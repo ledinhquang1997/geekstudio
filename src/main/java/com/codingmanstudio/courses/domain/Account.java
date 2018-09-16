@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
+@Entity(name = "Account")
 public class Account {
     @Id
     private String username;
@@ -13,6 +13,11 @@ public class Account {
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "account_role", joinColumns = @JoinColumn(name = "account_username"),inverseJoinColumns = @JoinColumn(name = "role_id"))
     private List<Role> roles=new ArrayList<>();
+
+    @ManyToMany(fetch = FetchType.LAZY)
+    @MapsId("courseId")
+    @JoinTable(name = "account_course", joinColumns = @JoinColumn(name = "account_username"),inverseJoinColumns = @JoinColumn(name = "course_id"))
+    private List<Courses> courses=new ArrayList<>();
 
     public Account() {
     }
@@ -44,5 +49,13 @@ public class Account {
 
     public void setRoles(List<Role> roles) {
         this.roles = roles;
+    }
+
+    public List<Courses> getCourses() {
+        return courses;
+    }
+
+    public void setCourses(List<Courses> courses) {
+        this.courses = courses;
     }
 }

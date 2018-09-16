@@ -4,6 +4,7 @@ package com.codingmanstudio.courses.domain;
  * Created by nhs3108 on 4/2/17.
  */
 public class News {
+
     public String title;
     public String content;
     public String author;
