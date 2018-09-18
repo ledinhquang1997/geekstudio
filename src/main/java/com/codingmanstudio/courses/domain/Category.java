@@ -1,44 +1,39 @@
 package com.codingmanstudio.courses.domain;
 
+import com.codingmanstudio.courses.repository.CourseRepository;
+import com.sun.istack.internal.NotNull;
+import lombok.Getter;
+import lombok.Setter;
+import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.UUID;
 
+@Getter
+@Setter
 @Entity
 public class Category {
     @Id
-    @GeneratedValue(generator = "uuid2")
-    @GenericGenerator(name = "uuid2", strategy = "uuid2")
-    @Column(columnDefinition = "BINARY(16)")
-    private UUID id;
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
+    private String id;
 
+    @NotNull
+    @NotBlank
     private String name;
 
     @Lob
     private String description;
 
-    public UUID getId() {
-        return id;
-    }
+    @OneToMany(cascade = CascadeType.PERSIST)
+    private Set<Course> courses = new HashSet<>();
 
-    public void setId(UUID id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
+    public void addCourse(Course course){
+        course.setCategory(this);
+        this.courses.add(course);
     }
 }

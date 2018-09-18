@@ -5,35 +5,31 @@ import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.UUID;
 
 @Getter
 @Setter
 @Entity
-public class Instructor {
+public class Lesson {
     @Id
     @GeneratedValue(generator = "UUID")
     @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
     private String id;
 
+    @NotNull
     @NotBlank
     private String name;
 
-    private String company;
+    @Lob
+    private String description;
 
-    @Email
-    private String email;
+    @ManyToOne(cascade = CascadeType.PERSIST)
+    private Course course;
 
-    private String image;
-
-    private String quote;
-
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "instructors_courses", joinColumns = @JoinColumn(name = "instructor_id"),inverseJoinColumns = @JoinColumn(name = "course_id"))
-    private Set<Course> courses = new HashSet<>();
+    @OneToMany(cascade = CascadeType.PERSIST)
+    private Set<Section> sections = new HashSet<>();
 
 }

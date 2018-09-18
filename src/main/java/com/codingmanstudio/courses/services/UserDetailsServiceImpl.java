@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
@@ -32,7 +33,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         return new User(account.getUsername(),account.getEncrytedPassword(),getAuthorities(account.getRoles()));
     }
 
-    private List<SimpleGrantedAuthority> getAuthorities(List<Role> roles) {
+    private List<SimpleGrantedAuthority> getAuthorities(Set<Role> roles) {
         return roles
                 .stream()
                 .map(role -> {

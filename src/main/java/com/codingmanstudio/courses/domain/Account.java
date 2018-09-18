@@ -1,18 +1,29 @@
 package com.codingmanstudio.courses.domain;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
+@Getter
+@Setter
 public class Account {
     @Id
     private String username;
+
     private String encrytedPassword;
 
     @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(name = "account_role", joinColumns = @JoinColumn(name = "account_username"),inverseJoinColumns = @JoinColumn(name = "role_id"))
-    private List<Role> roles=new ArrayList<>();
+    @JoinTable(name = "accounts_roles", joinColumns = @JoinColumn(name = "account_username"),inverseJoinColumns = @JoinColumn(name = "role_id"))
+    private Set<Role> roles=new HashSet<>();
+
+    @OneToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL ,mappedBy = "course")
+    private Set<AccountCourse> courses = new HashSet<>();
 
     public Account() {
     }
@@ -21,28 +32,10 @@ public class Account {
         this.username = username;
         this.encrytedPassword = encrytedPassword;
     }
-
-    public String getUsername() {
-        return username;
+    public void addCourse(Course course){
+        AccountCourse accountCourse = new AccountCourse(this,course);
+        courses.add(accountCourse);
+        course.getAccounts().add(accountCourse);
     }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getEncrytedPassword() {
-        return encrytedPassword;
-    }
-
-    public void setEncrytedPassword(String encrytedPassword) {
-        this.encrytedPassword = encrytedPassword;
-    }
-
-    public List<Role> getRoles() {
-        return roles;
-    }
-
-    public void setRoles(List<Role> roles) {
-        this.roles = roles;
-    }
 }
