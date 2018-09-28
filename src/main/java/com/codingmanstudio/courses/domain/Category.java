@@ -29,8 +29,13 @@ public class Category {
     @Lob
     private String description;
 
+    private String image;
+
     @OneToMany(cascade = CascadeType.PERSIST)
     private Set<Course> courses = new HashSet<>();
+
+    @ManyToMany(fetch = FetchType.LAZY,mappedBy = "categories")
+    private Set<Instructor> instructors = new HashSet<>();
 
     public void addCourse(Course course){
         course.setCategory(this);

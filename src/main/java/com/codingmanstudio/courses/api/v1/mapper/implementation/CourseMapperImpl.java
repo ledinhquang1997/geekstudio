@@ -24,6 +24,7 @@ public class CourseMapperImpl implements CourseMapper {
             courseDTO.setName(course.getName());
             courseDTO.setDescription(course.getDescription());
             courseDTO.setCost(course.getCost());
+            courseDTO.setAmountStudent(course.getAmountStudent());
             courseDTO.setRating(course.getRating());
             courseDTO.setImage(course.getImage());
             courseDTO.setInstructors(this.instructorSetToInstructorDTOSet(course.getInstructors()));

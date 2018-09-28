@@ -12,7 +12,7 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class ListCourseDTO {
-    @JsonProperty("courses")
-    List<CourseDTO> courseDTOList;
+public class ListInstructorDTO {
+    @JsonProperty("instructors")
+    private List<InstructorDTO> instructorDTOList;
 }

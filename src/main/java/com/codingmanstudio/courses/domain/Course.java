@@ -33,9 +33,13 @@ public class Course {
 
     @NotNull
     @NotBlank
+    @Lob
     private String description;
 
     private Long cost;
+
+    private int amountStudent;
+
 
     @Max(5)
     @Min(1)

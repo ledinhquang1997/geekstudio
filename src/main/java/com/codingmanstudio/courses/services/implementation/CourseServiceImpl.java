@@ -26,4 +26,10 @@ public class CourseServiceImpl implements CourseService {
                 .map(courseMapper::courseToCourseDto)
                 .collect(Collectors.toList());
     }
+
+    @Override
+    public List<CourseDTO> getBestSellerCourse() {
+        return courseRepository.findTop6ByOrderByAmountStudentDesc().stream()
+                .map(courseMapper::courseToCourseDto).collect(Collectors.toList());
+    }
 }
