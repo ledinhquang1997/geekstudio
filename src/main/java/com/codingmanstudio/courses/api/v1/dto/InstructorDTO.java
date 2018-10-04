@@ -15,7 +15,7 @@ import java.util.Set;
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class InstructorDTO {
-    private String id;
+    private String username;
     private String name;
     private String company;
     private String email;

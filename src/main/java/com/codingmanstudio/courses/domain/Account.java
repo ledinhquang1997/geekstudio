@@ -22,9 +22,6 @@ public class Account {
     @JoinTable(name = "accounts_roles", joinColumns = @JoinColumn(name = "account_username"),inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles=new HashSet<>();
 
-    @OneToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL ,mappedBy = "course")
-    private Set<AccountCourse> courses = new HashSet<>();
-
     public Account() {
     }
 
@@ -32,10 +29,6 @@ public class Account {
         this.username = username;
         this.encrytedPassword = encrytedPassword;
     }
-    public void addCourse(Course course){
-        AccountCourse accountCourse = new AccountCourse(this,course);
-        courses.add(accountCourse);
-        course.getAccounts().add(accountCourse);
-    }
+
 
 }

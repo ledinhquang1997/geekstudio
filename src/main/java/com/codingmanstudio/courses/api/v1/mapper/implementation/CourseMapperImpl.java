@@ -35,7 +35,7 @@ public class CourseMapperImpl implements CourseMapper {
     private InstructorDTO instructorToInstructorDTO(Instructor instructor){
         if(instructor ==null) return null;
         InstructorDTO instructorDTO = new InstructorDTO();
-        instructorDTO.setId(instructor.getId());
+        instructorDTO.setUsername(instructor.getUsername());
         instructorDTO.setCompany(instructor.getCompany());
         instructorDTO.setEmail(instructor.getEmail());
         instructorDTO.setName(instructor.getName());

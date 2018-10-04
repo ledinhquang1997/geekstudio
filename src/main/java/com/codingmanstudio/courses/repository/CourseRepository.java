@@ -1,5 +1,6 @@
 package com.codingmanstudio.courses.repository;
 
+import com.codingmanstudio.courses.domain.Category;
 import com.codingmanstudio.courses.domain.Course;
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -11,4 +12,7 @@ public interface CourseRepository extends JpaRepository<Course, String> {
     Optional<Course> findByName(String name);
 
     List<Course> findTop6ByOrderByAmountStudentDesc();
+    List<Course> findTop8ByCategoryIdOrderByAmountStudentDesc(String id);
+    List<Course> findTop8ByOrderByRatingDesc();
+
 }

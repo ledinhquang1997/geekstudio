@@ -18,7 +18,7 @@ public class InstructorMapperImpl implements InstructorMapper {
             return null;
         } else {
             InstructorDTO instructorDTO = new InstructorDTO();
-            instructorDTO.setId(instructor.getId());
+            instructorDTO.setUsername(instructor.getUsername());
             instructorDTO.setName(instructor.getName());
             instructorDTO.setCompany(instructor.getCompany());
             instructorDTO.setEmail(instructor.getEmail());

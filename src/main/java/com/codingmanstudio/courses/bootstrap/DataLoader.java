@@ -20,9 +20,8 @@ public class DataLoader implements CommandLineRunner {
     private final SectionRepository sectionRepository;
     private final InstructorRepository instructorRepository;
     private final TopicRepository topicRepository;
-    private final AccountCourseRepository accountCourseRepository;
 
-    public DataLoader(RoleRepository roleRepository, AccountRepository accountRepository, CategoryRepository categoryRepository, CourseRepository courseRepository, LessonRepository lessonRepository, SectionRepository sectionRepository, InstructorRepository instructorRepository, TopicRepository topicRepository, AccountCourseRepository accountCourseRepository) {
+    public DataLoader(RoleRepository roleRepository, AccountRepository accountRepository, CategoryRepository categoryRepository, CourseRepository courseRepository, LessonRepository lessonRepository, SectionRepository sectionRepository, InstructorRepository instructorRepository, TopicRepository topicRepository) {
         this.roleRepository = roleRepository;
         this.accountRepository = accountRepository;
         this.categoryRepository = categoryRepository;
@@ -31,7 +30,6 @@ public class DataLoader implements CommandLineRunner {
         this.sectionRepository = sectionRepository;
         this.instructorRepository = instructorRepository;
         this.topicRepository = topicRepository;
-        this.accountCourseRepository = accountCourseRepository;
     }
 
     @Transactional
@@ -70,7 +68,7 @@ public class DataLoader implements CommandLineRunner {
             Course nodeJs = new Course();
             nodeJs.setName("Conquer Node JS");
             nodeJs.setCost(300L);
-            nodeJs.setRating(3L);
+            nodeJs.setRating(1);
             nodeJs.setAmountStudent(303);
             nodeJs.setImage("nodejs1.jpg");
             nodeJs.getTopics().add(savedTopicWebsite);
@@ -85,7 +83,7 @@ public class DataLoader implements CommandLineRunner {
             reactJs.setImage("reactjs.jpg");
             reactJs.setAmountStudent(401);
             reactJs.setCost(350L);
-            reactJs.setRating(3L);
+            reactJs.setRating(1.4);
             reactJs.setDescription("Similarly, any interface we define by extending the ExtendedRepository interface will have the same method");
             reactJs.setDateCreate("03-04-2018");
 
@@ -94,7 +92,7 @@ public class DataLoader implements CommandLineRunner {
             vueJs.getTopics().add(savedTopicFrontend);
             vueJs.setName("Vue JS in real word");
             vueJs.setCost(350L);
-            vueJs.setRating(3L);
+            vueJs.setRating(3.4);
             vueJs.setImage("vuejs.png");
             vueJs.setAmountStudent(233);
             vueJs.setDescription("Vue.js, gọi tắt là Vue, là một framework linh động dùng để xây dựng giao diện người dùng. Khác với các framework nguyên khối, Vue được thiết kế từ đầu theo hướng cho phép và khuyến khích việc phát triển ứng dụng theo các bước");
@@ -104,7 +102,7 @@ public class DataLoader implements CommandLineRunner {
             business.getTopics().add(savedBussiness);
             business.setName("Market Leader");
             business.setCost(350L);
-            business.setRating(3L);
+            business.setRating(2.4);
             business.setImage("business1.jpg");
             business.setAmountStudent(123);
             business.setDescription("Để giữ gìn sự trong sáng của tiếng Việt khi tham gia chat, blog, các diễn đàn, SMS… Mấy bợng đừn diếc xai trính tã nge");
@@ -114,7 +112,7 @@ public class DataLoader implements CommandLineRunner {
             marketingCourse.getTopics().add(savedBussiness);
             marketingCourse.setName("Marketing Leader");
             marketingCourse.setCost(350L);
-            marketingCourse.setRating(3L);
+            marketingCourse.setRating(3.6);
             marketingCourse.setImage("marketing.jpg");
             marketingCourse.setAmountStudent(923);
             marketingCourse.setDescription("Để giữ gìn sự trong sáng của tiếng Việt khi tham gia chat, blog, các diễn đàn, SMS… Mấy bợng đừn diếc xai trính tã nge");
@@ -124,7 +122,7 @@ public class DataLoader implements CommandLineRunner {
             electronicCourse.getTopics().add(savedEngineering);
             electronicCourse.setName("Master Electrons");
             electronicCourse.setCost(350L);
-            electronicCourse.setRating(3L);
+            electronicCourse.setRating(4.5);
             electronicCourse.setImage("electonic.jpg");
             electronicCourse.setAmountStudent(923);
             electronicCourse.setDescription("Để giữ gìn sự trong sáng của tiếng Việt khi tham gia chat, blog, các diễn đàn, SMS… Mấy bợng đừn diếc xai trính tã nge");
@@ -134,7 +132,7 @@ public class DataLoader implements CommandLineRunner {
             dockerCourse.getTopics().add(savedBussiness);
             dockerCourse.setName("Docker - magic tool");
             dockerCourse.setCost(350L);
-            dockerCourse.setRating(3L);
+            dockerCourse.setRating(5);
             dockerCourse.setImage("docker.png");
             dockerCourse.setAmountStudent(943);
             dockerCourse.setDescription("Để giữ gìn sự trong sáng của tiếng Việt khi tham gia chat, blog, các diễn đàn, SMS… Mấy bợng đừn diếc xai trính tã nge");
@@ -144,7 +142,7 @@ public class DataLoader implements CommandLineRunner {
             phpCourse.getTopics().add(savedTopicBackend);
             phpCourse.setName("Website with PHP");
             phpCourse.setCost(353L);
-            phpCourse.setRating(3L);
+            phpCourse.setRating(3.1);
             phpCourse.setImage("php.jpg");
             phpCourse.setAmountStudent(716);
             phpCourse.setDescription("Để giữ gìn sự trong sáng của tiếng Việt khi tham gia chat, blog, các diễn đàn, SMS… Mấy bợng đừn diếc xai trính tã nge");
@@ -154,26 +152,88 @@ public class DataLoader implements CommandLineRunner {
             cScharp.getTopics().add(savedTopicBackend);
             cScharp.setName("C# Core");
             cScharp.setCost(350L);
-            cScharp.setRating(3L);
+            cScharp.setRating(4.2);
             cScharp.setImage("csharp1.png");
             cScharp.setAmountStudent(12);
             cScharp.setDescription("Để giữ gìn sự trong sáng của tiếng Việt khi tham gia chat, blog, các diễn đàn, SMS… Mấy bợng đừn diếc xai trính tã nge");
             cScharp.setDateCreate("03-04-2018");
 
-            Course savedcScharp = courseRepository.save(cScharp);
-            Course savedphpCourse = courseRepository.save(phpCourse);
-            Course saveddockerCourse = courseRepository.save(dockerCourse);
-            Course savedelectronicCourse = courseRepository.save(electronicCourse);
-            Course savedBusiness = courseRepository.save(business);
-            Course savedmarketingCourse = courseRepository.save(marketingCourse);
+            Course java = new Course();
+            java.getTopics().add(savedTopicBackend);
+            java.setName("Java Core");
+            java.setCost(120L);
+            java.setRating(4);
+            java.setImage("java.jpg");
+            java.setAmountStudent(12);
+            java.setDescription("Để giữ gìn sự trong sáng của tiếng Việt khi tham gia chat, blog, các diễn đàn, SMS… Mấy bợng đừn diếc xai trính tã nge");
+            java.setDateCreate("03-04-2018");
+
+
+            Course css = new Course();
+            css.getTopics().add(savedTopicBackend);
+            css.setName("CSS wonderful");
+            css.setCost(350L);
+            css.setRating(4.7);
+            css.setImage("css-wonderful.png");
+            css.setAmountStudent(12);
+            css.setDescription("Để giữ gìn sự trong sáng của tiếng Việt khi tham gia chat, blog, các diễn đàn, SMS… Mấy bợng đừn diếc xai trính tã nge");
+            css.setDateCreate("03-04-2018");
+
+
+            Course html = new Course();
+            html.getTopics().add(savedTopicBackend);
+            html.setName("HTML is not programming lang");
+            html.setCost(350L);
+            html.setRating(3.4);
+            html.setImage("html.jpg");
+            html.setAmountStudent(12);
+            html.setDescription("Để giữ gìn sự trong sáng của tiếng Việt khi tham gia chat, blog, các diễn đàn, SMS… Mấy bợng đừn diếc xai trính tã nge");
+            html.setDateCreate("03-04-2018");
+
+
+            Course typeScript = new Course();
+            typeScript.getTopics().add(savedTopicBackend);
+            typeScript.setName("TypeScript course");
+            typeScript.setCost(350L);
+            typeScript.setRating(3.9);
+            typeScript.setImage("typescript.png");
+            typeScript.setAmountStudent(12);
+            typeScript.setDescription("Để giữ gìn sự trong sáng của tiếng Việt khi tham gia chat, blog, các diễn đàn, SMS… Mấy bợng đừn diếc xai trính tã nge");
+            typeScript.setDateCreate("03-04-2018");
+
 
             //Init category----------------------------------------------------------------------------------------------------
 
             Category cat1 = new Category();
             cat1.setName("Programming");
+
             vueJs.setCategory(cat1);
             cat1.getCourses().add(vueJs);
-            cat1.setDescription("That’s all you have to do to let Hibernate generate UUIDs as primary key values. You can see an example of it in the following code snippet");
+
+            cat1.getCourses().add(cScharp);
+            cScharp.setCategory(cat1);
+
+            cat1.getCourses().add(phpCourse);
+            phpCourse.setCategory(cat1);
+
+            cat1.getCourses().add(dockerCourse);
+            dockerCourse.setCategory(cat1);
+
+            cat1.getCourses().add(java);
+            java.setCategory(cat1);
+
+            cat1.getCourses().add(typeScript);
+            typeScript.setCategory(cat1);
+
+            cat1.getCourses().add(css);
+            css.setCategory(cat1);
+
+            cat1.getCourses().add(html);
+            html.setCategory(cat1);
+
+
+            cat1.setImage("programming-icon.png");
+            cat1.setDescription("C#, Java, Javascript, PHP, ReactJS, VueJS, Node JS,...");
 
             Category cat2 = new Category();
             nodeJs.setCategory(cat2);
@@ -181,15 +241,18 @@ public class DataLoader implements CommandLineRunner {
             cat2.getCourses().add(nodeJs);
             cat2.getCourses().add(reactJs);
             cat2.setName("Business");
-            cat2.setDescription("That’s all you have to do to let Hibernate generate UUIDs as primary key values. You can see an example of it in the following code snippet");
+            cat2.setImage("business-icon.png");
+            cat2.setDescription("Sale, Manage, Statistic, Products,...");
 
             Category cat3 = new Category();
             cat3.setName("Marketing");
-            cat3.setDescription("That’s all you have to do to let Hibernate generate UUIDs as primary key values. You can see an example of it in the following code snippet");
+            cat3.setImage("marketing-icon.png");
+            cat3.setDescription("SEO, Internet Marketing, Influencer Marketing, PPI, Online viral marketing,...");
 
             Category cat4 = new Category();
+            cat4.setImage("engineering-icon.png");
             cat4.setName("Engineering");
-            cat4.setDescription("That’s all you have to do to let Hibernate generate UUIDs as primary key values. You can see an example of it in the following code snippet");
+            cat4.setDescription("Chemical engineering, Civil engineering, Electical, Process engineering,...");
 
 
             //Init Lesson ----------------------------------------------------------------------------------------------------------
@@ -324,6 +387,9 @@ public class DataLoader implements CommandLineRunner {
             role_admin.setRole("ROLE_ADMIN");
             Role saved_role_admin = roleRepository.save(role_admin);
 
+            Role role_instructor = new Role();
+            role_instructor.setRole("ROLE_INSTRUCTOR");
+            Role saved_role_instructor = roleRepository.save(role_instructor);
 
             //Save Category, Role, Lesson, Course, Section ----------------------------------------------------------------------------------------------------------
 
@@ -335,6 +401,16 @@ public class DataLoader implements CommandLineRunner {
             Course savedVueJs = courseRepository.save(vueJs);
             Course savedNodeJs = courseRepository.save(nodeJs);
             Course savedReactJS = courseRepository.save(reactJs);
+            Course savedcScharp = courseRepository.save(cScharp);
+            Course savedphpCourse = courseRepository.save(phpCourse);
+            Course saveddockerCourse = courseRepository.save(dockerCourse);
+            Course savedelectronicCourse = courseRepository.save(electronicCourse);
+            Course savedBusiness = courseRepository.save(business);
+            Course savedmarketingCourse = courseRepository.save(marketingCourse);
+            Course savedJava = courseRepository.save(java);
+            Course savedtypeScript = courseRepository.save(typeScript);
+            Course savedHtml = courseRepository.save(html);
+            Course savedCss = courseRepository.save(css);
 
             Lesson savedNodeJsLesson1 = lessonRepository.save(nodeJsLesson1);
             Lesson savedNodeJsLesson2 = lessonRepository.save(nodeJsLesson2);
@@ -349,6 +425,9 @@ public class DataLoader implements CommandLineRunner {
             //Init Instructor ----------------------------------------------------------------------------------------------------------
 
             Instructor alex = new Instructor();
+            alex.setUsername("alex");
+            alex.setEncrytedPassword(EncrytedPasswordUtils.encrytePassword("123"));
+            alex.getRoles().add(saved_role_instructor);
             alex.setName("Alex Jefferson");
             alex.setEmail("alex@gmail.com");
             alex.setCompany("FPT");
@@ -360,40 +439,59 @@ public class DataLoader implements CommandLineRunner {
             Instructor savedA = instructorRepository.save(alex);
 
             Instructor quill = new Instructor();
+            quill.setUsername("quill");
+            quill.setEncrytedPassword(EncrytedPasswordUtils.encrytePassword("123"));
+            quill.getRoles().add(saved_role_instructor);
             quill.setName("Quilliam Johnson");
             quill.setCompany("TMA Solutions");
             quill.setEmail("quill@tma.com");
             quill.setQuote("Cảm giác dạy học thì giống như một người mẹ");
             quill.setImage("captain");
+            quill.getCourses().add(savedNodeJs);
             quill.getCourses().add(savedReactJS);
             quill.getCategories().add(savedcat1);
             quill.getCategories().add(savedcat2);
             Instructor savedQ = instructorRepository.save(quill);
 
             Instructor tripleh = new Instructor();
+            tripleh.setUsername("tripleh");
+            tripleh.setEncrytedPassword(EncrytedPasswordUtils.encrytePassword("123"));
+            tripleh.getRoles().add(saved_role_instructor);
             tripleh.setName("Triple H");
             tripleh.setCompany("WWE Cop");
             tripleh.setEmail("hhh@tma.com");
             tripleh.setQuote("Tôi chỉ cảm thấy hạnh phúc khi thấy những người xung quanh mình hạnh phúc");
             tripleh.getCategories().add(savedcat3);
+            tripleh.getCourses().add(saveddockerCourse);
+            tripleh.getCourses().add(savedelectronicCourse);
             tripleh.setImage("tripleh");
             Instructor savedtripleh = instructorRepository.save(tripleh);
 
             Instructor rose = new Instructor();
+            rose.setUsername("rose");
+            rose.setEncrytedPassword(EncrytedPasswordUtils.encrytePassword("123"));
+            rose.getRoles().add(saved_role_instructor);
             rose.setName("Park Chaeyoung");
             rose.setCompany("YG Copany");
             rose.setEmail("rosanne@tma.com");
             rose.setQuote("너의 눈에 비친 나의 모습이 늘 처음 만난 그 날만 같길 소리 없이 타오르는 불꽃같이");
             rose.getCategories().add(savedcat4);
+            rose.getCourses().add(savedBusiness);
+            rose.getCourses().add(savedmarketingCourse);
             rose.setImage("jisoo");
             Instructor savedRose = instructorRepository.save(rose);
 
             Instructor lisa = new Instructor();
+            lisa.setUsername("lisa");
+            lisa.setEncrytedPassword(EncrytedPasswordUtils.encrytePassword("123"));
+            lisa.getRoles().add(saved_role_instructor);
             lisa.setName("Lalisa Manoban");
             lisa.setCompany("YG Copany");
             lisa.setEmail("lisa@tma.com");
             lisa.setQuote("너의 눈에 비친 나의 모습이 늘 처음 만난 그 날만 같길 소리 없이 타오르는 불꽃같이");
             lisa.setImage("lisa");
+            lisa.getCourses().add(savedcScharp);
+            lisa.getCourses().add(savedphpCourse);
             lisa.getCategories().add(savedcat3);
             Instructor savedLisa = instructorRepository.save(lisa);
             //Init Account ----------------------------------------------------------------------------------------------------------
@@ -403,8 +501,7 @@ public class DataLoader implements CommandLineRunner {
             user1.setEncrytedPassword(EncrytedPasswordUtils.encrytePassword("123"));
             user1.getRoles().add(saved_role_admin);
             user1.getRoles().add(saved_role_user);
-            user1.addCourse(savedNodeJs);
-            user1.addCourse(savedReactJS);
+
             Account savedUser1 = accountRepository.save(user1);
 
             Account user2 = new Account();
@@ -431,18 +528,6 @@ public class DataLoader implements CommandLineRunner {
 //            for(Course c: savedA.getCourses()){
 //                System.out.println(c.getName());
 //            }
-
-            Optional<Account> accountOptional = accountRepository.findByUsername("quang");
-            if (accountOptional.isPresent()) {
-                System.out.println("found");
-                System.out.println(accountOptional.get().getEncrytedPassword());
-
-                System.out.println(accountOptional.get().getCourses().size());
-                for (AccountCourse ac : accountOptional.get().getCourses()
-                ) {
-                    System.out.println(ac.getCourse().getName());
-                }
-            }
 
             Optional<Instructor> instructorOptional = instructorRepository.findByName("Quilliam Johnson");
             if (instructorOptional.isPresent()) {

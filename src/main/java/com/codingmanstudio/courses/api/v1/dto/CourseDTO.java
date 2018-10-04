@@ -19,7 +19,7 @@ public class CourseDTO {
     private String name;
     private String description;
     private Long cost;
-    private Long rating;
+    private double rating;
     private int amountStudent;
     private String image;
     private Set<InstructorDTO> instructors = new HashSet<>();

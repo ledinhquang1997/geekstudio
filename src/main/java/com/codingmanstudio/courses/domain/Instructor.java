@@ -9,16 +9,11 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.UUID;
 
 @Getter
 @Setter
 @Entity
-public class Instructor {
-    @Id
-    @GeneratedValue(generator = "UUID")
-    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
-    private String id;
+public class Instructor extends Account{
 
     @NotBlank
     private String name;
@@ -33,11 +28,11 @@ public class Instructor {
     private String quote;
 
     @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "instructors_courses", joinColumns = @JoinColumn(name = "instructor_id"),inverseJoinColumns = @JoinColumn(name = "course_id"))
+    @JoinTable(name = "instructors_courses", joinColumns = @JoinColumn(name = "instructor_username"),inverseJoinColumns = @JoinColumn(name = "course_id"))
     private Set<Course> courses = new HashSet<>();
 
     @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(name = "instructors_categories", joinColumns = @JoinColumn(name = "instructor_id"),inverseJoinColumns = @JoinColumn(name = "category_id"))
+    @JoinTable(name = "instructors_categories", joinColumns = @JoinColumn(name = "instructor_username"),inverseJoinColumns = @JoinColumn(name = "category_id"))
     private Set<Category> categories = new HashSet<>();
 
 }

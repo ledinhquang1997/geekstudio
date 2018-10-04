@@ -43,7 +43,7 @@ public class Course {
 
     @Max(5)
     @Min(1)
-    private Long rating;
+    private double rating;
 
     private String image;
 
@@ -62,15 +62,5 @@ public class Course {
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "courses_topics", joinColumns = @JoinColumn(name = "course_id"), inverseJoinColumns = @JoinColumn(name = "topic_id"))
     private Set<Topic> topics = new HashSet<>();
-
-    @OneToMany(fetch = FetchType.LAZY,mappedBy = "account")
-    private Set<AccountCourse> accounts = new HashSet<>();
-
-    public void addCategory(Category category, CategoryRepository categoryRepository){
-        category.getCourses().add(this);
-        Category savedCategory = categoryRepository.save(category);
-        System.out.println(savedCategory.getName());
-        this.category = savedCategory;
-    }
 
 }
