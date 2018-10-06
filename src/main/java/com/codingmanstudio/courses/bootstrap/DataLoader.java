@@ -20,8 +20,9 @@ public class DataLoader implements CommandLineRunner {
     private final SectionRepository sectionRepository;
     private final InstructorRepository instructorRepository;
     private final TopicRepository topicRepository;
+    private final AdminRepository adminRepository;
 
-    public DataLoader(RoleRepository roleRepository, AccountRepository accountRepository, CategoryRepository categoryRepository, CourseRepository courseRepository, LessonRepository lessonRepository, SectionRepository sectionRepository, InstructorRepository instructorRepository, TopicRepository topicRepository) {
+    public DataLoader(RoleRepository roleRepository, AccountRepository accountRepository, CategoryRepository categoryRepository, CourseRepository courseRepository, LessonRepository lessonRepository, SectionRepository sectionRepository, InstructorRepository instructorRepository, TopicRepository topicRepository, AdminRepository adminRepository) {
         this.roleRepository = roleRepository;
         this.accountRepository = accountRepository;
         this.categoryRepository = categoryRepository;
@@ -30,6 +31,7 @@ public class DataLoader implements CommandLineRunner {
         this.sectionRepository = sectionRepository;
         this.instructorRepository = instructorRepository;
         this.topicRepository = topicRepository;
+        this.adminRepository = adminRepository;
     }
 
     @Transactional
@@ -423,6 +425,13 @@ public class DataLoader implements CommandLineRunner {
             Lesson savedVueJsLesson3 = lessonRepository.save(vueJsLesson3);
 
             //Init Instructor ----------------------------------------------------------------------------------------------------------
+            Admin admin1= new Admin();
+            admin1.setUsername("admin");
+            admin1.setEncrytedPassword(EncrytedPasswordUtils.encrytePassword("123"));
+            admin1.getRoles().add(saved_role_admin);
+            admin1.setEmail("admin@gmail.com");
+            admin1.setName("Admin Quang");
+            adminRepository.save(admin1);
 
             Instructor alex = new Instructor();
             alex.setUsername("alex");
