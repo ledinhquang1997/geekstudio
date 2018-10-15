@@ -2,6 +2,8 @@ package com.codingmanstudio.courses.repository;
 
 import com.codingmanstudio.courses.domain.Category;
 import com.codingmanstudio.courses.domain.Course;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
@@ -15,4 +17,5 @@ public interface CourseRepository extends JpaRepository<Course, String> {
     List<Course> findTop8ByCategoryIdOrderByAmountStudentDesc(String id);
     List<Course> findTop8ByOrderByRatingDesc();
 
+    Page<Course> findByCategoryId(String categoryId, Pageable pageable);
 }

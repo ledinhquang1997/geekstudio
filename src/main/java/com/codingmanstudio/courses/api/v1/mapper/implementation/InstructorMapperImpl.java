@@ -1,7 +1,7 @@
 package com.codingmanstudio.courses.api.v1.mapper.implementation;
 
-import com.codingmanstudio.courses.api.v1.dto.CategoryDTO;
-import com.codingmanstudio.courses.api.v1.dto.InstructorDTO;
+import com.codingmanstudio.courses.api.v1.dto.Category.CategoryDTO;
+import com.codingmanstudio.courses.api.v1.dto.Instructor.InstructorDTO;
 import com.codingmanstudio.courses.api.v1.mapper.InstructorMapper;
 import com.codingmanstudio.courses.domain.Category;
 import com.codingmanstudio.courses.domain.Instructor;

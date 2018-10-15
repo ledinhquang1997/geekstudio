@@ -31,11 +31,14 @@ public class Category {
 
     private String image;
 
-    @OneToMany(cascade = CascadeType.PERSIST)
+    @OneToMany(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     private Set<Course> courses = new HashSet<>();
 
     @ManyToMany(fetch = FetchType.LAZY,mappedBy = "categories")
     private Set<Instructor> instructors = new HashSet<>();
+
+    @ManyToMany()
+    private Set<Topic> topics = new HashSet<>();
 
     public void addCourse(Course course){
         course.setCategory(this);

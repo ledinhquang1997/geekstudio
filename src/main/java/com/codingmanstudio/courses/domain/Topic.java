@@ -4,10 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.util.HashSet;
@@ -26,7 +23,12 @@ public class Topic {
     @NotBlank
     private String name;
 
+    private String image;
+
     @ManyToMany(mappedBy = "topics")
     private Set<Course> courses = new HashSet<>();
 
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "categories_topics", joinColumns = @JoinColumn(name = "category_id"),inverseJoinColumns = @JoinColumn(name = "topic_id"))
+    private Set<Category> categories = new HashSet<>();
 }

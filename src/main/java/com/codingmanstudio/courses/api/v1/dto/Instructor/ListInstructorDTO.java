@@ -1,4 +1,4 @@
-package com.codingmanstudio.courses.api.v1.dto;
+package com.codingmanstudio.courses.api.v1.dto.Instructor;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;

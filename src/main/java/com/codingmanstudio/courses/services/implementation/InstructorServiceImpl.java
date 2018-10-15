@@ -1,6 +1,6 @@
 package com.codingmanstudio.courses.services.implementation;
 
-import com.codingmanstudio.courses.api.v1.dto.InstructorDTO;
+import com.codingmanstudio.courses.api.v1.dto.Instructor.InstructorDTO;
 import com.codingmanstudio.courses.api.v1.mapper.InstructorMapper;
 import com.codingmanstudio.courses.repository.InstructorRepository;
 import com.codingmanstudio.courses.services.InstructorService;

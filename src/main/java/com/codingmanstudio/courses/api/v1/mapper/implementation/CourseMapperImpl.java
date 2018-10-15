@@ -1,7 +1,8 @@
 package com.codingmanstudio.courses.api.v1.mapper.implementation;
 
-import com.codingmanstudio.courses.api.v1.dto.CourseDTO;
-import com.codingmanstudio.courses.api.v1.dto.InstructorDTO;
+import com.codingmanstudio.courses.api.v1.dto.Course.CourseDTO;
+import com.codingmanstudio.courses.api.v1.dto.Course.CourseWithoutInstructorDTO;
+import com.codingmanstudio.courses.api.v1.dto.Instructor.InstructorDTO;
 import com.codingmanstudio.courses.api.v1.mapper.CourseMapper;
 import com.codingmanstudio.courses.domain.Course;
 import com.codingmanstudio.courses.domain.Instructor;
@@ -29,6 +30,23 @@ public class CourseMapperImpl implements CourseMapper {
             courseDTO.setImage(course.getImage());
             courseDTO.setInstructors(this.instructorSetToInstructorDTOSet(course.getInstructors()));
             return courseDTO;
+        }
+    }
+
+    @Override
+    public CourseWithoutInstructorDTO courseToCourseWithoutInstructorDto(Course course) {
+        if (course == null) {
+            return null;
+        } else {
+            CourseWithoutInstructorDTO courseWithoutInstructorDTO = new CourseWithoutInstructorDTO();
+            courseWithoutInstructorDTO.setId(course.getId());
+            courseWithoutInstructorDTO.setName(course.getName());
+            courseWithoutInstructorDTO.setDescription(course.getDescription());
+            courseWithoutInstructorDTO.setCost(course.getCost());
+            courseWithoutInstructorDTO.setAmountStudent(course.getAmountStudent());
+            courseWithoutInstructorDTO.setRating(course.getRating());
+            courseWithoutInstructorDTO.setImage(course.getImage());
+            return courseWithoutInstructorDTO;
         }
     }
 

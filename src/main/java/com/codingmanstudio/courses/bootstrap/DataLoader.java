@@ -7,6 +7,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.Optional;
 
 @Component
@@ -58,9 +59,24 @@ public class DataLoader implements CommandLineRunner {
             bussiness.setName("Bussiness");
             Topic savedBussiness = topicRepository.save(bussiness);
 
-            Topic marketing = new Topic();
-            marketing.setName("Marketing");
-            Topic savedMarketing = topicRepository.save(marketing);
+            Topic advertisement = new Topic();
+            advertisement.setName("Advertisement");
+            Topic savedAd = topicRepository.save(advertisement);
+
+            Topic influncerMarketing = new Topic();
+            influncerMarketing.setName("Influencer marketing");
+            Topic savedInfluncerMarketing = topicRepository.save(influncerMarketing);
+
+
+            Topic onlineMakerting = new Topic();
+            onlineMakerting.setName("Online Makerting");
+            Topic savedonlineMakerting = topicRepository.save(onlineMakerting);
+
+
+            Topic seo = new Topic();
+            seo.setName("SEO");
+            Topic savedSeo = topicRepository.save(seo);
+
 
             Topic engineering = new Topic();
             engineering.setName("Engineering");
@@ -181,6 +197,16 @@ public class DataLoader implements CommandLineRunner {
             css.setDescription("Để giữ gìn sự trong sáng của tiếng Việt khi tham gia chat, blog, các diễn đàn, SMS… Mấy bợng đừn diếc xai trính tã nge");
             css.setDateCreate("03-04-2018");
 
+            Course linux = new Course();
+            linux.getTopics().add(savedTopicBackend);
+            linux.setName("Linux");
+            linux.setCost(350L);
+            linux.setRating(4.7);
+            linux.setImage("css-wonderful.png");
+            linux.setAmountStudent(12);
+            linux.setDescription("Để giữ gìn sự trong sáng của tiếng Việt khi tham gia chat, blog, các diễn đàn, SMS… Mấy bợng đừn diếc xai trính tã nge");
+            linux.setDateCreate("03-04-2018");
+
 
             Course html = new Course();
             html.getTopics().add(savedTopicBackend);
@@ -208,6 +234,9 @@ public class DataLoader implements CommandLineRunner {
 
             Category cat1 = new Category();
             cat1.setName("Programming");
+            cat1.getTopics().add(savedTopicWebsite);
+            cat1.getTopics().add(savedTopicBackend);
+            cat1.getTopics().add(savedTopicFrontend);
 
             vueJs.setCategory(cat1);
             cat1.getCourses().add(vueJs);
@@ -233,6 +262,8 @@ public class DataLoader implements CommandLineRunner {
             cat1.getCourses().add(html);
             html.setCategory(cat1);
 
+            cat1.getCourses().add(linux);
+            linux.setCategory(cat1);
 
             cat1.setImage("programming-icon.png");
             cat1.setDescription("C#, Java, Javascript, PHP, ReactJS, VueJS, Node JS,...");
@@ -250,6 +281,10 @@ public class DataLoader implements CommandLineRunner {
             cat3.setName("Marketing");
             cat3.setImage("marketing-icon.png");
             cat3.setDescription("SEO, Internet Marketing, Influencer Marketing, PPI, Online viral marketing,...");
+            cat3.getTopics().add(savedSeo);
+            cat3.getTopics().add(savedInfluncerMarketing);
+            cat3.getTopics().add(savedonlineMakerting);
+            cat3.getTopics().add(savedAd);
 
             Category cat4 = new Category();
             cat4.setImage("engineering-icon.png");
@@ -413,6 +448,7 @@ public class DataLoader implements CommandLineRunner {
             Course savedtypeScript = courseRepository.save(typeScript);
             Course savedHtml = courseRepository.save(html);
             Course savedCss = courseRepository.save(css);
+            Course savedLinux = courseRepository.save(linux);
 
             Lesson savedNodeJsLesson1 = lessonRepository.save(nodeJsLesson1);
             Lesson savedNodeJsLesson2 = lessonRepository.save(nodeJsLesson2);
@@ -549,6 +585,13 @@ public class DataLoader implements CommandLineRunner {
                 }
             }
 
+            Category en = categoryRepository.findByName("Engineering").get();
+
+
+            Optional<Category> optionalCategory = categoryRepository.findByNameOrId(en.getId(),en.getId());
+            if(optionalCategory.isPresent()){
+                System.out.println(optionalCategory.get().getName());
+            }
 
         }
 
