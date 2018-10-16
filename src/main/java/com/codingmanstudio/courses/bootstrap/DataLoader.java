@@ -150,7 +150,7 @@ public class DataLoader implements CommandLineRunner {
             dockerCourse.getTopics().add(savedBussiness);
             dockerCourse.setName("Docker - magic tool");
             dockerCourse.setCost(350L);
-            dockerCourse.setRating(5);
+            dockerCourse.setRating(2.5);
             dockerCourse.setImage("docker.png");
             dockerCourse.setAmountStudent(943);
             dockerCourse.setDescription("Để giữ gìn sự trong sáng của tiếng Việt khi tham gia chat, blog, các diễn đàn, SMS… Mấy bợng đừn diếc xai trính tã nge");
@@ -525,6 +525,42 @@ public class DataLoader implements CommandLineRunner {
             rose.getCourses().add(savedmarketingCourse);
             rose.setImage("jisoo");
             Instructor savedRose = instructorRepository.save(rose);
+
+            Instructor mrDao = new Instructor();
+            mrDao.setUsername("daonm");
+            mrDao.setEncrytedPassword(EncrytedPasswordUtils.encrytePassword("123"));
+            mrDao.getRoles().add(saved_role_instructor);
+            mrDao.setName("Nguyen Minh Dao");
+            mrDao.setCompany("HCMUTE");
+            mrDao.setEmail("daomn@tma.com");
+            mrDao.setQuote("너의 눈에 비친 나의 모습이 늘 처음 만난 그 날만 같길 소리 없이 타오르는 불꽃같이");
+            mrDao.getCategories().add(savedcat1);
+            mrDao.setImage("mrdao");
+            Instructor savedMrDao = instructorRepository.save(mrDao);
+
+            Instructor rapMonster = new Instructor();
+            rapMonster.setUsername("rmonster");
+            rapMonster.setEncrytedPassword(EncrytedPasswordUtils.encrytePassword("123"));
+            rapMonster.getRoles().add(saved_role_instructor);
+            rapMonster.setName("Rap Monster");
+            rapMonster.setCompany("BigHit");
+            rapMonster.setEmail("rm@tma.com");
+            rapMonster.setQuote("너의 눈에 비친 나의 모습이 늘 처음 만난 그 날만 같길 소리 없이 타오르는 불꽃같이");
+            rapMonster.getCategories().add(savedcat1);
+            rapMonster.setImage("rm");
+            Instructor savedRapMonster = instructorRepository.save(rapMonster);
+
+            Instructor mrHuy = new Instructor();
+            mrHuy.setUsername("huynguyen");
+            mrHuy.setEncrytedPassword(EncrytedPasswordUtils.encrytePassword("123"));
+            mrHuy.getRoles().add(saved_role_instructor);
+            mrHuy.setName("Nguyễn Quang Huy");
+            mrHuy.setCompany("HCMUTE");
+            mrHuy.setEmail("huynguyen@tma.com");
+            mrHuy.setQuote("너의 눈에 비친 나의 모습이 늘 처음 만난 그 날만 같길 소리 없이 타오르는 불꽃같이");
+            mrHuy.getCategories().add(savedcat1);
+            mrHuy.setImage("mrhuy");
+            Instructor savedMrHuy = instructorRepository.save(mrHuy);
 
             Instructor lisa = new Instructor();
             lisa.setUsername("lisa");

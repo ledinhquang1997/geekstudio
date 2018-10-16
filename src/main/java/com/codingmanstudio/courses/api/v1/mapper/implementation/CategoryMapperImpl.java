@@ -4,12 +4,15 @@ import com.codingmanstudio.courses.api.v1.dto.Category.CategoryDTO;
 import com.codingmanstudio.courses.api.v1.dto.Category.CategoryWithCoursesDTO;
 import com.codingmanstudio.courses.api.v1.dto.Category.CategoryWithTopicsDTO;
 import com.codingmanstudio.courses.api.v1.dto.Course.CourseWithoutInstructorDTO;
+import com.codingmanstudio.courses.api.v1.dto.Instructor.InstructorDTO;
 import com.codingmanstudio.courses.api.v1.dto.TopicDTO;
 import com.codingmanstudio.courses.api.v1.mapper.CategoryMapper;
 import com.codingmanstudio.courses.api.v1.mapper.CourseMapper;
+import com.codingmanstudio.courses.api.v1.mapper.InstructorMapper;
 import com.codingmanstudio.courses.api.v1.mapper.TopicMapper;
 import com.codingmanstudio.courses.domain.Category;
 import com.codingmanstudio.courses.domain.Course;
+import com.codingmanstudio.courses.domain.Instructor;
 import com.codingmanstudio.courses.domain.Topic;
 import org.springframework.stereotype.Component;
 
@@ -22,9 +25,11 @@ public class CategoryMapperImpl implements CategoryMapper {
 
     private final CourseMapper courseMapper;
     private final TopicMapper topicMapper;
-    public CategoryMapperImpl(CourseMapper courseMapper, TopicMapper topicMapper) {
+    private final InstructorMapper instructorMapper;
+    public CategoryMapperImpl(CourseMapper courseMapper, TopicMapper topicMapper, InstructorMapper instructorMapper) {
         this.courseMapper = courseMapper;
         this.topicMapper = topicMapper;
+        this.instructorMapper = instructorMapper;
     }
 
 
@@ -68,12 +73,17 @@ public class CategoryMapperImpl implements CategoryMapper {
             categoryWithTopicsDTO.setDescription(category.getDescription());
             categoryWithTopicsDTO.setImage(category.getImage());
             categoryWithTopicsDTO.setTopics(this.topicSetTopicDTOSet(category.getTopics()));
+            categoryWithTopicsDTO.setInstructors(this.instructorSetToInstructorDTOSet(category.getInstructors()));
             return categoryWithTopicsDTO;
         }
     }
 
     private Set<TopicDTO> topicSetTopicDTOSet(Set<Topic> topics){
         return topics.stream().map(topicMapper::topicTopicDto).collect(Collectors.toSet());
+    }
+
+    private Set<InstructorDTO> instructorSetToInstructorDTOSet(Set<Instructor> instructors){
+        return instructors.stream().map(instructorMapper::instructorToInstructorDto).collect(Collectors.toSet());
     }
 
     private TreeSet<CourseWithoutInstructorDTO> courseSetToCourseWithCoursesDTOSet(Set<Course> courses){

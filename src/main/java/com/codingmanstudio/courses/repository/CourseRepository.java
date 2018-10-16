@@ -18,4 +18,6 @@ public interface CourseRepository extends JpaRepository<Course, String> {
     List<Course> findTop8ByOrderByRatingDesc();
 
     Page<Course> findByCategoryId(String categoryId, Pageable pageable);
+
+    Optional<Course> findTopByCategoryIdOrCategoryNameOrderByAmountStudentDesc(String categoryId,String name);
 }
