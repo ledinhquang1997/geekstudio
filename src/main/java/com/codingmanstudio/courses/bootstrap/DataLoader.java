@@ -151,9 +151,24 @@ public class DataLoader implements CommandLineRunner {
             dockerCourse.setName("Docker - magic tool");
             dockerCourse.setCost(350L);
             dockerCourse.setRating(2.5);
+            dockerCourse.getContentSummary().add("Completely understand how the stock market works.");
+            dockerCourse.getContentSummary().add("Know the history of the Stock Market and it's Evolution.");
+            dockerCourse.getContentSummary().add("Know the process that a company goes through to become a Publicly Traded Company");
+            dockerCourse.getContentSummary().add("Different Exchanges: NYSE, NASDAQ & AMEX");
+
+            dockerCourse.getRequirements().add("Basic Stock Market or Trading Knowledge");
+            dockerCourse.getRequirements().add("This is a follow up course to the course \"Foundation Stock Trading Course\"\n");
+
             dockerCourse.setImage("docker.png");
             dockerCourse.setAmountStudent(943);
-            dockerCourse.setDescription("Để giữ gìn sự trong sáng của tiếng Việt khi tham gia chat, blog, các diễn đàn, SMS… Mấy bợng đừn diếc xai trính tã nge");
+
+            dockerCourse.setDescriptionDetail("<p>This is the advanced&nbsp;course that our<strong>&nbsp;Full-Time Traders&nbsp;</strong>at the Proprietary Trading Firm Montreal&nbsp;Trading Group have taken in order to start their trading career.&nbsp;</p>\n" +
+                    "<p>This course&nbsp;includes comprehensive advanced&nbsp;material that is required to start&nbsp;trading confidently and effectively.&nbsp;You learn the complete theory behind trading and even better,&nbsp;<strong>how to put theory&nbsp;into actio</strong><strong>n</strong>. I&nbsp;will&nbsp;teach you how our full time traders are&nbsp;making&nbsp;independent market decisions&nbsp;to produce profitable consistent&nbsp;results. You will get&nbsp;an&nbsp;<strong>excellent understanding of the Tools and Techniques used by Professional Traders</strong>.</p>\n" +
+                    "<p>You will be learning from Mohsen Hassan, who is the owner of Montreal Trading Group (A proprietary Trading Firm that has 14 Full Time Traders and several Million dollars in Buying Power).</p>\n" +
+                    "<p>This course covers<strong>&nbsp;Intermediary&nbsp;and advanced level information</strong>&nbsp;to breakthrough your path to becoming a profitable trader&nbsp;in your own trading abilities.&nbsp;You're going to&nbsp;take away a&nbsp;<strong>different approach at analyzing the data</strong>, an approach that isn&rsquo;t just based on theory.&nbsp;We will also cover in depth&nbsp;<strong>2&nbsp;Strategies&nbsp;</strong>from the ground up&nbsp;that we currently run at our office.&nbsp;On top of all the material thought, I will be giving you our&nbsp;<strong>personal tricks</strong>,&nbsp;<strong>techniques</strong>&nbsp;and&nbsp;<strong>views&nbsp;</strong>on the stock market that have tremendously fast-tracked our success.</p>\n" +
+                    "<p>Trading can be a very rewarding career if done correctly. So whether you want to generate some side income by trading stocks or if you want to make trading your only source of income (like our Traders), then this course is for you.&nbsp;</p>\n" +
+                    "<p>This is a&nbsp;full course separated in 2 parts, this is the 2nd&nbsp;part of the&nbsp;series.</p>");
+            dockerCourse.setDescription("Để giữ gìn sự trong sáng của tiếng Việt \n khi tham gia chat, blog, các diễn đàn, SMS… Mấy bợng đừn diếc xai trính tã nge");
             dockerCourse.setDateCreate("03-04-2018");
 
             Course phpCourse = new Course();

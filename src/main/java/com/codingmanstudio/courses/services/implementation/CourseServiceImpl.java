@@ -1,6 +1,7 @@
 package com.codingmanstudio.courses.services.implementation;
 
 import com.codingmanstudio.courses.api.v1.dto.Course.CourseDTO;
+import com.codingmanstudio.courses.api.v1.dto.Course.CourseDetailDTO;
 import com.codingmanstudio.courses.api.v1.dto.Course.ListCourseDTO;
 import com.codingmanstudio.courses.api.v1.mapper.CourseMapper;
 import com.codingmanstudio.courses.domain.Category;
@@ -84,5 +85,14 @@ public class CourseServiceImpl implements CourseService {
                 .stream()
                 .map(courseMapper::courseToCourseDto)
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public CourseDetailDTO getCourseById(String id) {
+        Optional<Course> optionalCourse = courseRepository.findById(id);
+        if(!optionalCourse.isPresent()){
+            throw new ResourceNotFoundException("Course "+ id + " not found");
+        }
+        return courseMapper.courseToCourseDetailDto(optionalCourse.get());
     }
 }

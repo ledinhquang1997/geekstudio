@@ -1,6 +1,7 @@
 package com.codingmanstudio.courses.controller;
 
 import com.codingmanstudio.courses.api.v1.dto.Course.CourseDTO;
+import com.codingmanstudio.courses.api.v1.dto.Course.CourseDetailDTO;
 import com.codingmanstudio.courses.api.v1.dto.Course.ListCourseDTO;
 import com.codingmanstudio.courses.services.CourseService;
 import org.springframework.data.domain.Page;
@@ -42,6 +43,12 @@ public class CourseController {
     @ResponseStatus(HttpStatus.OK)
     public List<CourseDTO> getTopRatingCourses(){
         return courseService.getTopRatingCourse();
+    }
+
+    @GetMapping("/course/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public CourseDetailDTO getCourseById(@PathVariable String id){
+        return courseService.getCourseById(id);
     }
 
     @GetMapping({"/courses/by-category/{category}/{filter}/{page}","/courses/by-category/{category}/{filter}/{page}/"})

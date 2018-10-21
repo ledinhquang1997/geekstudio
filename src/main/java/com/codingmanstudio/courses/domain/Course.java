@@ -14,7 +14,9 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Getter
@@ -36,9 +38,18 @@ public class Course {
     @Lob
     private String description;
 
+    @Lob
+    private String descriptionDetail;
+
     private Long cost;
 
     private int amountStudent;
+
+    @ElementCollection
+    private Set<String> contentSummary = new HashSet<>();
+
+    @ElementCollection
+    private Set<String> requirements = new HashSet<>();
 
 
     @Max(5)
