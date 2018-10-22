@@ -286,6 +286,7 @@ public class DataLoader implements CommandLineRunner {
             Category cat2 = new Category();
             nodeJs.setCategory(cat2);
             reactJs.setCategory(cat2);
+            business.setCategory(cat2);
             cat2.getCourses().add(nodeJs);
             cat2.getCourses().add(reactJs);
             cat2.setName("Business");
@@ -293,7 +294,10 @@ public class DataLoader implements CommandLineRunner {
             cat2.setDescription("Sale, Manage, Statistic, Products,...");
 
             Category cat3 = new Category();
+
             cat3.setName("Marketing");
+            cat3.getCourses().add(marketingCourse);
+            marketingCourse.setCategory(cat3);
             cat3.setImage("marketing-icon.png");
             cat3.setDescription("SEO, Internet Marketing, Influencer Marketing, PPI, Online viral marketing,...");
             cat3.getTopics().add(savedSeo);
@@ -302,6 +306,8 @@ public class DataLoader implements CommandLineRunner {
             cat3.getTopics().add(savedAd);
 
             Category cat4 = new Category();
+            cat4.getCourses().add(electronicCourse);
+            electronicCourse.setCategory(cat4);
             cat4.setImage("engineering-icon.png");
             cat4.setName("Engineering");
             cat4.setDescription("Chemical engineering, Civil engineering, Electical, Process engineering,...");

@@ -1,13 +1,16 @@
 package com.codingmanstudio.courses.api.v1.mapper.implementation;
 
+import com.codingmanstudio.courses.api.v1.dto.Category.CategoryDTO;
 import com.codingmanstudio.courses.api.v1.dto.Course.CourseDTO;
 import com.codingmanstudio.courses.api.v1.dto.Course.CourseDetailDTO;
 import com.codingmanstudio.courses.api.v1.dto.Course.CourseWithoutInstructorDTO;
 import com.codingmanstudio.courses.api.v1.dto.Instructor.InstructorDTO;
+import com.codingmanstudio.courses.api.v1.mapper.CategoryMapper;
 import com.codingmanstudio.courses.api.v1.mapper.CourseMapper;
+import com.codingmanstudio.courses.api.v1.mapper.InstructorMapper;
+import com.codingmanstudio.courses.domain.Category;
 import com.codingmanstudio.courses.domain.Course;
 import com.codingmanstudio.courses.domain.Instructor;
-import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -15,8 +18,13 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 @Component
-@NoArgsConstructor
 public class CourseMapperImpl implements CourseMapper {
+    private final InstructorMapper instructorMapper;
+
+    public CourseMapperImpl(InstructorMapper instructorMapper) {
+        this.instructorMapper = instructorMapper;
+    }
+
     @Override
     public CourseDTO courseToCourseDto(Course course) {
         if (course == null) {
@@ -30,6 +38,7 @@ public class CourseMapperImpl implements CourseMapper {
             courseDTO.setAmountStudent(course.getAmountStudent());
             courseDTO.setRating(course.getRating());
             courseDTO.setImage(course.getImage());
+            courseDTO.setCategory(this.categoryToCategoryDto(course.getCategory()));
             courseDTO.setInstructors(this.instructorSetToInstructorDTOSet(course.getInstructors()));
             return courseDTO;
         }
@@ -73,6 +82,19 @@ public class CourseMapperImpl implements CourseMapper {
         }
     }
 
+    private CategoryDTO categoryToCategoryDto(Category category) {
+        if (category == null) {
+            return null;
+        } else {
+            CategoryDTO categoryDTO = new CategoryDTO();
+            categoryDTO.setId(category.getId());
+            categoryDTO.setName(category.getName());
+            categoryDTO.setDescription(category.getDescription());
+            categoryDTO.setImage(category.getImage());
+            return categoryDTO;
+        }
+    }
+
     private ArrayList<String> setToArrayList(Set<String> set){
         if(set==null) return null;
         ArrayList<String> list = new ArrayList<>();
@@ -95,7 +117,7 @@ public class CourseMapperImpl implements CourseMapper {
     private Set<InstructorDTO> instructorSetToInstructorDTOSet(Set<Instructor> instructors){
         if(instructors==null) return null;
         return instructors.stream()
-                .map(this::instructorToInstructorDTO)
+                .map(instructorMapper::instructorToInstructorDto)
                 .collect(Collectors.toSet());
     }
 }

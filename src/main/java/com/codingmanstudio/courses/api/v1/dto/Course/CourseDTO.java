@@ -1,5 +1,6 @@
 package com.codingmanstudio.courses.api.v1.dto.Course;
 
+import com.codingmanstudio.courses.api.v1.dto.Category.CategoryDTO;
 import com.codingmanstudio.courses.api.v1.dto.Instructor.InstructorDTO;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
@@ -22,6 +23,7 @@ public class CourseDTO implements Comparable<CourseDTO>{
     private double rating;
     private int amountStudent;
     private String image;
+    private CategoryDTO category;
     private Set<InstructorDTO> instructors = new HashSet<>();
 
     @Override

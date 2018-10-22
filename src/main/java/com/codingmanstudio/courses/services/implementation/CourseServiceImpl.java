@@ -37,7 +37,7 @@ public class CourseServiceImpl implements CourseService {
     @Override
     public ListCourseDTO getAllCourses() {
         Sort sortable = Sort.by("amountStudent").descending();
-        Pageable pageable = PageRequest.of(0, 8, sortable);
+        Pageable pageable = PageRequest.of(0, 1000, sortable);
 
         Page page = courseRepository.findAll(pageable);
         List<CourseDTO> courseDTOs = courseRepository.findAll(pageable)
