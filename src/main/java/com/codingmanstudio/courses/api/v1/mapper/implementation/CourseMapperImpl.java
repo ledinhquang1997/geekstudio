@@ -5,7 +5,6 @@ import com.codingmanstudio.courses.api.v1.dto.Course.CourseDTO;
 import com.codingmanstudio.courses.api.v1.dto.Course.CourseDetailDTO;
 import com.codingmanstudio.courses.api.v1.dto.Course.CourseWithoutInstructorDTO;
 import com.codingmanstudio.courses.api.v1.dto.Instructor.InstructorDTO;
-import com.codingmanstudio.courses.api.v1.mapper.CategoryMapper;
 import com.codingmanstudio.courses.api.v1.mapper.CourseMapper;
 import com.codingmanstudio.courses.api.v1.mapper.InstructorMapper;
 import com.codingmanstudio.courses.domain.Category;

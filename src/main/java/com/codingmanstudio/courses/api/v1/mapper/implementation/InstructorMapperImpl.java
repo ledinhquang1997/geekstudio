@@ -1,9 +1,12 @@
 package com.codingmanstudio.courses.api.v1.mapper.implementation;
 
 import com.codingmanstudio.courses.api.v1.dto.Category.CategoryDTO;
+import com.codingmanstudio.courses.api.v1.dto.Course.CourseDTO;
 import com.codingmanstudio.courses.api.v1.dto.Instructor.InstructorDTO;
+import com.codingmanstudio.courses.api.v1.dto.Instructor.InstructorWithCourseDTO;
 import com.codingmanstudio.courses.api.v1.mapper.InstructorMapper;
 import com.codingmanstudio.courses.domain.Category;
+import com.codingmanstudio.courses.domain.Course;
 import com.codingmanstudio.courses.domain.Instructor;
 import org.springframework.stereotype.Component;
 
@@ -29,11 +32,26 @@ public class InstructorMapperImpl implements InstructorMapper {
         }
     }
 
-    private CategoryDTO categoryToCategoryDTO(Category category){
-        if(category == null){
+    @Override
+    public InstructorWithCourseDTO instructorToInstructorWithCourseDTO(Instructor instructor) {
+        if (instructor == null) {
             return null;
+        } else {
+            InstructorWithCourseDTO instructorWithCourseDTO = new InstructorWithCourseDTO();
+            instructorWithCourseDTO.setName(instructor.getName());
+            instructorWithCourseDTO.setCompany(instructor.getCompany());
+            instructorWithCourseDTO.setEmail(instructor.getEmail());
+            instructorWithCourseDTO.setQuote(instructor.getQuote());
+            instructorWithCourseDTO.setImage(instructor.getImage());
+            instructorWithCourseDTO.setCourses(this.courseSetToCourseDTOSet(instructor.getCourses()));
+            return instructorWithCourseDTO;
         }
-        else {
+    }
+
+    private CategoryDTO categoryToCategoryDTO(Category category) {
+        if (category == null) {
+            return null;
+        } else {
             CategoryDTO categoryDTO = new CategoryDTO();
             categoryDTO.setId(category.getId());
             categoryDTO.setName(category.getName());
@@ -42,7 +60,27 @@ public class InstructorMapperImpl implements InstructorMapper {
         }
     }
 
-    private Set<CategoryDTO> categorySetToCategoryDTOSet(Set<Category> categories){
-       return categories.stream().map(this::categoryToCategoryDTO).collect(Collectors.toSet());
+    private CourseDTO courseToCourseDTO(Course course){
+        if (course == null) {
+            return null;
+        } else {
+            CourseDTO courseDTO = new CourseDTO();
+            courseDTO.setId(course.getId());
+            courseDTO.setName(course.getName());
+            courseDTO.setDescription(course.getDescription());
+            courseDTO.setCost(course.getCost());
+            courseDTO.setAmountStudent(course.getAmountStudent());
+            courseDTO.setRating(course.getRating());
+            courseDTO.setImage(course.getImage());
+            return courseDTO;
+        }
+    }
+
+    private Set<CategoryDTO> categorySetToCategoryDTOSet(Set<Category> categories) {
+        return categories.stream().map(this::categoryToCategoryDTO).collect(Collectors.toSet());
+    }
+
+    private Set<CourseDTO> courseSetToCourseDTOSet(Set<Course> courses){
+        return courses.stream().map(this::courseToCourseDTO).collect(Collectors.toSet());
     }
 }
