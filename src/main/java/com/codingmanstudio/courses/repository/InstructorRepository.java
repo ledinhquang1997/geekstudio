@@ -9,4 +9,6 @@ import java.util.UUID;
 
 public interface InstructorRepository extends JpaRepository<Instructor, String> {
     Optional<Instructor> findByName(String name);
+
+    Optional<Instructor> findByUsername(String instructorUsername);
 }

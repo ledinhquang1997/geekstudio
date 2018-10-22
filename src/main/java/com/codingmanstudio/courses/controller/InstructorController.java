@@ -1,5 +1,6 @@
 package com.codingmanstudio.courses.controller;
 
+import com.codingmanstudio.courses.api.v1.dto.Instructor.InstructorWithCourseDTO;
 import com.codingmanstudio.courses.api.v1.dto.Instructor.ListInstructorDTO;
 import com.codingmanstudio.courses.services.InstructorService;
 import org.springframework.http.HttpStatus;
@@ -18,5 +19,11 @@ public class InstructorController {
     @ResponseStatus(HttpStatus.OK)
     public ListInstructorDTO getAllInstructor(){
         return new ListInstructorDTO(instructorService.getAllInstructors());
+    }
+
+    @GetMapping("/{username}")
+    @ResponseStatus(HttpStatus.OK)
+    public InstructorWithCourseDTO getInstructor(@PathVariable("username") String instructorUsername){
+        return instructorService.getInstructor(instructorUsername);
     }
 }
