@@ -25,7 +25,7 @@ public class InstructorMapperImpl implements InstructorMapper {
             instructorDTO.setName(instructor.getName());
             instructorDTO.setCompany(instructor.getCompany());
             instructorDTO.setEmail(instructor.getEmail());
-            instructorDTO.setImage(instructor.getImage());
+            instructorDTO.setImage(instructor.getImage().getUrl());
             instructorDTO.setQuote(instructor.getQuote());
             instructorDTO.setCategories(this.categorySetToCategoryDTOSet(instructor.getCategories()));
             return instructorDTO;
@@ -42,7 +42,7 @@ public class InstructorMapperImpl implements InstructorMapper {
             instructorWithCourseDTO.setCompany(instructor.getCompany());
             instructorWithCourseDTO.setEmail(instructor.getEmail());
             instructorWithCourseDTO.setQuote(instructor.getQuote());
-            instructorWithCourseDTO.setImage(instructor.getImage());
+            instructorWithCourseDTO.setImage(instructor.getImage().getUrl());
             instructorWithCourseDTO.setCourses(this.courseSetToCourseDTOSet(instructor.getCourses()));
             return instructorWithCourseDTO;
         }
@@ -71,7 +71,7 @@ public class InstructorMapperImpl implements InstructorMapper {
             courseDTO.setCost(course.getCost());
             courseDTO.setAmountStudent(course.getAmountStudent());
             courseDTO.setRating(course.getRating());
-            courseDTO.setImage(course.getImage());
+            courseDTO.setImage(course.getImage().getUrl());
             return courseDTO;
         }
     }

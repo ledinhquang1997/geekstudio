@@ -29,7 +29,8 @@ public class Category {
     @Lob
     private String description;
 
-    private String image;
+    @Embedded
+    private Image image;
 
     @OneToMany(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     private Set<Course> courses = new HashSet<>();

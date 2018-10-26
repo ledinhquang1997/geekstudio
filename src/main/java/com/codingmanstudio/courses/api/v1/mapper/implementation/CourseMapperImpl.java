@@ -36,7 +36,7 @@ public class CourseMapperImpl implements CourseMapper {
             courseDTO.setCost(course.getCost());
             courseDTO.setAmountStudent(course.getAmountStudent());
             courseDTO.setRating(course.getRating());
-            courseDTO.setImage(course.getImage());
+            courseDTO.setImage(course.getImage().getUrl());
             courseDTO.setCategory(this.categoryToCategoryDto(course.getCategory()));
             courseDTO.setInstructors(this.instructorSetToInstructorDTOSet(course.getInstructors()));
             return courseDTO;
@@ -55,7 +55,7 @@ public class CourseMapperImpl implements CourseMapper {
             courseWithoutInstructorDTO.setCost(course.getCost());
             courseWithoutInstructorDTO.setAmountStudent(course.getAmountStudent());
             courseWithoutInstructorDTO.setRating(course.getRating());
-            courseWithoutInstructorDTO.setImage(course.getImage());
+            courseWithoutInstructorDTO.setImage(course.getImage().getUrl());
             return courseWithoutInstructorDTO;
         }
     }
@@ -72,7 +72,7 @@ public class CourseMapperImpl implements CourseMapper {
             courseDetailDTO.setCost(course.getCost());
             courseDetailDTO.setAmountStudent(course.getAmountStudent());
             courseDetailDTO.setRating(course.getRating());
-            courseDetailDTO.setImage(course.getImage());
+            courseDetailDTO.setImage(course.getImage().getUrl());
             courseDetailDTO.setDescriptionDetail(course.getDescriptionDetail());
             courseDetailDTO.setContentSummary(this.setToArrayList(course.getContentSummary()));
             courseDetailDTO.setRequirements(this.setToArrayList(course.getRequirements()));
@@ -89,7 +89,7 @@ public class CourseMapperImpl implements CourseMapper {
             categoryDTO.setId(category.getId());
             categoryDTO.setName(category.getName());
             categoryDTO.setDescription(category.getDescription());
-            categoryDTO.setImage(category.getImage());
+            categoryDTO.setImage(category.getImage().getUrl());
             return categoryDTO;
         }
     }
@@ -108,7 +108,7 @@ public class CourseMapperImpl implements CourseMapper {
         instructorDTO.setCompany(instructor.getCompany());
         instructorDTO.setEmail(instructor.getEmail());
         instructorDTO.setName(instructor.getName());
-        instructorDTO.setImage(instructor.getImage());
+        instructorDTO.setImage(instructor.getImage().getUrl());
         instructorDTO.setQuote(instructor.getQuote());
         return  instructorDTO;
     }

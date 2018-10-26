@@ -23,7 +23,8 @@ public class Instructor extends Account{
     @Email
     private String email;
 
-    private String image;
+    @Embedded
+    private Image image;
 
     private String quote;
 

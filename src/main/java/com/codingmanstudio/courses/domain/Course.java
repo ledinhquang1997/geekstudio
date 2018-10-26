@@ -56,7 +56,8 @@ public class Course {
     @Min(1)
     private double rating;
 
-    private String image;
+    @Embedded
+    private Image image;
 
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     private String dateCreate;

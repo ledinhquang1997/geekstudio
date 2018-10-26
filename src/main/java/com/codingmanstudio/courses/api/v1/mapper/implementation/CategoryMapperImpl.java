@@ -42,7 +42,7 @@ public class CategoryMapperImpl implements CategoryMapper {
             categoryDTO.setId(category.getId());
             categoryDTO.setName(category.getName());
             categoryDTO.setDescription(category.getDescription());
-            categoryDTO.setImage(category.getImage());
+            categoryDTO.setImage(category.getImage().getUrl());
             return categoryDTO;
         }
     }
@@ -56,7 +56,7 @@ public class CategoryMapperImpl implements CategoryMapper {
             categoryWithCoursesDTO.setId(category.getId());
             categoryWithCoursesDTO.setName(category.getName());
             categoryWithCoursesDTO.setDescription(category.getDescription());
-            categoryWithCoursesDTO.setImage(category.getImage());
+            categoryWithCoursesDTO.setImage(category.getImage().getUrl());
             categoryWithCoursesDTO.setCourses(this.courseSetToCourseWithCoursesDTOSet(category.getCourses()));
             return categoryWithCoursesDTO;
         }
@@ -71,7 +71,7 @@ public class CategoryMapperImpl implements CategoryMapper {
             categoryWithTopicsDTO.setId(category.getId());
             categoryWithTopicsDTO.setName(category.getName());
             categoryWithTopicsDTO.setDescription(category.getDescription());
-            categoryWithTopicsDTO.setImage(category.getImage());
+            categoryWithTopicsDTO.setImage(category.getImage().getUrl());
             categoryWithTopicsDTO.setTopics(this.topicSetTopicDTOSet(category.getTopics()));
             categoryWithTopicsDTO.setInstructors(this.instructorSetToInstructorDTOSet(category.getInstructors()));
             return categoryWithTopicsDTO;
