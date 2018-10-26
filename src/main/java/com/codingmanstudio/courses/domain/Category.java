@@ -1,17 +1,14 @@
 package com.codingmanstudio.courses.domain;
 
-import com.codingmanstudio.courses.repository.CourseRepository;
-import com.sun.istack.internal.NotNull;
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.UUID;
 
 @Getter
 @Setter
@@ -22,7 +19,6 @@ public class Category {
     @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
     private String id;
 
-    @NotNull
     @NotBlank
     private String name;
 
