@@ -18,7 +18,6 @@ public class Section {
     private String id;
 
     @NotBlank
-    @NotNull
     private String description;
 
     @Lob

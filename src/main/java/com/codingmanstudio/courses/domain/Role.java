@@ -13,7 +13,6 @@ public class Role {
     private Long id;
 
     @NotBlank
-    @NotNull
     private String role;
 
     @ManyToMany(mappedBy = "roles")
