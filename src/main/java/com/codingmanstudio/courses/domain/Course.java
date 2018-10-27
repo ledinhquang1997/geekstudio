@@ -1,6 +1,5 @@
 package com.codingmanstudio.courses.domain;
 
-
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
@@ -11,7 +10,6 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import java.util.HashSet;
-
 import java.util.Set;
 
 @Getter

@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 @Transactional
 public class JWTAuthenticationFilter extends GenericFilterBean {
+
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         Authentication authentication = TokenAuthenticationService.getAuthentication((HttpServletRequest) servletRequest);
