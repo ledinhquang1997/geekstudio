@@ -594,6 +594,11 @@ public class DataLoader implements CommandLineRunner {
             lisa.setImage(new Image("https://res.cloudinary.com/quanglibrary/image/upload/s--913coQRo--/v1540526988/geek/lisa_ghvqcw.jpg","e07c565e38a2e15b5d04950a41f3ba0004bba8f168cc5e0ab65257b429e166093cdc93e7c5d13a97d4d7c80013e7d75355f21f361dbd7d0256b517af70b350346a997fbdeff9e4efa4bb720b60e619809ae31ce74f6da519304dc16d4bf484652e030f0f79be044eec447c2895efb46afabbf9230d8449e42e56c963836e699ab1707aef5a148348f26d00c3d25b9e17"));
             lisa.getCourses().add(savedcScharp);
             lisa.getCourses().add(savedphpCourse);
+            lisa.getCourses().add(savedtypeScript);
+            lisa.getCourses().add(savedHtml);
+            lisa.getCourses().add(savedLinux);
+            lisa.getCourses().add(savedCss);
+            lisa.getCourses().add(savedJava);
             lisa.getCategories().add(savedcat3);
             Instructor savedLisa = instructorRepository.save(lisa);
             //Init Account ----------------------------------------------------------------------------------------------------------

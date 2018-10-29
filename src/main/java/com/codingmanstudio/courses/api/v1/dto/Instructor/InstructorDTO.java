@@ -24,4 +24,5 @@ public class InstructorDTO {
     private String image;
     private String quote;
     private Set<CategoryDTO> categories = new HashSet<>();
+    private int totalPage;
 }
