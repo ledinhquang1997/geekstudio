@@ -7,7 +7,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
 import java.util.Optional;
 
 @Component
@@ -22,8 +21,9 @@ public class DataLoader implements CommandLineRunner {
     private final InstructorRepository instructorRepository;
     private final TopicRepository topicRepository;
     private final AdminRepository adminRepository;
+    private final StudentRepository studentRepository;
 
-    public DataLoader(RoleRepository roleRepository, AccountRepository accountRepository, CategoryRepository categoryRepository, CourseRepository courseRepository, LessonRepository lessonRepository, SectionRepository sectionRepository, InstructorRepository instructorRepository, TopicRepository topicRepository, AdminRepository adminRepository) {
+    public DataLoader(RoleRepository roleRepository, AccountRepository accountRepository, CategoryRepository categoryRepository, CourseRepository courseRepository, LessonRepository lessonRepository, SectionRepository sectionRepository, InstructorRepository instructorRepository, TopicRepository topicRepository, AdminRepository adminRepository, StudentRepository studentRepository) {
         this.roleRepository = roleRepository;
         this.accountRepository = accountRepository;
         this.categoryRepository = categoryRepository;
@@ -33,6 +33,7 @@ public class DataLoader implements CommandLineRunner {
         this.instructorRepository = instructorRepository;
         this.topicRepository = topicRepository;
         this.adminRepository = adminRepository;
+        this.studentRepository = studentRepository;
     }
 
     @Transactional
@@ -601,8 +602,33 @@ public class DataLoader implements CommandLineRunner {
             lisa.getCourses().add(savedJava);
             lisa.getCategories().add(savedcat3);
             Instructor savedLisa = instructorRepository.save(lisa);
-            //Init Account ----------------------------------------------------------------------------------------------------------
 
+            // Init Student--------------------------------------------------------------------------------
+
+            Student dinhquang = new Student();
+            dinhquang.setUsername("dinhquang");
+            dinhquang.setEncrytedPassword(EncrytedPasswordUtils.encrytePassword("123"));
+            dinhquang.setEmail("ledinhquang@gmail.com");
+            dinhquang.setName("Lê Đình Quang");
+//          dinhquang.setDob(new Date("03-04-2018"));
+            dinhquang.setImage(new Image("https://res.cloudinary.com/quanglibrary/image/upload/s--913coQRo--/v1540526988/geek/lisa_ghvqcw.jpg","e07c565e38a2e15b5d04950a41f3ba0004bba8f168cc5e0ab65257b429e166093cdc93e7c5d13a97d4d7c80013e7d75355f21f361dbd7d0256b517af70b350346a997fbdeff9e4efa4bb720b60e619809ae31ce74f6da519304dc16d4bf484652e030f0f79be044eec447c2895efb46afabbf9230d8449e42e56c963836e699ab1707aef5a148348f26d00c3d25b9e17"));
+            dinhquang.setSchool("UTE");
+
+            dinhquang.addCourse(saveddockerCourse);
+            dinhquang.addCourse(savedphpCourse);
+            Student savedDinhQuang = studentRepository.save(dinhquang);
+
+            Student hongvan = new Student();
+            hongvan.setUsername("hongvan");
+            hongvan.setEncrytedPassword(EncrytedPasswordUtils.encrytePassword("123"));
+            hongvan.setName("Hồng Vân");
+            hongvan.setEmail("hongvan@gmail.com");
+            hongvan.setImage(new Image("https://res.cloudinary.com/quanglibrary/image/upload/s--913coQRo--/v1540526988/geek/lisa_ghvqcw.jpg","e07c565e38a2e15b5d04950a41f3ba0004bba8f168cc5e0ab65257b429e166093cdc93e7c5d13a97d4d7c80013e7d75355f21f361dbd7d0256b517af70b350346a997fbdeff9e4efa4bb720b60e619809ae31ce74f6da519304dc16d4bf484652e030f0f79be044eec447c2895efb46afabbf9230d8449e42e56c963836e699ab1707aef5a148348f26d00c3d25b9e17"));
+            hongvan.setSchool("PVS");
+            hongvan.addCourse(saveddockerCourse);
+            Student savedHongVan = studentRepository.save(hongvan);
+
+            //Init Account ----------------------------------------------------------------------------------------------------------
             Account user1 = new Account();
             user1.setUsername("quang");
             user1.setEncrytedPassword(EncrytedPasswordUtils.encrytePassword("123"));
@@ -636,25 +662,45 @@ public class DataLoader implements CommandLineRunner {
 //                System.out.println(c.getName());
 //            }
 
-            Optional<Instructor> instructorOptional = instructorRepository.findByName("Quilliam Johnson");
-            if (instructorOptional.isPresent()) {
-                Instructor quillfound = instructorOptional.get();
-                Optional<Course> courseOptional = courseRepository.findByName("Node JS Basic");
-                if (courseOptional.isPresent()) {
-                    Course nodefound = courseOptional.get();
-                    quillfound.getCourses().add(nodefound);
-                    instructorRepository.save(quillfound);
+//            Optional<Instructor> instructorOptional = instructorRepository.findByName("Quilliam Johnson");
+//            if (instructorOptional.isPresent()) {
+//                Instructor quillfound = instructorOptional.get();
+//                Optional<Course> courseOptional = courseRepository.findByName("Node JS Basic");
+//                if (courseOptional.isPresent()) {
+//                    Course nodefound = courseOptional.get();
+//                    quillfound.getCourses().add(nodefound);
+//                    instructorRepository.save(quillfound);
+//                }
+//            }
+//
+//            Category en = categoryRepository.findByName("Engineering").get();
+//
+//
+//            Optional<Category> optionalCategory = categoryRepository.findByNameOrId(en.getId(),en.getId());
+//            if(optionalCategory.isPresent()){
+//                System.out.println(optionalCategory.get().getName());
+//            }
+
+            Optional<Student> accountOptional = studentRepository.findByUsername("dinhquang");
+            if (accountOptional.isPresent()) {
+                System.out.println("found");
+                System.out.println(accountOptional.get().getEncrytedPassword());
+
+                System.out.println(accountOptional.get().getCourses().size());
+                for (StudentCourse ac : accountOptional.get().getCourses()
+                ) {
+                    System.out.println(ac.getCourse().getName());
                 }
             }
 
-            Category en = categoryRepository.findByName("Engineering").get();
-
-
-            Optional<Category> optionalCategory = categoryRepository.findByNameOrId(en.getId(),en.getId());
-            if(optionalCategory.isPresent()){
-                System.out.println(optionalCategory.get().getName());
+            Optional<Course> courseOptional = courseRepository.findByName("Docker - magic tool");
+            if (courseOptional.isPresent()) {
+                System.out.println("found");
+                for (StudentCourse ac : courseOptional.get().getStudents()
+                ) {
+                    System.out.println(ac.getStudent().getName());
+                }
             }
-
         }
 
 

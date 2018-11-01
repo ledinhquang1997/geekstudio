@@ -62,6 +62,9 @@ public class Course {
     @ManyToMany(fetch = FetchType.EAGER,mappedBy = "courses")
     private Set<Instructor> instructors = new HashSet<>();
 
+    @OneToMany(fetch = FetchType.LAZY,mappedBy = "student")
+    private Set<StudentCourse> students = new HashSet<>();
+
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "courses_topics", joinColumns = @JoinColumn(name = "course_id"), inverseJoinColumns = @JoinColumn(name = "topic_id"))
     private Set<Topic> topics = new HashSet<>();
