@@ -1,7 +1,10 @@
 package com.codingmanstudio.courses.filters;
 
+import com.codingmanstudio.courses.api.v1.dto.Student.StudentDTO;
 import com.codingmanstudio.courses.domain.Account;
+import com.codingmanstudio.courses.services.AccountService;
 import com.codingmanstudio.courses.services.TokenAuthenticationService;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -18,10 +21,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 @Transactional
 public class JWTLoginFilter extends AbstractAuthenticationProcessingFilter {
-
-    public JWTLoginFilter(String url, AuthenticationManager authManager) {
+    private final AccountService accountService;
+    public JWTLoginFilter(String url, AuthenticationManager authManager, AccountService accountService) {
         super(new AntPathRequestMatcher(url));
         setAuthenticationManager(authManager);
+        this.accountService=accountService;
     }
 
     @Override
@@ -38,5 +42,13 @@ public class JWTLoginFilter extends AbstractAuthenticationProcessingFilter {
     @Override
     protected void successfulAuthentication(HttpServletRequest request, HttpServletResponse response, FilterChain chain, Authentication authResult) throws IOException, ServletException {
         TokenAuthenticationService.addAuthentication(response, authResult);
+        response.setCharacterEncoding("UTF-8");
+        response.setContentType("application/json;charset=UTF-8");
+        Object userInfo= accountService.getUserInfo(request.getParameter("username"));
+        ObjectMapper objectMapper = new ObjectMapper();
+        String userInfoString= objectMapper.writeValueAsString(userInfo);
+        response.getWriter().write(userInfoString);
+        response.addHeader("userInfo",userInfoString);
+
     }
 }

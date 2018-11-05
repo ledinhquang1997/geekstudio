@@ -28,7 +28,7 @@ public class Student extends Account{
 
     private Date dob;
 
-    @OneToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL ,mappedBy = "course")
+    @OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL ,mappedBy = "student")
     private Set<StudentCourse> courses = new HashSet<>();
 
     public void addCourse(Course course){

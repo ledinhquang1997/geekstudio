@@ -3,20 +3,22 @@ package com.codingmanstudio.courses.services.implementation;
 import com.codingmanstudio.courses.api.v1.dto.Course.CourseDTO;
 import com.codingmanstudio.courses.api.v1.dto.Course.CourseDetailDTO;
 import com.codingmanstudio.courses.api.v1.dto.Course.ListCourseDTO;
+import com.codingmanstudio.courses.api.v1.dto.Course.StudentCourseDTO;
 import com.codingmanstudio.courses.api.v1.mapper.CourseMapper;
 import com.codingmanstudio.courses.domain.Category;
 import com.codingmanstudio.courses.domain.Course;
+import com.codingmanstudio.courses.domain.Student;
+import com.codingmanstudio.courses.domain.StudentCourse;
 import com.codingmanstudio.courses.exceptions.ResourceNotFoundException;
 import com.codingmanstudio.courses.repository.CategoryRepository;
 import com.codingmanstudio.courses.repository.CourseRepository;
-import com.codingmanstudio.courses.services.CategoryService;
+import com.codingmanstudio.courses.repository.StudentRepository;
 import com.codingmanstudio.courses.services.CourseService;
 import org.springframework.data.domain.*;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
@@ -24,11 +26,13 @@ public class CourseServiceImpl implements CourseService {
     private final CourseRepository courseRepository;
     private final CourseMapper courseMapper;
     private final CategoryRepository categoryRepository;
+    private final StudentRepository studentRepository;
 
-    public CourseServiceImpl(CourseRepository courseRepository, CourseMapper courseMapper, CategoryRepository categoryRepository) {
+    public CourseServiceImpl(CourseRepository courseRepository, CourseMapper courseMapper, CategoryRepository categoryRepository, StudentRepository studentRepository) {
         this.courseRepository = courseRepository;
         this.courseMapper = courseMapper;
         this.categoryRepository = categoryRepository;
+        this.studentRepository = studentRepository;
     }
 
     private static final String POPUPLAR = "POPULAR";
@@ -94,5 +98,20 @@ public class CourseServiceImpl implements CourseService {
             throw new ResourceNotFoundException("Course "+ id + " not found");
         }
         return courseMapper.courseToCourseDetailDto(optionalCourse.get());
+    }
+
+    @Override
+    public List<StudentCourseDTO> getCoursesOfStudent(String username) {
+        Optional<Student> studentOptional = studentRepository.findByUsername(username);
+        if(!studentOptional.isPresent()){
+            throw new ResourceNotFoundException("Username "+username+" not found");
+        }
+        Student student = studentOptional.get();
+
+        for (StudentCourse ac : student.getCourses()
+        ) {
+            System.out.println(ac.getCourse().getName()+ " "+ac.getLearnerRating());
+        }
+        return student.getCourses().stream().map(courseMapper::courseToStudentCourseDto).collect(Collectors.toList());
     }
 }

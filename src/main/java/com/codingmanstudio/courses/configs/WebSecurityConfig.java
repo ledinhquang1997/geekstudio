@@ -2,6 +2,7 @@ package com.codingmanstudio.courses.configs;
 
 import com.codingmanstudio.courses.filters.JWTAuthenticationFilter;
 import com.codingmanstudio.courses.filters.JWTLoginFilter;
+import com.codingmanstudio.courses.services.AccountService;
 import com.codingmanstudio.courses.services.UserDetailsServiceImpl;
 import com.google.common.collect.ImmutableList;
 import org.springframework.context.annotation.Bean;
@@ -22,15 +23,16 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
-
+    private final AccountService accountService;
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         final CorsConfiguration configuration = new CorsConfiguration();
         configuration.setAllowedOrigins(ImmutableList.of("*"));
         configuration.setAllowedMethods(ImmutableList.of("HEAD", "GET", "POST", "PUT", "DELETE", "PATCH"));
         configuration.setAllowCredentials(true);
-        configuration.setAllowedHeaders(ImmutableList.of("Authorization", "Cache-Control", "Content-Type"));
+        configuration.setAllowedHeaders(ImmutableList.of("Authorization", "Cache-Control", "Content-Type","userInfo"));
         configuration.addExposedHeader("Authorization");
+        configuration.addExposedHeader("userInfo");
         final UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
         return source;
@@ -45,7 +47,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final UserDetailsServiceImpl userDetailsService;
 
-    public WebSecurityConfig(UserDetailsServiceImpl userDetailsService) {
+    public WebSecurityConfig(AccountService accountService, UserDetailsServiceImpl userDetailsService) {
+        this.accountService = accountService;
         this.userDetailsService = userDetailsService;
     }
 
@@ -64,7 +67,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/quill/**").access("hasAnyRole('ROLE_MANA')")
                 .anyRequest().authenticated()
                 .and()
-                .addFilterBefore(new JWTLoginFilter("/login", authenticationManager()), UsernamePasswordAuthenticationFilter.class)
+                .addFilterBefore(new JWTLoginFilter("/login", authenticationManager(),accountService), UsernamePasswordAuthenticationFilter.class)
                 .addFilterBefore(new JWTAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
     }
 

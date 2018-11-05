@@ -4,12 +4,14 @@ import com.codingmanstudio.courses.api.v1.dto.Category.CategoryDTO;
 import com.codingmanstudio.courses.api.v1.dto.Course.CourseDTO;
 import com.codingmanstudio.courses.api.v1.dto.Course.CourseDetailDTO;
 import com.codingmanstudio.courses.api.v1.dto.Course.CourseWithoutInstructorDTO;
+import com.codingmanstudio.courses.api.v1.dto.Course.StudentCourseDTO;
 import com.codingmanstudio.courses.api.v1.dto.Instructor.InstructorDTO;
 import com.codingmanstudio.courses.api.v1.mapper.CourseMapper;
 import com.codingmanstudio.courses.api.v1.mapper.InstructorMapper;
 import com.codingmanstudio.courses.domain.Category;
 import com.codingmanstudio.courses.domain.Course;
 import com.codingmanstudio.courses.domain.Instructor;
+import com.codingmanstudio.courses.domain.StudentCourse;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -78,6 +80,28 @@ public class CourseMapperImpl implements CourseMapper {
             courseDetailDTO.setRequirements(this.setToArrayList(course.getRequirements()));
             courseDetailDTO.setInstructors(this.instructorSetToInstructorDTOSet(course.getInstructors()));
             return courseDetailDTO;
+        }
+    }
+
+    @Override
+    public StudentCourseDTO courseToStudentCourseDto(StudentCourse studentCourse) {
+        if (studentCourse == null) {
+            return null;
+        } else {
+            StudentCourseDTO studentCourseDTO = new StudentCourseDTO();
+            studentCourseDTO.setId(studentCourse.getCourse().getId());
+            studentCourseDTO.setName(studentCourse.getCourse().getName());
+            studentCourseDTO.setDescription(studentCourse.getCourse().getDescription());
+            studentCourseDTO.setCost(studentCourse.getCourse().getCost());
+            studentCourseDTO.setAmountStudent(studentCourse.getCourse().getAmountStudent());
+            studentCourseDTO.setRating(studentCourse.getCourse().getRating());
+            studentCourseDTO.setImage(studentCourse.getCourse().getImage().getUrl());
+            studentCourseDTO.setCategory(this.categoryToCategoryDto(studentCourse.getCourse().getCategory()));
+            studentCourseDTO.setInstructors(this.instructorSetToInstructorDTOSet(studentCourse.getCourse().getInstructors()));
+            studentCourseDTO.setLessonProgress(studentCourse.getLessonProgress());
+            studentCourseDTO.setSectionProgress(studentCourse.getSectionProgress());
+            studentCourseDTO.setLearnerRating(studentCourse.getLearnerRating());
+            return studentCourseDTO;
         }
     }
 

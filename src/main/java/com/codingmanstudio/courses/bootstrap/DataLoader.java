@@ -606,6 +606,7 @@ public class DataLoader implements CommandLineRunner {
             // Init Student--------------------------------------------------------------------------------
 
             Student dinhquang = new Student();
+            dinhquang.getRoles().add(saved_role_learner);
             dinhquang.setUsername("dinhquang");
             dinhquang.setEncrytedPassword(EncrytedPasswordUtils.encrytePassword("123"));
             dinhquang.setEmail("ledinhquang@gmail.com");
@@ -619,6 +620,7 @@ public class DataLoader implements CommandLineRunner {
             Student savedDinhQuang = studentRepository.save(dinhquang);
 
             Student hongvan = new Student();
+            hongvan.getRoles().add(saved_role_learner);
             hongvan.setUsername("hongvan");
             hongvan.setEncrytedPassword(EncrytedPasswordUtils.encrytePassword("123"));
             hongvan.setName("Hồng Vân");
@@ -627,6 +629,28 @@ public class DataLoader implements CommandLineRunner {
             hongvan.setSchool("PVS");
             hongvan.addCourse(saveddockerCourse);
             Student savedHongVan = studentRepository.save(hongvan);
+
+            Student khanhhoang = new Student();
+            khanhhoang.getRoles().add(saved_role_learner);
+            khanhhoang.setUsername("khanhhoang");
+            khanhhoang.setEncrytedPassword(EncrytedPasswordUtils.encrytePassword("123"));
+            khanhhoang.setName("Khánh Hoàng");
+            khanhhoang.setEmail("khanhhoang@gmail.com");
+            khanhhoang.setImage(new Image("https://res.cloudinary.com/quanglibrary/image/upload/s--913coQRo--/v1540526988/geek/lisa_ghvqcw.jpg","e07c565e38a2e15b5d04950a41f3ba0004bba8f168cc5e0ab65257b429e166093cdc93e7c5d13a97d4d7c80013e7d75355f21f361dbd7d0256b517af70b350346a997fbdeff9e4efa4bb720b60e619809ae31ce74f6da519304dc16d4bf484652e030f0f79be044eec447c2895efb46afabbf9230d8449e42e56c963836e699ab1707aef5a148348f26d00c3d25b9e17"));
+            khanhhoang.setSchool("PVS");
+
+
+            Student savedKhanhHoang = studentRepository.save(khanhhoang);
+
+
+            StudentCourse studentCourse=new StudentCourse(khanhhoang,saveddockerCourse);
+
+//            studentCourse.setCourse(saveddockerCourse);
+//            studentCourse.setStudent(savedKhanhHoang);
+
+            savedKhanhHoang.getCourses().add(studentCourse);
+
+            studentRepository.save(savedKhanhHoang);
 
             //Init Account ----------------------------------------------------------------------------------------------------------
             Account user1 = new Account();

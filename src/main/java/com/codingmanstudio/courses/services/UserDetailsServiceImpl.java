@@ -1,5 +1,7 @@
 package com.codingmanstudio.courses.services;
 
+import com.codingmanstudio.courses.domain.CustomUserDetail;
+import com.codingmanstudio.courses.domain.Student;
 import com.codingmanstudio.courses.repository.AccountRepository;
 import com.codingmanstudio.courses.domain.Account;
 import com.codingmanstudio.courses.domain.Role;
@@ -30,6 +32,13 @@ public class UserDetailsServiceImpl implements UserDetailsService {
             throw new RuntimeException();
         }
         Account account= accountCredentials.get();
+        if(account instanceof Student){
+            Student student= (Student) account;
+            CustomUserDetail customUserDetail = new CustomUserDetail(account.getUsername(),account.getEncrytedPassword(),getAuthorities(account.getRoles()));
+            customUserDetail.setEmail(student.getEmail());
+            customUserDetail.setSchool(student.getSchool());
+            return customUserDetail;
+        }
         return new User(account.getUsername(),account.getEncrytedPassword(),getAuthorities(account.getRoles()));
     }
 
