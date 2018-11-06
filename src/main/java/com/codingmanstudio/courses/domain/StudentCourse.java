@@ -40,4 +40,6 @@ public class StudentCourse {
     private int sectionProgress;
     @Column
     private Double learnerRating;
+
+
 }

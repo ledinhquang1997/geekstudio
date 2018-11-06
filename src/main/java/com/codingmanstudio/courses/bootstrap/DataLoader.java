@@ -317,18 +317,21 @@ public class DataLoader implements CommandLineRunner {
             //Init Lesson ----------------------------------------------------------------------------------------------------------
 
             Lesson nodeJsLesson1 = new Lesson();
-            nodeJsLesson1.setName("Node js chap 1");
+            nodeJsLesson1.setOrdinalNumber(1);
+            nodeJsLesson1.setName("Deploy Node.js Express Application in App Engine");
             nodeJsLesson1.setDescription("YG Entertainment Inc. (thay mặt cho YG Entertainment); ASCAP, Abramus Digital, SODRAC, UMPG Publishing, UBEM và 13 Hội bảo vệ quyền âm nhạc");
             nodeJsLesson1.setCourse(nodeJs);
             nodeJs.getLessons().add(nodeJsLesson1);
 
             Lesson nodeJsLesson2 = new Lesson();
-            nodeJsLesson2.setName("Node js chap 2");
+            nodeJsLesson2.setOrdinalNumber(2);
+            nodeJsLesson2.setName("Updating the Node App");
             nodeJsLesson2.setDescription("Warning: Establishing SSL connection without server's identity verification is not recommended [duplicate]");
             nodeJsLesson2.setCourse(nodeJs);
             nodeJs.getLessons().add(nodeJsLesson2);
 
             Lesson nodeJsLesson3 = new Lesson();
+            nodeJsLesson3.setOrdinalNumber(3);
             nodeJsLesson3.setName("Node js chap 3");
             nodeJsLesson3.setDescription("Establishing SSL connection without server's identity verification is not recommended." +
                     " According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set.");
@@ -380,54 +383,194 @@ public class DataLoader implements CommandLineRunner {
             //Init Section ----------------------------------------------------------------------------------------------------------
 
             Section sec1Node1 = new Section();
-            sec1Node1.setDescription("Sự phù hợp với đặc tả của JPA");
-            sec1Node1.setContent("Hibernate là cài đặt ORM Java thành công nhất. Không ngạc nhiên khi mà các đặc tả cho Java persistence API (JPA) bị ảnh hưởng nhiều bởi Hibernate API. Cũng không ngạc nhiên khi Hibernate là ORM Framework phổ biến nhất.");
+            sec1Node1.setOrdinalNumber(1);
+            sec1Node1.setDescription("Overview");
+            sec1Node1.setContent("<p>Google App Engine applications are easy to create, easy to maintain, and easy to scale as your traffic and data storage needs change. With App Engine, there are no servers to maintain. You simply upload your application and it's ready to go.</p>\n" +
+                    "<p>App Engine applications automatically scale based on incoming traffic. load balancing, microservices, authorization, SQL and NoSQL databases, Memcache, traffic splitting, logging, search, versioning, roll out and roll backs, and security scanning are all supported natively and are highly customizable.</p>\n" +
+                    "<p>App Engine's environments, the&nbsp;<a href=\"https://cloud.google.com/appengine/docs/about-the-standard-environment\" target=\"_blank\">Standard Environment</a>&nbsp;and the&nbsp;<a href=\"https://cloud.google.com/appengine/docs/flexible/\" target=\"_blank\">Flexible environment</a>, support a host of programming languages, including Java, Python, PHP, Node.js, Go, etc.. The two environments give users maximum flexibility in how their application behaves since each environment has certain strengths. Read&nbsp;<a href=\"https://cloud.google.com/appengine/docs/the-appengine-environments\" target=\"_blank\">The App Engine Environments</a>&nbsp;for more information.</p>\n" +
+                    "<p>In this codelab, you will learn how to to connect to computing resources hosted on Google Cloud Platform via the web. You will learn how to use Cloud Shell and the Cloud SDK gcloud command.</p>\n" +
+                    "<p>This tutorial uses the sample code from the&nbsp;<a href=\"https://github.com/GoogleCloudPlatform/nodejs-docs-samples\" target=\"_blank\">Google Cloud Node.js Getting Started guide</a>.</p>\n" +
+                    "<h3 class=\"checklist\"><strong>What you'll learn</strong></h3>\n" +
+                    "<ul class=\"checklist\">\n" +
+                    "<li>How to create a Node.js Express application on Google App Engine.</li>\n" +
+                    "<li>How to update the code without taking the server down.</li>\n" +
+                    "</ul>\n" +
+                    "<h3><strong>What you'll need</strong></h3>\n" +
+                    "<ul>\n" +
+                    "<li>A Google Cloud Platform Project</li>\n" +
+                    "<li>A Browser, such&nbsp;<a href=\"https://www.google.com/chrome/browser/desktop/\" target=\"_blank\">Chrome</a>&nbsp;or&nbsp;<a href=\"https://www.mozilla.org/firefox/\" target=\"_blank\">Firefox</a></li>\n" +
+                    "<li>Familiarity with standard Linux text editors such as Vim, EMACs or Nano</li>\n" +
+                    "</ul>");
             sec1Node1.setLesson(nodeJsLesson1);
             nodeJsLesson1.getSections().add(sec1Node1);
 
             Section sec2Node1 = new Section();
-            sec2Node1.setDescription(" Sự khác nhau giữa các hành động thực thi");
-            sec2Node1.setContent("Các method persist, save, update, merge, saveOrUpdate không lập tức đưa ra kết quả tương ứng SQL UPDATE hoặc INSERT. Thực tế thì việc cập nhật dữ liệu vào database xảy ra khi transaction được commit hoặc flushing session. Cũng không ngạc nhiên khi Hibernate là ORM Framework phổ biến nhất.");
+            sec2Node1.setOrdinalNumber(2);
+            sec2Node1.setDescription("Setup and Requirements");
+            sec2Node1.setContent("<h2><strong>Self-paced environment setup</strong></h2>\n" +
+                    "<p>If you don't already have a Google Account (Gmail or Google Apps), you must&nbsp;<a href=\"https://accounts.google.com/SignUp\" target=\"_blank\">create one</a>. Sign-in to Google Cloud Platform console (<a href=\"http://console.cloud.google.com/\" target=\"_blank\">console.cloud.google.com</a>) and create a new project:</p>\n" +
+                    "<p><img src=\"https://codelabs.developers.google.com/codelabs/cloud-app-engine-node/img/3c50189ec031c0cf.png\" /></p>\n" +
+                    "<p><img src=\"https://codelabs.developers.google.com/codelabs/cloud-app-engine-node/img/f8a3bda1aa66cf2f.png\" /></p>\n" +
+                    "<p>Remember the project ID, a unique name across all Google Cloud projects (the name above has already been taken and will not work for you, sorry!). It will be referred to later in this codelab as&nbsp;<code>PROJECT_ID</code>.</p>\n" +
+                    "<p>Next, you'll need to&nbsp;<a href=\"https://console.developers.google.com/billing\" target=\"_blank\">enable billing</a>&nbsp;in the Developers Console in order to use Google Cloud resources.</p>\n" +
+                    "<p>Running through this codelab shouldn't cost you more than a few dollars, but it could be more if you decide to use more resources or if you leave them running (see \"cleanup\" section at the end of this document).</p>\n" +
+                    "<p>New users of Google Cloud Platform are eligible for a&nbsp;<a href=\"https://console.developers.google.com/billing/freetrial?hl=en\" target=\"_blank\">$300 free trial</a>.</p>\n" +
+                    "<h2><strong>Google Cloud Shell</strong></h2>\n" +
+                    "<p>While Google Cloud can be operated remotely from your laptop, in this codelab we will be using&nbsp;<a href=\"https://cloud.google.com/cloud-shell/\" target=\"_blank\">Google Cloud Shell</a>, a command line environment running in the Cloud. This Debian-based virtual machine is loaded with all the development tools you'll need (<code>gcloud</code>,&nbsp;<code>node,</code>&nbsp;<code>npm</code>&nbsp;and more), it offers a persistent 5GB home directory, and runs on the Google Cloud, greatly enhancing network performance and authentication. This means that all you will need for this codelab is a browser (yes, it works on a Chromebook).</p>\n" +
+                    "<p>To activate Google Cloud Shell, from the developer console simply click the button on the top right-hand side (it should only take a few moments to provision and connect to the environment):</p>\n" +
+                    "<p><img src=\"https://codelabs.developers.google.com/codelabs/cloud-app-engine-node/img/5f504766b9b3be17.png\" /></p>\n" +
+                    "<p><img src=\"https://codelabs.developers.google.com/codelabs/cloud-app-engine-node/img/c0726a5e7bd6ec39.png\" /></p>\n" +
+                    "<p><img src=\"https://codelabs.developers.google.com/codelabs/cloud-app-engine-node/img/9f0e51b578fecce5.png\" /></p>\n" +
+                    "<p>Once connected to the cloud shell, you should see that you are already authenticated and that the project is already set to your&nbsp;<code>PROJECT_ID</code>&nbsp;:</p>\n" +
+                    "<pre>$ gcloud auth list\n" +
+                    "Credentialed accounts:\n" +
+                    " - &lt;myaccount&gt;@&lt;mydomain&gt;.com (active)</pre>\n" +
+                    "<aside class=\"special\">\n" +
+                    "<p><strong>Note:&nbsp;</strong><code>gcloud</code>&nbsp;is the powerful and unified command-line tool for Google Cloud Platform. Full documentation is available from&nbsp;<a href=\"https://cloud.google.com/sdk/gcloud/\" target=\"_blank\">https://cloud.google.com/sdk/gcloud</a>. It comes pre-installed on CloudShell and you will surely enjoy its support for tab-completion.</p>\n" +
+                    "</aside>\n" +
+                    "<pre>$ gcloud config list project\n" +
+                    "[core]\n" +
+                    "project = &lt;PROJECT_ID&gt;</pre>\n" +
+                    "<p>If for some reason the project is not set, simply issue the following command :</p>\n" +
+                    "<pre>$ gcloud config set project &lt;PROJECT_ID&gt;</pre>\n" +
+                    "<p>Looking for you&nbsp;<code>PROJECT_ID</code>? Check out what ID you used in the setup steps or look it up in the console dashboard :</p>\n" +
+                    "<p><img src=\"https://codelabs.developers.google.com/codelabs/cloud-app-engine-node/img/e40be8c610cd41c0.png\" /></p>\n" +
+                    "<h2><strong>Start Cloud Shell</strong></h2>\n" +
+                    "<p>Navigate to the the Google Cloud Console from another browser tab/window, to&nbsp;<a href=\"https://console.cloud.google.com/\" target=\"_blank\">https://console.cloud.google.com</a>. Use the login credential given to you by the lab proctor.</p>\n" +
+                    "<p>You will do all of the work from the&nbsp;<a href=\"https://cloud.google.com/developer-shell/#how_do_i_get_started\" target=\"_blank\">Google Cloud Shell</a>,<a href=\"https://cloud.google.com/developer-shell/#how_do_i_get_started\" target=\"_blank\">&nbsp;a command line environment running in the Cloud</a>. This Debian-based virtual machine is loaded with all the development tools you'll need (<code>gcloud</code>,&nbsp;<code>git,</code>&nbsp;<code>node,</code>&nbsp;<code>npm</code>&nbsp;and others) and offers a persistent 5GB home directory. Open the Google Cloud Shell by clicking on the icon on the top right of the screen:</p>\n" +
+                    "<p><img src=\"https://codelabs.developers.google.com/codelabs/cloud-app-engine-node/img/5f504766b9b3be17.png\" /></p>");
             sec2Node1.setLesson(nodeJsLesson1);
             nodeJsLesson1.getSections().add(sec2Node1);
 
             Section sec3Node1 = new Section();
-            sec3Node1.setDescription("Persist");
-            sec3Node1.setContent("Điều gì xảy ra sau khi method persist được gọi? Đối tượng person bị đổi trạng thái từ transient sang persistent. Đối tượng vào trong persistence context nhưng vẫn chưa được lưu vào database.");
+            sec3Node1.setOrdinalNumber(3);
+            sec3Node1.setDescription("Get the Getting Started Example source code");
+            sec3Node1.setContent("<p>After Cloud Shell launches, you can use the command line to clone the example source code in the home directory:</p>\n" +
+                    "<pre><code><span class=\"pln\">git clone https</span><span class=\"pun\">:</span><span class=\"com\">//github.com/GoogleCloudPlatform/nodejs-docs-samples.git &amp;&amp; \\</span><span class=\"pln\">\n" +
+                    "cd nodejs</span><span class=\"pun\">-</span><span class=\"pln\">docs</span><span class=\"pun\">-</span><span class=\"pln\">samples</span><span class=\"pun\">/</span><span class=\"pln\">appengine</span><span class=\"pun\">/</span><span class=\"pln\">hello</span><span class=\"pun\">-</span><span class=\"pln\">world</span><span class=\"pun\">/</span><span class=\"pln\">standard</span><span class=\"pun\">/</span></code></pre>\n" +
+                    "<p>Now, install the dependencies with&nbsp;<code>npm</code>:</p>\n" +
+                    "<pre><code><span class=\"pln\">npm install</span></code></pre>");
             sec3Node1.setLesson(nodeJsLesson1);
             nodeJsLesson1.getSections().add(sec3Node1);
 
+
             Section sec1Node2 = new Section();
-            sec1Node2.setDescription("Sự phù hợp với đặc tả của JPA");
-            sec1Node2.setContent("Hibernate là cài đặt ORM Java thành công nhất. Không ngạc nhiên khi mà các đặc tả cho Java persistence API (JPA) bị ảnh hưởng nhiều bởi Hibernate API. Cũng không ngạc nhiên khi Hibernate là ORM Framework phổ biến nhất.");
+            sec1Node2.setOrdinalNumber(1);
+            sec1Node2.setDescription("Run the Application Locally");
+            sec1Node2.setContent("<p>You can start the Node.js application normally with&nbsp;<code>npm</code>:</p>\n" +
+                    "<pre><code><span class=\"pln\">npm start</span></code></pre>\n" +
+                    "<p>Once the application started, click on the Web Preview icon<img src=\"https://codelabs.developers.google.com/codelabs/cloud-app-engine-node/img/2db57663e4b2d819.png\" />in the Cloud Shell toolbar and choose&nbsp;<strong>preview on port 8080</strong>.</p>\n" +
+                    "<p><img src=\"https://codelabs.developers.google.com/codelabs/cloud-app-engine-node/img/1ccb86d5704356bc.png\" /></p>\n" +
+                    "<p>A tab in your browser opens and connects to the server you just started.</p>\n" +
+                    "<p><img src=\"https://codelabs.developers.google.com/codelabs/cloud-app-engine-node/img/13fec253414127d.png\" /></p>");
             sec1Node2.setLesson(nodeJsLesson2);
             nodeJsLesson2.getSections().add(sec1Node2);
 
             Section sec2Node2 = new Section();
-            sec2Node2.setDescription(" Sự khác nhau giữa các hành động thực thi");
-            sec2Node2.setContent("Các method persist, save, update, merge, saveOrUpdate không lập tức đưa ra kết quả tương ứng SQL UPDATE hoặc INSERT. Thực tế thì việc cập nhật dữ liệu vào database xảy ra khi transaction được commit hoặc flushing session. Cũng không ngạc nhiên khi Hibernate là ORM Framework phổ biến nhất.");
+            sec2Node2.setOrdinalNumber(2);
+
+            sec2Node2.setDescription("Deploying the Application into App Engine");
+            sec2Node2.setContent("App Engine uses a file called app.yaml to describe an application's deployment configuration. If this file is not present, App Engine will try to guess the deployment configuration. However, it is a good idea to provide this file.\n" +
+                    "\n" +
+                    "Open app.yaml to see what it contains. You can use vim, nano,or emacs to edit the file or use the code editor:\n" +
+                    "\n" +
+                    "\n" +
+                    "\n" +
+                    "app.yaml\n" +
+                    "runtime: nodejs8\n" +
+                    "This is the basic configuration needed to deploy a Node.js application. You can learn more about configuring App Engine here.\n" +
+                    "\n" +
+                    "To deploy your application into App Engine environment, run gcloud app deploy:\n" +
+                    "\n" +
+                    "gcloud app deploy\n" +
+                    "Because this is the first time you are deploying App Engine, the tool will prompt you to select a location to deploy the app. For this lab choose us-central, which is choice 9.\n" +
+                    "\n" +
+                    "\n" +
+                    "\n" +
+                    "First time deployment up to 2 minutes.\n" +
+                    "\n" +
+                    "After the application is deployed, you can visit it by opening the URL http://<project-id>.appspot.com in your web browser.\n" +
+                    "\n" +
+                    "If you don't remember your project-id, please refer to the \"Setup and Requirements\" section or check the deployment logs for something similar to this:\n" +
+                    "\n" +
+                    "Deployed service [default] to [https://<project-id>.appspot.com]\n" +
+                    "\n" +
+                    "Optionally, you can instead purchase and use a top-level domain name for your app, or use one that you have already registered.\n" +
+                    "\n" +
+                    "Summary\n" +
+                    "In this step, you set up a simple Node.js application and ran and deployed your application on App Engine.");
             sec2Node2.setLesson(nodeJsLesson2);
             nodeJsLesson2.getSections().add(sec2Node2);
 
             Section sec3Node2 = new Section();
-            sec3Node2.setDescription("Persist");
-            sec3Node2.setContent("Điều gì xảy ra sau khi method persist được gọi? Đối tượng person bị đổi trạng thái từ transient sang persistent. Đối tượng vào trong persistence context nhưng vẫn chưa được lưu vào database.");
+            sec3Node2.setOrdinalNumber(3);
+            sec3Node2.setDescription("Updating the Application");
+            sec3Node2.setContent("Update the application to generate a UUID every time someone visits the page.\n" +
+                    "\n" +
+                    "Install the uuid package with npm:\n" +
+                    "\n" +
+                    "npm install uuid --save\n" +
+                    "Now modify app.js to require uuid and then call the function in the response. You can use vim, nano,or emacs to edit the file or use the code editor:\n" +
+                    "\n" +
+                    "\n" +
+                    "\n" +
+                    "app.js\n" +
+                    "// [START app]\n" +
+                    "'use strict';\n" +
+                    "\n" +
+                    "const express = require('express');\n" +
+                    "const uuid = require('uuid');\n" +
+                    "const app = express();\n" +
+                    "\n" +
+                    "app.get('/', (req, res) => {\n" +
+                    "  res.status(200).send(`Hello, ${uuid()}!`);\n" +
+                    "});\n" +
+                    "\n" +
+                    "// Start the server\n" +
+                    "const PORT = process.env.PORT || 8080;\n" +
+                    "app.listen(PORT, () => {\n" +
+                    "  console.log(`App listening on port ${PORT}`);\n" +
+                    "  console.log('Press Ctrl+C to quit.');\n" +
+                    "});\n" +
+                    "// [END app]\n" +
+                    "Now, you can test the application locally.\n" +
+                    "\n" +
+                    "Start the Node.js application with npm:\n" +
+                    "\n" +
+                    "npm start\n" +
+                    "Once the application started, click on the Web Preview iconin the Cloud Shell toolbar and choose preview on port 8080.\n" +
+                    "\n" +
+                    "\n" +
+                    "\n" +
+                    "A tab in your browser opens and connects to the server you just started. You should see the new app that displays a UUID!\n" +
+                    "\n" +
+                    "\n" +
+                    "To deploy your updated application, run gcloud app deploy:\n" +
+                    "\n" +
+                    "gcloud app deploy\n" +
+                    "In a few minutes, the new version will be deployed and you can visit it by opening the URL http://<project-id>.appspot.com in your web browser.\n" +
+                    "\n" +
+                    "Summary\n" +
+                    "In this step, you updated your Node.js application without any downtime.");
             sec3Node2.setLesson(nodeJsLesson2);
             nodeJsLesson2.getSections().add(sec3Node2);
 
             Section sec1Node3 = new Section();
+            sec1Node3.setOrdinalNumber(1);
             sec1Node3.setDescription("Sự phù hợp với đặc tả của JPA");
             sec1Node3.setContent("Hibernate là cài đặt ORM Java thành công nhất. Không ngạc nhiên khi mà các đặc tả cho Java persistence API (JPA) bị ảnh hưởng nhiều bởi Hibernate API. Cũng không ngạc nhiên khi Hibernate là ORM Framework phổ biến nhất.");
             sec1Node3.setLesson(nodeJsLesson3);
             nodeJsLesson3.getSections().add(sec1Node3);
 
             Section sec2Node3 = new Section();
+            sec2Node3.setOrdinalNumber(2);
             sec2Node3.setDescription(" Sự khác nhau giữa các hành động thực thi");
             sec2Node3.setContent("Các method persist, save, update, merge, saveOrUpdate không lập tức đưa ra kết quả tương ứng SQL UPDATE hoặc INSERT. Thực tế thì việc cập nhật dữ liệu vào database xảy ra khi transaction được commit hoặc flushing session. Cũng không ngạc nhiên khi Hibernate là ORM Framework phổ biến nhất.");
             sec2Node3.setLesson(nodeJsLesson3);
             nodeJsLesson3.getSections().add(sec2Node3);
 
             Section sec3Node3 = new Section();
+            sec3Node3.setOrdinalNumber(3);
             sec3Node3.setDescription("Persist");
             sec3Node3.setContent("Điều gì xảy ra sau khi method persist được gọi? Đối tượng person bị đổi trạng thái từ transient sang persistent. Đối tượng vào trong persistence context nhưng vẫn chưa được lưu vào database.");
             sec3Node3.setLesson(nodeJsLesson3);
@@ -616,7 +759,7 @@ public class DataLoader implements CommandLineRunner {
             dinhquang.setSchool("UTE");
 
             dinhquang.addCourse(saveddockerCourse);
-            dinhquang.addCourse(savedphpCourse);
+            dinhquang.addCourse(savedNodeJs);
             Student savedDinhQuang = studentRepository.save(dinhquang);
 
             Student hongvan = new Student();

@@ -56,7 +56,7 @@ public class Course {
     @ManyToOne(cascade = CascadeType.PERSIST)
     private Category category;
 
-    @OneToMany(cascade = CascadeType.PERSIST)
+    @OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.PERSIST)
     private Set<Lesson> lessons = new HashSet<>();
 
     @ManyToMany(fetch = FetchType.EAGER,mappedBy = "courses")

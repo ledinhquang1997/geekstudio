@@ -1,11 +1,13 @@
 package com.codingmanstudio.courses.controller;
 
-import com.codingmanstudio.courses.api.v1.dto.Course.CourseDTO;
-import com.codingmanstudio.courses.api.v1.dto.Course.CourseDetailDTO;
-import com.codingmanstudio.courses.api.v1.dto.Course.ListCourseDTO;
+import com.codingmanstudio.courses.api.v1.dto.Course.*;
+import com.codingmanstudio.courses.api.v1.dto.Lesson.LessonWithSectionsDTO;
 import com.codingmanstudio.courses.services.CourseService;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -58,5 +60,20 @@ public class CourseController {
                                                           @PathVariable int page){
         System.out.println(category+" "+filter+" "+page);
         return courseService.getCoursesByCategoryFilterPage(category,filter,page);
+    }
+
+    @GetMapping("/course/course-lessons/{courseId}")
+    @ResponseStatus(HttpStatus.OK)
+    public StudentCourseWithLessonsDTO getStudentCourseWithLessons(@PathVariable String courseId){
+        Authentication authentication= SecurityContextHolder.getContext().getAuthentication();
+        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+
+        return courseService.getStudentCourseWithLessons( userDetails.getUsername(),  courseId);
+    }
+
+    @GetMapping("/course/lesson-sections/{lessonId}")
+    @ResponseStatus(HttpStatus.OK)
+    public LessonWithSectionsDTO getLessonDtail(@PathVariable String lessonId){
+        return courseService.getLessonWithSections(lessonId);
     }
 }

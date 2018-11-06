@@ -5,6 +5,7 @@ import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import java.util.HashSet;
 import java.util.Set;
@@ -18,6 +19,9 @@ public class Lesson {
     @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
     private String id;
 
+    @Column(unique = true)
+    private int ordinalNumber;
+
     @NotBlank
     private String name;
 
@@ -27,7 +31,7 @@ public class Lesson {
     @ManyToOne(cascade = CascadeType.PERSIST)
     private Course course;
 
-    @OneToMany(cascade = CascadeType.PERSIST)
+    @OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.PERSIST)
     private Set<Section> sections = new HashSet<>();
 
 }

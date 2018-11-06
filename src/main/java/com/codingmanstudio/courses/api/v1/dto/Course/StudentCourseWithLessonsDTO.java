@@ -2,23 +2,21 @@ package com.codingmanstudio.courses.api.v1.dto.Course;
 
 import com.codingmanstudio.courses.api.v1.dto.Category.CategoryDTO;
 import com.codingmanstudio.courses.api.v1.dto.Instructor.InstructorDTO;
-import com.codingmanstudio.courses.domain.Course;
+import com.codingmanstudio.courses.api.v1.dto.Lesson.LessonDTO;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class StudentCourseDTO {
+public class StudentCourseWithLessonsDTO {
 
     private String id;
     private String name;
@@ -35,4 +33,6 @@ public class StudentCourseDTO {
     private int lessonProgress;
     private int sectionProgress;
     private Double learnerRating;
+
+    private TreeSet<LessonDTO> lessons= new TreeSet<>();
 }

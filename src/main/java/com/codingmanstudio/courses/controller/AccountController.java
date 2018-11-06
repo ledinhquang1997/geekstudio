@@ -58,6 +58,8 @@ public class AccountController {
     @GetMapping("/courses/{username}")
     @ResponseStatus(HttpStatus.OK)
     public List<StudentCourseDTO> getCoursesOfStudent(@PathVariable String username){
+        Authentication authentication= SecurityContextHolder.getContext().getAuthentication();
+        System.out.println(authentication.getPrincipal());
         return courseService.getCoursesOfStudent(username);
     }
 }

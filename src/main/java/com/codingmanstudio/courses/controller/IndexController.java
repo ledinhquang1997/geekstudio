@@ -2,6 +2,8 @@ package com.codingmanstudio.courses.controller;
 
 import com.codingmanstudio.courses.Utils.FakeUtils;
 import com.codingmanstudio.courses.domain.News;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,6 +14,8 @@ public class IndexController {
 
     @GetMapping("/news")
     public List<News> news() {
+        Authentication authentication= SecurityContextHolder.getContext().getAuthentication();
+        System.out.println(authentication.getPrincipal());
         return FakeUtils.getAllNews();
     }
 

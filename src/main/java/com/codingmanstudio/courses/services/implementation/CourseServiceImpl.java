@@ -1,20 +1,17 @@
 package com.codingmanstudio.courses.services.implementation;
 
-import com.codingmanstudio.courses.api.v1.dto.Course.CourseDTO;
-import com.codingmanstudio.courses.api.v1.dto.Course.CourseDetailDTO;
-import com.codingmanstudio.courses.api.v1.dto.Course.ListCourseDTO;
-import com.codingmanstudio.courses.api.v1.dto.Course.StudentCourseDTO;
+import com.codingmanstudio.courses.api.v1.dto.Course.*;
+import com.codingmanstudio.courses.api.v1.dto.Lesson.LessonWithSectionsDTO;
 import com.codingmanstudio.courses.api.v1.mapper.CourseMapper;
-import com.codingmanstudio.courses.domain.Category;
-import com.codingmanstudio.courses.domain.Course;
-import com.codingmanstudio.courses.domain.Student;
-import com.codingmanstudio.courses.domain.StudentCourse;
+import com.codingmanstudio.courses.api.v1.mapper.LessonMapper;
+import com.codingmanstudio.courses.domain.*;
 import com.codingmanstudio.courses.exceptions.ResourceNotFoundException;
-import com.codingmanstudio.courses.repository.CategoryRepository;
-import com.codingmanstudio.courses.repository.CourseRepository;
-import com.codingmanstudio.courses.repository.StudentRepository;
+import com.codingmanstudio.courses.repository.*;
 import com.codingmanstudio.courses.services.CourseService;
 import org.springframework.data.domain.*;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -27,12 +24,18 @@ public class CourseServiceImpl implements CourseService {
     private final CourseMapper courseMapper;
     private final CategoryRepository categoryRepository;
     private final StudentRepository studentRepository;
+    private final StudentCourseRepository studentCourseRepository;
+    private final LessonMapper lessonMapper;
+    private final LessonRepository lessonRepository;
 
-    public CourseServiceImpl(CourseRepository courseRepository, CourseMapper courseMapper, CategoryRepository categoryRepository, StudentRepository studentRepository) {
+    public CourseServiceImpl(CourseRepository courseRepository, CourseMapper courseMapper, CategoryRepository categoryRepository, StudentRepository studentRepository, StudentCourseRepository studentCourseRepository, LessonMapper lessonMapper, LessonRepository lessonRepository) {
         this.courseRepository = courseRepository;
         this.courseMapper = courseMapper;
         this.categoryRepository = categoryRepository;
         this.studentRepository = studentRepository;
+        this.studentCourseRepository = studentCourseRepository;
+        this.lessonMapper = lessonMapper;
+        this.lessonRepository = lessonRepository;
     }
 
     private static final String POPUPLAR = "POPULAR";
@@ -113,5 +116,37 @@ public class CourseServiceImpl implements CourseService {
             System.out.println(ac.getCourse().getName()+ " "+ac.getLearnerRating());
         }
         return student.getCourses().stream().map(courseMapper::courseToStudentCourseDto).collect(Collectors.toList());
+    }
+
+    @Override
+    public StudentCourseWithLessonsDTO getStudentCourseWithLessons(String username, String courseId) {
+        Optional<StudentCourse> studentCourseOptional = studentCourseRepository.findByStudentUsernameAndCourseId(username,courseId);
+        if(!studentCourseOptional.isPresent()){
+            throw new ResourceNotFoundException("Course "+courseId+" of student "+username+" not found");
+        }
+        return courseMapper.courseToStudentCourseWithLessonsDto(studentCourseOptional.get());
+    }
+
+    @Override
+    public LessonWithSectionsDTO getLessonWithSections(String lessonId) {
+        Optional<Lesson> lessonOptional=lessonRepository.findById(lessonId);
+        if(!lessonOptional.isPresent()){
+            throw new ResourceNotFoundException("Lesson not found");
+        }
+        Lesson lesson= lessonOptional.get();
+        Course course = lesson.getCourse();
+
+        Authentication authentication= SecurityContextHolder.getContext().getAuthentication();
+        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+
+        Optional<StudentCourse> studentCourseOptional = studentCourseRepository.findByStudentUsernameAndCourseId(userDetails.getUsername(),course.getId());
+        if(!studentCourseOptional.isPresent()){
+            throw new ResourceNotFoundException("User "+userDetails.getUsername()+" or course "+course.getId()+ " not found");
+        }
+
+
+        LessonWithSectionsDTO lessonWithSectionsDTO= lessonMapper.lessonToLessonWithSectionsDto(lesson);
+        lessonWithSectionsDTO.setSectionProgress(studentCourseOptional.get().getSectionProgress());
+        return lessonWithSectionsDTO;
     }
 }
