@@ -19,7 +19,6 @@ public class Lesson {
     @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
     private String id;
 
-    @Column(unique = true)
     private int ordinalNumber;
 
     @NotBlank
