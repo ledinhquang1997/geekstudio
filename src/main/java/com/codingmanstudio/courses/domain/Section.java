@@ -17,10 +17,8 @@ public class Section {
     @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
     private String id;
 
-    @Column(unique = true)
     private int ordinalNumber;
-
-    @NotBlank
+    
     private String description;
 
     @Lob
