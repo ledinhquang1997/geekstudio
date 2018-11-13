@@ -9,14 +9,15 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.*;
-
+import java.util.HashSet;
+import java.util.Set;
+import java.util.TreeSet;
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class StudentCourseWithLessonsDTO {
+public class CourseWithLessonsDTO {
 
     private String id;
     private String name;
@@ -27,14 +28,6 @@ public class StudentCourseWithLessonsDTO {
     private String image;
     private CategoryDTO category;
     private Set<InstructorDTO> instructors = new HashSet<>();
-
-    private int totalLesson;
-    private int totalSection;
-    private int lessonProgress;
-    private int sectionProgress;
-    private Double learnerRating;
-    private String currentLesson;
-    private String currentSection;
 
     private TreeSet<LessonDTO> lessons= new TreeSet<>();
 }

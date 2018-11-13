@@ -14,10 +14,10 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 public class StudentCourse {
-    public StudentCourse(Student student,Course course){
-        this.student=student;
-        this.course=course;
-        this.studentCourseId=new StudentCourseId(student.getUsername(),course.getId());
+    public StudentCourse(Student student, Course course) {
+        this.student = student;
+        this.course = course;
+        this.studentCourseId = new StudentCourseId(student.getUsername(), course.getId());
     }
 
     @EmbeddedId
@@ -25,13 +25,13 @@ public class StudentCourse {
 
     @ManyToOne
     @MapsId("username")
-    @JoinColumn(name="student_username")
+    @JoinColumn(name = "student_username")
     private Student student;
 
 
     @ManyToOne
     @MapsId("courseId")
-    @JoinColumn(name="course_id")
+    @JoinColumn(name = "course_id")
     private Course course;
 
     @Column
@@ -41,5 +41,10 @@ public class StudentCourse {
     @Column
     private Double learnerRating;
 
+    @ManyToOne
+    private Section currentSection;
+
+    @ManyToOne
+    private Lesson currentLesson;
 
 }

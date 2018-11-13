@@ -48,7 +48,5 @@ public class JWTLoginFilter extends AbstractAuthenticationProcessingFilter {
         ObjectMapper objectMapper = new ObjectMapper();
         String userInfoString= objectMapper.writeValueAsString(userInfo);
         response.getWriter().write(userInfoString);
-        response.addHeader("userInfo",userInfoString);
-
     }
 }

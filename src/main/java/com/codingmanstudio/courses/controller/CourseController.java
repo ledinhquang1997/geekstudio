@@ -1,20 +1,15 @@
 package com.codingmanstudio.courses.controller;
 
 import com.codingmanstudio.courses.api.v1.dto.Course.*;
-import com.codingmanstudio.courses.api.v1.dto.Lesson.LessonWithSectionsDTO;
 import com.codingmanstudio.courses.services.CourseService;
-import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Set;
 
 @CrossOrigin
 @RestController
+@RequestMapping("/course")
 public class CourseController {
 
     private final CourseService courseService;
@@ -23,37 +18,37 @@ public class CourseController {
         this.courseService = courseService;
     }
 
-    @GetMapping({"/courses/"})
+    @GetMapping({"/all"})
     @ResponseStatus(HttpStatus.OK)
     public ListCourseDTO getAllCourse(){
         return courseService.getAllCourses();
     }
 
-    @GetMapping({"/courses/bestsellers"})
+    @GetMapping({"/bestsellers"})
     @ResponseStatus(HttpStatus.OK)
     public List<CourseDTO> getBestSellers(){
         return courseService.getBestSellerCourse();
     }
 
-    @GetMapping({"/courses/{id}"})
+    @GetMapping({"/top-by-category/{id}"})
     @ResponseStatus(HttpStatus.OK)
     public List<CourseDTO> getCoursesByCategoryId(@PathVariable String id){
         return courseService.getCourseByCategoryId(id);
     }
 
-    @GetMapping({"/courses/toprating"})
+    @GetMapping({"/toprating"})
     @ResponseStatus(HttpStatus.OK)
     public List<CourseDTO> getTopRatingCourses(){
         return courseService.getTopRatingCourse();
     }
 
-    @GetMapping("/course/{id}")
+    @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public CourseDetailDTO getCourseById(@PathVariable String id){
         return courseService.getCourseById(id);
     }
 
-    @GetMapping({"/courses/by-category/{category}/{filter}/{page}","/courses/by-category/{category}/{filter}/{page}/"})
+    @GetMapping({"/by-category-filter-page/{category}/{filter}/{page}","/courses/by-category/{category}/{filter}/{page}/"})
     @ResponseStatus(HttpStatus.OK)
     public List<CourseDTO> getCoursesByCategoryFilterPage(@PathVariable String category,
                                                           @PathVariable String filter,
@@ -62,18 +57,10 @@ public class CourseController {
         return courseService.getCoursesByCategoryFilterPage(category,filter,page);
     }
 
-    @GetMapping("/course/course-lessons/{courseId}")
+    @GetMapping("/with-lessons/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public StudentCourseWithLessonsDTO getStudentCourseWithLessons(@PathVariable String courseId){
-        Authentication authentication= SecurityContextHolder.getContext().getAuthentication();
-        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-
-        return courseService.getStudentCourseWithLessons( userDetails.getUsername(),  courseId);
+    public CourseWithLessonsDTO getCourseWithLessons (@PathVariable String id){
+        return courseService.getCourseWithLessons(id);
     }
 
-    @GetMapping("/course/lesson-sections/{lessonId}")
-    @ResponseStatus(HttpStatus.OK)
-    public LessonWithSectionsDTO getLessonDtail(@PathVariable String lessonId){
-        return courseService.getLessonWithSections(lessonId);
-    }
 }

@@ -146,6 +146,25 @@ public class CourseMapperImpl implements CourseMapper {
         }
     }
 
+    @Override
+    public CourseWithLessonsDTO courseToCourseWithLessonsDto(Course course) {
+        if (course == null) return null;
+        else {
+            CourseWithLessonsDTO courseWithLessonsDTO = new CourseWithLessonsDTO();
+            courseWithLessonsDTO.setId(course.getId());
+            courseWithLessonsDTO.setName(course.getName());
+            courseWithLessonsDTO.setDescription(course.getDescription());
+            courseWithLessonsDTO.setCost(course.getCost());
+            courseWithLessonsDTO.setAmountStudent(course.getAmountStudent());
+            courseWithLessonsDTO.setRating(course.getRating());
+            courseWithLessonsDTO.setImage(course.getImage().getUrl());
+            courseWithLessonsDTO.setCategory(this.categoryToCategoryDto(course.getCategory()));
+            courseWithLessonsDTO.setInstructors(this.instructorSetToInstructorDTOSet(course.getInstructors()));
+            courseWithLessonsDTO.setLessons(this.lessonSetToLessonDTOSet(course.getLessons()));
+            return courseWithLessonsDTO;
+        }
+    }
+
     private LessonDTO lessonToLessonDTO(Lesson lesson) {
         if (lesson == null) return null;
         else {
@@ -158,8 +177,8 @@ public class CourseMapperImpl implements CourseMapper {
         }
     }
 
-    private TreeSet<LessonDTO> lessonSetToLessonDTOSet(Set<Lesson> lessons){
-       return lessons.stream().map(this::lessonToLessonDTO).collect(Collectors.toCollection(TreeSet::new));
+    private TreeSet<LessonDTO> lessonSetToLessonDTOSet(Set<Lesson> lessons) {
+        return lessons.stream().map(this::lessonToLessonDTO).collect(Collectors.toCollection(TreeSet::new));
     }
 
     private CategoryDTO categoryToCategoryDto(Category category) {

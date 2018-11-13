@@ -1,6 +1,7 @@
 package com.codingmanstudio.courses.api.v1.mapper.implementation;
 
-import com.codingmanstudio.courses.api.v1.dto.Lesson.LessonWithSectionsDTO;
+import com.codingmanstudio.courses.api.v1.dto.Lesson.LessonWithDetailedSectionsDTO;
+import com.codingmanstudio.courses.api.v1.dto.Lesson.StudentLessonWithSectionsDTO;
 import com.codingmanstudio.courses.api.v1.dto.Section.SectionDTO;
 import com.codingmanstudio.courses.api.v1.dto.Section.SectionWithoutContentDTO;
 import com.codingmanstudio.courses.api.v1.mapper.LessonMapper;
@@ -15,15 +16,31 @@ import java.util.stream.Collectors;
 @Component
 public class LessonMapperImpl implements LessonMapper {
     @Override
-    public LessonWithSectionsDTO lessonToLessonWithSectionsDto(Lesson lesson) {
+    public StudentLessonWithSectionsDTO lessonToLessonWithSectionsDto(Lesson lesson) {
         if (lesson == null) return null;
         else {
-            LessonWithSectionsDTO lessonWithSectionsDTO = new LessonWithSectionsDTO();
+            StudentLessonWithSectionsDTO studentLessonWithSectionsDTO = new StudentLessonWithSectionsDTO();
+            studentLessonWithSectionsDTO.setId(lesson.getId());
+            studentLessonWithSectionsDTO.setName(lesson.getName());
+            studentLessonWithSectionsDTO.setDescription(lesson.getDescription());
+            studentLessonWithSectionsDTO.setOrdinalNumber(lesson.getOrdinalNumber());
+            studentLessonWithSectionsDTO.setSections(this.sectionSetToSectionWithoutContentDTOTreeSet(lesson.getSections()));
+            studentLessonWithSectionsDTO.setCourseId(lesson.getCourse().getId());
+            studentLessonWithSectionsDTO.setCourseName(lesson.getCourse().getName());
+            return studentLessonWithSectionsDTO;
+        }
+    }
+
+    @Override
+    public LessonWithDetailedSectionsDTO lessonToLessonWithDetailedSectionsDto(Lesson lesson) {
+        if (lesson == null) return null;
+        else {
+            LessonWithDetailedSectionsDTO lessonWithSectionsDTO = new LessonWithDetailedSectionsDTO();
             lessonWithSectionsDTO.setId(lesson.getId());
             lessonWithSectionsDTO.setName(lesson.getName());
             lessonWithSectionsDTO.setDescription(lesson.getDescription());
             lessonWithSectionsDTO.setOrdinalNumber(lesson.getOrdinalNumber());
-            lessonWithSectionsDTO.setSections(this.sectionSetToSectionWithoutContentDTOTreeSet(lesson.getSections()));
+            lessonWithSectionsDTO.setSections(this.sectionSetToSectionDTOTreeSet(lesson.getSections()));
             lessonWithSectionsDTO.setCourseId(lesson.getCourse().getId());
             lessonWithSectionsDTO.setCourseName(lesson.getCourse().getName());
             return lessonWithSectionsDTO;

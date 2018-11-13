@@ -30,9 +30,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         configuration.setAllowedOrigins(ImmutableList.of("*"));
         configuration.setAllowedMethods(ImmutableList.of("HEAD", "GET", "POST", "PUT", "DELETE", "PATCH"));
         configuration.setAllowCredentials(true);
-        configuration.setAllowedHeaders(ImmutableList.of("Authorization", "Cache-Control", "Content-Type","userInfo"));
+        configuration.setAllowedHeaders(ImmutableList.of("Authorization", "Cache-Control", "Content-Type"));
         configuration.addExposedHeader("Authorization");
-        configuration.addExposedHeader("userInfo");
         final UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
         return source;
@@ -61,6 +60,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.POST, "/login").permitAll()
                 .antMatchers(HttpMethod.GET,"/instructors/**").permitAll()
                 .antMatchers(HttpMethod.GET,"/category/**").permitAll()
+                .antMatchers(HttpMethod.GET,"/lesson/**").permitAll()
                 .antMatchers(HttpMethod.GET,"/user/**").access("hasAnyRole('ROLE_LEARNER','ROLE_INSTRUCTOR')")
                 .antMatchers("/fuck/**").access("hasAnyRole('ROLE_LEARNER','ROLE_INSTRUCTOR')")
                 .antMatchers("/news/**").access("hasAnyRole('ROLE_USER')")

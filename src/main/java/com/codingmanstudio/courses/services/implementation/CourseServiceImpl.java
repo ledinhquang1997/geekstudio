@@ -1,9 +1,13 @@
 package com.codingmanstudio.courses.services.implementation;
 
 import com.codingmanstudio.courses.api.v1.dto.Course.*;
-import com.codingmanstudio.courses.api.v1.dto.Lesson.LessonWithSectionsDTO;
+import com.codingmanstudio.courses.api.v1.dto.Course.Update.ProgressDTO;
+import com.codingmanstudio.courses.api.v1.dto.Lesson.LessonWithDetailedSectionsDTO;
+import com.codingmanstudio.courses.api.v1.dto.Lesson.StudentLessonWithSectionsDTO;
+import com.codingmanstudio.courses.api.v1.dto.Section.SectionDTO;
 import com.codingmanstudio.courses.api.v1.mapper.CourseMapper;
 import com.codingmanstudio.courses.api.v1.mapper.LessonMapper;
+import com.codingmanstudio.courses.api.v1.mapper.SectionMapper;
 import com.codingmanstudio.courses.domain.*;
 import com.codingmanstudio.courses.exceptions.ResourceNotFoundException;
 import com.codingmanstudio.courses.repository.*;
@@ -27,8 +31,10 @@ public class CourseServiceImpl implements CourseService {
     private final StudentCourseRepository studentCourseRepository;
     private final LessonMapper lessonMapper;
     private final LessonRepository lessonRepository;
+    private final SectionRepository sectionRepository;
+    private final SectionMapper sectionMapper;
 
-    public CourseServiceImpl(CourseRepository courseRepository, CourseMapper courseMapper, CategoryRepository categoryRepository, StudentRepository studentRepository, StudentCourseRepository studentCourseRepository, LessonMapper lessonMapper, LessonRepository lessonRepository) {
+    public CourseServiceImpl(CourseRepository courseRepository, CourseMapper courseMapper, CategoryRepository categoryRepository, StudentRepository studentRepository, StudentCourseRepository studentCourseRepository, LessonMapper lessonMapper, LessonRepository lessonRepository, SectionRepository sectionRepository, SectionMapper sectionMapper) {
         this.courseRepository = courseRepository;
         this.courseMapper = courseMapper;
         this.categoryRepository = categoryRepository;
@@ -36,6 +42,8 @@ public class CourseServiceImpl implements CourseService {
         this.studentCourseRepository = studentCourseRepository;
         this.lessonMapper = lessonMapper;
         this.lessonRepository = lessonRepository;
+        this.sectionRepository = sectionRepository;
+        this.sectionMapper = sectionMapper;
     }
 
     private static final String POPUPLAR = "POPULAR";
@@ -83,12 +91,12 @@ public class CourseServiceImpl implements CourseService {
         }
 
         Category foundCategory = optionalCategory.get();
-        String property="";
-        if(filter.equals(RATING)) property ="rating";
-        else if(filter.equals(POPUPLAR)) property="amountStudent";
-        Pageable pageable = PageRequest.of(page, 8, Sort.Direction.DESC,property);
+        String property = "";
+        if (filter.equals(RATING)) property = "rating";
+        else if (filter.equals(POPUPLAR)) property = "amountStudent";
+        Pageable pageable = PageRequest.of(page, 8, Sort.Direction.DESC, property);
 
-        return courseRepository.findByCategoryId(foundCategory.getId(),pageable)
+        return courseRepository.findByCategoryId(foundCategory.getId(), pageable)
                 .stream()
                 .map(courseMapper::courseToCourseDto)
                 .collect(Collectors.toList());
@@ -97,8 +105,8 @@ public class CourseServiceImpl implements CourseService {
     @Override
     public CourseDetailDTO getCourseById(String id) {
         Optional<Course> optionalCourse = courseRepository.findById(id);
-        if(!optionalCourse.isPresent()){
-            throw new ResourceNotFoundException("Course "+ id + " not found");
+        if (!optionalCourse.isPresent()) {
+            throw new ResourceNotFoundException("Course " + id + " not found");
         }
         return courseMapper.courseToCourseDetailDto(optionalCourse.get());
     }
@@ -106,47 +114,175 @@ public class CourseServiceImpl implements CourseService {
     @Override
     public List<StudentCourseDTO> getCoursesOfStudent(String username) {
         Optional<Student> studentOptional = studentRepository.findByUsername(username);
-        if(!studentOptional.isPresent()){
-            throw new ResourceNotFoundException("Username "+username+" not found");
+        if (!studentOptional.isPresent()) {
+            throw new ResourceNotFoundException("Username " + username + " not found");
         }
         Student student = studentOptional.get();
 
         for (StudentCourse ac : student.getCourses()
         ) {
-            System.out.println(ac.getCourse().getName()+ " "+ac.getLearnerRating());
+            System.out.println(ac.getCourse().getName() + " " + ac.getLearnerRating());
         }
         return student.getCourses().stream().map(courseMapper::courseToStudentCourseDto).collect(Collectors.toList());
     }
 
     @Override
     public StudentCourseWithLessonsDTO getStudentCourseWithLessons(String username, String courseId) {
-        Optional<StudentCourse> studentCourseOptional = studentCourseRepository.findByStudentUsernameAndCourseId(username,courseId);
-        if(!studentCourseOptional.isPresent()){
-            throw new ResourceNotFoundException("Course "+courseId+" of student "+username+" not found");
+        Optional<StudentCourse> studentCourseOptional = studentCourseRepository.findByStudentUsernameAndCourseId(username, courseId);
+        if (!studentCourseOptional.isPresent()) {
+            throw new ResourceNotFoundException("Course " + courseId + " of student " + username + " not found");
         }
-        return courseMapper.courseToStudentCourseWithLessonsDto(studentCourseOptional.get());
+
+
+        StudentCourseWithLessonsDTO studentCourseWithLessonsDTO = courseMapper.courseToStudentCourseWithLessonsDto(studentCourseOptional.get());
+        studentCourseWithLessonsDTO.setCurrentSection(studentCourseOptional.get().getCurrentSection().getId());
+        studentCourseWithLessonsDTO.setCurrentLesson(studentCourseOptional.get().getCurrentSection().getLesson().getId());
+        return studentCourseWithLessonsDTO;
     }
 
     @Override
-    public LessonWithSectionsDTO getLessonWithSections(String lessonId) {
-        Optional<Lesson> lessonOptional=lessonRepository.findById(lessonId);
-        if(!lessonOptional.isPresent()){
+    public StudentLessonWithSectionsDTO getLessonWithSections(String lessonId) {
+        Optional<Lesson> lessonOptional = lessonRepository.findById(lessonId);
+        if (!lessonOptional.isPresent()) {
             throw new ResourceNotFoundException("Lesson not found");
         }
-        Lesson lesson= lessonOptional.get();
+        Lesson lesson = lessonOptional.get();
         Course course = lesson.getCourse();
 
-        Authentication authentication= SecurityContextHolder.getContext().getAuthentication();
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();
 
-        Optional<StudentCourse> studentCourseOptional = studentCourseRepository.findByStudentUsernameAndCourseId(userDetails.getUsername(),course.getId());
-        if(!studentCourseOptional.isPresent()){
-            throw new ResourceNotFoundException("User "+userDetails.getUsername()+" or course "+course.getId()+ " not found");
+        Optional<StudentCourse> studentCourseOptional = studentCourseRepository.findByStudentUsernameAndCourseId(userDetails.getUsername(), course.getId());
+        if (!studentCourseOptional.isPresent()) {
+            throw new ResourceNotFoundException("User " + userDetails.getUsername() + " or course " + course.getId() + " not found");
         }
 
 
-        LessonWithSectionsDTO lessonWithSectionsDTO= lessonMapper.lessonToLessonWithSectionsDto(lesson);
-        lessonWithSectionsDTO.setSectionProgress(studentCourseOptional.get().getSectionProgress());
-        return lessonWithSectionsDTO;
+        StudentLessonWithSectionsDTO studentLessonWithSectionsDTO = lessonMapper.lessonToLessonWithSectionsDto(lesson);
+        studentLessonWithSectionsDTO.setSectionProgress(studentCourseOptional.get().getSectionProgress());
+        studentLessonWithSectionsDTO.setCurrentSection(studentCourseOptional.get().getCurrentSection().getId());
+        studentLessonWithSectionsDTO.setCurrentLesson(studentCourseOptional.get().getCurrentLesson().getId());
+        return studentLessonWithSectionsDTO;
     }
+
+    @Override
+    public CourseWithLessonsDTO getCourseWithLessons(String courseId) {
+        Optional<Course> courseOptional = courseRepository.findById(courseId);
+        if (!courseOptional.isPresent()) {
+            throw new ResourceNotFoundException("Course not found");
+        }
+
+        return courseMapper.courseToCourseWithLessonsDto(courseOptional.get());
+    }
+
+    @Override
+    public LessonWithDetailedSectionsDTO getLessonWithDetailedSections(String lessonId) {
+        Optional<Lesson> lessonOptional = lessonRepository.findById(lessonId);
+        if (!lessonOptional.isPresent()) {
+            throw new ResourceNotFoundException("Lesson not found");
+        }
+        Lesson lesson = lessonOptional.get();
+
+        return lessonMapper.lessonToLessonWithDetailedSectionsDto(lesson);
+
+    }
+
+    @Override
+    public SectionDTO getSectionDetail(String sectionId) {
+        Optional<Section> sectionOptional = sectionRepository.findById(sectionId);
+        if (!sectionOptional.isPresent()) {
+            throw new ResourceNotFoundException("Section not found");
+        }
+
+        Section section = sectionOptional.get();
+
+        Optional<Lesson> lessonOptional = lessonRepository.findById(section.getLesson().getId());
+        if (!lessonOptional.isPresent()) {
+            throw new ResourceNotFoundException("Lesson not found");
+        }
+        Lesson lesson = lessonOptional.get();
+
+        Course course = lesson.getCourse();
+
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+
+        Optional<StudentCourse> studentCourseOptional = studentCourseRepository.findByStudentUsernameAndCourseId(userDetails.getUsername(), course.getId());
+        if (!studentCourseOptional.isPresent()) {
+            throw new ResourceNotFoundException("User " + userDetails.getUsername() + " or course " + course.getId() + " not found");
+        }
+
+        return sectionMapper.sectionToSectionDto(section);
+
+    }
+
+    @Override
+    public StudentCourseDTO changeProgress(ProgressDTO progressDTO) {
+        if (progressDTO == null) {
+            throw new ResourceNotFoundException("Data not found");
+        } else {
+            if (progressDTO.getSectionId() == null) {
+                if (progressDTO.getLessonId() != null) {
+
+                    Optional<Lesson> lessonOptional = lessonRepository.findById(progressDTO.getLessonId());
+                    if (!lessonOptional.isPresent()) {
+                        throw new ResourceNotFoundException("Lesson not found");
+                    }
+                    Lesson lesson = lessonOptional.get();
+
+                    Course course = lesson.getCourse();
+
+                    Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+                    UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+
+                    Optional<StudentCourse> studentCourseOptional = studentCourseRepository.findByStudentUsernameAndCourseId(userDetails.getUsername(), course.getId());
+                    if (!studentCourseOptional.isPresent()) {
+                        throw new ResourceNotFoundException("User " + userDetails.getUsername() + " or course " + course.getId() + " not found");
+                    }
+
+                    StudentCourse studentCourse = studentCourseOptional.get();
+                    studentCourse.setCurrentLesson(lesson);
+                    studentCourse.setCurrentSection(lesson.getSections().stream().filter(section -> section.getOrdinalNumber()==1).findAny().orElse(null));
+                    StudentCourse savedStudentCourse = studentCourseRepository.save(studentCourse);
+
+                    System.out.println(savedStudentCourse.getCurrentSection().getId()+"   "+savedStudentCourse.getCurrentLesson().getId());
+
+                    return courseMapper.courseToStudentCourseDto(savedStudentCourse);
+                } else {
+                    throw new ResourceNotFoundException("Data not found");
+                }
+            }
+
+            Optional<Section> sectionOptional = sectionRepository.findById(progressDTO.getSectionId());
+            if (!sectionOptional.isPresent()) {
+                throw new ResourceNotFoundException("Section not found");
+            }
+
+            Section section = sectionOptional.get();
+
+            Optional<Lesson> lessonOptional = lessonRepository.findById(section.getLesson().getId());
+            if (!lessonOptional.isPresent()) {
+                throw new ResourceNotFoundException("Lesson not found");
+            }
+            Lesson lesson = lessonOptional.get();
+
+            Course course = lesson.getCourse();
+
+            Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+            UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+
+            Optional<StudentCourse> studentCourseOptional = studentCourseRepository.findByStudentUsernameAndCourseId(userDetails.getUsername(), course.getId());
+            if (!studentCourseOptional.isPresent()) {
+                throw new ResourceNotFoundException("User " + userDetails.getUsername() + " or course " + course.getId() + " not found");
+            }
+
+            StudentCourse studentCourse = studentCourseOptional.get();
+            studentCourse.setCurrentLesson(lesson);
+            studentCourse.setCurrentSection(section);
+            StudentCourse savedStudentCourse = studentCourseRepository.save(studentCourse);
+            System.out.println(savedStudentCourse.getCurrentSection().getId()+"   "+savedStudentCourse.getCurrentLesson().getId());
+            return courseMapper.courseToStudentCourseDto(savedStudentCourse);
+        }
+    }
+
 }

@@ -1,14 +1,12 @@
 package com.codingmanstudio.courses.services;
 
 import com.codingmanstudio.courses.api.v1.dto.Course.*;
-import com.codingmanstudio.courses.api.v1.dto.Lesson.LessonWithSectionsDTO;
-import com.codingmanstudio.courses.domain.Course;
-import com.codingmanstudio.courses.domain.Lesson;
-import org.springframework.data.domain.Page;
+import com.codingmanstudio.courses.api.v1.dto.Course.Update.ProgressDTO;
+import com.codingmanstudio.courses.api.v1.dto.Lesson.LessonWithDetailedSectionsDTO;
+import com.codingmanstudio.courses.api.v1.dto.Lesson.StudentLessonWithSectionsDTO;
+import com.codingmanstudio.courses.api.v1.dto.Section.SectionDTO;
 
 import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
 
 public interface CourseService {
     ListCourseDTO getAllCourses();
@@ -19,5 +17,9 @@ public interface CourseService {
     CourseDetailDTO getCourseById(String id);
     List<StudentCourseDTO> getCoursesOfStudent(String username);
     StudentCourseWithLessonsDTO getStudentCourseWithLessons(String username,String courseId);
-    LessonWithSectionsDTO getLessonWithSections(String lessonId);
+    StudentLessonWithSectionsDTO getLessonWithSections(String lessonId);
+    CourseWithLessonsDTO getCourseWithLessons(String courseId);
+    LessonWithDetailedSectionsDTO getLessonWithDetailedSections(String lessonId);
+    SectionDTO getSectionDetail(String sectionId);
+    StudentCourseDTO changeProgress(ProgressDTO progressDTO);
 }
