@@ -28,8 +28,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) {
         Optional<Account> accountCredentials = accountRepository.findById(username);
-        if (!accountCredentials.isPresent()) {
-            throw new RuntimeException();
+        if (!accountCredentials.isPresent()) { throw new RuntimeException();
         }
         Account account= accountCredentials.get();
         if(account instanceof Student){

@@ -58,6 +58,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.GET,"/courses/**").permitAll()
                 .antMatchers(HttpMethod.GET,"/course/**").permitAll()
                 .antMatchers(HttpMethod.POST, "/login").permitAll()
+                .antMatchers(HttpMethod.POST, "/student/add").permitAll()
+                .antMatchers(HttpMethod.PATCH, "/student/update/**").access("hasAnyRole('ROLE_ADMIN')")
                 .antMatchers(HttpMethod.GET,"/instructors/**").permitAll()
                 .antMatchers(HttpMethod.GET,"/category/**").permitAll()
                 .antMatchers(HttpMethod.GET,"/lesson/**").permitAll()
