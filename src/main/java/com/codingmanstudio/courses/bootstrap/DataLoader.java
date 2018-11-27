@@ -7,6 +7,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.text.SimpleDateFormat;
 import java.util.Optional;
 
 @Component
@@ -345,26 +346,26 @@ public class DataLoader implements CommandLineRunner {
             nodeJsLesson4.setCourse(nodeJs);
             nodeJs.getLessons().add(nodeJsLesson4);
 
-            Lesson nodeJsLesson5 = new Lesson();
-            nodeJsLesson5.setOrdinalNumber(5);
-            nodeJsLesson5.setName("Node js chap 5");
-            nodeJsLesson5.setDescription("Build a Slack Bot with Node.js on Kubernetes");
-            nodeJsLesson5.setCourse(nodeJs);
-            nodeJs.getLessons().add(nodeJsLesson5);
-
-            Lesson nodeJsLesson6 = new Lesson();
-            nodeJsLesson6.setOrdinalNumber(6);
-            nodeJsLesson6.setName("Node js chap 6");
-            nodeJsLesson6.setDescription("Running Node.js on a Virtual Machine");
-            nodeJsLesson6.setCourse(nodeJs);
-            nodeJs.getLessons().add(nodeJsLesson6);
-
-            Lesson nodeJsLesson7 = new Lesson();
-            nodeJsLesson7.setOrdinalNumber(7);
-            nodeJsLesson7.setName("Node js chap 7");
-            nodeJsLesson7.setDescription("Using Cloud Vision with Node.js");
-            nodeJsLesson7.setCourse(nodeJs);
-            nodeJs.getLessons().add(nodeJsLesson7);
+//            Lesson nodeJsLesson5 = new Lesson();
+//            nodeJsLesson5.setOrdinalNumber(5);
+//            nodeJsLesson5.setName("Node js chap 5");
+//            nodeJsLesson5.setDescription("Build a Slack Bot with Node.js on Kubernetes");
+//            nodeJsLesson5.setCourse(nodeJs);
+//            nodeJs.getLessons().add(nodeJsLesson5);
+//
+//            Lesson nodeJsLesson6 = new Lesson();
+//            nodeJsLesson6.setOrdinalNumber(6);
+//            nodeJsLesson6.setName("Node js chap 6");
+//            nodeJsLesson6.setDescription("Running Node.js on a Virtual Machine");
+//            nodeJsLesson6.setCourse(nodeJs);
+//            nodeJs.getLessons().add(nodeJsLesson6);
+//
+//            Lesson nodeJsLesson7 = new Lesson();
+//            nodeJsLesson7.setOrdinalNumber(7);
+//            nodeJsLesson7.setName("Node js chap 7");
+//            nodeJsLesson7.setDescription("Using Cloud Vision with Node.js");
+//            nodeJsLesson7.setCourse(nodeJs);
+//            nodeJs.getLessons().add(nodeJsLesson7);
 
             Lesson reactJsLesson1 = new Lesson();
             reactJsLesson1.setOrdinalNumber(1);
@@ -396,26 +397,26 @@ public class DataLoader implements CommandLineRunner {
             reactJsLesson4.setCourse(reactJs);
             reactJs.getLessons().add(reactJsLesson4);
 
-            Lesson reactJsLesson5 = new Lesson();
-            reactJsLesson5.setOrdinalNumber(5);
-            reactJsLesson5.setName("React js chap 5");
-            reactJsLesson5.setDescription("Advanced Guides");
-            reactJsLesson5.setCourse(reactJs);
-            reactJs.getLessons().add(reactJsLesson5);
-
-            Lesson reactJsLesson6 = new Lesson();
-            reactJsLesson6.setOrdinalNumber(6);
-            reactJsLesson6.setName("React js chap 6");
-            reactJsLesson6.setDescription("API References");
-            reactJsLesson6.setCourse(reactJs);
-            reactJs.getLessons().add(reactJsLesson6);
-
-            Lesson reactJsLesson7 = new Lesson();
-            reactJsLesson7.setOrdinalNumber(7);
-            reactJsLesson7.setName("React js chap 7");
-            reactJsLesson7.setDescription("Hooks");
-            reactJsLesson7.setCourse(reactJs);
-            reactJs.getLessons().add(reactJsLesson7);
+//            Lesson reactJsLesson5 = new Lesson();
+//            reactJsLesson5.setOrdinalNumber(5);
+//            reactJsLesson5.setName("React js chap 5");
+//            reactJsLesson5.setDescription("Advanced Guides");
+//            reactJsLesson5.setCourse(reactJs);
+//            reactJs.getLessons().add(reactJsLesson5);
+//
+//            Lesson reactJsLesson6 = new Lesson();
+//            reactJsLesson6.setOrdinalNumber(6);
+//            reactJsLesson6.setName("React js chap 6");
+//            reactJsLesson6.setDescription("API References");
+//            reactJsLesson6.setCourse(reactJs);
+//            reactJs.getLessons().add(reactJsLesson6);
+//
+//            Lesson reactJsLesson7 = new Lesson();
+//            reactJsLesson7.setOrdinalNumber(7);
+//            reactJsLesson7.setName("React js chap 7");
+//            reactJsLesson7.setDescription("Hooks");
+//            reactJsLesson7.setCourse(reactJs);
+//            reactJs.getLessons().add(reactJsLesson7);
 
             Lesson vueJsLesson1 = new Lesson();
             vueJsLesson1.setOrdinalNumber(1);
@@ -433,41 +434,41 @@ public class DataLoader implements CommandLineRunner {
             vueJsLesson2.setCourse(vueJs);
             vueJs.getLessons().add(vueJsLesson2);
 
-            Lesson vueJsLesson3 = new Lesson();
-            vueJsLesson3.setOrdinalNumber(3);
-            vueJsLesson3.setName("Vue js chap 3");
-            vueJsLesson3.setDescription("Cascading the one-to-one persist operation\n" +
-                    "The CascadeType.PERSIST comes along with the CascadeType.ALL configuration, so we only have to persist the Post entity, and the associated PostDetails entity is persisted as well");
-            vueJsLesson3.setCourse(vueJs);
-            vueJs.getLessons().add(vueJsLesson3);
-
-            Lesson vueJsLesson4 = new Lesson();
-            vueJsLesson4.setOrdinalNumber(4);
-            vueJsLesson4.setName("Vue js chap 4");
-            vueJsLesson4.setDescription("Essentials");
-            vueJsLesson4.setCourse(vueJs);
-            vueJs.getLessons().add(vueJsLesson4);
-
-            Lesson vueJsLesson5 = new Lesson();
-            vueJsLesson5.setOrdinalNumber(5);
-            vueJsLesson5.setName("Vue js chap 5");
-            vueJsLesson5.setDescription("Components In-Depth");
-            vueJsLesson5.setCourse(vueJs);
-            vueJs.getLessons().add(vueJsLesson5);
-
-            Lesson vueJsLesson6 = new Lesson();
-            vueJsLesson6.setOrdinalNumber(6);
-            vueJsLesson6.setName("Vue js chap 6");
-            vueJsLesson6.setDescription("Transitions & Animation");
-            vueJsLesson6.setCourse(vueJs);
-            vueJs.getLessons().add(vueJsLesson6);
-
-            Lesson vueJsLesson7 = new Lesson();
-            vueJsLesson7.setOrdinalNumber(7);
-            vueJsLesson7.setName("Vue js chap 7");
-            vueJsLesson7.setDescription("Reusability & Composition");
-            vueJsLesson7.setCourse(vueJs);
-            vueJs.getLessons().add(vueJsLesson7);
+//            Lesson vueJsLesson3 = new Lesson();
+//            vueJsLesson3.setOrdinalNumber(3);
+//            vueJsLesson3.setName("Vue js chap 3");
+//            vueJsLesson3.setDescription("Cascading the one-to-one persist operation\n" +
+//                    "The CascadeType.PERSIST comes along with the CascadeType.ALL configuration, so we only have to persist the Post entity, and the associated PostDetails entity is persisted as well");
+//            vueJsLesson3.setCourse(vueJs);
+//            vueJs.getLessons().add(vueJsLesson3);
+//
+//            Lesson vueJsLesson4 = new Lesson();
+//            vueJsLesson4.setOrdinalNumber(4);
+//            vueJsLesson4.setName("Vue js chap 4");
+//            vueJsLesson4.setDescription("Essentials");
+//            vueJsLesson4.setCourse(vueJs);
+//            vueJs.getLessons().add(vueJsLesson4);
+//
+//            Lesson vueJsLesson5 = new Lesson();
+//            vueJsLesson5.setOrdinalNumber(5);
+//            vueJsLesson5.setName("Vue js chap 5");
+//            vueJsLesson5.setDescription("Components In-Depth");
+//            vueJsLesson5.setCourse(vueJs);
+//            vueJs.getLessons().add(vueJsLesson5);
+//
+//            Lesson vueJsLesson6 = new Lesson();
+//            vueJsLesson6.setOrdinalNumber(6);
+//            vueJsLesson6.setName("Vue js chap 6");
+//            vueJsLesson6.setDescription("Transitions & Animation");
+//            vueJsLesson6.setCourse(vueJs);
+//            vueJs.getLessons().add(vueJsLesson6);
+//
+//            Lesson vueJsLesson7 = new Lesson();
+//            vueJsLesson7.setOrdinalNumber(7);
+//            vueJsLesson7.setName("Vue js chap 7");
+//            vueJsLesson7.setDescription("Reusability & Composition");
+//            vueJsLesson7.setCourse(vueJs);
+//            vueJs.getLessons().add(vueJsLesson7);
 
             //Init Section ----------------------------------------------------------------------------------------------------------
 
@@ -2347,6 +2348,3554 @@ public class DataLoader implements CommandLineRunner {
             sec5React1.setLesson(reactJsLesson1);
             reactJsLesson1.getSections().add(sec5React1);
 
+                        Section sec1React2 = new Section();
+            sec1React2.setOrdinalNumber(1);
+            sec1React2.setDescription("Accessibility");
+            sec1React2.setContent("<div class=\"css-7u1i3w\">\n" +
+                    "<h2 id=\"why-accessibility\">Why Accessibility?</h2>\n" +
+                    "<p>Web accessibility (also referred to as&nbsp;<a href=\"https://en.wiktionary.org/wiki/a11y\"><strong>a11y</strong></a>) is the design and creation of websites that can be used by everyone. Accessibility support is necessary to allow assistive technology to interpret web pages.</p>\n" +
+                    "<p>React fully supports building accessible websites, often by using standard HTML techniques.</p>\n" +
+                    "<h2 id=\"standards-and-guidelines\">Standards and Guidelines</h2>\n" +
+                    "<h3 id=\"wcag\">WCAG</h3>\n" +
+                    "<p>The&nbsp;<a href=\"https://www.w3.org/WAI/intro/wcag\">Web Content Accessibility Guidelines</a>&nbsp;provides guidelines for creating accessible web sites.</p>\n" +
+                    "<p>The following WCAG checklists provide an overview:</p>\n" +
+                    "<ul>\n" +
+                    "<li><a href=\"https://www.wuhcag.com/wcag-checklist/\">WCAG checklist from Wuhcag</a></li>\n" +
+                    "<li><a href=\"http://webaim.org/standards/wcag/checklist\">WCAG checklist from WebAIM</a></li>\n" +
+                    "<li><a href=\"http://a11yproject.com/checklist.html\">Checklist from The A11Y Project</a></li>\n" +
+                    "</ul>\n" +
+                    "<h3 id=\"wai-aria\">WAI-ARIA</h3>\n" +
+                    "<p>The&nbsp;<a href=\"https://www.w3.org/WAI/intro/aria\">Web Accessibility Initiative - Accessible Rich Internet Applications</a>&nbsp;document contains techniques for building fully accessible JavaScript widgets.</p>\n" +
+                    "<p>Note that all&nbsp;<code class=\"gatsby-code-text\">aria-*</code>&nbsp;HTML attributes are fully supported in JSX. Whereas most DOM properties and attributes in React are camelCased, these attributes should be hyphen-cased (also known as kebab-case, lisp-case, etc) as they are in plain HTML:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>input\n" +
+                    "  <span class=\"token attr-name\">type</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>text<span class=\"token punctuation\">\"</span></span>\n" +
+                    "<span class=\"gatsby-highlight-code-line\">  <span class=\"token attr-name\">aria-label</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span>labelText<span class=\"token punctuation\">}</span></span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">  <span class=\"token attr-name\">aria-required</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>true<span class=\"token punctuation\">\"</span></span>\n" +
+                    "</span>  <span class=\"token attr-name\">onChange</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span>onchangeHandler<span class=\"token punctuation\">}</span></span>\n" +
+                    "  <span class=\"token attr-name\">value</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span>inputValue<span class=\"token punctuation\">}</span></span>\n" +
+                    "  <span class=\"token attr-name\">name</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>name<span class=\"token punctuation\">\"</span></span>\n" +
+                    "<span class=\"token punctuation\">/&gt;</span></span></code></pre>\n" +
+                    "</div>\n" +
+                    "<h2 id=\"semantic-html\">Semantic HTML</h2>\n" +
+                    "<p>Semantic HTML is the foundation of accessibility in a web application. Using the various HTML elements to reinforce the meaning of information in our websites will often give us accessibility for free.</p>\n" +
+                    "<ul>\n" +
+                    "<li><a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element\">MDN HTML elements reference</a></li>\n" +
+                    "</ul>\n" +
+                    "<p>Sometimes we break HTML semantics when we add&nbsp;<code class=\"gatsby-code-text\">&lt;div&gt;</code>&nbsp;elements to our JSX to make our React code work, especially when working with lists (<code class=\"gatsby-code-text\">&lt;ol&gt;</code>,&nbsp;<code class=\"gatsby-code-text\">&lt;ul&gt;</code>&nbsp;and&nbsp;<code class=\"gatsby-code-text\">&lt;dl&gt;</code>) and the HTML&nbsp;<code class=\"gatsby-code-text\">&lt;table&gt;</code>. In these cases we should rather use&nbsp;<a href=\"https://reactjs.org/docs/fragments.html\">React Fragments</a>&nbsp;to group together multiple elements.</p>\n" +
+                    "<p>For example,</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\"><span class=\"gatsby-highlight-code-line\"><span class=\"token keyword\">import</span> React<span class=\"token punctuation\">,</span> <span class=\"token punctuation\">{</span> Fragment <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'react'</span><span class=\"token punctuation\">;</span>\n" +
+                    "</span>\n" +
+                    "<span class=\"token keyword\">function</span> <span class=\"token function\">ListItem</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span> item <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "  <span class=\"token keyword\">return</span> <span class=\"token punctuation\">(</span>\n" +
+                    "<span class=\"gatsby-highlight-code-line\">    <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Fragment<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "</span>      <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>dt<span class=\"token punctuation\">&gt;</span></span><span class=\"token punctuation\">{</span>item<span class=\"token punctuation\">.</span>term<span class=\"token punctuation\">}</span><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>dt<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "      <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>dd<span class=\"token punctuation\">&gt;</span></span><span class=\"token punctuation\">{</span>item<span class=\"token punctuation\">.</span>description<span class=\"token punctuation\">}</span><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>dd<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "<span class=\"gatsby-highlight-code-line\">    <span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Fragment<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "</span>  <span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "<span class=\"token punctuation\">}</span>\n" +
+                    "\n" +
+                    "<span class=\"token keyword\">function</span> <span class=\"token function\">Glossary</span><span class=\"token punctuation\">(</span>props<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "  <span class=\"token keyword\">return</span> <span class=\"token punctuation\">(</span>\n" +
+                    "    <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>dl<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "      <span class=\"token punctuation\">{</span>props<span class=\"token punctuation\">.</span>items<span class=\"token punctuation\">.</span><span class=\"token function\">map</span><span class=\"token punctuation\">(</span>item <span class=\"token operator\">=&gt;</span> <span class=\"token punctuation\">(</span>\n" +
+                    "        <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>ListItem <span class=\"token attr-name\">item</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span>item<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">key</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span>item<span class=\"token punctuation\">.</span>id<span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/&gt;</span></span>\n" +
+                    "      <span class=\"token punctuation\">)</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">}</span>\n" +
+                    "    <span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>dl<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "  <span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "<span class=\"token punctuation\">}</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>You can map a collection of items to an array of fragments as you would any other type of element as well:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\"><span class=\"token keyword\">function</span> <span class=\"token function\">Glossary</span><span class=\"token punctuation\">(</span>props<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "  <span class=\"token keyword\">return</span> <span class=\"token punctuation\">(</span>\n" +
+                    "    <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>dl<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "      <span class=\"token punctuation\">{</span>props<span class=\"token punctuation\">.</span>items<span class=\"token punctuation\">.</span><span class=\"token function\">map</span><span class=\"token punctuation\">(</span>item <span class=\"token operator\">=&gt;</span> <span class=\"token punctuation\">(</span>\n" +
+                    "        <span class=\"token comment\">// Fragments should also have a `key` prop when mapping collections</span>\n" +
+                    "<span class=\"gatsby-highlight-code-line\">        <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Fragment <span class=\"token attr-name\">key</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span>item<span class=\"token punctuation\">.</span>id<span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "</span>          <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>dt<span class=\"token punctuation\">&gt;</span></span><span class=\"token punctuation\">{</span>item<span class=\"token punctuation\">.</span>term<span class=\"token punctuation\">}</span><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>dt<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "          <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>dd<span class=\"token punctuation\">&gt;</span></span><span class=\"token punctuation\">{</span>item<span class=\"token punctuation\">.</span>description<span class=\"token punctuation\">}</span><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>dd<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "<span class=\"gatsby-highlight-code-line\">        <span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Fragment<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "</span>      <span class=\"token punctuation\">)</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">}</span>\n" +
+                    "    <span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>dl<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "  <span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "<span class=\"token punctuation\">}</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>When you don&rsquo;t need any props on the Fragment tag you can use the&nbsp;<a href=\"https://reactjs.org/docs/fragments.html#short-syntax\">short syntax</a>, if your tooling supports it:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\"><span class=\"token keyword\">function</span> <span class=\"token function\">ListItem</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span> item <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "  <span class=\"token keyword\">return</span> <span class=\"token punctuation\">(</span>\n" +
+                    "<span class=\"gatsby-highlight-code-line\">    <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span><span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "</span>      <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>dt<span class=\"token punctuation\">&gt;</span></span><span class=\"token punctuation\">{</span>item<span class=\"token punctuation\">.</span>term<span class=\"token punctuation\">}</span><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>dt<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "      <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>dd<span class=\"token punctuation\">&gt;</span></span><span class=\"token punctuation\">{</span>item<span class=\"token punctuation\">.</span>description<span class=\"token punctuation\">}</span><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>dd<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "<span class=\"gatsby-highlight-code-line\">    <span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span><span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "</span>  <span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "<span class=\"token punctuation\">}</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>For more info, see&nbsp;<a href=\"https://reactjs.org/docs/fragments.html\">the Fragments documentation</a>.</p>\n" +
+                    "<h2 id=\"accessible-forms\">Accessible Forms</h2>\n" +
+                    "<h3 id=\"labeling\">Labeling</h3>\n" +
+                    "<p>Every HTML form control, such as&nbsp;<code class=\"gatsby-code-text\">&lt;input&gt;</code>&nbsp;and&nbsp;<code class=\"gatsby-code-text\">&lt;textarea&gt;</code>, needs to be labeled accessibly. We need to provide descriptive labels that are also exposed to screen readers.</p>\n" +
+                    "<p>The following resources show us how to do this:</p>\n" +
+                    "<ul>\n" +
+                    "<li><a href=\"https://www.w3.org/WAI/tutorials/forms/labels/\">The W3C shows us how to label elements</a></li>\n" +
+                    "<li><a href=\"http://webaim.org/techniques/forms/controls\">WebAIM shows us how to label elements</a></li>\n" +
+                    "<li><a href=\"https://www.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/\">The Paciello Group explains accessible names</a></li>\n" +
+                    "</ul>\n" +
+                    "<p>Although these standard HTML practices can be directly used in React, note that the&nbsp;<code class=\"gatsby-code-text\">for</code>attribute is written as&nbsp;<code class=\"gatsby-code-text\">htmlFor</code>&nbsp;in JSX:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\"><span class=\"gatsby-highlight-code-line\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>label <span class=\"token attr-name\">htmlFor</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>namedInput<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">&gt;</span></span><span class=\"token plain-text\">Name:</span><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>label<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "</span><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>input <span class=\"token attr-name\">id</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>namedInput<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">type</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>text<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">name</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>name<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">/&gt;</span></span></code></pre>\n" +
+                    "</div>\n" +
+                    "<h3 id=\"notifying-the-user-of-errors\">Notifying the user of errors</h3>\n" +
+                    "<p>Error situations need to be understood by all users. The following link shows us how to expose error texts to screen readers as well:</p>\n" +
+                    "<ul>\n" +
+                    "<li><a href=\"https://www.w3.org/WAI/tutorials/forms/notifications/\">The W3C demonstrates user notifications</a></li>\n" +
+                    "<li><a href=\"http://webaim.org/techniques/formvalidation/\">WebAIM looks at form validation</a></li>\n" +
+                    "</ul>\n" +
+                    "<h2 id=\"focus-control\">Focus Control</h2>\n" +
+                    "<p>Ensure that your web application can be fully operated with the keyboard only:</p>\n" +
+                    "<ul>\n" +
+                    "<li><a href=\"http://webaim.org/techniques/keyboard/\">WebAIM talks about keyboard accessibility</a></li>\n" +
+                    "</ul>\n" +
+                    "<h3 id=\"keyboard-focus-and-focus-outline\">Keyboard focus and focus outline</h3>\n" +
+                    "<p>Keyboard focus refers to the current element in the DOM that is selected to accept input from the keyboard. We see it everywhere as a focus outline similar to that shown in the following image:</p>\n" +
+                    "<a class=\"gatsby-resp-image-link\" href=\"https://reactjs.org/static/keyboard-focus-dec0e6bcc1f882baf76ebc860d4f04e5-9d63d.png\" target=\"_blank\" rel=\"noopener\"><span class=\"gatsby-resp-image-wrapper\"><span class=\"gatsby-resp-image-background-image\"><img class=\"gatsby-resp-image-image\" title=\"\" src=\"https://reactjs.org/static/keyboard-focus-dec0e6bcc1f882baf76ebc860d4f04e5-9d63d.png\" sizes=\"(max-width: 146px) 100vw, 146px\" srcset=\"/static/keyboard-focus-dec0e6bcc1f882baf76ebc860d4f04e5-9d63d.png 146w\" alt=\"Blue keyboard focus outline around a selected link.\" /></span></span></a>\n" +
+                    "<p>Only ever use CSS that removes this outline, for example by setting&nbsp;<code class=\"gatsby-code-text\">outline: 0</code>, if you are replacing it with another focus outline implementation.</p>\n" +
+                    "<h3 id=\"mechanisms-to-skip-to-desired-content\">Mechanisms to skip to desired content</h3>\n" +
+                    "<p>Provide a mechanism to allow users to skip past navigation sections in your application as this assists and speeds up keyboard navigation.</p>\n" +
+                    "<p>Skiplinks or Skip Navigation Links are hidden navigation links that only become visible when keyboard users interact with the page. They are very easy to implement with internal page anchors and some styling:</p>\n" +
+                    "<ul>\n" +
+                    "<li><a href=\"http://webaim.org/techniques/skipnav/\">WebAIM - Skip Navigation Links</a></li>\n" +
+                    "</ul>\n" +
+                    "<p>Also use landmark elements and roles, such as&nbsp;<code class=\"gatsby-code-text\">&lt;main&gt;</code>&nbsp;and&nbsp;<code class=\"gatsby-code-text\">&lt;aside&gt;</code>, to demarcate page regions as assistive technology allow the user to quickly navigate to these sections.</p>\n" +
+                    "<p>Read more about the use of these elements to enhance accessibility here:</p>\n" +
+                    "<ul>\n" +
+                    "<li><a href=\"http://www.scottohara.me/blog/2018/03/03/landmarks.html\">Accessible Landmarks</a></li>\n" +
+                    "</ul>\n" +
+                    "<h3 id=\"programmatically-managing-focus\">Programmatically managing focus</h3>\n" +
+                    "<p>Our React applications continuously modify the HTML DOM during runtime, sometimes leading to keyboard focus being lost or set to an unexpected element. In order to repair this, we need to programmatically nudge the keyboard focus in the right direction. For example, by resetting keyboard focus to a button that opened a modal window after that modal window is closed.</p>\n" +
+                    "<p>MDN Web Docs takes a look at this and describes how we can build&nbsp;<a href=\"https://developer.mozilla.org/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets\">keyboard-navigable JavaScript widgets</a>.</p>\n" +
+                    "<p>To set focus in React, we can use&nbsp;<a href=\"https://reactjs.org/docs/refs-and-the-dom.html\">Refs to DOM elements</a>.</p>\n" +
+                    "<p>Using this, we first create a ref to an element in the JSX of a component class:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\"><span class=\"token keyword\">class</span> <span class=\"token class-name\">CustomTextInput</span> <span class=\"token keyword\">extends</span> <span class=\"token class-name\">React<span class=\"token punctuation\">.</span>Component</span> <span class=\"token punctuation\">{</span>\n" +
+                    "  <span class=\"token function\">constructor</span><span class=\"token punctuation\">(</span>props<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "    <span class=\"token keyword\">super</span><span class=\"token punctuation\">(</span>props<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "<span class=\"gatsby-highlight-code-line\">    <span class=\"token comment\">// Create a ref to store the textInput DOM element</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">    <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>textInput <span class=\"token operator\">=</span> React<span class=\"token punctuation\">.</span><span class=\"token function\">createRef</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "</span>  <span class=\"token punctuation\">}</span>\n" +
+                    "  <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "<span class=\"gatsby-highlight-code-line\">  <span class=\"token comment\">// Use the `ref` callback to store a reference to the text input DOM</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">  <span class=\"token comment\">// element in an instance field (for example, this.textInput).</span>\n" +
+                    "</span>    <span class=\"token keyword\">return</span> <span class=\"token punctuation\">(</span>\n" +
+                    "      <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>input\n" +
+                    "        <span class=\"token attr-name\">type</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>text<span class=\"token punctuation\">\"</span></span>\n" +
+                    "<span class=\"gatsby-highlight-code-line\">        <span class=\"token attr-name\">ref</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>textInput<span class=\"token punctuation\">}</span></span>\n" +
+                    "</span>      <span class=\"token punctuation\">/&gt;</span></span>\n" +
+                    "    <span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "  <span class=\"token punctuation\">}</span>\n" +
+                    "<span class=\"token punctuation\">}</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>Then we can focus it elsewhere in our component when needed:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\"><span class=\"token function\">focus</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "  <span class=\"token comment\">// Explicitly focus the text input using the raw DOM API</span>\n" +
+                    "  <span class=\"token comment\">// Note: we're accessing \"current\" to get the DOM node</span>\n" +
+                    "  <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>textInput<span class=\"token punctuation\">.</span>current<span class=\"token punctuation\">.</span><span class=\"token function\">focus</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "<span class=\"token punctuation\">}</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>Sometimes a parent component needs to set focus to an element in a child component. We can do this by&nbsp;<a href=\"https://reactjs.org/docs/refs-and-the-dom.html#exposing-dom-refs-to-parent-components\">exposing DOM refs to parent components</a>&nbsp;through a special prop on the child component that forwards the parent&rsquo;s ref to the child&rsquo;s DOM node.</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\"><span class=\"token keyword\">function</span> <span class=\"token function\">CustomTextInput</span><span class=\"token punctuation\">(</span>props<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "  <span class=\"token keyword\">return</span> <span class=\"token punctuation\">(</span>\n" +
+                    "    <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "<span class=\"gatsby-highlight-code-line\">      <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>input <span class=\"token attr-name\">ref</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span>props<span class=\"token punctuation\">.</span>inputRef<span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/&gt;</span></span>\n" +
+                    "</span>    <span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "  <span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "<span class=\"token punctuation\">}</span>\n" +
+                    "\n" +
+                    "<span class=\"token keyword\">class</span> <span class=\"token class-name\">Parent</span> <span class=\"token keyword\">extends</span> <span class=\"token class-name\">React<span class=\"token punctuation\">.</span>Component</span> <span class=\"token punctuation\">{</span>\n" +
+                    "  <span class=\"token function\">constructor</span><span class=\"token punctuation\">(</span>props<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "    <span class=\"token keyword\">super</span><span class=\"token punctuation\">(</span>props<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "<span class=\"gatsby-highlight-code-line\">    <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>inputElement <span class=\"token operator\">=</span> React<span class=\"token punctuation\">.</span><span class=\"token function\">createRef</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "</span>  <span class=\"token punctuation\">}</span>\n" +
+                    "  <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "    <span class=\"token keyword\">return</span> <span class=\"token punctuation\">(</span>\n" +
+                    "<span class=\"gatsby-highlight-code-line\">      <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>CustomTextInput <span class=\"token attr-name\">inputRef</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>inputElement<span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/&gt;</span></span>\n" +
+                    "</span>    <span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "  <span class=\"token punctuation\">}</span>\n" +
+                    "<span class=\"token punctuation\">}</span>\n" +
+                    "\n" +
+                    "<span class=\"token comment\">// Now you can set focus when required.</span>\n" +
+                    "<span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>inputElement<span class=\"token punctuation\">.</span>current<span class=\"token punctuation\">.</span><span class=\"token function\">focus</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>When using a HOC to extend components, it is recommended to&nbsp;<a href=\"https://reactjs.org/docs/forwarding-refs.html\">forward the ref</a>&nbsp;to the wrapped component using the&nbsp;<code class=\"gatsby-code-text\">forwardRef</code>&nbsp;function of React. If a third party HOC does not implement ref forwarding, the above pattern can still be used as a fallback.</p>\n" +
+                    "<p>A great focus management example is the&nbsp;<a href=\"https://github.com/davidtheclark/react-aria-modal\">react-aria-modal</a>. This is a relatively rare example of a fully accessible modal window. Not only does it set initial focus on the cancel button (preventing the keyboard user from accidentally activating the success action) and trap keyboard focus inside the modal, it also resets focus back to the element that initially triggered the modal.</p>\n" +
+                    "<blockquote>\n" +
+                    "<p>Note:</p>\n" +
+                    "<p>While this is a very important accessibility feature, it is also a technique that should be used judiciously. Use it to repair the keyboard focus flow when it is disturbed, not to try and anticipate how users want to use applications.</p>\n" +
+                    "</blockquote>\n" +
+                    "<h2 id=\"mouse-and-pointer-events\">Mouse and pointer events</h2>\n" +
+                    "<p>Ensure that all functionality exposed through a mouse or pointer event can also be accessed using the keyboard alone. Depending only on the pointer device will lead to many cases where keyboard users cannot use your application.</p>\n" +
+                    "<p>To illustrate this, let&rsquo;s look at a prolific example of broken accessibility caused by click events. This is the outside click pattern, where a user can disable an opened popover by clicking outside the element.</p>\n" +
+                    "<img src=\"https://reactjs.org/outerclick-with-mouse-5523b05b22210c5a2fa0bd1f01339cb3.gif\" alt=\"A toggle button opening a popover list implemented with the click outside pattern and operated with a mouse showing that the close action works.\" />\n" +
+                    "<p>This is typically implemented by attaching a&nbsp;<code class=\"gatsby-code-text\">click</code>&nbsp;event to the&nbsp;<code class=\"gatsby-code-text\">window</code>&nbsp;object that closes the popover:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\"><span class=\"token keyword\">class</span> <span class=\"token class-name\">OuterClickExample</span> <span class=\"token keyword\">extends</span> <span class=\"token class-name\">React<span class=\"token punctuation\">.</span>Component</span> <span class=\"token punctuation\">{</span>\n" +
+                    "<span class=\"token function\">constructor</span><span class=\"token punctuation\">(</span>props<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "    <span class=\"token keyword\">super</span><span class=\"token punctuation\">(</span>props<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "\n" +
+                    "    <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>state <span class=\"token operator\">=</span> <span class=\"token punctuation\">{</span> isOpen<span class=\"token punctuation\">:</span> <span class=\"token boolean\">false</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">;</span>\n" +
+                    "    <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>toggleContainer <span class=\"token operator\">=</span> React<span class=\"token punctuation\">.</span><span class=\"token function\">createRef</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "\n" +
+                    "    <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>onClickHandler <span class=\"token operator\">=</span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>onClickHandler<span class=\"token punctuation\">.</span><span class=\"token function\">bind</span><span class=\"token punctuation\">(</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "    <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>onClickOutsideHandler <span class=\"token operator\">=</span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>onClickOutsideHandler<span class=\"token punctuation\">.</span><span class=\"token function\">bind</span><span class=\"token punctuation\">(</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "  <span class=\"token punctuation\">}</span>\n" +
+                    "\n" +
+                    "<span class=\"gatsby-highlight-code-line\">  <span class=\"token function\">componentDidMount</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">    window<span class=\"token punctuation\">.</span><span class=\"token function\">addEventListener</span><span class=\"token punctuation\">(</span><span class=\"token string\">'click'</span><span class=\"token punctuation\">,</span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>onClickOutsideHandler<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">  <span class=\"token punctuation\">}</span>\n" +
+                    "</span>\n" +
+                    "  <span class=\"token function\">componentWillUnmount</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "    window<span class=\"token punctuation\">.</span><span class=\"token function\">removeEventListener</span><span class=\"token punctuation\">(</span><span class=\"token string\">'click'</span><span class=\"token punctuation\">,</span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>onClickOutsideHandler<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "  <span class=\"token punctuation\">}</span>\n" +
+                    "\n" +
+                    "  <span class=\"token function\">onClickHandler</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "    <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>currentState <span class=\"token operator\">=&gt;</span> <span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span>\n" +
+                    "      isOpen<span class=\"token punctuation\">:</span> <span class=\"token operator\">!</span>currentState<span class=\"token punctuation\">.</span>isOpen\n" +
+                    "    <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "  <span class=\"token punctuation\">}</span>\n" +
+                    "\n" +
+                    "<span class=\"gatsby-highlight-code-line\">  <span class=\"token function\">onClickOutsideHandler</span><span class=\"token punctuation\">(</span>event<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">    <span class=\"token keyword\">if</span> <span class=\"token punctuation\">(</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>isOpen <span class=\"token operator\">&amp;&amp;</span> <span class=\"token operator\">!</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>toggleContainer<span class=\"token punctuation\">.</span>current<span class=\"token punctuation\">.</span><span class=\"token function\">contains</span><span class=\"token punctuation\">(</span>event<span class=\"token punctuation\">.</span>target<span class=\"token punctuation\">)</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">      <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span> isOpen<span class=\"token punctuation\">:</span> <span class=\"token boolean\">false</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">    <span class=\"token punctuation\">}</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">  <span class=\"token punctuation\">}</span>\n" +
+                    "</span>\n" +
+                    "  <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "    <span class=\"token keyword\">return</span> <span class=\"token punctuation\">(</span>\n" +
+                    "      <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div <span class=\"token attr-name\">ref</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>toggleContainer<span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "        <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>button <span class=\"token attr-name\">onClick</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>onClickHandler<span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">&gt;</span></span><span class=\"token plain-text\">Select an option</span><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>button<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "        <span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>isOpen <span class=\"token operator\">?</span> <span class=\"token punctuation\">(</span>\n" +
+                    "          <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>ul<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "            <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>li<span class=\"token punctuation\">&gt;</span></span><span class=\"token plain-text\">Option 1</span><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>li<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "            <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>li<span class=\"token punctuation\">&gt;</span></span><span class=\"token plain-text\">Option 2</span><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>li<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "            <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>li<span class=\"token punctuation\">&gt;</span></span><span class=\"token plain-text\">Option 3</span><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>li<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "          <span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>ul<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "        <span class=\"token punctuation\">)</span> <span class=\"token punctuation\">:</span> <span class=\"token keyword\">null</span><span class=\"token punctuation\">}</span>\n" +
+                    "      <span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "    <span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "  <span class=\"token punctuation\">}</span>\n" +
+                    "<span class=\"token punctuation\">}</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>This may work fine for users with pointer devices, such as a mouse, but operating this with the keyboard alone leads to broken functionality when tabbing to the next element as the&nbsp;<code class=\"gatsby-code-text\">window</code>object never receives a&nbsp;<code class=\"gatsby-code-text\">click</code>&nbsp;event. This can lead to obscured functionality which blocks users from using your application.</p>\n" +
+                    "<img src=\"https://reactjs.org/outerclick-with-keyboard-eca0ca825c8c5e2aa609cee72ef47e27.gif\" alt=\"A toggle button opening a popover list implemented with the click outside pattern and operated with the keyboard showing the popover not being closed on blur and it obscuring other screen elements.\" />\n" +
+                    "<p>The same functionality can be achieved by using an appropriate event handlers instead, such as&nbsp;<code class=\"gatsby-code-text\">onBlur</code>&nbsp;and&nbsp;<code class=\"gatsby-code-text\">onFocus</code>:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\"><span class=\"token keyword\">class</span> <span class=\"token class-name\">BlurExample</span> <span class=\"token keyword\">extends</span> <span class=\"token class-name\">React<span class=\"token punctuation\">.</span>Component</span> <span class=\"token punctuation\">{</span>\n" +
+                    "  <span class=\"token function\">constructor</span><span class=\"token punctuation\">(</span>props<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "    <span class=\"token keyword\">super</span><span class=\"token punctuation\">(</span>props<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "\n" +
+                    "    <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>state <span class=\"token operator\">=</span> <span class=\"token punctuation\">{</span> isOpen<span class=\"token punctuation\">:</span> <span class=\"token boolean\">false</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">;</span>\n" +
+                    "    <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>timeOutId <span class=\"token operator\">=</span> <span class=\"token keyword\">null</span><span class=\"token punctuation\">;</span>\n" +
+                    "\n" +
+                    "    <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>onClickHandler <span class=\"token operator\">=</span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>onClickHandler<span class=\"token punctuation\">.</span><span class=\"token function\">bind</span><span class=\"token punctuation\">(</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "    <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>onBlurHandler <span class=\"token operator\">=</span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>onBlurHandler<span class=\"token punctuation\">.</span><span class=\"token function\">bind</span><span class=\"token punctuation\">(</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "    <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>onFocusHandler <span class=\"token operator\">=</span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>onFocusHandler<span class=\"token punctuation\">.</span><span class=\"token function\">bind</span><span class=\"token punctuation\">(</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "  <span class=\"token punctuation\">}</span>\n" +
+                    "\n" +
+                    "  <span class=\"token function\">onClickHandler</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "    <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span>currentState <span class=\"token operator\">=&gt;</span> <span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span>\n" +
+                    "      isOpen<span class=\"token punctuation\">:</span> <span class=\"token operator\">!</span>currentState<span class=\"token punctuation\">.</span>isOpen\n" +
+                    "    <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "  <span class=\"token punctuation\">}</span>\n" +
+                    "\n" +
+                    "<span class=\"gatsby-highlight-code-line\">  <span class=\"token comment\">// We close the popover on the next tick by using setTimeout.</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">  <span class=\"token comment\">// This is necessary because we need to first check if</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">  <span class=\"token comment\">// another child of the element has received focus as</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">  <span class=\"token comment\">// the blur event fires prior to the new focus event.</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">  <span class=\"token function\">onBlurHandler</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">    <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>timeOutId <span class=\"token operator\">=</span> <span class=\"token function\">setTimeout</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=&gt;</span> <span class=\"token punctuation\">{</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">      <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">        isOpen<span class=\"token punctuation\">:</span> <span class=\"token boolean\">false</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">      <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">    <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">  <span class=\"token punctuation\">}</span>\n" +
+                    "</span>\n" +
+                    "<span class=\"gatsby-highlight-code-line\">  <span class=\"token comment\">// If a child receives focus, do not close the popover.</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">  <span class=\"token function\">onFocusHandler</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">    <span class=\"token function\">clearTimeout</span><span class=\"token punctuation\">(</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>timeOutId<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">  <span class=\"token punctuation\">}</span>\n" +
+                    "</span>\n" +
+                    "  <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "<span class=\"gatsby-highlight-code-line\">    <span class=\"token comment\">// React assists us by bubbling the blur and</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">    <span class=\"token comment\">// focus events to the parent.</span>\n" +
+                    "</span>    <span class=\"token keyword\">return</span> <span class=\"token punctuation\">(</span>\n" +
+                    "<span class=\"gatsby-highlight-code-line\">      <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div <span class=\"token attr-name\">onBlur</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>onBlurHandler<span class=\"token punctuation\">}</span></span>\n" +
+                    "</span>           <span class=\"token attr-name\">onFocus</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>onFocusHandler<span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">&gt;</span>\n" +
+                    "</span>        <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>button <span class=\"token attr-name\">onClick</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>onClickHandler<span class=\"token punctuation\">}</span></span>\n" +
+                    "                <span class=\"token attr-name\">aria-haspopup</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>true<span class=\"token punctuation\">\"</span></span>\n" +
+                    "                <span class=\"token attr-name\">aria-expanded</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>isOpen<span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "<span class=\"token plain-text\">          Select an option</span>\n" +
+                    "        <span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>button<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "        <span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>isOpen <span class=\"token operator\">?</span> <span class=\"token punctuation\">(</span>\n" +
+                    "          <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>ul<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "            <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>li<span class=\"token punctuation\">&gt;</span></span><span class=\"token plain-text\">Option 1</span><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>li<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "            <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>li<span class=\"token punctuation\">&gt;</span></span><span class=\"token plain-text\">Option 2</span><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>li<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "            <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>li<span class=\"token punctuation\">&gt;</span></span><span class=\"token plain-text\">Option 3</span><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>li<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "          <span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>ul<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "        <span class=\"token punctuation\">)</span> <span class=\"token punctuation\">:</span> <span class=\"token keyword\">null</span><span class=\"token punctuation\">}</span>\n" +
+                    "      <span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "    <span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "  <span class=\"token punctuation\">}</span>\n" +
+                    "<span class=\"token punctuation\">}</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>This code exposes the functionality to both pointer device and keyboard users. Also note the added&nbsp;<code class=\"gatsby-code-text\">aria-*</code>&nbsp;props to support screen-reader users. For simplicity&rsquo;s sake the keyboard events to enable&nbsp;<code class=\"gatsby-code-text\">arrow key</code>&nbsp;interaction of the popover options have not been implemented.</p>\n" +
+                    "<img src=\"https://reactjs.org/blur-popover-close-28ce2067489843caf05fe7ce22494542.gif\" alt=\"A popover list correctly closing for both mouse and keyboard users.\" />\n" +
+                    "<p>This is one example of many cases where depending on only pointer and mouse events will break functionality for keyboard users. Always testing with the keyboard will immediately highlight the problem areas which can then be fixed by using keyboard aware event handlers.</p>\n" +
+                    "<h2 id=\"more-complex-widgets\">More Complex Widgets</h2>\n" +
+                    "<p>A more complex user experience should not mean a less accessible one. Whereas accessibility is most easily achieved by coding as close to HTML as possible, even the most complex widget can be coded accessibly.</p>\n" +
+                    "<p>Here we require knowledge of&nbsp;<a href=\"https://www.w3.org/TR/wai-aria/#roles\">ARIA Roles</a>&nbsp;as well as&nbsp;<a href=\"https://www.w3.org/TR/wai-aria/#states_and_properties\">ARIA States and Properties</a>. These are toolboxes filled with HTML attributes that are fully supported in JSX and enable us to construct fully accessible, highly functional React components.</p>\n" +
+                    "<p>Each type of widget has a specific design pattern and is expected to function in a certain way by users and user agents alike:</p>\n" +
+                    "<ul>\n" +
+                    "<li><a href=\"https://www.w3.org/TR/wai-aria-practices/#aria_ex\">WAI-ARIA Authoring Practices - Design Patterns and Widgets</a></li>\n" +
+                    "<li><a href=\"http://heydonworks.com/practical_aria_examples/\">Heydon Pickering - ARIA Examples</a></li>\n" +
+                    "<li><a href=\"https://inclusive-components.design/\">Inclusive Components</a></li>\n" +
+                    "</ul>\n" +
+                    "<h2 id=\"other-points-for-consideration\">Other Points for Consideration</h2>\n" +
+                    "<h3 id=\"setting-the-language\">Setting the language</h3>\n" +
+                    "<p>Indicate the human language of page texts as screen reader software uses this to select the correct voice settings:</p>\n" +
+                    "<ul>\n" +
+                    "<li><a href=\"http://webaim.org/techniques/screenreader/#language\">WebAIM - Document Language</a></li>\n" +
+                    "</ul>\n" +
+                    "<h3 id=\"setting-the-document-title\">Setting the document title</h3>\n" +
+                    "<p>Set the document&nbsp;<code class=\"gatsby-code-text\">&lt;title&gt;</code>&nbsp;to correctly describe the current page content as this ensures that the user remains aware of the current page context:</p>\n" +
+                    "<ul>\n" +
+                    "<li><a href=\"https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html\">WCAG - Understanding the Document Title Requirement</a></li>\n" +
+                    "</ul>\n" +
+                    "<p>We can set this in React using the&nbsp;<a href=\"https://github.com/gaearon/react-document-title\">React Document Title Component</a>.</p>\n" +
+                    "<h3 id=\"color-contrast\">Color contrast</h3>\n" +
+                    "<p>Ensure that all readable text on your website has sufficient color contrast to remain maximally readable by users with low vision:</p>\n" +
+                    "<ul>\n" +
+                    "<li><a href=\"https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html\">WCAG - Understanding the Color Contrast Requirement</a></li>\n" +
+                    "<li><a href=\"https://www.smashingmagazine.com/2014/10/color-contrast-tips-and-tools-for-accessibility/\">Everything About Color Contrast And Why You Should Rethink It</a></li>\n" +
+                    "<li><a href=\"http://a11yproject.com/posts/what-is-color-contrast/\">A11yProject - What is Color Contrast</a></li>\n" +
+                    "</ul>\n" +
+                    "<p>It can be tedious to manually calculate the proper color combinations for all cases in your website so instead, you can&nbsp;<a href=\"http://jxnblk.com/colorable/\">calculate an entire accessible color palette with Colorable</a>.</p>\n" +
+                    "<p>Both the aXe and WAVE tools mentioned below also include color contrast tests and will report on contrast errors.</p>\n" +
+                    "<p>If you want to extend your contrast testing abilities you can use these tools:</p>\n" +
+                    "<ul>\n" +
+                    "<li><a href=\"http://webaim.org/resources/contrastchecker/\">WebAIM - Color Contrast Checker</a></li>\n" +
+                    "<li><a href=\"https://www.paciellogroup.com/resources/contrastanalyser/\">The Paciello Group - Color Contrast Analyzer</a></li>\n" +
+                    "</ul>\n" +
+                    "<h2 id=\"development-and-testing-tools\">Development and Testing Tools</h2>\n" +
+                    "<p>There are a number of tools we can use to assist in the creation of accessible web applications.</p>\n" +
+                    "<h3 id=\"the-keyboard\">The keyboard</h3>\n" +
+                    "<p>By far the easiest and also one of the most important checks is to test if your entire website can be reached and used with the keyboard alone. Do this by:</p>\n" +
+                    "<ol>\n" +
+                    "<li>Plugging out your mouse.</li>\n" +
+                    "<li>Using&nbsp;<code class=\"gatsby-code-text\">Tab</code>&nbsp;and&nbsp;<code class=\"gatsby-code-text\">Shift+Tab</code>&nbsp;to browse.</li>\n" +
+                    "<li>Using&nbsp;<code class=\"gatsby-code-text\">Enter</code>&nbsp;to activate elements.</li>\n" +
+                    "<li>Where required, using your keyboard arrow keys to interact with some elements, such as menus and dropdowns.</li>\n" +
+                    "</ol>\n" +
+                    "<h3 id=\"development-assistance\">Development assistance</h3>\n" +
+                    "<p>We can check some accessibility features directly in our JSX code. Often intellisense checks are already provided in JSX aware IDE&rsquo;s for the ARIA roles, states and properties. We also have access to the following tool:</p>\n" +
+                    "<h4 id=\"eslint-plugin-jsx-a11y\">eslint-plugin-jsx-a11y</h4>\n" +
+                    "<p>The&nbsp;<a href=\"https://github.com/evcohen/eslint-plugin-jsx-a11y\">eslint-plugin-jsx-a11y</a>&nbsp;plugin for ESLint provides AST linting feedback regarding accessibility issues in your JSX. Many IDE&rsquo;s allow you to integrate these findings directly into code analysis and source code windows.</p>\n" +
+                    "<p><a href=\"https://github.com/facebookincubator/create-react-app\">Create React App</a>&nbsp;has this plugin with a subset of rules activated. If you want to enable even more accessibility rules, you can create an&nbsp;<code class=\"gatsby-code-text\">.eslintrc</code>&nbsp;file in the root of your project with this content:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsxon\">\n" +
+                    "<pre class=\"gatsby-code-jsxon\"><code class=\"gatsby-code-jsxon\">{\n" +
+                    "  \"extends\": [\"react-app\", \"plugin:jsx-a11y/recommended\"],\n" +
+                    "  \"plugins\": [\"jsx-a11y\"]\n" +
+                    "}</code></pre>\n" +
+                    "</div>\n" +
+                    "<h3 id=\"testing-accessibility-in-the-browser\">Testing accessibility in the browser</h3>\n" +
+                    "<p>A number of tools exist that can run accessibility audits on web pages in your browser. Please use them in combination with other accessibility checks mentioned here as they can only test the technical accessibility of your HTML.</p>\n" +
+                    "<h4 id=\"axe-axe-core-and-react-axe\">aXe, aXe-core and react-axe</h4>\n" +
+                    "<p>Deque Systems offers&nbsp;<a href=\"https://github.com/dequelabs/axe-core\">aXe-core</a>&nbsp;for automated and end-to-end accessibility tests of your applications. This module includes integrations for Selenium.</p>\n" +
+                    "<p><a href=\"https://www.deque.com/products/axe/\">The Accessibility Engine</a>&nbsp;or aXe, is an accessibility inspector browser extension built on&nbsp;<code class=\"gatsby-code-text\">aXe-core</code>.</p>\n" +
+                    "<p>You can also use the&nbsp;<a href=\"https://github.com/dylanb/react-axe\">react-axe</a>&nbsp;module to report these accessibility findings directly to the console while developing and debugging.</p>\n" +
+                    "<h4 id=\"webaim-wave\">WebAIM WAVE</h4>\n" +
+                    "<p>The&nbsp;<a href=\"http://wave.webaim.org/extension/\">Web Accessibility Evaluation Tool</a>&nbsp;is another accessibility browser extension.</p>\n" +
+                    "<h4 id=\"accessibility-inspectors-and-the-accessibility-tree\">Accessibility inspectors and the Accessibility Tree</h4>\n" +
+                    "<p><a href=\"https://www.paciellogroup.com/blog/2015/01/the-browser-accessibility-tree/\">The Accessibility Tree</a>&nbsp;is a subset of the DOM tree that contains accessible objects for every DOM element that should be exposed to assistive technology, such as screen readers.</p>\n" +
+                    "<p>In some browsers we can easily view the accessibility information for each element in the accessibility tree:</p>\n" +
+                    "<ul>\n" +
+                    "<li><a href=\"https://gist.github.com/marcysutton/0a42f815878c159517a55e6652e3b23a\">Activate the Accessibility Inspector in Chrome</a></li>\n" +
+                    "<li><a href=\"https://developer.apple.com/library/content/documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXTestingApps.html\">Using the Accessibility Inspector in OS X Safari</a></li>\n" +
+                    "</ul>\n" +
+                    "<h3 id=\"screen-readers\">Screen readers</h3>\n" +
+                    "<p>Testing with a screen reader should form part of your accessibility tests.</p>\n" +
+                    "<p>Please note that browser / screen reader combinations matter. It is recommended that you test your application in the browser best suited to your screen reader of choice.</p>\n" +
+                    "<h3 id=\"commonly-used-screen-readers\">Commonly Used Screen Readers</h3>\n" +
+                    "<h4 id=\"nvda-in-firefox\">NVDA in Firefox</h4>\n" +
+                    "<p><a href=\"https://www.nvaccess.org/\">NonVisual Desktop Access</a>&nbsp;or NVDA is an open source Windows screen reader that is widely used.</p>\n" +
+                    "<p>Refer to the following guides on how to best use NVDA:</p>\n" +
+                    "<ul>\n" +
+                    "<li><a href=\"http://webaim.org/articles/nvda/\">WebAIM - Using NVDA to Evaluate Web Accessibility</a></li>\n" +
+                    "<li><a href=\"https://dequeuniversity.com/screenreaders/nvda-keyboard-shortcuts\">Deque - NVDA Keyboard Shortcuts</a></li>\n" +
+                    "</ul>\n" +
+                    "<h4 id=\"voiceover-in-safari\">VoiceOver in Safari</h4>\n" +
+                    "<p>VoiceOver is an integrated screen reader on Apple devices.</p>\n" +
+                    "<p>Refer to the following guides on how activate and use VoiceOver:</p>\n" +
+                    "<ul>\n" +
+                    "<li><a href=\"http://webaim.org/articles/voiceover/\">WebAIM - Using VoiceOver to Evaluate Web Accessibility</a></li>\n" +
+                    "<li><a href=\"https://dequeuniversity.com/screenreaders/voiceover-keyboard-shortcuts\">Deque - VoiceOver for OS X Keyboard Shortcuts</a></li>\n" +
+                    "<li><a href=\"https://dequeuniversity.com/screenreaders/voiceover-ios-shortcuts\">Deque - VoiceOver for iOS Shortcuts</a></li>\n" +
+                    "</ul>\n" +
+                    "<h4 id=\"jaws-in-internet-explorer\">JAWS in Internet Explorer</h4>\n" +
+                    "<p><a href=\"http://www.freedomscientific.com/Products/Blindness/JAWS\">Job Access With Speech</a>&nbsp;or JAWS, is a prolifically used screen reader on Windows.</p>\n" +
+                    "<p>Refer to the following guides on how to best use JAWS:</p>\n" +
+                    "<ul>\n" +
+                    "<li><a href=\"http://webaim.org/articles/jaws/\">WebAIM - Using JAWS to Evaluate Web Accessibility</a></li>\n" +
+                    "<li><a href=\"https://dequeuniversity.com/screenreaders/jaws-keyboard-shortcuts\">Deque - JAWS Keyboard Shortcuts</a></li>\n" +
+                    "</ul>\n" +
+                    "<h3 id=\"other-screen-readers\">Other Screen Readers</h3>\n" +
+                    "<h4 id=\"chromevox-in-google-chrome\">ChromeVox in Google Chrome</h4>\n" +
+                    "<p><a href=\"http://www.chromevox.com/\">ChromeVox</a>&nbsp;is an integrated screen reader on Chromebooks and is available&nbsp;<a href=\"https://chrome.google.com/webstore/detail/chromevox/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en\">as an extension</a>&nbsp;for Google Chrome.</p>\n" +
+                    "<p>Refer to the following guides on how best to use ChromeVox:</p>\n" +
+                    "<ul>\n" +
+                    "<li><a href=\"https://support.google.com/chromebook/answer/7031755?hl=en\">Google Chromebook Help - Use the Built-in Screen Reader</a></li>\n" +
+                    "<li><a href=\"http://www.chromevox.com/keyboard_shortcuts.html\">ChromeVox Classic Keyboard Shortcuts Reference</a></li>\n" +
+                    "</ul>\n" +
+                    "</div>");
+            sec1React2.setLesson(reactJsLesson2);
+            reactJsLesson2.getSections().add(sec1React2);
+
+            Section sec2React2 = new Section();
+            sec2React2.setOrdinalNumber(2);
+            sec2React2.setDescription("Context");
+            sec2React2.setContent("<p>Context is designed to share data that can be considered &ldquo;global&rdquo; for a tree of React components, such as the current authenticated user, theme, or preferred language. For example, in the code below we manually thread through a &ldquo;theme&rdquo; prop in order to style the Button component:</p>\n" +
+                    "<p>&nbsp;</p>\n" +
+                    "<div class=\"gatsby-highlight\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code><span class=\"token keyword\">class</span> <span class=\"token class-name\">App</span> <span class=\"token keyword\">extends</span> <span class=\"token class-name\">React<span class=\"token punctuation\">.</span>Component</span> <span class=\"token punctuation\">{</span>\n" +
+                    "  <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "    <span class=\"token keyword\">return</span> <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Toolbar <span class=\"token attr-name\">theme</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>dark<span class=\"token punctuation\">\"</span></span> <span class=\"token punctuation\">/&gt;</span></span><span class=\"token punctuation\">;</span>\n" +
+                    "  <span class=\"token punctuation\">}</span>\n" +
+                    "<span class=\"token punctuation\">}</span>\n" +
+                    "\n" +
+                    "<span class=\"token keyword\">function</span> <span class=\"token function\">Toolbar</span><span class=\"token punctuation\">(</span>props<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "<span class=\"gatsby-highlight-code-line\">  <span class=\"token comment\">// The Toolbar component must take an extra \"theme\" prop</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">  <span class=\"token comment\">// and pass it to the ThemedButton. This can become painful</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">  <span class=\"token comment\">// if every single button in the app needs to know the theme</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">  <span class=\"token comment\">// because it would have to be passed through all components.</span>\n" +
+                    "</span>  <span class=\"token keyword\">return</span> <span class=\"token punctuation\">(</span>\n" +
+                    "    <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "<span class=\"gatsby-highlight-code-line\">      <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>ThemedButton <span class=\"token attr-name\">theme</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span>props<span class=\"token punctuation\">.</span>theme<span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/&gt;</span></span>\n" +
+                    "</span>    <span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "  <span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "<span class=\"token punctuation\">}</span>\n" +
+                    "\n" +
+                    "<span class=\"token keyword\">class</span> <span class=\"token class-name\">ThemedButton</span> <span class=\"token keyword\">extends</span> <span class=\"token class-name\">React<span class=\"token punctuation\">.</span>Component</span> <span class=\"token punctuation\">{</span>\n" +
+                    "  <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "    <span class=\"token keyword\">return</span> <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Button <span class=\"token attr-name\">theme</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>props<span class=\"token punctuation\">.</span>theme<span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/&gt;</span></span><span class=\"token punctuation\">;</span>\n" +
+                    "  <span class=\"token punctuation\">}</span>\n" +
+                    "<span class=\"token punctuation\">}</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>&nbsp;</p>\n" +
+                    "<p>Using context, we can avoid passing props through intermediate elements:</p>\n" +
+                    "<p>&nbsp;</p>\n" +
+                    "<div class=\"gatsby-highlight\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code><span class=\"gatsby-highlight-code-line\"><span class=\"token comment\">// Context lets us pass a value deep into the component tree</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\"><span class=\"token comment\">// without explicitly threading it through every component.</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\"><span class=\"token comment\">// Create a context for the current theme (with \"light\" as the default).</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\"><span class=\"token keyword\">const</span> ThemeContext <span class=\"token operator\">=</span> React<span class=\"token punctuation\">.</span><span class=\"token function\">createContext</span><span class=\"token punctuation\">(</span><span class=\"token string\">'light'</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "</span>\n" +
+                    "<span class=\"token keyword\">class</span> <span class=\"token class-name\">App</span> <span class=\"token keyword\">extends</span> <span class=\"token class-name\">React<span class=\"token punctuation\">.</span>Component</span> <span class=\"token punctuation\">{</span>\n" +
+                    "  <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "<span class=\"gatsby-highlight-code-line\">    <span class=\"token comment\">// Use a Provider to pass the current theme to the tree below.</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">    <span class=\"token comment\">// Any component can read it, no matter how deep it is.</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">    <span class=\"token comment\">// In this example, we're passing \"dark\" as the current value.</span>\n" +
+                    "</span>    <span class=\"token keyword\">return</span> <span class=\"token punctuation\">(</span>\n" +
+                    "<span class=\"gatsby-highlight-code-line\">      <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>ThemeContext.Provider <span class=\"token attr-name\">value</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>dark<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "</span>        <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Toolbar <span class=\"token punctuation\">/&gt;</span></span>\n" +
+                    "      <span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>ThemeContext.Provider<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "    <span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "  <span class=\"token punctuation\">}</span>\n" +
+                    "<span class=\"token punctuation\">}</span>\n" +
+                    "\n" +
+                    "<span class=\"gatsby-highlight-code-line\"><span class=\"token comment\">// A component in the middle doesn't have to</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\"><span class=\"token comment\">// pass the theme down explicitly anymore.</span>\n" +
+                    "</span><span class=\"token keyword\">function</span> <span class=\"token function\">Toolbar</span><span class=\"token punctuation\">(</span>props<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "  <span class=\"token keyword\">return</span> <span class=\"token punctuation\">(</span>\n" +
+                    "    <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "      <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>ThemedButton <span class=\"token punctuation\">/&gt;</span></span>\n" +
+                    "    <span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "  <span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "<span class=\"token punctuation\">}</span>\n" +
+                    "\n" +
+                    "<span class=\"token keyword\">class</span> <span class=\"token class-name\">ThemedButton</span> <span class=\"token keyword\">extends</span> <span class=\"token class-name\">React<span class=\"token punctuation\">.</span>Component</span> <span class=\"token punctuation\">{</span>\n" +
+                    "<span class=\"gatsby-highlight-code-line\">  <span class=\"token comment\">// Assign a contextType to read the current theme context.</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">  <span class=\"token comment\">// React will find the closest theme Provider above and use its value.</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">  <span class=\"token comment\">// In this example, the current theme is \"dark\".</span>\n" +
+                    "</span>  <span class=\"token keyword\">static</span> contextType <span class=\"token operator\">=</span> ThemeContext<span class=\"token punctuation\">;</span>\n" +
+                    "  <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "<span class=\"gatsby-highlight-code-line\">    <span class=\"token keyword\">return</span> <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Button <span class=\"token attr-name\">theme</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>context<span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/&gt;</span></span><span class=\"token punctuation\">;</span>\n" +
+                    "</span>  <span class=\"token punctuation\">}</span>\n" +
+                    "<span class=\"token punctuation\">}</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>&nbsp;</p>\n" +
+                    "<h2 id=\"before-you-use-context\">Before You Use Context</h2>\n" +
+                    "<p>Context is primarily used when some data needs to be accessible by&nbsp;<em>many</em>&nbsp;components at different nesting levels. Apply it sparingly because it makes component reuse more difficult.</p>\n" +
+                    "<p><strong>If you only want to avoid passing some props through many levels,&nbsp;<a href=\"https://reactjs.org/docs/composition-vs-inheritance.html\">component composition</a>&nbsp;is often a simpler solution than context.</strong></p>\n" +
+                    "<p>For example, consider a&nbsp;<code class=\"gatsby-code-text\">Page</code>&nbsp;component that passes a&nbsp;<code class=\"gatsby-code-text\">user</code>&nbsp;and&nbsp;<code class=\"gatsby-code-text\">avatarSize</code>&nbsp;prop several levels down so that deeply nested&nbsp;<code class=\"gatsby-code-text\">Link</code>&nbsp;and&nbsp;<code class=\"gatsby-code-text\">Avatar</code>&nbsp;components can read it:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Page <span class=\"token attr-name\">user</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span>user<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">avatarSize</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span>avatarSize<span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/&gt;</span></span>\n" +
+                    "<span class=\"token comment\">// ... which renders ...</span>\n" +
+                    "<span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>PageLayout <span class=\"token attr-name\">user</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span>user<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">avatarSize</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span>avatarSize<span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/&gt;</span></span>\n" +
+                    "<span class=\"token comment\">// ... which renders ...</span>\n" +
+                    "<span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>NavigationBar <span class=\"token attr-name\">user</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span>user<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">avatarSize</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span>avatarSize<span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/&gt;</span></span>\n" +
+                    "<span class=\"token comment\">// ... which renders ...</span>\n" +
+                    "<span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Link <span class=\"token attr-name\">href</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span>user<span class=\"token punctuation\">.</span>permalink<span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "  <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Avatar <span class=\"token attr-name\">user</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span>user<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">size</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span>avatarSize<span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/&gt;</span></span>\n" +
+                    "<span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Link<span class=\"token punctuation\">&gt;</span></span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>It might feel redundant to pass down the&nbsp;<code class=\"gatsby-code-text\">user</code>&nbsp;and&nbsp;<code class=\"gatsby-code-text\">avatarSize</code>&nbsp;props through many levels if in the end only the&nbsp;<code class=\"gatsby-code-text\">Avatar</code>&nbsp;component really needs it. It&rsquo;s also annoying that whenever the&nbsp;<code class=\"gatsby-code-text\">Avatar</code>&nbsp;component needs more props from the top, you have to add them at all the intermediate levels too.</p>\n" +
+                    "<p>One way to solve this issue&nbsp;<strong>without context</strong>&nbsp;is to&nbsp;<a href=\"https://reactjs.org/docs/composition-vs-inheritance.html#containment\">pass down the&nbsp;<code class=\"gatsby-code-text\">Avatar</code>&nbsp;component itself</a>&nbsp;so that the intermediate components don&rsquo;t need to know about the&nbsp;<code class=\"gatsby-code-text\">user</code>&nbsp;prop:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\"><span class=\"token keyword\">function</span> <span class=\"token function\">Page</span><span class=\"token punctuation\">(</span>props<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "  <span class=\"token keyword\">const</span> user <span class=\"token operator\">=</span> props<span class=\"token punctuation\">.</span>user<span class=\"token punctuation\">;</span>\n" +
+                    "  <span class=\"token keyword\">const</span> userLink <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>\n" +
+                    "    <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Link <span class=\"token attr-name\">href</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span>user<span class=\"token punctuation\">.</span>permalink<span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "      <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Avatar <span class=\"token attr-name\">user</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span>user<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">size</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span>props<span class=\"token punctuation\">.</span>avatarSize<span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/&gt;</span></span>\n" +
+                    "    <span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Link<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "  <span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "  <span class=\"token keyword\">return</span> <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>PageLayout <span class=\"token attr-name\">userLink</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span>userLink<span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/&gt;</span></span><span class=\"token punctuation\">;</span>\n" +
+                    "<span class=\"token punctuation\">}</span>\n" +
+                    "\n" +
+                    "<span class=\"token comment\">// Now, we have:</span>\n" +
+                    "<span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Page <span class=\"token attr-name\">user</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span>user<span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/&gt;</span></span>\n" +
+                    "<span class=\"token comment\">// ... which renders ...</span>\n" +
+                    "<span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>PageLayout <span class=\"token attr-name\">userLink</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token operator\">...</span><span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/&gt;</span></span>\n" +
+                    "<span class=\"token comment\">// ... which renders ...</span>\n" +
+                    "<span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>NavigationBar <span class=\"token attr-name\">userLink</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token operator\">...</span><span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/&gt;</span></span>\n" +
+                    "<span class=\"token comment\">// ... which renders ...</span>\n" +
+                    "<span class=\"token punctuation\">{</span>props<span class=\"token punctuation\">.</span>userLink<span class=\"token punctuation\">}</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>With this change, only the top-most Page component needs to know about the&nbsp;<code class=\"gatsby-code-text\">Link</code>&nbsp;and&nbsp;<code class=\"gatsby-code-text\">Avatar</code>&nbsp;components&rsquo; use of&nbsp;<code class=\"gatsby-code-text\">user</code>&nbsp;and&nbsp;<code class=\"gatsby-code-text\">avatarSize</code>.</p>\n" +
+                    "<p>This&nbsp;<em>inversion of control</em>&nbsp;can make your code cleaner in many cases by reducing the amount of props you need to pass through your application and giving more control to the root components. However, this isn&rsquo;t the right choice in every case: moving more complexity higher in the tree makes those higher-level components more complicated and forces the lower-level components to be more flexible than you may want.</p>\n" +
+                    "<p>You&rsquo;re not limited to a single child for a component. You may pass multiple children, or even have multiple separate &ldquo;slots&rdquo; for children,&nbsp;<a href=\"https://reactjs.org/docs/composition-vs-inheritance.html#containment\">as documented here</a>:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\"><span class=\"token keyword\">function</span> <span class=\"token function\">Page</span><span class=\"token punctuation\">(</span>props<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "  <span class=\"token keyword\">const</span> user <span class=\"token operator\">=</span> props<span class=\"token punctuation\">.</span>user<span class=\"token punctuation\">;</span>\n" +
+                    "  <span class=\"token keyword\">const</span> content <span class=\"token operator\">=</span> <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Feed <span class=\"token attr-name\">user</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span>user<span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/&gt;</span></span><span class=\"token punctuation\">;</span>\n" +
+                    "  <span class=\"token keyword\">const</span> topBar <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span>\n" +
+                    "    <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>NavigationBar<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "      <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Link <span class=\"token attr-name\">href</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span>user<span class=\"token punctuation\">.</span>permalink<span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "        <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Avatar <span class=\"token attr-name\">user</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span>user<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">size</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span>props<span class=\"token punctuation\">.</span>avatarSize<span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/&gt;</span></span>\n" +
+                    "      <span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>Link<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "    <span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>NavigationBar<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "  <span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "  <span class=\"token keyword\">return</span> <span class=\"token punctuation\">(</span>\n" +
+                    "    <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>PageLayout\n" +
+                    "      <span class=\"token attr-name\">topBar</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span>topBar<span class=\"token punctuation\">}</span></span>\n" +
+                    "      <span class=\"token attr-name\">content</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span>content<span class=\"token punctuation\">}</span></span>\n" +
+                    "    <span class=\"token punctuation\">/&gt;</span></span>\n" +
+                    "  <span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "<span class=\"token punctuation\">}</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>This pattern is sufficient for many cases when you need to decouple a child from its immediate parents. You can take it even further with&nbsp;<a href=\"https://reactjs.org/docs/render-props.html\">render props</a>&nbsp;if the child needs to communicate with the parent before rendering.</p>\n" +
+                    "<p>However, sometimes the same data needs to be accessible by many components in the tree, and at different nesting levels. Context lets you &ldquo;broadcast&rdquo; such data, and changes to it, to all components below. Common examples where using context might be simpler than the alternatives include managing the current locale, theme, or a data cache.</p>");
+            sec2React2.setLesson(reactJsLesson2);
+            reactJsLesson2.getSections().add(sec2React2);
+
+            Section sec3React2 = new Section();
+            sec3React2.setOrdinalNumber(3);
+            sec3React2.setDescription("Error Boundaries");
+            sec3React2.setContent("<div class=\"css-7u1i3w\">\n" +
+                    "<p>In the past, JavaScript errors inside components used to corrupt React&rsquo;s internal state and cause it to&nbsp;<a href=\"https://github.com/facebook/react/issues/4026\">emit</a>&nbsp;<a href=\"https://github.com/facebook/react/issues/6895\">cryptic</a>&nbsp;<a href=\"https://github.com/facebook/react/issues/8579\">errors</a>&nbsp;on next renders. These errors were always caused by an earlier error in the application code, but React did not provide a way to handle them gracefully in components, and could not recover from them.</p>\n" +
+                    "<h2 id=\"introducing-error-boundaries\">Introducing Error Boundaries</h2>\n" +
+                    "<p>A JavaScript error in a part of the UI shouldn&rsquo;t break the whole app. To solve this problem for React users, React 16 introduces a new concept of an &ldquo;error boundary&rdquo;.</p>\n" +
+                    "<p>Error boundaries are React components that&nbsp;<strong>catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI</strong>&nbsp;instead of the component tree that crashed. Error boundaries catch errors during rendering, in lifecycle methods, and in constructors of the whole tree below them.</p>\n" +
+                    "<blockquote>\n" +
+                    "<p>Note</p>\n" +
+                    "<p>Error boundaries do&nbsp;<strong>not</strong>&nbsp;catch errors for:</p>\n" +
+                    "<ul>\n" +
+                    "<li>Event handlers (<a href=\"https://reactjs.org/docs/error-boundaries.html#how-about-event-handlers\">learn more</a>)</li>\n" +
+                    "<li>Asynchronous code (e.g.&nbsp;<code class=\"gatsby-code-text\">setTimeout</code>&nbsp;or&nbsp;<code class=\"gatsby-code-text\">requestAnimationFrame</code>&nbsp;callbacks)</li>\n" +
+                    "<li>Server side rendering</li>\n" +
+                    "<li>Errors thrown in the error boundary itself (rather than its children)</li>\n" +
+                    "</ul>\n" +
+                    "</blockquote>\n" +
+                    "<p>A class component becomes an error boundary if it defines either (or both) of the lifecycle methods&nbsp;<a href=\"https://reactjs.org/docs/react-component.html#static-getderivedstatefromerror\"><code class=\"gatsby-code-text\">static getDerivedStateFromError()</code></a>&nbsp;or&nbsp;<a href=\"https://reactjs.org/docs/react-component.html#componentdidcatch\"><code class=\"gatsby-code-text\">componentDidCatch()</code></a>. Use&nbsp;<code class=\"gatsby-code-text\">static getDerivedStateFromError()</code>&nbsp;to render a fallback UI after an error has been thrown. Use&nbsp;<code class=\"gatsby-code-text\">componentDidCatch()</code>&nbsp;to log error information.</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\"><span class=\"token keyword\">class</span> <span class=\"token class-name\">ErrorBoundary</span> <span class=\"token keyword\">extends</span> <span class=\"token class-name\">React<span class=\"token punctuation\">.</span>Component</span> <span class=\"token punctuation\">{</span>\n" +
+                    "  <span class=\"token function\">constructor</span><span class=\"token punctuation\">(</span>props<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "    <span class=\"token keyword\">super</span><span class=\"token punctuation\">(</span>props<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "    <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>state <span class=\"token operator\">=</span> <span class=\"token punctuation\">{</span> hasError<span class=\"token punctuation\">:</span> <span class=\"token boolean\">false</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">;</span>\n" +
+                    "  <span class=\"token punctuation\">}</span>\n" +
+                    "\n" +
+                    "<span class=\"gatsby-highlight-code-line\">  <span class=\"token keyword\">static</span> <span class=\"token function\">getDerivedStateFromError</span><span class=\"token punctuation\">(</span>error<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">    <span class=\"token comment\">// Update state so the next render will show the fallback UI.</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">    <span class=\"token keyword\">return</span> <span class=\"token punctuation\">{</span> hasError<span class=\"token punctuation\">:</span> <span class=\"token boolean\">true</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">;</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">  <span class=\"token punctuation\">}</span>\n" +
+                    "</span>\n" +
+                    "<span class=\"gatsby-highlight-code-line\">  <span class=\"token function\">componentDidCatch</span><span class=\"token punctuation\">(</span>error<span class=\"token punctuation\">,</span> info<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">    <span class=\"token comment\">// You can also log the error to an error reporting service</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">    <span class=\"token function\">logErrorToMyService</span><span class=\"token punctuation\">(</span>error<span class=\"token punctuation\">,</span> info<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">  <span class=\"token punctuation\">}</span>\n" +
+                    "</span>\n" +
+                    "  <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "<span class=\"gatsby-highlight-code-line\">    <span class=\"token keyword\">if</span> <span class=\"token punctuation\">(</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>hasError<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">      <span class=\"token comment\">// You can render any custom fallback UI</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">      <span class=\"token keyword\">return</span> <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>h1<span class=\"token punctuation\">&gt;</span></span><span class=\"token plain-text\">Something went wrong.</span><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>h1<span class=\"token punctuation\">&gt;</span></span><span class=\"token punctuation\">;</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">    <span class=\"token punctuation\">}</span>\n" +
+                    "</span>\n" +
+                    "    <span class=\"token keyword\">return</span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>props<span class=\"token punctuation\">.</span>children<span class=\"token punctuation\">;</span> \n" +
+                    "  <span class=\"token punctuation\">}</span>\n" +
+                    "<span class=\"token punctuation\">}</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>Then you can use it as a regular component:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>ErrorBoundary<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "  <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>MyWidget <span class=\"token punctuation\">/&gt;</span></span>\n" +
+                    "<span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>ErrorBoundary<span class=\"token punctuation\">&gt;</span></span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>Error boundaries work like a JavaScript&nbsp;<code class=\"gatsby-code-text\">catch {}</code>&nbsp;block, but for components. Only class components can be error boundaries. In practice, most of the time you&rsquo;ll want to declare an error boundary component once and use it throughout your application.</p>\n" +
+                    "<p>Note that&nbsp;<strong>error boundaries only catch errors in the components below them in the tree</strong>. An error boundary can&rsquo;t catch an error within itself. If an error boundary fails trying to render the error message, the error will propagate to the closest error boundary above it. This, too, is similar to how catch {} block works in JavaScript.</p>\n" +
+                    "<h2 id=\"live-demo\">Live Demo</h2>\n" +
+                    "<p>Check out&nbsp;<a href=\"https://codepen.io/gaearon/pen/wqvxGa?editors=0010\">this example of declaring and using an error boundary</a>&nbsp;with&nbsp;<a href=\"https://reactjs.org/blog/2017/09/26/react-v16.0.html\">React 16</a>.</p>\n" +
+                    "<h2 id=\"where-to-place-error-boundaries\">Where to Place Error Boundaries</h2>\n" +
+                    "<p>The granularity of error boundaries is up to you. You may wrap top-level route components to display a &ldquo;Something went wrong&rdquo; message to the user, just like server-side frameworks often handle crashes. You may also wrap individual widgets in an error boundary to protect them from crashing the rest of the application.</p>\n" +
+                    "<h2 id=\"new-behavior-for-uncaught-errors\">New Behavior for Uncaught Errors</h2>\n" +
+                    "<p>This change has an important implication.&nbsp;<strong>As of React 16, errors that were not caught by any error boundary will result in unmounting of the whole React component tree.</strong></p>\n" +
+                    "<p>We debated this decision, but in our experience it is worse to leave corrupted UI in place than to completely remove it. For example, in a product like Messenger leaving the broken UI visible could lead to somebody sending a message to the wrong person. Similarly, it is worse for a payments app to display a wrong amount than to render nothing.</p>\n" +
+                    "<p>This change means that as you migrate to React 16, you will likely uncover existing crashes in your application that have been unnoticed before. Adding error boundaries lets you provide better user experience when something goes wrong.</p>\n" +
+                    "<p>For example, Facebook Messenger wraps content of the sidebar, the info panel, the conversation log, and the message input into separate error boundaries. If some component in one of these UI areas crashes, the rest of them remain interactive.</p>\n" +
+                    "<p>We also encourage you to use JS error reporting services (or build your own) so that you can learn about unhandled exceptions as they happen in production, and fix them.</p>\n" +
+                    "<h2 id=\"component-stack-traces\">Component Stack Traces</h2>\n" +
+                    "<p>React 16 prints all errors that occurred during rendering to the console in development, even if the application accidentally swallows them. In addition to the error message and the JavaScript stack, it also provides component stack traces. Now you can see where exactly in the component tree the failure has happened:</p>\n" +
+                    "<a class=\"gatsby-resp-image-link\" href=\"https://reactjs.org/static/error-boundaries-stack-trace-f1276837b03821b43358d44c14072945-71000.png\" target=\"_blank\" rel=\"noopener\"><span class=\"gatsby-resp-image-wrapper\"><span class=\"gatsby-resp-image-background-image\"><img class=\"gatsby-resp-image-image\" title=\"\" src=\"https://reactjs.org/static/error-boundaries-stack-trace-f1276837b03821b43358d44c14072945-acf85.png\" sizes=\"(max-width: 840px) 100vw, 840px\" srcset=\"/static/error-boundaries-stack-trace-f1276837b03821b43358d44c14072945-c1418.png 210w,\n" +
+                    "/static/error-boundaries-stack-trace-f1276837b03821b43358d44c14072945-5d5d8.png 420w,\n" +
+                    "/static/error-boundaries-stack-trace-f1276837b03821b43358d44c14072945-acf85.png 840w,\n" +
+                    "/static/error-boundaries-stack-trace-f1276837b03821b43358d44c14072945-de0cd.png 1260w,\n" +
+                    "/static/error-boundaries-stack-trace-f1276837b03821b43358d44c14072945-71000.png 1601w\" alt=\"Error caught by Error Boundary component\" /></span></span></a>\n" +
+                    "<p>You can also see the filenames and line numbers in the component stack trace. This works by default in&nbsp;<a href=\"https://github.com/facebookincubator/create-react-app\">Create React App</a>&nbsp;projects:</p>\n" +
+                    "<a class=\"gatsby-resp-image-link\" href=\"https://reactjs.org/static/error-boundaries-stack-trace-line-numbers-45611d4fdbd152829b28ae2348d6dcba-4e7a0.png\" target=\"_blank\" rel=\"noopener\"><span class=\"gatsby-resp-image-wrapper\"><span class=\"gatsby-resp-image-background-image\"><img class=\"gatsby-resp-image-image\" title=\"\" src=\"https://reactjs.org/static/error-boundaries-stack-trace-line-numbers-45611d4fdbd152829b28ae2348d6dcba-acf85.png\" sizes=\"(max-width: 840px) 100vw, 840px\" srcset=\"/static/error-boundaries-stack-trace-line-numbers-45611d4fdbd152829b28ae2348d6dcba-c1418.png 210w,\n" +
+                    "/static/error-boundaries-stack-trace-line-numbers-45611d4fdbd152829b28ae2348d6dcba-5d5d8.png 420w,\n" +
+                    "/static/error-boundaries-stack-trace-line-numbers-45611d4fdbd152829b28ae2348d6dcba-acf85.png 840w,\n" +
+                    "/static/error-boundaries-stack-trace-line-numbers-45611d4fdbd152829b28ae2348d6dcba-de0cd.png 1260w,\n" +
+                    "/static/error-boundaries-stack-trace-line-numbers-45611d4fdbd152829b28ae2348d6dcba-4e7a0.png 1597w\" alt=\"Error caught by Error Boundary component with line numbers\" /></span></span></a>\n" +
+                    "<p>If you don&rsquo;t use Create React App, you can add&nbsp;<a href=\"https://www.npmjs.com/package/babel-plugin-transform-react-jsx-source\">this plugin</a>&nbsp;manually to your Babel configuration. Note that it&rsquo;s intended only for development and&nbsp;<strong>must be disabled in production</strong>.</p>\n" +
+                    "<blockquote>\n" +
+                    "<p>Note</p>\n" +
+                    "<p>Component names displayed in the stack traces depend on the&nbsp;<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name\"><code class=\"gatsby-code-text\">Function.name</code></a>&nbsp;property. If you support older browsers and devices which may not yet provide this natively (e.g. IE 11), consider including a&nbsp;<code class=\"gatsby-code-text\">Function.name</code>&nbsp;polyfill in your bundled application, such as&nbsp;<a href=\"https://github.com/JamesMGreene/Function.name\"><code class=\"gatsby-code-text\">function.name-polyfill</code></a>. Alternatively, you may explicitly set the&nbsp;<a href=\"https://reactjs.org/docs/react-component.html#displayname\"><code class=\"gatsby-code-text\">displayName</code></a>&nbsp;property on all your components.</p>\n" +
+                    "</blockquote>\n" +
+                    "<h2 id=\"how-about-trycatch\">How About try/catch?</h2>\n" +
+                    "<p><code class=\"gatsby-code-text\">try</code>&nbsp;/&nbsp;<code class=\"gatsby-code-text\">catch</code>&nbsp;is great but it only works for imperative code:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\"><span class=\"token keyword\">try</span> <span class=\"token punctuation\">{</span>\n" +
+                    "  <span class=\"token function\">showButton</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "<span class=\"token punctuation\">}</span> <span class=\"token keyword\">catch</span> <span class=\"token punctuation\">(</span><span class=\"token class-name\">error</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "  <span class=\"token comment\">// ...</span>\n" +
+                    "<span class=\"token punctuation\">}</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>However, React components are declarative and specify&nbsp;<em>what</em>&nbsp;should be rendered:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Button <span class=\"token punctuation\">/&gt;</span></span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>Error boundaries preserve the declarative nature of React, and behave as you would expect. For example, even if an error occurs in a&nbsp;<code class=\"gatsby-code-text\">componentDidUpdate</code>&nbsp;method caused by a&nbsp;<code class=\"gatsby-code-text\">setState</code>somewhere deep in the tree, it will still correctly propagate to the closest error boundary.</p>\n" +
+                    "<h2 id=\"how-about-event-handlers\">How About Event Handlers?</h2>\n" +
+                    "<p>Error boundaries&nbsp;<strong>do not</strong>&nbsp;catch errors inside event handlers.</p>\n" +
+                    "<p>React doesn&rsquo;t need error boundaries to recover from errors in event handlers. Unlike the render method and lifecycle methods, the event handlers don&rsquo;t happen during rendering. So if they throw, React still knows what to display on the screen.</p>\n" +
+                    "<p>If you need to catch an error inside event handler, use the regular JavaScript&nbsp;<code class=\"gatsby-code-text\">try</code>&nbsp;/&nbsp;<code class=\"gatsby-code-text\">catch</code>statement:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\"><span class=\"token keyword\">class</span> <span class=\"token class-name\">MyComponent</span> <span class=\"token keyword\">extends</span> <span class=\"token class-name\">React<span class=\"token punctuation\">.</span>Component</span> <span class=\"token punctuation\">{</span>\n" +
+                    "  <span class=\"token function\">constructor</span><span class=\"token punctuation\">(</span>props<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "    <span class=\"token keyword\">super</span><span class=\"token punctuation\">(</span>props<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "    <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>state <span class=\"token operator\">=</span> <span class=\"token punctuation\">{</span> error<span class=\"token punctuation\">:</span> <span class=\"token keyword\">null</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">;</span>\n" +
+                    "    <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>handleClick <span class=\"token operator\">=</span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>handleClick<span class=\"token punctuation\">.</span><span class=\"token function\">bind</span><span class=\"token punctuation\">(</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "  <span class=\"token punctuation\">}</span>\n" +
+                    "\n" +
+                    "  <span class=\"token function\">handleClick</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "<span class=\"gatsby-highlight-code-line\">    <span class=\"token keyword\">try</span> <span class=\"token punctuation\">{</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">      <span class=\"token comment\">// Do something that could throw</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">    <span class=\"token punctuation\">}</span> <span class=\"token keyword\">catch</span> <span class=\"token punctuation\">(</span><span class=\"token class-name\">error</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">      <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span> error <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">    <span class=\"token punctuation\">}</span>\n" +
+                    "</span>  <span class=\"token punctuation\">}</span>\n" +
+                    "\n" +
+                    "  <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "<span class=\"gatsby-highlight-code-line\">    <span class=\"token keyword\">if</span> <span class=\"token punctuation\">(</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>state<span class=\"token punctuation\">.</span>error<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">      <span class=\"token keyword\">return</span> <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>h1<span class=\"token punctuation\">&gt;</span></span><span class=\"token plain-text\">Caught an error.</span><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>h1<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">    <span class=\"token punctuation\">}</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">    <span class=\"token keyword\">return</span> <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div <span class=\"token attr-name\">onClick</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>handleClick<span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">&gt;</span></span><span class=\"token plain-text\">Click Me</span><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "</span>  <span class=\"token punctuation\">}</span>\n" +
+                    "<span class=\"token punctuation\">}</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>Note that the above example is demonstrating regular JavaScript behavior and doesn&rsquo;t use error boundaries.</p>\n" +
+                    "<h2 id=\"naming-changes-from-react-15\">Naming Changes from React 15</h2>\n" +
+                    "<p>React 15 included a very limited support for error boundaries under a different method name:&nbsp;<code class=\"gatsby-code-text\">unstable_handleError</code>. This method no longer works, and you will need to change it to&nbsp;<code class=\"gatsby-code-text\">componentDidCatch</code>&nbsp;in your code starting from the first 16 beta release.</p>\n" +
+                    "<p>For this change, we&rsquo;ve provided a&nbsp;<a href=\"https://github.com/reactjs/react-codemod#error-boundaries\">codemod</a>&nbsp;to automatically migrate your code.</p>\n" +
+                    "</div>");
+            sec3React2.setLesson(reactJsLesson2);
+            reactJsLesson2.getSections().add(sec3React2);
+
+            Section sec4React2 = new Section();
+            sec4React2.setOrdinalNumber(4);
+            sec4React2.setDescription("Forwarding Refs");
+            sec4React2.setContent("<div class=\"css-7u1i3w\">\n" +
+                    "<p>Ref forwarding is a technique for automatically passing a&nbsp;<a href=\"https://reactjs.org/docs/refs-and-the-dom.html\">ref</a>&nbsp;through a component to one of its children. This is typically not necessary for most components in the application. However, it can be useful for some kinds of components, especially in reusable component libraries. The most common scenarios are described below.</p>\n" +
+                    "<h2 id=\"forwarding-refs-to-dom-components\">Forwarding refs to DOM components</h2>\n" +
+                    "<p>Consider a&nbsp;<code class=\"gatsby-code-text\">FancyButton</code>&nbsp;component that renders the native&nbsp;<code class=\"gatsby-code-text\">button</code>&nbsp;DOM element:</p>\n" +
+                    "<div class=\"gatsby-highlight\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code><span class=\"token keyword\">function</span> <span class=\"token function\">FancyButton</span><span class=\"token punctuation\">(</span>props<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "  <span class=\"token keyword\">return</span> <span class=\"token punctuation\">(</span>\n" +
+                    "    <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>button <span class=\"token attr-name\">className</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>FancyButton<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "      <span class=\"token punctuation\">{</span>props<span class=\"token punctuation\">.</span>children<span class=\"token punctuation\">}</span>\n" +
+                    "    <span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>button<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "  <span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "<span class=\"token punctuation\">}</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>&nbsp;</p>\n" +
+                    "<p>React components hide their implementation details, including their rendered output. Other components using&nbsp;<code class=\"gatsby-code-text\">FancyButton</code>&nbsp;<strong>usually will not need to</strong>&nbsp;<a href=\"https://reactjs.org/docs/refs-and-the-dom.html\">obtain a ref</a>&nbsp;to the inner&nbsp;<code class=\"gatsby-code-text\">button</code>DOM element. This is good because it prevents components from relying on each other&rsquo;s DOM structure too much.</p>\n" +
+                    "<p>Although such encapsulation is desirable for application-level components like&nbsp;<code class=\"gatsby-code-text\">FeedStory</code>&nbsp;or&nbsp;<code class=\"gatsby-code-text\">Comment</code>, it can be inconvenient for highly reusable &ldquo;leaf&rdquo; components like&nbsp;<code class=\"gatsby-code-text\">FancyButton</code>&nbsp;or&nbsp;<code class=\"gatsby-code-text\">MyTextInput</code>. These components tend to be used throughout the application in a similar manner as a regular DOM&nbsp;<code class=\"gatsby-code-text\">button</code>&nbsp;and&nbsp;<code class=\"gatsby-code-text\">input</code>, and accessing their DOM nodes may be unavoidable for managing focus, selection, or animations.</p>\n" +
+                    "<p><strong>Ref forwarding is an opt-in feature that lets some components take a&nbsp;<code class=\"gatsby-code-text\">ref</code>&nbsp;they receive, and pass it further down (in other words, &ldquo;forward&rdquo; it) to a child.</strong></p>\n" +
+                    "<p>In the example below,&nbsp;<code class=\"gatsby-code-text\">FancyButton</code>&nbsp;uses&nbsp;<code class=\"gatsby-code-text\">React.forwardRef</code>&nbsp;to obtain the&nbsp;<code class=\"gatsby-code-text\">ref</code>&nbsp;passed to it, and then forward it to the DOM&nbsp;<code class=\"gatsby-code-text\">button</code>&nbsp;that it renders:</p>\n" +
+                    "<p>&nbsp;</p>\n" +
+                    "<div class=\"gatsby-highlight\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code><span class=\"gatsby-highlight-code-line\"><span class=\"token keyword\">const</span> FancyButton <span class=\"token operator\">=</span> React<span class=\"token punctuation\">.</span><span class=\"token function\">forwardRef</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">(</span>props<span class=\"token punctuation\">,</span> ref<span class=\"token punctuation\">)</span> <span class=\"token operator\">=&gt;</span> <span class=\"token punctuation\">(</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">  <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>button <span class=\"token attr-name\">ref</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span>ref<span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">className</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>FancyButton<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "</span>    <span class=\"token punctuation\">{</span>props<span class=\"token punctuation\">.</span>children<span class=\"token punctuation\">}</span>\n" +
+                    "  <span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>button<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "<span class=\"token punctuation\">)</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "\n" +
+                    "<span class=\"token comment\">// You can now get a ref directly to the DOM button:</span>\n" +
+                    "<span class=\"token keyword\">const</span> ref <span class=\"token operator\">=</span> React<span class=\"token punctuation\">.</span><span class=\"token function\">createRef</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "<span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>FancyButton <span class=\"token attr-name\">ref</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span>ref<span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">&gt;</span></span><span class=\"token plain-text\">Click me!</span><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>FancyButton<span class=\"token punctuation\">&gt;</span></span><span class=\"token punctuation\">;</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>&nbsp;</p>\n" +
+                    "<p>This way, components using&nbsp;<code class=\"gatsby-code-text\">FancyButton</code>&nbsp;can get a ref to the underlying&nbsp;<code class=\"gatsby-code-text\">button</code>&nbsp;DOM node and access it if necessary&mdash;just like if they used a DOM&nbsp;<code class=\"gatsby-code-text\">button</code>&nbsp;directly.</p>\n" +
+                    "<p>Here is a step-by-step explanation of what happens in the above example:</p>\n" +
+                    "<ol>\n" +
+                    "<li>We create a&nbsp;<a href=\"https://reactjs.org/docs/refs-and-the-dom.html\">React ref</a>&nbsp;by calling&nbsp;<code class=\"gatsby-code-text\">React.createRef</code>&nbsp;and assign it to a&nbsp;<code class=\"gatsby-code-text\">ref</code>&nbsp;variable.</li>\n" +
+                    "<li>We pass our&nbsp;<code class=\"gatsby-code-text\">ref</code>&nbsp;down to&nbsp;<code class=\"gatsby-code-text\">&lt;FancyButton ref={ref}&gt;</code>&nbsp;by specifying it as a JSX attribute.</li>\n" +
+                    "<li>React passes the&nbsp;<code class=\"gatsby-code-text\">ref</code>&nbsp;to the&nbsp;<code class=\"gatsby-code-text\">(props, ref) =&gt; ...</code>&nbsp;function inside&nbsp;<code class=\"gatsby-code-text\">forwardRef</code>&nbsp;as a second argument.</li>\n" +
+                    "<li>We forward this&nbsp;<code class=\"gatsby-code-text\">ref</code>&nbsp;argument down to&nbsp;<code class=\"gatsby-code-text\">&lt;button ref={ref}&gt;</code>&nbsp;by specifying it as a JSX attribute.</li>\n" +
+                    "<li>When the ref is attached,&nbsp;<code class=\"gatsby-code-text\">ref.current</code>&nbsp;will point to the&nbsp;<code class=\"gatsby-code-text\">&lt;button&gt;</code>&nbsp;DOM node.</li>\n" +
+                    "</ol>\n" +
+                    "<blockquote>\n" +
+                    "<p>Note</p>\n" +
+                    "<p>The second&nbsp;<code class=\"gatsby-code-text\">ref</code>&nbsp;argument only exists when you define a component with&nbsp;<code class=\"gatsby-code-text\">React.forwardRef</code>call. Regular function or class components don&rsquo;t receive the&nbsp;<code class=\"gatsby-code-text\">ref</code>&nbsp;argument, and ref is not available in props either.</p>\n" +
+                    "<p>Ref forwarding is not limited to DOM components. You can forward refs to class component instances, too.</p>\n" +
+                    "</blockquote>\n" +
+                    "<h2 id=\"note-for-component-library-maintainers\">Note for component library maintainers</h2>\n" +
+                    "<p><strong>When you start using&nbsp;<code class=\"gatsby-code-text\">forwardRef</code>&nbsp;in a component library, you should treat it as a breaking change and release a new major version of your library.</strong>&nbsp;This is because your library likely has an observably different behavior (such as what refs get assigned to, and what types are exported), and this can break apps and other libraries that depend on the old behavior.</p>\n" +
+                    "<p>Conditionally applying&nbsp;<code class=\"gatsby-code-text\">React.forwardRef</code>&nbsp;when it exists is also not recommended for the same reasons: it changes how your library behaves and can break your users&rsquo; apps when they upgrade React itself.</p>\n" +
+                    "<h2 id=\"forwarding-refs-in-higher-order-components\">Forwarding refs in higher-order components</h2>\n" +
+                    "<p>This technique can also be particularly useful with&nbsp;<a href=\"https://reactjs.org/docs/higher-order-components.html\">higher-order components</a>&nbsp;(also known as HOCs). Let&rsquo;s start with an example HOC that logs component props to the console:</p>\n" +
+                    "<div class=\"gatsby-highlight\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code><span class=\"gatsby-highlight-code-line\"><span class=\"token keyword\">function</span> <span class=\"token function\">logProps</span><span class=\"token punctuation\">(</span>WrappedComponent<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "</span>  <span class=\"token keyword\">class</span> <span class=\"token class-name\">LogProps</span> <span class=\"token keyword\">extends</span> <span class=\"token class-name\">React<span class=\"token punctuation\">.</span>Component</span> <span class=\"token punctuation\">{</span>\n" +
+                    "    <span class=\"token function\">componentDidUpdate</span><span class=\"token punctuation\">(</span>prevProps<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "      console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span><span class=\"token string\">'old props:'</span><span class=\"token punctuation\">,</span> prevProps<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "      console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span><span class=\"token string\">'new props:'</span><span class=\"token punctuation\">,</span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>props<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "    <span class=\"token punctuation\">}</span>\n" +
+                    "\n" +
+                    "    <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "<span class=\"gatsby-highlight-code-line\">      <span class=\"token keyword\">return</span> <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>WrappedComponent <span class=\"token spread\"><span class=\"token punctuation\">{</span><span class=\"token punctuation\">...</span><span class=\"token attr-value\">this</span><span class=\"token punctuation\">.</span><span class=\"token attr-value\">props</span><span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/&gt;</span></span><span class=\"token punctuation\">;</span>\n" +
+                    "</span>    <span class=\"token punctuation\">}</span>\n" +
+                    "  <span class=\"token punctuation\">}</span>\n" +
+                    "\n" +
+                    "  <span class=\"token keyword\">return</span> LogProps<span class=\"token punctuation\">;</span>\n" +
+                    "<span class=\"token punctuation\">}</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>&nbsp;</p>\n" +
+                    "<p>The &ldquo;logProps&rdquo;&nbsp;HOC passes all&nbsp;<code class=\"gatsby-code-text\">props</code>&nbsp;through to the component it wraps, so the rendered output will be the same. For example, we can use this HOC to log all props that get passed to our &ldquo;fancy button&rdquo; component:</p>\n" +
+                    "<div class=\"gatsby-highlight\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code><span class=\"token keyword\">class</span> <span class=\"token class-name\">FancyButton</span> <span class=\"token keyword\">extends</span> <span class=\"token class-name\">React<span class=\"token punctuation\">.</span>Component</span> <span class=\"token punctuation\">{</span>\n" +
+                    "  <span class=\"token function\">focus</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "    <span class=\"token comment\">// ...</span>\n" +
+                    "  <span class=\"token punctuation\">}</span>\n" +
+                    "\n" +
+                    "  <span class=\"token comment\">// ...</span>\n" +
+                    "<span class=\"token punctuation\">}</span>\n" +
+                    "\n" +
+                    "<span class=\"token comment\">// Rather than exporting FancyButton, we export LogProps.</span>\n" +
+                    "<span class=\"token comment\">// It will render a FancyButton though.</span>\n" +
+                    "<span class=\"gatsby-highlight-code-line\"><span class=\"token keyword\">export</span> <span class=\"token keyword\">default</span> <span class=\"token function\">logProps</span><span class=\"token punctuation\">(</span>FancyButton<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>&nbsp;</p>\n" +
+                    "<p>There is one caveat to the above example: refs will not get passed through. That&rsquo;s because&nbsp;<code class=\"gatsby-code-text\">ref</code>is not a prop. Like&nbsp;<code class=\"gatsby-code-text\">key</code>, it&rsquo;s handled differently by React. If you add a ref to a HOC, the ref will refer to the outermost container component, not the wrapped component.</p>\n" +
+                    "<p>This means that refs intended for our&nbsp;<code class=\"gatsby-code-text\">FancyButton</code>&nbsp;component will actually be attached to the&nbsp;<code class=\"gatsby-code-text\">LogProps</code>&nbsp;component:</p>\n" +
+                    "<div class=\"gatsby-highlight\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code><span class=\"token keyword\">import</span> FancyButton <span class=\"token keyword\">from</span> <span class=\"token string\">'./FancyButton'</span><span class=\"token punctuation\">;</span>\n" +
+                    "\n" +
+                    "<span class=\"gatsby-highlight-code-line\"><span class=\"token keyword\">const</span> ref <span class=\"token operator\">=</span> React<span class=\"token punctuation\">.</span><span class=\"token function\">createRef</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "</span>\n" +
+                    "<span class=\"token comment\">// The FancyButton component we imported is the LogProps HOC.</span>\n" +
+                    "<span class=\"token comment\">// Even though the rendered output will be the same,</span>\n" +
+                    "<span class=\"token comment\">// Our ref will point to LogProps instead of the inner FancyButton component!</span>\n" +
+                    "<span class=\"token comment\">// This means we can't call e.g. ref.current.focus()</span>\n" +
+                    "<span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>FancyButton\n" +
+                    "  <span class=\"token attr-name\">label</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Click Me<span class=\"token punctuation\">\"</span></span>\n" +
+                    "  <span class=\"token attr-name\">handleClick</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span>handleClick<span class=\"token punctuation\">}</span></span>\n" +
+                    "<span class=\"gatsby-highlight-code-line\">  <span class=\"token attr-name\">ref</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span>ref<span class=\"token punctuation\">}</span></span>\n" +
+                    "</span><span class=\"token punctuation\">/&gt;</span></span><span class=\"token punctuation\">;</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>&nbsp;</p>\n" +
+                    "<p>Fortunately, we can explicitly forward refs to the inner&nbsp;<code class=\"gatsby-code-text\">FancyButton</code>&nbsp;component using the&nbsp;<code class=\"gatsby-code-text\">React.forwardRef</code>&nbsp;API.&nbsp;<code class=\"gatsby-code-text\">React.forwardRef</code>&nbsp;accepts a render function that receives&nbsp;<code class=\"gatsby-code-text\">props</code>&nbsp;and&nbsp;<code class=\"gatsby-code-text\">ref</code>&nbsp;parameters and returns a React node. For example:</p>\n" +
+                    "<div class=\"gatsby-highlight\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code><span class=\"token keyword\">function</span> <span class=\"token function\">logProps</span><span class=\"token punctuation\">(</span>Component<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "  <span class=\"token keyword\">class</span> <span class=\"token class-name\">LogProps</span> <span class=\"token keyword\">extends</span> <span class=\"token class-name\">React<span class=\"token punctuation\">.</span>Component</span> <span class=\"token punctuation\">{</span>\n" +
+                    "    <span class=\"token function\">componentDidUpdate</span><span class=\"token punctuation\">(</span>prevProps<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "      console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span><span class=\"token string\">'old props:'</span><span class=\"token punctuation\">,</span> prevProps<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "      console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span><span class=\"token string\">'new props:'</span><span class=\"token punctuation\">,</span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>props<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "    <span class=\"token punctuation\">}</span>\n" +
+                    "\n" +
+                    "    <span class=\"token function\">render</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "<span class=\"gatsby-highlight-code-line\">      <span class=\"token keyword\">const</span> <span class=\"token punctuation\">{</span>forwardedRef<span class=\"token punctuation\">,</span> <span class=\"token operator\">...</span>rest<span class=\"token punctuation\">}</span> <span class=\"token operator\">=</span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>props<span class=\"token punctuation\">;</span>\n" +
+                    "</span>\n" +
+                    "      <span class=\"token comment\">// Assign the custom prop \"forwardedRef\" as a ref</span>\n" +
+                    "<span class=\"gatsby-highlight-code-line\">      <span class=\"token keyword\">return</span> <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>Component <span class=\"token attr-name\">ref</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span>forwardedRef<span class=\"token punctuation\">}</span></span> <span class=\"token spread\"><span class=\"token punctuation\">{</span><span class=\"token punctuation\">...</span><span class=\"token attr-value\">rest</span><span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/&gt;</span></span><span class=\"token punctuation\">;</span>\n" +
+                    "</span>    <span class=\"token punctuation\">}</span>\n" +
+                    "  <span class=\"token punctuation\">}</span>\n" +
+                    "\n" +
+                    "  <span class=\"token comment\">// Note the second param \"ref\" provided by React.forwardRef.</span>\n" +
+                    "  <span class=\"token comment\">// We can pass it along to LogProps as a regular prop, e.g. \"forwardedRef\"</span>\n" +
+                    "  <span class=\"token comment\">// And it can then be attached to the Component.</span>\n" +
+                    "<span class=\"gatsby-highlight-code-line\">  <span class=\"token keyword\">return</span> React<span class=\"token punctuation\">.</span><span class=\"token function\">forwardRef</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">(</span>props<span class=\"token punctuation\">,</span> ref<span class=\"token punctuation\">)</span> <span class=\"token operator\">=&gt;</span> <span class=\"token punctuation\">{</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">    <span class=\"token keyword\">return</span> <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>LogProps <span class=\"token spread\"><span class=\"token punctuation\">{</span><span class=\"token punctuation\">...</span><span class=\"token attr-value\">props</span><span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">forwardedRef</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span>ref<span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/&gt;</span></span><span class=\"token punctuation\">;</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">  <span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "</span><span class=\"token punctuation\">}</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>&nbsp;</p>\n" +
+                    "<h2 id=\"displaying-a-custom-name-in-devtools\">Displaying a custom name in DevTools</h2>\n" +
+                    "<p><code class=\"gatsby-code-text\">React.forwardRef</code>&nbsp;accepts a render function. React DevTools uses this function to determine what to display for the ref forwarding component.</p>\n" +
+                    "<p>For example, the following component will appear as &rdquo;<em>ForwardRef</em>&rdquo; in the DevTools:</p>\n" +
+                    "<p>&nbsp;</p>\n" +
+                    "<div class=\"gatsby-highlight\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code><span class=\"token keyword\">const</span> WrappedComponent <span class=\"token operator\">=</span> React<span class=\"token punctuation\">.</span><span class=\"token function\">forwardRef</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">(</span>props<span class=\"token punctuation\">,</span> ref<span class=\"token punctuation\">)</span> <span class=\"token operator\">=&gt;</span> <span class=\"token punctuation\">{</span>\n" +
+                    "  <span class=\"token keyword\">return</span> <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>LogProps <span class=\"token spread\"><span class=\"token punctuation\">{</span><span class=\"token punctuation\">...</span><span class=\"token attr-value\">props</span><span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">forwardedRef</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span>ref<span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/&gt;</span></span><span class=\"token punctuation\">;</span>\n" +
+                    "<span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>&nbsp;</p>\n" +
+                    "<p>If you name the render function, DevTools will also include its name (e.g. &rdquo;<em>ForwardRef(myFunction)</em>&rdquo;):</p>\n" +
+                    "<p>&nbsp;</p>\n" +
+                    "<div class=\"gatsby-highlight\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code><span class=\"token keyword\">const</span> WrappedComponent <span class=\"token operator\">=</span> React<span class=\"token punctuation\">.</span><span class=\"token function\">forwardRef</span><span class=\"token punctuation\">(</span>\n" +
+                    "  <span class=\"token keyword\">function</span> <span class=\"token function\">myFunction</span><span class=\"token punctuation\">(</span>props<span class=\"token punctuation\">,</span> ref<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "    <span class=\"token keyword\">return</span> <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>LogProps <span class=\"token spread\"><span class=\"token punctuation\">{</span><span class=\"token punctuation\">...</span><span class=\"token attr-value\">props</span><span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">forwardedRef</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span>ref<span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/&gt;</span></span><span class=\"token punctuation\">;</span>\n" +
+                    "  <span class=\"token punctuation\">}</span>\n" +
+                    "<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>&nbsp;</p>\n" +
+                    "<p>You can even set the function&rsquo;s&nbsp;<code class=\"gatsby-code-text\">displayName</code>&nbsp;property to include the component you&rsquo;re wrapping:</p>\n" +
+                    "<p>&nbsp;</p>\n" +
+                    "<div class=\"gatsby-highlight\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code><span class=\"token keyword\">function</span> <span class=\"token function\">logProps</span><span class=\"token punctuation\">(</span>Component<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "  <span class=\"token keyword\">class</span> <span class=\"token class-name\">LogProps</span> <span class=\"token keyword\">extends</span> <span class=\"token class-name\">React<span class=\"token punctuation\">.</span>Component</span> <span class=\"token punctuation\">{</span>\n" +
+                    "    <span class=\"token comment\">// ...</span>\n" +
+                    "  <span class=\"token punctuation\">}</span>\n" +
+                    "\n" +
+                    "  <span class=\"token keyword\">function</span> <span class=\"token function\">forwardRef</span><span class=\"token punctuation\">(</span>props<span class=\"token punctuation\">,</span> ref<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "    <span class=\"token keyword\">return</span> <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>LogProps <span class=\"token spread\"><span class=\"token punctuation\">{</span><span class=\"token punctuation\">...</span><span class=\"token attr-value\">props</span><span class=\"token punctuation\">}</span></span> <span class=\"token attr-name\">forwardedRef</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span>ref<span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/&gt;</span></span><span class=\"token punctuation\">;</span>\n" +
+                    "  <span class=\"token punctuation\">}</span>\n" +
+                    "\n" +
+                    "  <span class=\"token comment\">// Give this component a more helpful display name in DevTools.</span>\n" +
+                    "  <span class=\"token comment\">// e.g. \"ForwardRef(logProps(MyComponent))\"</span>\n" +
+                    "<span class=\"gatsby-highlight-code-line\">  <span class=\"token keyword\">const</span> name <span class=\"token operator\">=</span> Component<span class=\"token punctuation\">.</span>displayName <span class=\"token operator\">||</span> Component<span class=\"token punctuation\">.</span>name<span class=\"token punctuation\">;</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">  forwardRef<span class=\"token punctuation\">.</span>displayName <span class=\"token operator\">=</span> <span class=\"token template-string\"><span class=\"token string\">`logProps(</span><span class=\"token interpolation\"><span class=\"token interpolation-punctuation punctuation\">${</span>name<span class=\"token interpolation-punctuation punctuation\">}</span></span><span class=\"token string\">)`</span></span><span class=\"token punctuation\">;</span>\n" +
+                    "</span>\n" +
+                    "  <span class=\"token keyword\">return</span> React<span class=\"token punctuation\">.</span><span class=\"token function\">forwardRef</span><span class=\"token punctuation\">(</span>forwardRef<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "<span class=\"token punctuation\">}</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>&nbsp;</p>\n" +
+                    "</div>");
+            sec4React2.setLesson(reactJsLesson2);
+            reactJsLesson2.getSections().add(sec4React2);
+
+                        Section sec1React3 = new Section();
+            sec1React3.setOrdinalNumber(1);
+            sec1React3.setDescription("ReactDOM");
+            sec1React3.setContent("<div class=\"css-7u1i3w\">\n" +
+                    "<h2 id=\"overview\">Overview</h2>\n" +
+                    "<p>The&nbsp;<code class=\"gatsby-code-text\">react-dom</code>&nbsp;package provides DOM-specific methods that can be used at the top level of your app and as an escape hatch to get outside of the React model if you need to. Most of your components should not need to use this module.</p>\n" +
+                    "<ul>\n" +
+                    "<li><a href=\"https://reactjs.org/docs/react-dom.html#render\"><code class=\"gatsby-code-text\">render()</code></a></li>\n" +
+                    "<li><a href=\"https://reactjs.org/docs/react-dom.html#hydrate\"><code class=\"gatsby-code-text\">hydrate()</code></a></li>\n" +
+                    "<li><a href=\"https://reactjs.org/docs/react-dom.html#unmountcomponentatnode\"><code class=\"gatsby-code-text\">unmountComponentAtNode()</code></a></li>\n" +
+                    "<li><a href=\"https://reactjs.org/docs/react-dom.html#finddomnode\"><code class=\"gatsby-code-text\">findDOMNode()</code></a></li>\n" +
+                    "<li><a href=\"https://reactjs.org/docs/react-dom.html#createportal\"><code class=\"gatsby-code-text\">createPortal()</code></a></li>\n" +
+                    "</ul>\n" +
+                    "<h3 id=\"browser-support\">Browser Support</h3>\n" +
+                    "<p>React supports all popular browsers, including Internet Explorer 9 and above, although&nbsp;<a href=\"https://reactjs.org/docs/javascript-environment-requirements.html\">some polyfills are required</a>&nbsp;for older browsers such as IE 9 and IE 10.</p>\n" +
+                    "<blockquote>\n" +
+                    "<p>Note</p>\n" +
+                    "<p>We don&rsquo;t support older browsers that don&rsquo;t support ES5 methods, but you may find that your apps do work in older browsers if polyfills such as&nbsp;<a href=\"https://github.com/es-shims/es5-shim\">es5-shim and es5-sham</a>&nbsp;are included in the page. You&rsquo;re on your own if you choose to take this path.</p>\n" +
+                    "</blockquote>\n" +
+                    "<hr />\n" +
+                    "<h2 id=\"reference\">Reference</h2>\n" +
+                    "<h3 id=\"render\"><code class=\"gatsby-code-text\">render()</code></h3>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\">ReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">render</span><span class=\"token punctuation\">(</span>element<span class=\"token punctuation\">,</span> container<span class=\"token punctuation\">[</span><span class=\"token punctuation\">,</span> callback<span class=\"token punctuation\">]</span><span class=\"token punctuation\">)</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>Render a React element into the DOM in the supplied&nbsp;<code class=\"gatsby-code-text\">container</code>&nbsp;and return a&nbsp;<a href=\"https://reactjs.org/docs/more-about-refs.html\">reference</a>&nbsp;to the component (or returns&nbsp;<code class=\"gatsby-code-text\">null</code>&nbsp;for&nbsp;<a href=\"https://reactjs.org/docs/components-and-props.html#functional-and-class-components\">stateless components</a>).</p>\n" +
+                    "<p>If the React element was previously rendered into&nbsp;<code class=\"gatsby-code-text\">container</code>, this will perform an update on it and only mutate the DOM as necessary to reflect the latest React element.</p>\n" +
+                    "<p>If the optional callback is provided, it will be executed after the component is rendered or updated.</p>\n" +
+                    "<blockquote>\n" +
+                    "<p>Note:</p>\n" +
+                    "<p><code class=\"gatsby-code-text\">ReactDOM.render()</code>&nbsp;controls the contents of the container node you pass in. Any existing DOM elements inside are replaced when first called. Later calls use React&rsquo;s DOM diffing algorithm for efficient updates.</p>\n" +
+                    "<p><code class=\"gatsby-code-text\">ReactDOM.render()</code>&nbsp;does not modify the container node (only modifies the children of the container). It may be possible to insert a component to an existing DOM node without overwriting the existing children.</p>\n" +
+                    "<p><code class=\"gatsby-code-text\">ReactDOM.render()</code>&nbsp;currently returns a reference to the root&nbsp;<code class=\"gatsby-code-text\">ReactComponent</code>&nbsp;instance. However, using this return value is legacy and should be avoided because future versions of React may render components asynchronously in some cases. If you need a reference to the root&nbsp;<code class=\"gatsby-code-text\">ReactComponent</code>&nbsp;instance, the preferred solution is to attach a&nbsp;<a href=\"https://reactjs.org/docs/more-about-refs.html#the-ref-callback-attribute\">callback ref</a>&nbsp;to the root element.</p>\n" +
+                    "<p>Using&nbsp;<code class=\"gatsby-code-text\">ReactDOM.render()</code>&nbsp;to hydrate a server-rendered container is deprecated and will be removed in React 17. Use&nbsp;<a href=\"https://reactjs.org/docs/react-dom.html#hydrate\"><code class=\"gatsby-code-text\">hydrate()</code></a>&nbsp;instead.</p>\n" +
+                    "</blockquote>\n" +
+                    "<hr />\n" +
+                    "<h3 id=\"hydrate\"><code class=\"gatsby-code-text\">hydrate()</code></h3>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\">ReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">hydrate</span><span class=\"token punctuation\">(</span>element<span class=\"token punctuation\">,</span> container<span class=\"token punctuation\">[</span><span class=\"token punctuation\">,</span> callback<span class=\"token punctuation\">]</span><span class=\"token punctuation\">)</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>Same as&nbsp;<a href=\"https://reactjs.org/docs/react-dom.html#render\"><code class=\"gatsby-code-text\">render()</code></a>, but is used to hydrate a container whose HTML contents were rendered by&nbsp;<a href=\"https://reactjs.org/docs/react-dom-server.html\"><code class=\"gatsby-code-text\">ReactDOMServer</code></a>. React will attempt to attach event listeners to the existing markup.</p>\n" +
+                    "<p>React expects that the rendered content is identical between the server and the client. It can patch up differences in text content, but you should treat mismatches as bugs and fix them. In development mode, React warns about mismatches during hydration. There are no guarantees that attribute differences will be patched up in case of mismatches. This is important for performance reasons because in most apps, mismatches are rare, and so validating all markup would be prohibitively expensive.</p>\n" +
+                    "<p>If a single element&rsquo;s attribute or text content is unavoidably different between the server and the client (for example, a timestamp), you may silence the warning by adding&nbsp;<code class=\"gatsby-code-text\">suppressHydrationWarning={true}</code>&nbsp;to the element. It only works one level deep, and is intended to be an escape hatch. Don&rsquo;t overuse it. Unless it&rsquo;s text content, React still won&rsquo;t attempt to patch it up, so it may remain inconsistent until future updates.</p>\n" +
+                    "<p>If you intentionally need to render something different on the server and the client, you can do a two-pass rendering. Components that render something different on the client can read a state variable like&nbsp;<code class=\"gatsby-code-text\">this.state.isClient</code>, which you can set to&nbsp;<code class=\"gatsby-code-text\">true</code>&nbsp;in&nbsp;<code class=\"gatsby-code-text\">componentDidMount()</code>. This way the initial render pass will render the same content as the server, avoiding mismatches, but an additional pass will happen synchronously right after hydration. Note that this approach will make your components slower because they have to render twice, so use it with caution.</p>\n" +
+                    "<p>Remember to be mindful of user experience on slow connections. The JavaScript code may load significantly later than the initial HTML render, so if you render something different in the client-only pass, the transition can be jarring. However, if executed well, it may be beneficial to render a &ldquo;shell&rdquo; of the application on the server, and only show some of the extra widgets on the client. To learn how to do this without getting the markup mismatch issues, refer to the explanation in the previous paragraph.</p>\n" +
+                    "<hr />\n" +
+                    "<h3 id=\"unmountcomponentatnode\"><code class=\"gatsby-code-text\">unmountComponentAtNode()</code></h3>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\">ReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">unmountComponentAtNode</span><span class=\"token punctuation\">(</span>container<span class=\"token punctuation\">)</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>Remove a mounted React component from the DOM and clean up its event handlers and state. If no component was mounted in the container, calling this function does nothing. Returns&nbsp;<code class=\"gatsby-code-text\">true</code>&nbsp;if a component was unmounted and&nbsp;<code class=\"gatsby-code-text\">false</code>&nbsp;if there was no component to unmount.</p>\n" +
+                    "<hr />\n" +
+                    "<h3 id=\"finddomnode\"><code class=\"gatsby-code-text\">findDOMNode()</code></h3>\n" +
+                    "<blockquote>\n" +
+                    "<p>Note:</p>\n" +
+                    "<p><code class=\"gatsby-code-text\">findDOMNode</code>&nbsp;is an escape hatch used to access the underlying DOM node. In most cases, use of this escape hatch is discouraged because it pierces the component abstraction.&nbsp;<a href=\"https://reactjs.org/docs/strict-mode.html#warning-about-deprecated-finddomnode-usage\">It has been deprecated in&nbsp;<code class=\"gatsby-code-text\">StrictMode</code>.</a></p>\n" +
+                    "</blockquote>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\">ReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">findDOMNode</span><span class=\"token punctuation\">(</span>component<span class=\"token punctuation\">)</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>If this component has been mounted into the DOM, this returns the corresponding native browser DOM element. This method is useful for reading values out of the DOM, such as form field values and performing DOM measurements.&nbsp;<strong>In most cases, you can attach a ref to the DOM node and avoid using&nbsp;<code class=\"gatsby-code-text\">findDOMNode</code>&nbsp;at all.</strong></p>\n" +
+                    "<p>When a component renders to&nbsp;<code class=\"gatsby-code-text\">null</code>&nbsp;or&nbsp;<code class=\"gatsby-code-text\">false</code>,&nbsp;<code class=\"gatsby-code-text\">findDOMNode</code>&nbsp;returns&nbsp;<code class=\"gatsby-code-text\">null</code>. When a component renders to a string,&nbsp;<code class=\"gatsby-code-text\">findDOMNode</code>&nbsp;returns a text DOM node containing that value. As of React 16, a component may return a fragment with multiple children, in which case&nbsp;<code class=\"gatsby-code-text\">findDOMNode</code>&nbsp;will return the DOM node corresponding to the first non-empty child.</p>\n" +
+                    "<blockquote>\n" +
+                    "<p>Note:</p>\n" +
+                    "<p><code class=\"gatsby-code-text\">findDOMNode</code>&nbsp;only works on mounted components (that is, components that have been placed in the DOM). If you try to call this on a component that has not been mounted yet (like calling&nbsp;<code class=\"gatsby-code-text\">findDOMNode()</code>&nbsp;in&nbsp;<code class=\"gatsby-code-text\">render()</code>&nbsp;on a component that has yet to be created) an exception will be thrown.</p>\n" +
+                    "<p><code class=\"gatsby-code-text\">findDOMNode</code>&nbsp;cannot be used on function components.</p>\n" +
+                    "</blockquote>\n" +
+                    "<hr />\n" +
+                    "<h3 id=\"createportal\"><code class=\"gatsby-code-text\">createPortal()</code></h3>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\">ReactDOM<span class=\"token punctuation\">.</span><span class=\"token function\">createPortal</span><span class=\"token punctuation\">(</span>child<span class=\"token punctuation\">,</span> container<span class=\"token punctuation\">)</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>Creates a portal. Portals provide a way to&nbsp;<a href=\"https://reactjs.org/docs/portals.html\">render children into a DOM node that exists outside the hierarchy of the DOM component</a>.</p>\n" +
+                    "</div>");
+            sec1React3.setLesson(reactJsLesson3);
+            reactJsLesson3.getSections().add(sec1React3);
+
+            Section sec2React3 = new Section();
+            sec2React3.setOrdinalNumber(2);
+            sec2React3.setDescription("ReactDOMServer");
+            sec2React3.setContent("<h2 id=\"overview\">Overview</h2>\n" +
+                    "<p>The following methods can be used in both the server and browser environments:</p>\n" +
+                    "<ul>\n" +
+                    "<li><a href=\"https://reactjs.org/docs/react-dom-server.html#rendertostring\"><code class=\"gatsby-code-text\">renderToString()</code></a></li>\n" +
+                    "<li><a href=\"https://reactjs.org/docs/react-dom-server.html#rendertostaticmarkup\"><code class=\"gatsby-code-text\">renderToStaticMarkup()</code></a></li>\n" +
+                    "</ul>\n" +
+                    "<p>These additional methods depend on a package (<code class=\"gatsby-code-text\">stream</code>) that is&nbsp;<strong>only available on the server</strong>, and won&rsquo;t work in the browser.</p>\n" +
+                    "<ul>\n" +
+                    "<li><a href=\"https://reactjs.org/docs/react-dom-server.html#rendertonodestream\"><code class=\"gatsby-code-text\">renderToNodeStream()</code></a></li>\n" +
+                    "<li><a href=\"https://reactjs.org/docs/react-dom-server.html#rendertostaticnodestream\"><code class=\"gatsby-code-text\">renderToStaticNodeStream()</code></a></li>\n" +
+                    "</ul>\n" +
+                    "<hr />\n" +
+                    "<h2 id=\"reference\">Reference</h2>\n" +
+                    "<h3 id=\"rendertostring\"><code class=\"gatsby-code-text\">renderToString()</code></h3>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\">ReactDOMServer<span class=\"token punctuation\">.</span><span class=\"token function\">renderToString</span><span class=\"token punctuation\">(</span>element<span class=\"token punctuation\">)</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>Render a React element to its initial HTML. React will return an HTML string. You can use this method to generate HTML on the server and send the markup down on the initial request for faster page loads and to allow search engines to crawl your pages for SEO purposes.</p>\n" +
+                    "<p>If you call&nbsp;<a href=\"https://reactjs.org/docs/react-dom.html#hydrate\"><code class=\"gatsby-code-text\">ReactDOM.hydrate()</code></a>&nbsp;on a node that already has this server-rendered markup, React will preserve it and only attach event handlers, allowing you to have a very performant first-load experience.</p>\n" +
+                    "<hr />\n" +
+                    "<h3 id=\"rendertostaticmarkup\"><code class=\"gatsby-code-text\">renderToStaticMarkup()</code></h3>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\">ReactDOMServer<span class=\"token punctuation\">.</span><span class=\"token function\">renderToStaticMarkup</span><span class=\"token punctuation\">(</span>element<span class=\"token punctuation\">)</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>Similar to&nbsp;<a href=\"https://reactjs.org/docs/react-dom-server.html#rendertostring\"><code class=\"gatsby-code-text\">renderToString</code></a>, except this doesn&rsquo;t create extra DOM attributes that React uses internally, such as&nbsp;<code class=\"gatsby-code-text\">data-reactroot</code>. This is useful if you want to use React as a simple static page generator, as stripping away the extra attributes can save some bytes.</p>\n" +
+                    "<p>If you plan to use React on the client to make the markup interactive, do not use this method. Instead, use&nbsp;<a href=\"https://reactjs.org/docs/react-dom-server.html#rendertostring\"><code class=\"gatsby-code-text\">renderToString</code></a>&nbsp;on the server and&nbsp;<a href=\"https://reactjs.org/docs/react-dom.html#hydrate\"><code class=\"gatsby-code-text\">ReactDOM.hydrate()</code></a>&nbsp;on the client.</p>\n" +
+                    "<hr />\n" +
+                    "<h3 id=\"rendertonodestream\"><code class=\"gatsby-code-text\">renderToNodeStream()</code></h3>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\">ReactDOMServer<span class=\"token punctuation\">.</span><span class=\"token function\">renderToNodeStream</span><span class=\"token punctuation\">(</span>element<span class=\"token punctuation\">)</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>Render a React element to its initial HTML. Returns a&nbsp;<a href=\"https://nodejs.org/api/stream.html#stream_readable_streams\">Readable stream</a>&nbsp;that outputs an HTML string. The HTML output by this stream is exactly equal to what&nbsp;<a href=\"https://reactjs.org/docs/react-dom-server.html#rendertostring\"><code class=\"gatsby-code-text\">ReactDOMServer.renderToString</code></a>&nbsp;would return. You can use this method to generate HTML on the server and send the markup down on the initial request for faster page loads and to allow search engines to crawl your pages for SEO purposes.</p>\n" +
+                    "<p>If you call&nbsp;<a href=\"https://reactjs.org/docs/react-dom.html#hydrate\"><code class=\"gatsby-code-text\">ReactDOM.hydrate()</code></a>&nbsp;on a node that already has this server-rendered markup, React will preserve it and only attach event handlers, allowing you to have a very performant first-load experience.</p>\n" +
+                    "<blockquote>\n" +
+                    "<p>Note:</p>\n" +
+                    "<p>Server-only. This API is not available in the browser.</p>\n" +
+                    "<p>The stream returned from this method will return a byte stream encoded in utf-8. If you need a stream in another encoding, take a look at a project like&nbsp;<a href=\"https://www.npmjs.com/package/iconv-lite\">iconv-lite</a>, which provides transform streams for transcoding text.</p>\n" +
+                    "</blockquote>\n" +
+                    "<hr />\n" +
+                    "<h3 id=\"rendertostaticnodestream\"><code class=\"gatsby-code-text\">renderToStaticNodeStream()</code></h3>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\">ReactDOMServer<span class=\"token punctuation\">.</span><span class=\"token function\">renderToStaticNodeStream</span><span class=\"token punctuation\">(</span>element<span class=\"token punctuation\">)</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>Similar to&nbsp;<a href=\"https://reactjs.org/docs/react-dom-server.html#rendertonodestream\"><code class=\"gatsby-code-text\">renderToNodeStream</code></a>, except this doesn&rsquo;t create extra DOM attributes that React uses internally, such as&nbsp;<code class=\"gatsby-code-text\">data-reactroot</code>. This is useful if you want to use React as a simple static page generator, as stripping away the extra attributes can save some bytes.</p>\n" +
+                    "<p>The HTML output by this stream is exactly equal to what&nbsp;<a href=\"https://reactjs.org/docs/react-dom-server.html#rendertostaticmarkup\"><code class=\"gatsby-code-text\">ReactDOMServer.renderToStaticMarkup</code></a>&nbsp;would return.</p>\n" +
+                    "<p>If you plan to use React on the client to make the markup interactive, do not use this method. Instead, use&nbsp;<a href=\"https://reactjs.org/docs/react-dom-server.html#rendertonodestream\"><code class=\"gatsby-code-text\">renderToNodeStream</code></a>&nbsp;on the server and&nbsp;<a href=\"https://reactjs.org/docs/react-dom.html#hydrate\"><code class=\"gatsby-code-text\">ReactDOM.hydrate()</code></a>&nbsp;on the client.</p>");
+            sec2React3.setLesson(reactJsLesson3);
+            reactJsLesson3.getSections().add(sec2React3);
+
+            Section sec3React3 = new Section();
+            sec3React3.setOrdinalNumber(3);
+            sec3React3.setDescription("DOM Elements");
+            sec3React3.setContent("<div class=\"css-7u1i3w\">\n" +
+                    "<h2 id=\"differences-in-attributes\">Differences In Attributes</h2>\n" +
+                    "<p>There are a number of attributes that work differently between React and HTML:</p>\n" +
+                    "<h3 id=\"checked\">checked</h3>\n" +
+                    "<p>The&nbsp;<code class=\"gatsby-code-text\">checked</code>&nbsp;attribute is supported by&nbsp;<code class=\"gatsby-code-text\">&lt;input&gt;</code>&nbsp;components of type&nbsp;<code class=\"gatsby-code-text\">checkbox</code>&nbsp;or&nbsp;<code class=\"gatsby-code-text\">radio</code>. You can use it to set whether the component is checked. This is useful for building controlled components.&nbsp;<code class=\"gatsby-code-text\">defaultChecked</code>&nbsp;is the uncontrolled equivalent, which sets whether the component is checked when it is first mounted.</p>\n" +
+                    "<h3 id=\"classname\">className</h3>\n" +
+                    "<p>To specify a CSS class, use the&nbsp;<code class=\"gatsby-code-text\">className</code>&nbsp;attribute. This applies to all regular DOM and SVG elements like&nbsp;<code class=\"gatsby-code-text\">&lt;div&gt;</code>,&nbsp;<code class=\"gatsby-code-text\">&lt;a&gt;</code>, and others.</p>\n" +
+                    "<p>If you use React with Web Components (which is uncommon), use the&nbsp;<code class=\"gatsby-code-text\">class</code>&nbsp;attribute instead.</p>\n" +
+                    "<h3 id=\"dangerouslysetinnerhtml\">dangerouslySetInnerHTML</h3>\n" +
+                    "<p><code class=\"gatsby-code-text\">dangerouslySetInnerHTML</code>&nbsp;is React&rsquo;s replacement for using&nbsp;<code class=\"gatsby-code-text\">innerHTML</code>&nbsp;in the browser DOM. In general, setting HTML from code is risky because it&rsquo;s easy to inadvertently expose your users to a&nbsp;<a href=\"https://en.wikipedia.org/wiki/Cross-site_scripting\">cross-site scripting (XSS)</a>&nbsp;attack. So, you can set HTML directly from React, but you have to type out&nbsp;<code class=\"gatsby-code-text\">dangerouslySetInnerHTML</code>&nbsp;and pass an object with a&nbsp;<code class=\"gatsby-code-text\">__html</code>&nbsp;key, to remind yourself that it&rsquo;s dangerous. For example:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\"><span class=\"token keyword\">function</span> <span class=\"token function\">createMarkup</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "  <span class=\"token keyword\">return</span> <span class=\"token punctuation\">{</span>__html<span class=\"token punctuation\">:</span> <span class=\"token string\">'First &amp;middot; Second'</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">;</span>\n" +
+                    "<span class=\"token punctuation\">}</span>\n" +
+                    "\n" +
+                    "<span class=\"token keyword\">function</span> <span class=\"token function\">MyComponent</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "  <span class=\"token keyword\">return</span> <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div <span class=\"token attr-name\">dangerouslySetInnerHTML</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token function\">createMarkup</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/&gt;</span></span><span class=\"token punctuation\">;</span>\n" +
+                    "<span class=\"token punctuation\">}</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<h3 id=\"htmlfor\">htmlFor</h3>\n" +
+                    "<p>Since&nbsp;<code class=\"gatsby-code-text\">for</code>&nbsp;is a reserved word in JavaScript, React elements use&nbsp;<code class=\"gatsby-code-text\">htmlFor</code>&nbsp;instead.</p>\n" +
+                    "<h3 id=\"onchange\">onChange</h3>\n" +
+                    "<p>The&nbsp;<code class=\"gatsby-code-text\">onChange</code>&nbsp;event behaves as you would expect it to: whenever a form field is changed, this event is fired. We intentionally do not use the existing browser behavior because&nbsp;<code class=\"gatsby-code-text\">onChange</code>&nbsp;is a misnomer for its behavior and React relies on this event to handle user input in real time.</p>\n" +
+                    "<h3 id=\"selected\">selected</h3>\n" +
+                    "<p>The&nbsp;<code class=\"gatsby-code-text\">selected</code>&nbsp;attribute is supported by&nbsp;<code class=\"gatsby-code-text\">&lt;option&gt;</code>&nbsp;components. You can use it to set whether the component is selected. This is useful for building controlled components.</p>\n" +
+                    "<h3 id=\"style\">style</h3>\n" +
+                    "<blockquote>\n" +
+                    "<p>Note</p>\n" +
+                    "<p>Some examples in the documentation use&nbsp;<code class=\"gatsby-code-text\">style</code>&nbsp;for convenience, but&nbsp;<strong>using the&nbsp;<code class=\"gatsby-code-text\">style</code>attribute as the primary means of styling elements is generally not recommended.</strong>&nbsp;In most cases,&nbsp;<a href=\"https://reactjs.org/docs/dom-elements.html#classname\"><code class=\"gatsby-code-text\">className</code></a>&nbsp;should be used to reference classes defined in an external CSS stylesheet.&nbsp;<code class=\"gatsby-code-text\">style</code>&nbsp;is most often used in React applications to add dynamically-computed styles at render time. See also&nbsp;<a href=\"https://reactjs.org/docs/faq-styling.html\">FAQ: Styling and CSS</a>.</p>\n" +
+                    "</blockquote>\n" +
+                    "<p>The&nbsp;<code class=\"gatsby-code-text\">style</code>&nbsp;attribute accepts a JavaScript object with camelCased properties rather than a CSS string. This is consistent with the DOM&nbsp;<code class=\"gatsby-code-text\">style</code>&nbsp;JavaScript property, is more efficient, and prevents XSS security holes. For example:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\"><span class=\"token keyword\">const</span> divStyle <span class=\"token operator\">=</span> <span class=\"token punctuation\">{</span>\n" +
+                    "  color<span class=\"token punctuation\">:</span> <span class=\"token string\">'blue'</span><span class=\"token punctuation\">,</span>\n" +
+                    "  backgroundImage<span class=\"token punctuation\">:</span> <span class=\"token string\">'url('</span> <span class=\"token operator\">+</span> imgUrl <span class=\"token operator\">+</span> <span class=\"token string\">')'</span><span class=\"token punctuation\">,</span>\n" +
+                    "<span class=\"token punctuation\">}</span><span class=\"token punctuation\">;</span>\n" +
+                    "\n" +
+                    "<span class=\"token keyword\">function</span> <span class=\"token function\">HelloWorldComponent</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "  <span class=\"token keyword\">return</span> <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div <span class=\"token attr-name\">style</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span>divStyle<span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">&gt;</span></span><span class=\"token plain-text\">Hello World!</span><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div<span class=\"token punctuation\">&gt;</span></span><span class=\"token punctuation\">;</span>\n" +
+                    "<span class=\"token punctuation\">}</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>Note that styles are not autoprefixed. To support older browsers, you need to supply corresponding style properties:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\"><span class=\"token keyword\">const</span> divStyle <span class=\"token operator\">=</span> <span class=\"token punctuation\">{</span>\n" +
+                    "  WebkitTransition<span class=\"token punctuation\">:</span> <span class=\"token string\">'all'</span><span class=\"token punctuation\">,</span> <span class=\"token comment\">// note the capital 'W' here</span>\n" +
+                    "  msTransition<span class=\"token punctuation\">:</span> <span class=\"token string\">'all'</span> <span class=\"token comment\">// 'ms' is the only lowercase vendor prefix</span>\n" +
+                    "<span class=\"token punctuation\">}</span><span class=\"token punctuation\">;</span>\n" +
+                    "\n" +
+                    "<span class=\"token keyword\">function</span> <span class=\"token function\">ComponentWithTransition</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "  <span class=\"token keyword\">return</span> <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div <span class=\"token attr-name\">style</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span>divStyle<span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">&gt;</span></span><span class=\"token plain-text\">This should work cross-browser</span><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div<span class=\"token punctuation\">&gt;</span></span><span class=\"token punctuation\">;</span>\n" +
+                    "<span class=\"token punctuation\">}</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>Style keys are camelCased in order to be consistent with accessing the properties on DOM nodes from JS (e.g.&nbsp;<code class=\"gatsby-code-text\">node.style.backgroundImage</code>). Vendor prefixes&nbsp;<a href=\"http://www.andismith.com/blog/2012/02/modernizr-prefixed/\">other than&nbsp;<code class=\"gatsby-code-text\">ms</code></a>&nbsp;should begin with a capital letter. This is why&nbsp;<code class=\"gatsby-code-text\">WebkitTransition</code>&nbsp;has an uppercase &ldquo;W&rdquo;.</p>\n" +
+                    "<p>React will automatically append a &ldquo;px&rdquo; suffix to certain numeric inline style properties. If you want to use units other than &ldquo;px&rdquo;, specify the value as a string with the desired unit. For example:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\"><span class=\"token comment\">// Result style: '10px'</span>\n" +
+                    "<span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div <span class=\"token attr-name\">style</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span> height<span class=\"token punctuation\">:</span> <span class=\"token number\">10</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">&gt;</span></span><span class=\"token plain-text\">\n" +
+                    "  Hello World!\n" +
+                    "</span><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "\n" +
+                    "<span class=\"token comment\">// Result style: '10%'</span>\n" +
+                    "<span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div <span class=\"token attr-name\">style</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span> height<span class=\"token punctuation\">:</span> <span class=\"token string\">'10%'</span> <span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">&gt;</span></span><span class=\"token plain-text\">\n" +
+                    "  Hello World!\n" +
+                    "</span><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div<span class=\"token punctuation\">&gt;</span></span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>Not all style properties are converted to pixel strings though. Certain ones remain unitless (eg&nbsp;<code class=\"gatsby-code-text\">zoom</code>,&nbsp;<code class=\"gatsby-code-text\">order</code>,&nbsp;<code class=\"gatsby-code-text\">flex</code>). A complete list of unitless properties can be seen&nbsp;<a href=\"https://github.com/facebook/react/blob/4131af3e4bf52f3a003537ec95a1655147c81270/src/renderers/dom/shared/CSSProperty.js#L15-L59\">here</a>.</p>\n" +
+                    "<h3 id=\"suppresscontenteditablewarning\">suppressContentEditableWarning</h3>\n" +
+                    "<p>Normally, there is a warning when an element with children is also marked as&nbsp;<code class=\"gatsby-code-text\">contentEditable</code>, because it won&rsquo;t work. This attribute suppresses that warning. Don&rsquo;t use this unless you are building a library like&nbsp;<a href=\"https://facebook.github.io/draft-js/\">Draft.js</a>&nbsp;that manages&nbsp;<code class=\"gatsby-code-text\">contentEditable</code>&nbsp;manually.</p>\n" +
+                    "<h3 id=\"suppresshydrationwarning\">suppressHydrationWarning</h3>\n" +
+                    "<p>If you use server-side React rendering, normally there is a warning when the server and the client render different content. However, in some rare cases, it is very hard or impossible to guarantee an exact match. For example, timestamps are expected to differ on the server and on the client.</p>\n" +
+                    "<p>If you set&nbsp;<code class=\"gatsby-code-text\">suppressHydrationWarning</code>&nbsp;to&nbsp;<code class=\"gatsby-code-text\">true</code>, React will not warn you about mismatches in the attributes and the content of that element. It only works one level deep, and is intended to be used as an escape hatch. Don&rsquo;t overuse it. You can read more about hydration in the&nbsp;<a href=\"https://reactjs.org/docs/react-dom.html#hydrate\"><code class=\"gatsby-code-text\">ReactDOM.hydrate()</code>&nbsp;documentation</a>.</p>\n" +
+                    "<h3 id=\"value\">value</h3>\n" +
+                    "<p>The&nbsp;<code class=\"gatsby-code-text\">value</code>&nbsp;attribute is supported by&nbsp;<code class=\"gatsby-code-text\">&lt;input&gt;</code>&nbsp;and&nbsp;<code class=\"gatsby-code-text\">&lt;textarea&gt;</code>&nbsp;components. You can use it to set the value of the component. This is useful for building controlled components.&nbsp;<code class=\"gatsby-code-text\">defaultValue</code>&nbsp;is the uncontrolled equivalent, which sets the value of the component when it is first mounted.</p>\n" +
+                    "<h2 id=\"all-supported-html-attributes\">All Supported HTML Attributes</h2>\n" +
+                    "<p>As of React 16, any standard&nbsp;<a href=\"https://reactjs.org/blog/2017/09/08/dom-attributes-in-react-16.html\">or custom</a>&nbsp;DOM attributes are fully supported.</p>\n" +
+                    "<p>React has always provided a JavaScript-centric API to the DOM. Since React components often take both custom and DOM-related props, React uses the&nbsp;<code class=\"gatsby-code-text\">camelCase</code>&nbsp;convention just like the DOM APIs:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div <span class=\"token attr-name\">tabIndex</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>-1<span class=\"token punctuation\">\"</span></span> <span class=\"token punctuation\">/&gt;</span></span>      <span class=\"token comment\">// Just like node.tabIndex DOM API</span>\n" +
+                    "<span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div <span class=\"token attr-name\">className</span><span class=\"token attr-value\"><span class=\"token punctuation\">=</span><span class=\"token punctuation\">\"</span>Button<span class=\"token punctuation\">\"</span></span> <span class=\"token punctuation\">/&gt;</span></span> <span class=\"token comment\">// Just like node.className DOM API</span>\n" +
+                    "<span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>input <span class=\"token attr-name\">readOnly</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token boolean\">true</span><span class=\"token punctuation\">}</span></span> <span class=\"token punctuation\">/&gt;</span></span>  <span class=\"token comment\">// Just like node.readOnly DOM API</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>These props work similarly to the corresponding HTML attributes, with the exception of the special cases documented above.</p>\n" +
+                    "<p>Some of the DOM attributes supported by React include:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"text\">\n" +
+                    "<pre class=\"gatsby-code-text\"><code class=\"gatsby-code-text\">accept acceptCharset accessKey action allowFullScreen alt async autoComplete\n" +
+                    "autoFocus autoPlay capture cellPadding cellSpacing challenge charSet checked\n" +
+                    "cite classID className colSpan cols content contentEditable contextMenu controls\n" +
+                    "controlsList coords crossOrigin data dateTime default defer dir disabled\n" +
+                    "download draggable encType form formAction formEncType formMethod formNoValidate\n" +
+                    "formTarget frameBorder headers height hidden high href hrefLang htmlFor\n" +
+                    "httpEquiv icon id inputMode integrity is keyParams keyType kind label lang list\n" +
+                    "loop low manifest marginHeight marginWidth max maxLength media mediaGroup method\n" +
+                    "min minLength multiple muted name noValidate nonce open optimum pattern\n" +
+                    "placeholder poster preload profile radioGroup readOnly rel required reversed\n" +
+                    "role rowSpan rows sandbox scope scoped scrolling seamless selected shape size\n" +
+                    "sizes span spellCheck src srcDoc srcLang srcSet start step style summary\n" +
+                    "tabIndex target title type useMap value width wmode wrap</code></pre>\n" +
+                    "</div>\n" +
+                    "<p>Similarly, all SVG attributes are fully supported:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"text\">\n" +
+                    "<pre class=\"gatsby-code-text\"><code class=\"gatsby-code-text\">accentHeight accumulate additive alignmentBaseline allowReorder alphabetic\n" +
+                    "amplitude arabicForm ascent attributeName attributeType autoReverse azimuth\n" +
+                    "baseFrequency baseProfile baselineShift bbox begin bias by calcMode capHeight\n" +
+                    "clip clipPath clipPathUnits clipRule colorInterpolation\n" +
+                    "colorInterpolationFilters colorProfile colorRendering contentScriptType\n" +
+                    "contentStyleType cursor cx cy d decelerate descent diffuseConstant direction\n" +
+                    "display divisor dominantBaseline dur dx dy edgeMode elevation enableBackground\n" +
+                    "end exponent externalResourcesRequired fill fillOpacity fillRule filter\n" +
+                    "filterRes filterUnits floodColor floodOpacity focusable fontFamily fontSize\n" +
+                    "fontSizeAdjust fontStretch fontStyle fontVariant fontWeight format from fx fy\n" +
+                    "g1 g2 glyphName glyphOrientationHorizontal glyphOrientationVertical glyphRef\n" +
+                    "gradientTransform gradientUnits hanging horizAdvX horizOriginX ideographic\n" +
+                    "imageRendering in in2 intercept k k1 k2 k3 k4 kernelMatrix kernelUnitLength\n" +
+                    "kerning keyPoints keySplines keyTimes lengthAdjust letterSpacing lightingColor\n" +
+                    "limitingConeAngle local markerEnd markerHeight markerMid markerStart\n" +
+                    "markerUnits markerWidth mask maskContentUnits maskUnits mathematical mode\n" +
+                    "numOctaves offset opacity operator order orient orientation origin overflow\n" +
+                    "overlinePosition overlineThickness paintOrder panose1 pathLength\n" +
+                    "patternContentUnits patternTransform patternUnits pointerEvents points\n" +
+                    "pointsAtX pointsAtY pointsAtZ preserveAlpha preserveAspectRatio primitiveUnits\n" +
+                    "r radius refX refY renderingIntent repeatCount repeatDur requiredExtensions\n" +
+                    "requiredFeatures restart result rotate rx ry scale seed shapeRendering slope\n" +
+                    "spacing specularConstant specularExponent speed spreadMethod startOffset\n" +
+                    "stdDeviation stemh stemv stitchTiles stopColor stopOpacity\n" +
+                    "strikethroughPosition strikethroughThickness string stroke strokeDasharray\n" +
+                    "strokeDashoffset strokeLinecap strokeLinejoin strokeMiterlimit strokeOpacity\n" +
+                    "strokeWidth surfaceScale systemLanguage tableValues targetX targetY textAnchor\n" +
+                    "textDecoration textLength textRendering to transform u1 u2 underlinePosition\n" +
+                    "underlineThickness unicode unicodeBidi unicodeRange unitsPerEm vAlphabetic\n" +
+                    "vHanging vIdeographic vMathematical values vectorEffect version vertAdvY\n" +
+                    "vertOriginX vertOriginY viewBox viewTarget visibility widths wordSpacing\n" +
+                    "writingMode x x1 x2 xChannelSelector xHeight xlinkActuate xlinkArcrole\n" +
+                    "xlinkHref xlinkRole xlinkShow xlinkTitle xlinkType xmlns xmlnsXlink xmlBase\n" +
+                    "xmlLang xmlSpace y y1 y2 yChannelSelector z zoomAndPan</code></pre>\n" +
+                    "</div>\n" +
+                    "<p>You may also use custom attributes as long as they&rsquo;re fully lowercase.</p>\n" +
+                    "</div>");
+            sec3React3.setLesson(reactJsLesson3);
+            reactJsLesson3.getSections().add(sec3React3);
+
+            Section sec4React3 = new Section();
+            sec4React3.setOrdinalNumber(4);
+            sec4React3.setDescription("SyntheticEvent");
+            sec4React3.setContent("<div class=\"css-7u1i3w\">\n" +
+                    "<h2 id=\"overview\">Overview</h2>\n" +
+                    "<p>Your event handlers will be passed instances of&nbsp;<code class=\"gatsby-code-text\">SyntheticEvent</code>, a cross-browser wrapper around the browser&rsquo;s native event. It has the same interface as the browser&rsquo;s native event, including&nbsp;<code class=\"gatsby-code-text\">stopPropagation()</code>&nbsp;and&nbsp;<code class=\"gatsby-code-text\">preventDefault()</code>, except the events work identically across all browsers.</p>\n" +
+                    "<p>If you find that you need the underlying browser event for some reason, simply use the&nbsp;<code class=\"gatsby-code-text\">nativeEvent</code>&nbsp;attribute to get it. Every&nbsp;<code class=\"gatsby-code-text\">SyntheticEvent</code>&nbsp;object has the following attributes:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\">boolean bubbles\n" +
+                    "boolean cancelable\n" +
+                    "DOMEventTarget currentTarget\n" +
+                    "boolean defaultPrevented\n" +
+                    "number eventPhase\n" +
+                    "boolean isTrusted\n" +
+                    "DOMEvent nativeEvent\n" +
+                    "<span class=\"token keyword\">void</span> <span class=\"token function\">preventDefault</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span>\n" +
+                    "boolean <span class=\"token function\">isDefaultPrevented</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span>\n" +
+                    "<span class=\"token keyword\">void</span> <span class=\"token function\">stopPropagation</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span>\n" +
+                    "boolean <span class=\"token function\">isPropagationStopped</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span>\n" +
+                    "DOMEventTarget target\n" +
+                    "number timeStamp\n" +
+                    "string type</code></pre>\n" +
+                    "</div>\n" +
+                    "<blockquote>\n" +
+                    "<p>Note:</p>\n" +
+                    "<p>As of v0.14, returning&nbsp;<code class=\"gatsby-code-text\">false</code>&nbsp;from an event handler will no longer stop event propagation. Instead,&nbsp;<code class=\"gatsby-code-text\">e.stopPropagation()</code>&nbsp;or&nbsp;<code class=\"gatsby-code-text\">e.preventDefault()</code>&nbsp;should be triggered manually, as appropriate.</p>\n" +
+                    "</blockquote>\n" +
+                    "<h3 id=\"event-pooling\">Event Pooling</h3>\n" +
+                    "<p>The&nbsp;<code class=\"gatsby-code-text\">SyntheticEvent</code>&nbsp;is pooled. This means that the&nbsp;<code class=\"gatsby-code-text\">SyntheticEvent</code>&nbsp;object will be reused and all properties will be nullified after the event callback has been invoked. This is for performance reasons. As such, you cannot access the event in an asynchronous way.</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\"><span class=\"token keyword\">function</span> <span class=\"token function\">onClick</span><span class=\"token punctuation\">(</span>event<span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "  console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span>event<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span> <span class=\"token comment\">// =&gt; nullified object.</span>\n" +
+                    "  console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span>event<span class=\"token punctuation\">.</span>type<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span> <span class=\"token comment\">// =&gt; \"click\"</span>\n" +
+                    "  <span class=\"token keyword\">const</span> eventType <span class=\"token operator\">=</span> event<span class=\"token punctuation\">.</span>type<span class=\"token punctuation\">;</span> <span class=\"token comment\">// =&gt; \"click\"</span>\n" +
+                    "\n" +
+                    "  <span class=\"token function\">setTimeout</span><span class=\"token punctuation\">(</span><span class=\"token keyword\">function</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "    console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span>event<span class=\"token punctuation\">.</span>type<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span> <span class=\"token comment\">// =&gt; null</span>\n" +
+                    "    console<span class=\"token punctuation\">.</span><span class=\"token function\">log</span><span class=\"token punctuation\">(</span>eventType<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span> <span class=\"token comment\">// =&gt; \"click\"</span>\n" +
+                    "  <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span> <span class=\"token number\">0</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "\n" +
+                    "  <span class=\"token comment\">// Won't work. this.state.clickEvent will only contain null values.</span>\n" +
+                    "  <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span>clickEvent<span class=\"token punctuation\">:</span> event<span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "\n" +
+                    "  <span class=\"token comment\">// You can still export event properties.</span>\n" +
+                    "  <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span><span class=\"token function\">setState</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">{</span>eventType<span class=\"token punctuation\">:</span> event<span class=\"token punctuation\">.</span>type<span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "<span class=\"token punctuation\">}</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<blockquote>\n" +
+                    "<p>Note:</p>\n" +
+                    "<p>If you want to access the event properties in an asynchronous way, you should call&nbsp;<code class=\"gatsby-code-text\">event.persist()</code>&nbsp;on the event, which will remove the synthetic event from the pool and allow references to the event to be retained by user code.</p>\n" +
+                    "</blockquote>\n" +
+                    "<h2 id=\"supported-events\">Supported Events</h2>\n" +
+                    "<p>React normalizes events so that they have consistent properties across different browsers.</p>\n" +
+                    "<p>The event handlers below are triggered by an event in the bubbling phase. To register an event handler for the capture phase, append&nbsp;<code class=\"gatsby-code-text\">Capture</code>&nbsp;to the event name; for example, instead of using&nbsp;<code class=\"gatsby-code-text\">onClick</code>, you would use&nbsp;<code class=\"gatsby-code-text\">onClickCapture</code>&nbsp;to handle the click event in the capture phase.</p>\n" +
+                    "<ul>\n" +
+                    "<li><a href=\"https://reactjs.org/docs/events.html#clipboard-events\">Clipboard Events</a></li>\n" +
+                    "<li><a href=\"https://reactjs.org/docs/events.html#composition-events\">Composition Events</a></li>\n" +
+                    "<li><a href=\"https://reactjs.org/docs/events.html#keyboard-events\">Keyboard Events</a></li>\n" +
+                    "<li><a href=\"https://reactjs.org/docs/events.html#focus-events\">Focus Events</a></li>\n" +
+                    "<li><a href=\"https://reactjs.org/docs/events.html#form-events\">Form Events</a></li>\n" +
+                    "<li><a href=\"https://reactjs.org/docs/events.html#mouse-events\">Mouse Events</a></li>\n" +
+                    "<li><a href=\"https://reactjs.org/docs/events.html#pointer-events\">Pointer Events</a></li>\n" +
+                    "<li><a href=\"https://reactjs.org/docs/events.html#selection-events\">Selection Events</a></li>\n" +
+                    "<li><a href=\"https://reactjs.org/docs/events.html#touch-events\">Touch Events</a></li>\n" +
+                    "<li><a href=\"https://reactjs.org/docs/events.html#ui-events\">UI Events</a></li>\n" +
+                    "<li><a href=\"https://reactjs.org/docs/events.html#wheel-events\">Wheel Events</a></li>\n" +
+                    "<li><a href=\"https://reactjs.org/docs/events.html#media-events\">Media Events</a></li>\n" +
+                    "<li><a href=\"https://reactjs.org/docs/events.html#image-events\">Image Events</a></li>\n" +
+                    "<li><a href=\"https://reactjs.org/docs/events.html#animation-events\">Animation Events</a></li>\n" +
+                    "<li><a href=\"https://reactjs.org/docs/events.html#transition-events\">Transition Events</a></li>\n" +
+                    "<li><a href=\"https://reactjs.org/docs/events.html#other-events\">Other Events</a></li>\n" +
+                    "</ul>\n" +
+                    "<hr />\n" +
+                    "<h2 id=\"reference\">Reference</h2>\n" +
+                    "<h3 id=\"clipboard-events\">Clipboard Events</h3>\n" +
+                    "<p>Event names:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"text\">\n" +
+                    "<pre class=\"gatsby-code-text\"><code class=\"gatsby-code-text\">onCopy onCut onPaste</code></pre>\n" +
+                    "</div>\n" +
+                    "<p>Properties:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\">DOMDataTransfer clipboardData</code></pre>\n" +
+                    "</div>\n" +
+                    "<hr />\n" +
+                    "<h3 id=\"composition-events\">Composition Events</h3>\n" +
+                    "<p>Event names:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"text\">\n" +
+                    "<pre class=\"gatsby-code-text\"><code class=\"gatsby-code-text\">onCompositionEnd onCompositionStart onCompositionUpdate</code></pre>\n" +
+                    "</div>\n" +
+                    "<p>Properties:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\">string data</code></pre>\n" +
+                    "</div>\n" +
+                    "<hr />\n" +
+                    "<h3 id=\"keyboard-events\">Keyboard Events</h3>\n" +
+                    "<p>Event names:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"text\">\n" +
+                    "<pre class=\"gatsby-code-text\"><code class=\"gatsby-code-text\">onKeyDown onKeyPress onKeyUp</code></pre>\n" +
+                    "</div>\n" +
+                    "<p>Properties:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\">boolean altKey\n" +
+                    "number charCode\n" +
+                    "boolean ctrlKey\n" +
+                    "boolean <span class=\"token function\">getModifierState</span><span class=\"token punctuation\">(</span>key<span class=\"token punctuation\">)</span>\n" +
+                    "string key\n" +
+                    "number keyCode\n" +
+                    "string locale\n" +
+                    "number location\n" +
+                    "boolean metaKey\n" +
+                    "boolean repeat\n" +
+                    "boolean shiftKey\n" +
+                    "number which</code></pre>\n" +
+                    "</div>\n" +
+                    "<p>The&nbsp;<code class=\"gatsby-code-text\">key</code>&nbsp;property can take any of the values documented in the&nbsp;<a href=\"https://www.w3.org/TR/uievents-key/#named-key-attribute-values\">DOM Level 3 Events spec</a>.</p>\n" +
+                    "<hr />\n" +
+                    "<h3 id=\"focus-events\">Focus Events</h3>\n" +
+                    "<p>Event names:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"text\">\n" +
+                    "<pre class=\"gatsby-code-text\"><code class=\"gatsby-code-text\">onFocus onBlur</code></pre>\n" +
+                    "</div>\n" +
+                    "<p>These focus events work on all elements in the React DOM, not just form elements.</p>\n" +
+                    "<p>Properties:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\">DOMEventTarget relatedTarget</code></pre>\n" +
+                    "</div>\n" +
+                    "<hr />\n" +
+                    "<h3 id=\"form-events\">Form Events</h3>\n" +
+                    "<p>Event names:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"text\">\n" +
+                    "<pre class=\"gatsby-code-text\"><code class=\"gatsby-code-text\">onChange onInput onInvalid onSubmit</code></pre>\n" +
+                    "</div>\n" +
+                    "<p>For more information about the onChange event, see&nbsp;<a href=\"https://reactjs.org/docs/forms.html\">Forms</a>.</p>\n" +
+                    "<hr />\n" +
+                    "<h3 id=\"mouse-events\">Mouse Events</h3>\n" +
+                    "<p>Event names:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"text\">\n" +
+                    "<pre class=\"gatsby-code-text\"><code class=\"gatsby-code-text\">onClick onContextMenu onDoubleClick onDrag onDragEnd onDragEnter onDragExit\n" +
+                    "onDragLeave onDragOver onDragStart onDrop onMouseDown onMouseEnter onMouseLeave\n" +
+                    "onMouseMove onMouseOut onMouseOver onMouseUp</code></pre>\n" +
+                    "</div>\n" +
+                    "<p>The&nbsp;<code class=\"gatsby-code-text\">onMouseEnter</code>&nbsp;and&nbsp;<code class=\"gatsby-code-text\">onMouseLeave</code>&nbsp;events propagate from the element being left to the one being entered instead of ordinary bubbling and do not have a capture phase.</p>\n" +
+                    "<p>Properties:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\">boolean altKey\n" +
+                    "number button\n" +
+                    "number buttons\n" +
+                    "number clientX\n" +
+                    "number clientY\n" +
+                    "boolean ctrlKey\n" +
+                    "boolean <span class=\"token function\">getModifierState</span><span class=\"token punctuation\">(</span>key<span class=\"token punctuation\">)</span>\n" +
+                    "boolean metaKey\n" +
+                    "number pageX\n" +
+                    "number pageY\n" +
+                    "DOMEventTarget relatedTarget\n" +
+                    "number screenX\n" +
+                    "number screenY\n" +
+                    "boolean shiftKey</code></pre>\n" +
+                    "</div>\n" +
+                    "<hr />\n" +
+                    "<h3 id=\"pointer-events\">Pointer Events</h3>\n" +
+                    "<p>Event names:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"text\">\n" +
+                    "<pre class=\"gatsby-code-text\"><code class=\"gatsby-code-text\">onPointerDown onPointerMove onPointerUp onPointerCancel onGotPointerCapture\n" +
+                    "onLostPointerCapture onPointerEnter onPointerLeave onPointerOver onPointerOut</code></pre>\n" +
+                    "</div>\n" +
+                    "<p>The&nbsp;<code class=\"gatsby-code-text\">onPointerEnter</code>&nbsp;and&nbsp;<code class=\"gatsby-code-text\">onPointerLeave</code>&nbsp;events propagate from the element being left to the one being entered instead of ordinary bubbling and do not have a capture phase.</p>\n" +
+                    "<p>Properties:</p>\n" +
+                    "<p>As defined in the&nbsp;<a href=\"https://www.w3.org/TR/pointerevents/\">W3 spec</a>, pointer events extend&nbsp;<a href=\"https://reactjs.org/docs/events.html#mouse-events\">Mouse Events</a>&nbsp;with the following properties:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\">number pointerId\n" +
+                    "number width\n" +
+                    "number height\n" +
+                    "number pressure\n" +
+                    "number tangentialPressure\n" +
+                    "number tiltX\n" +
+                    "number tiltY\n" +
+                    "number twist\n" +
+                    "string pointerType\n" +
+                    "boolean isPrimary</code></pre>\n" +
+                    "</div>\n" +
+                    "<p>A note on cross-browser support:</p>\n" +
+                    "<p>Pointer events are not yet supported in every browser (at the time of writing this article, supported browsers include: Chrome, Firefox, Edge, and Internet Explorer). React deliberately does not polyfill support for other browsers because a standard-conform polyfill would significantly increase the bundle size of&nbsp;<code class=\"gatsby-code-text\">react-dom</code>.</p>\n" +
+                    "<p>If your application requires pointer events, we recommend adding a third party pointer event polyfill.</p>\n" +
+                    "<hr />\n" +
+                    "<h3 id=\"selection-events\">Selection Events</h3>\n" +
+                    "<p>Event names:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"text\">\n" +
+                    "<pre class=\"gatsby-code-text\"><code class=\"gatsby-code-text\">onSelect</code></pre>\n" +
+                    "</div>\n" +
+                    "<hr />\n" +
+                    "<h3 id=\"touch-events\">Touch Events</h3>\n" +
+                    "<p>Event names:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"text\">\n" +
+                    "<pre class=\"gatsby-code-text\"><code class=\"gatsby-code-text\">onTouchCancel onTouchEnd onTouchMove onTouchStart</code></pre>\n" +
+                    "</div>\n" +
+                    "<p>Properties:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\">boolean altKey\n" +
+                    "DOMTouchList changedTouches\n" +
+                    "boolean ctrlKey\n" +
+                    "boolean <span class=\"token function\">getModifierState</span><span class=\"token punctuation\">(</span>key<span class=\"token punctuation\">)</span>\n" +
+                    "boolean metaKey\n" +
+                    "boolean shiftKey\n" +
+                    "DOMTouchList targetTouches\n" +
+                    "DOMTouchList touches</code></pre>\n" +
+                    "</div>\n" +
+                    "<hr />\n" +
+                    "<h3 id=\"ui-events\">UI Events</h3>\n" +
+                    "<p>Event names:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"text\">\n" +
+                    "<pre class=\"gatsby-code-text\"><code class=\"gatsby-code-text\">onScroll</code></pre>\n" +
+                    "</div>\n" +
+                    "<p>Properties:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\">number detail\n" +
+                    "DOMAbstractView view</code></pre>\n" +
+                    "</div>\n" +
+                    "<hr />\n" +
+                    "<h3 id=\"wheel-events\">Wheel Events</h3>\n" +
+                    "<p>Event names:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"text\">\n" +
+                    "<pre class=\"gatsby-code-text\"><code class=\"gatsby-code-text\">onWheel</code></pre>\n" +
+                    "</div>\n" +
+                    "<p>Properties:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\">number deltaMode\n" +
+                    "number deltaX\n" +
+                    "number deltaY\n" +
+                    "number deltaZ</code></pre>\n" +
+                    "</div>\n" +
+                    "<hr />\n" +
+                    "<h3 id=\"media-events\">Media Events</h3>\n" +
+                    "<p>Event names:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"text\">\n" +
+                    "<pre class=\"gatsby-code-text\"><code class=\"gatsby-code-text\">onAbort onCanPlay onCanPlayThrough onDurationChange onEmptied onEncrypted\n" +
+                    "onEnded onError onLoadedData onLoadedMetadata onLoadStart onPause onPlay\n" +
+                    "onPlaying onProgress onRateChange onSeeked onSeeking onStalled onSuspend\n" +
+                    "onTimeUpdate onVolumeChange onWaiting</code></pre>\n" +
+                    "</div>\n" +
+                    "<hr />\n" +
+                    "<h3 id=\"image-events\">Image Events</h3>\n" +
+                    "<p>Event names:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"text\">\n" +
+                    "<pre class=\"gatsby-code-text\"><code class=\"gatsby-code-text\">onLoad onError</code></pre>\n" +
+                    "</div>\n" +
+                    "<hr />\n" +
+                    "<h3 id=\"animation-events\">Animation Events</h3>\n" +
+                    "<p>Event names:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"text\">\n" +
+                    "<pre class=\"gatsby-code-text\"><code class=\"gatsby-code-text\">onAnimationStart onAnimationEnd onAnimationIteration</code></pre>\n" +
+                    "</div>\n" +
+                    "<p>Properties:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\">string animationName\n" +
+                    "string pseudoElement\n" +
+                    "float elapsedTime</code></pre>\n" +
+                    "</div>\n" +
+                    "<hr />\n" +
+                    "<h3 id=\"transition-events\">Transition Events</h3>\n" +
+                    "<p>Event names:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"text\">\n" +
+                    "<pre class=\"gatsby-code-text\"><code class=\"gatsby-code-text\">onTransitionEnd</code></pre>\n" +
+                    "</div>\n" +
+                    "<p>Properties:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\">string propertyName\n" +
+                    "string pseudoElement\n" +
+                    "float elapsedTime</code></pre>\n" +
+                    "</div>\n" +
+                    "<hr />\n" +
+                    "<h3 id=\"other-events\">Other Events</h3>\n" +
+                    "<p>Event names:</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"text\">\n" +
+                    "<pre class=\"gatsby-code-text\"><code class=\"gatsby-code-text\">onToggle</code></pre>\n" +
+                    "</div>\n" +
+                    "</div>");
+            sec4React3.setLesson(reactJsLesson3);
+            reactJsLesson3.getSections().add(sec4React3);
+
+            Section sec5React3 = new Section();
+            sec5React3.setOrdinalNumber(5);
+            sec5React3.setDescription("Test Utilities");
+            sec5React3.setContent("<h2 id=\"overview\">Overview</h2>\n" +
+                    "<p><code class=\"gatsby-code-text\">ReactTestUtils</code>&nbsp;makes it easy to test React components in the testing framework of your choice. At Facebook we use&nbsp;<a href=\"https://facebook.github.io/jest/\">Jest</a>&nbsp;for painless JavaScript testing. Learn how to get started with Jest through the Jest website&rsquo;s&nbsp;<a href=\"http://facebook.github.io/jest/docs/en/tutorial-react.html#content\">React Tutorial</a>.</p>\n" +
+                    "<blockquote>\n" +
+                    "<p>Note:</p>\n" +
+                    "<p>Airbnb has released a testing utility called Enzyme, which makes it easy to assert, manipulate, and traverse your React Components&rsquo; output. If you&rsquo;re deciding on a unit testing utility to use together with Jest, or any other test runner, it&rsquo;s worth checking out:&nbsp;<a href=\"http://airbnb.io/enzyme/\">http://airbnb.io/enzyme/</a></p>\n" +
+                    "<p>Alternatively, there is another testing utility called react-testing-library designed to enable and encourage writing tests that use your components as the end users use them. It also works with any test runner:&nbsp;<a href=\"https://git.io/react-testing-library\">https://git.io/react-testing-library</a></p>\n" +
+                    "</blockquote>\n" +
+                    "<ul>\n" +
+                    "<li><a href=\"https://reactjs.org/docs/test-utils.html#simulate\"><code class=\"gatsby-code-text\">Simulate</code></a></li>\n" +
+                    "<li><a href=\"https://reactjs.org/docs/test-utils.html#renderintodocument\"><code class=\"gatsby-code-text\">renderIntoDocument()</code></a></li>\n" +
+                    "<li><a href=\"https://reactjs.org/docs/test-utils.html#mockcomponent\"><code class=\"gatsby-code-text\">mockComponent()</code></a></li>\n" +
+                    "<li><a href=\"https://reactjs.org/docs/test-utils.html#iselement\"><code class=\"gatsby-code-text\">isElement()</code></a></li>\n" +
+                    "<li><a href=\"https://reactjs.org/docs/test-utils.html#iselementoftype\"><code class=\"gatsby-code-text\">isElementOfType()</code></a></li>\n" +
+                    "<li><a href=\"https://reactjs.org/docs/test-utils.html#isdomcomponent\"><code class=\"gatsby-code-text\">isDOMComponent()</code></a></li>\n" +
+                    "<li><a href=\"https://reactjs.org/docs/test-utils.html#iscompositecomponent\"><code class=\"gatsby-code-text\">isCompositeComponent()</code></a></li>\n" +
+                    "<li><a href=\"https://reactjs.org/docs/test-utils.html#iscompositecomponentwithtype\"><code class=\"gatsby-code-text\">isCompositeComponentWithType()</code></a></li>\n" +
+                    "<li><a href=\"https://reactjs.org/docs/test-utils.html#findallinrenderedtree\"><code class=\"gatsby-code-text\">findAllInRenderedTree()</code></a></li>\n" +
+                    "<li><a href=\"https://reactjs.org/docs/test-utils.html#scryrendereddomcomponentswithclass\"><code class=\"gatsby-code-text\">scryRenderedDOMComponentsWithClass()</code></a></li>\n" +
+                    "<li><a href=\"https://reactjs.org/docs/test-utils.html#findrendereddomcomponentwithclass\"><code class=\"gatsby-code-text\">findRenderedDOMComponentWithClass()</code></a></li>\n" +
+                    "<li><a href=\"https://reactjs.org/docs/test-utils.html#scryrendereddomcomponentswithtag\"><code class=\"gatsby-code-text\">scryRenderedDOMComponentsWithTag()</code></a></li>\n" +
+                    "<li><a href=\"https://reactjs.org/docs/test-utils.html#findrendereddomcomponentwithtag\"><code class=\"gatsby-code-text\">findRenderedDOMComponentWithTag()</code></a></li>\n" +
+                    "<li><a href=\"https://reactjs.org/docs/test-utils.html#scryrenderedcomponentswithtype\"><code class=\"gatsby-code-text\">scryRenderedComponentsWithType()</code></a></li>\n" +
+                    "<li><a href=\"https://reactjs.org/docs/test-utils.html#findrenderedcomponentwithtype\"><code class=\"gatsby-code-text\">findRenderedComponentWithType()</code></a></li>\n" +
+                    "</ul>\n" +
+                    "<h2 id=\"reference\">Reference</h2>\n" +
+                    "<h2 id=\"shallow-rendering\">Shallow Rendering</h2>\n" +
+                    "<p>When writing unit tests for React, shallow rendering can be helpful. Shallow rendering lets you render a component &ldquo;one level deep&rdquo; and assert facts about what its render method returns, without worrying about the behavior of child components, which are not instantiated or rendered. This does not require a DOM.</p>\n" +
+                    "<blockquote>\n" +
+                    "<p>Note:</p>\n" +
+                    "<p>The shallow renderer has moved to&nbsp;<code class=\"gatsby-code-text\">react-test-renderer/shallow</code>.<br /><a href=\"https://reactjs.org/docs/shallow-renderer.html\">Learn more about shallow rendering on its reference page.</a></p>\n" +
+                    "</blockquote>\n" +
+                    "<h2 id=\"other-utilities\">Other Utilities</h2>\n" +
+                    "<h3 id=\"simulate\"><code class=\"gatsby-code-text\">Simulate</code></h3>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\">Simulate<span class=\"token punctuation\">.</span><span class=\"token punctuation\">{</span>eventName<span class=\"token punctuation\">}</span><span class=\"token punctuation\">(</span>\n" +
+                    "  element<span class=\"token punctuation\">,</span>\n" +
+                    "  <span class=\"token punctuation\">[</span>eventData<span class=\"token punctuation\">]</span>\n" +
+                    "<span class=\"token punctuation\">)</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>Simulate an event dispatch on a DOM node with optional&nbsp;<code class=\"gatsby-code-text\">eventData</code>&nbsp;event data.</p>\n" +
+                    "<p><code class=\"gatsby-code-text\">Simulate</code>&nbsp;has a method for&nbsp;<a href=\"https://reactjs.org/docs/events.html#supported-events\">every event that React understands</a>.</p>\n" +
+                    "<p><strong>Clicking an element</strong></p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\"><span class=\"token comment\">// &lt;button ref={(node) =&gt; this.button = node}&gt;...&lt;/button&gt;</span>\n" +
+                    "<span class=\"token keyword\">const</span> node <span class=\"token operator\">=</span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>button<span class=\"token punctuation\">;</span>\n" +
+                    "ReactTestUtils<span class=\"token punctuation\">.</span>Simulate<span class=\"token punctuation\">.</span><span class=\"token function\">click</span><span class=\"token punctuation\">(</span>node<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p><strong>Changing the value of an input field and then pressing ENTER.</strong></p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\"><span class=\"token comment\">// &lt;input ref={(node) =&gt; this.textInput = node} /&gt;</span>\n" +
+                    "<span class=\"token keyword\">const</span> node <span class=\"token operator\">=</span> <span class=\"token keyword\">this</span><span class=\"token punctuation\">.</span>textInput<span class=\"token punctuation\">;</span>\n" +
+                    "node<span class=\"token punctuation\">.</span>value <span class=\"token operator\">=</span> <span class=\"token string\">'giraffe'</span><span class=\"token punctuation\">;</span>\n" +
+                    "ReactTestUtils<span class=\"token punctuation\">.</span>Simulate<span class=\"token punctuation\">.</span><span class=\"token function\">change</span><span class=\"token punctuation\">(</span>node<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "ReactTestUtils<span class=\"token punctuation\">.</span>Simulate<span class=\"token punctuation\">.</span><span class=\"token function\">keyDown</span><span class=\"token punctuation\">(</span>node<span class=\"token punctuation\">,</span> <span class=\"token punctuation\">{</span>key<span class=\"token punctuation\">:</span> <span class=\"token string\">\"Enter\"</span><span class=\"token punctuation\">,</span> keyCode<span class=\"token punctuation\">:</span> <span class=\"token number\">13</span><span class=\"token punctuation\">,</span> which<span class=\"token punctuation\">:</span> <span class=\"token number\">13</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<blockquote>\n" +
+                    "<p>Note</p>\n" +
+                    "<p>You will have to provide any event property that you&rsquo;re using in your component (e.g. keyCode, which, etc&hellip;) as React is not creating any of these for you.</p>\n" +
+                    "</blockquote>\n" +
+                    "<hr />\n" +
+                    "<h3 id=\"renderintodocument\"><code class=\"gatsby-code-text\">renderIntoDocument()</code></h3>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\"><span class=\"token function\">renderIntoDocument</span><span class=\"token punctuation\">(</span>element<span class=\"token punctuation\">)</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>Render a React element into a detached DOM node in the document.&nbsp;<strong>This function requires a DOM.</strong></p>\n" +
+                    "<blockquote>\n" +
+                    "<p>Note:</p>\n" +
+                    "<p>You will need to have&nbsp;<code class=\"gatsby-code-text\">window</code>,&nbsp;<code class=\"gatsby-code-text\">window.document</code>&nbsp;and&nbsp;<code class=\"gatsby-code-text\">window.document.createElement</code>globally available&nbsp;<strong>before</strong>&nbsp;you import&nbsp;<code class=\"gatsby-code-text\">React</code>. Otherwise React will think it can&rsquo;t access the DOM and methods like&nbsp;<code class=\"gatsby-code-text\">setState</code>&nbsp;won&rsquo;t work.</p>\n" +
+                    "</blockquote>\n" +
+                    "<hr />\n" +
+                    "<h3 id=\"mockcomponent\"><code class=\"gatsby-code-text\">mockComponent()</code></h3>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\"><span class=\"token function\">mockComponent</span><span class=\"token punctuation\">(</span>\n" +
+                    "  componentClass<span class=\"token punctuation\">,</span>\n" +
+                    "  <span class=\"token punctuation\">[</span>mockTagName<span class=\"token punctuation\">]</span>\n" +
+                    "<span class=\"token punctuation\">)</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>Pass a mocked component module to this method to augment it with useful methods that allow it to be used as a dummy React component. Instead of rendering as usual, the component will become a simple&nbsp;<code class=\"gatsby-code-text\">&lt;div&gt;</code>&nbsp;(or other tag if&nbsp;<code class=\"gatsby-code-text\">mockTagName</code>&nbsp;is provided) containing any provided children.</p>\n" +
+                    "<blockquote>\n" +
+                    "<p>Note:</p>\n" +
+                    "<p><code class=\"gatsby-code-text\">mockComponent()</code>&nbsp;is a legacy API. We recommend using&nbsp;<a href=\"https://reactjs.org/docs/test-utils.html#shallow-rendering\">shallow rendering</a>&nbsp;or&nbsp;<a href=\"https://facebook.github.io/jest/docs/en/tutorial-react-native.html#mock-native-modules-using-jestmock\"><code class=\"gatsby-code-text\">jest.mock()</code></a>instead.</p>\n" +
+                    "</blockquote>\n" +
+                    "<hr />\n" +
+                    "<h3 id=\"iselement\"><code class=\"gatsby-code-text\">isElement()</code></h3>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\"><span class=\"token function\">isElement</span><span class=\"token punctuation\">(</span>element<span class=\"token punctuation\">)</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>Returns&nbsp;<code class=\"gatsby-code-text\">true</code>&nbsp;if&nbsp;<code class=\"gatsby-code-text\">element</code>&nbsp;is any React element.</p>\n" +
+                    "<hr />\n" +
+                    "<h3 id=\"iselementoftype\"><code class=\"gatsby-code-text\">isElementOfType()</code></h3>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\"><span class=\"token function\">isElementOfType</span><span class=\"token punctuation\">(</span>\n" +
+                    "  element<span class=\"token punctuation\">,</span>\n" +
+                    "  componentClass\n" +
+                    "<span class=\"token punctuation\">)</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>Returns&nbsp;<code class=\"gatsby-code-text\">true</code>&nbsp;if&nbsp;<code class=\"gatsby-code-text\">element</code>&nbsp;is a React element whose type is of a React&nbsp;<code class=\"gatsby-code-text\">componentClass</code>.</p>\n" +
+                    "<hr />\n" +
+                    "<h3 id=\"isdomcomponent\"><code class=\"gatsby-code-text\">isDOMComponent()</code></h3>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\"><span class=\"token function\">isDOMComponent</span><span class=\"token punctuation\">(</span>instance<span class=\"token punctuation\">)</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>Returns&nbsp;<code class=\"gatsby-code-text\">true</code>&nbsp;if&nbsp;<code class=\"gatsby-code-text\">instance</code>&nbsp;is a DOM component (such as a&nbsp;<code class=\"gatsby-code-text\">&lt;div&gt;</code>&nbsp;or&nbsp;<code class=\"gatsby-code-text\">&lt;span&gt;</code>).</p>\n" +
+                    "<hr />\n" +
+                    "<h3 id=\"iscompositecomponent\"><code class=\"gatsby-code-text\">isCompositeComponent()</code></h3>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\"><span class=\"token function\">isCompositeComponent</span><span class=\"token punctuation\">(</span>instance<span class=\"token punctuation\">)</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>Returns&nbsp;<code class=\"gatsby-code-text\">true</code>&nbsp;if&nbsp;<code class=\"gatsby-code-text\">instance</code>&nbsp;is a user-defined component, such as a class or a function.</p>\n" +
+                    "<hr />\n" +
+                    "<h3 id=\"iscompositecomponentwithtype\"><code class=\"gatsby-code-text\">isCompositeComponentWithType()</code></h3>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\"><span class=\"token function\">isCompositeComponentWithType</span><span class=\"token punctuation\">(</span>\n" +
+                    "  instance<span class=\"token punctuation\">,</span>\n" +
+                    "  componentClass\n" +
+                    "<span class=\"token punctuation\">)</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>Returns&nbsp;<code class=\"gatsby-code-text\">true</code>&nbsp;if&nbsp;<code class=\"gatsby-code-text\">instance</code>&nbsp;is a component whose type is of a React&nbsp;<code class=\"gatsby-code-text\">componentClass</code>.</p>\n" +
+                    "<hr />\n" +
+                    "<h3 id=\"findallinrenderedtree\"><code class=\"gatsby-code-text\">findAllInRenderedTree()</code></h3>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\"><span class=\"token function\">findAllInRenderedTree</span><span class=\"token punctuation\">(</span>\n" +
+                    "  tree<span class=\"token punctuation\">,</span>\n" +
+                    "  test\n" +
+                    "<span class=\"token punctuation\">)</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>Traverse all components in&nbsp;<code class=\"gatsby-code-text\">tree</code>&nbsp;and accumulate all components where&nbsp;<code class=\"gatsby-code-text\">test(component)</code>&nbsp;is&nbsp;<code class=\"gatsby-code-text\">true</code>. This is not that useful on its own, but it&rsquo;s used as a primitive for other test utils.</p>\n" +
+                    "<hr />\n" +
+                    "<h3 id=\"scryrendereddomcomponentswithclass\"><code class=\"gatsby-code-text\">scryRenderedDOMComponentsWithClass()</code></h3>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\"><span class=\"token function\">scryRenderedDOMComponentsWithClass</span><span class=\"token punctuation\">(</span>\n" +
+                    "  tree<span class=\"token punctuation\">,</span>\n" +
+                    "  className\n" +
+                    "<span class=\"token punctuation\">)</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>Finds all DOM elements of components in the rendered tree that are DOM components with the class name matching&nbsp;<code class=\"gatsby-code-text\">className</code>.</p>\n" +
+                    "<hr />\n" +
+                    "<h3 id=\"findrendereddomcomponentwithclass\"><code class=\"gatsby-code-text\">findRenderedDOMComponentWithClass()</code></h3>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\"><span class=\"token function\">findRenderedDOMComponentWithClass</span><span class=\"token punctuation\">(</span>\n" +
+                    "  tree<span class=\"token punctuation\">,</span>\n" +
+                    "  className\n" +
+                    "<span class=\"token punctuation\">)</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>Like&nbsp;<a href=\"https://reactjs.org/docs/test-utils.html#scryrendereddomcomponentswithclass\"><code class=\"gatsby-code-text\">scryRenderedDOMComponentsWithClass()</code></a>&nbsp;but expects there to be one result, and returns that one result, or throws exception if there is any other number of matches besides one.</p>\n" +
+                    "<hr />\n" +
+                    "<h3 id=\"scryrendereddomcomponentswithtag\"><code class=\"gatsby-code-text\">scryRenderedDOMComponentsWithTag()</code></h3>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\"><span class=\"token function\">scryRenderedDOMComponentsWithTag</span><span class=\"token punctuation\">(</span>\n" +
+                    "  tree<span class=\"token punctuation\">,</span>\n" +
+                    "  tagName\n" +
+                    "<span class=\"token punctuation\">)</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>Finds all DOM elements of components in the rendered tree that are DOM components with the tag name matching&nbsp;<code class=\"gatsby-code-text\">tagName</code>.</p>\n" +
+                    "<hr />\n" +
+                    "<h3 id=\"findrendereddomcomponentwithtag\"><code class=\"gatsby-code-text\">findRenderedDOMComponentWithTag()</code></h3>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\"><span class=\"token function\">findRenderedDOMComponentWithTag</span><span class=\"token punctuation\">(</span>\n" +
+                    "  tree<span class=\"token punctuation\">,</span>\n" +
+                    "  tagName\n" +
+                    "<span class=\"token punctuation\">)</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>Like&nbsp;<a href=\"https://reactjs.org/docs/test-utils.html#scryrendereddomcomponentswithtag\"><code class=\"gatsby-code-text\">scryRenderedDOMComponentsWithTag()</code></a>&nbsp;but expects there to be one result, and returns that one result, or throws exception if there is any other number of matches besides one.</p>\n" +
+                    "<hr />\n" +
+                    "<h3 id=\"scryrenderedcomponentswithtype\"><code class=\"gatsby-code-text\">scryRenderedComponentsWithType()</code></h3>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\"><span class=\"token function\">scryRenderedComponentsWithType</span><span class=\"token punctuation\">(</span>\n" +
+                    "  tree<span class=\"token punctuation\">,</span>\n" +
+                    "  componentClass\n" +
+                    "<span class=\"token punctuation\">)</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>Finds all instances of components with type equal to&nbsp;<code class=\"gatsby-code-text\">componentClass</code>.</p>\n" +
+                    "<hr />\n" +
+                    "<h3 id=\"findrenderedcomponentwithtype\"><code class=\"gatsby-code-text\">findRenderedComponentWithType()</code></h3>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\"><span class=\"token function\">findRenderedComponentWithType</span><span class=\"token punctuation\">(</span>\n" +
+                    "  tree<span class=\"token punctuation\">,</span>\n" +
+                    "  componentClass\n" +
+                    "<span class=\"token punctuation\">)</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>Same as&nbsp;<a href=\"https://reactjs.org/docs/test-utils.html#scryrenderedcomponentswithtype\"><code class=\"gatsby-code-text\">scryRenderedComponentsWithType()</code></a>&nbsp;but expects there to be one result and returns that one result, or throws exception if there is any other number of matches besides one.</p>");
+            sec5React3.setLesson(reactJsLesson3);
+            reactJsLesson3.getSections().add(sec5React3);
+
+
+            Section sec1React4 = new Section();
+            sec1React4.setOrdinalNumber(1);
+            sec1React4.setDescription("Introducing Hooks");
+            sec1React4.setContent("<h2 id=\"no-breaking-changes\">No Breaking Changes</h2>\n" +
+                    "<p>Before we continue, note that Hooks are:</p>\n" +
+                    "<ul>\n" +
+                    "<li><strong>Completely opt-in.</strong>&nbsp;You can try Hooks in a few components without rewriting any existing code. But you don&rsquo;t have to learn or use Hooks right now if you don&rsquo;t want to.</li>\n" +
+                    "<li><strong>100% backwards-compatible.</strong>&nbsp;Hooks don&rsquo;t contain any breaking changes.</li>\n" +
+                    "<li><strong>Available now.</strong>&nbsp;Hooks are currently in an alpha release, and we hope to include them in React 16.7 after receiving community feedback.</li>\n" +
+                    "</ul>\n" +
+                    "<p><strong>There are no plans to remove classes from React.</strong>&nbsp;You can read more about the gradual adoption strategy for Hooks in the&nbsp;<a href=\"https://reactjs.org/docs/hooks-intro.html#gradual-adoption-strategy\">bottom section</a>&nbsp;of this page.</p>\n" +
+                    "<p><strong>Hooks don&rsquo;t replace your knowledge of React concepts.</strong>&nbsp;Instead, Hooks provide a more direct API to the React concepts you already know: props, state, context, refs, and lifecycle. As we will show later, Hooks also offer a new powerful way to combine them.</p>\n" +
+                    "<p><strong>If you just want to start learning Hooks, feel free to&nbsp;<a href=\"https://reactjs.org/docs/hooks-overview.html\">jump directly to the next page!</a></strong>&nbsp;You can also keep reading this page to learn more about why we&rsquo;re adding Hooks, and how we&rsquo;re going to start using them without rewriting our applications.</p>\n" +
+                    "<h2 id=\"motivation\">Motivation</h2>\n" +
+                    "<p>Hooks solve a wide variety of seemingly unconnected problems in React that we&rsquo;ve encountered over five years of writing and maintaining tens of thousands of components. Whether you&rsquo;re learning React, use it daily, or even prefer a different library with a similar component model, you might recognize some of these problems.</p>\n" +
+                    "<h3 id=\"its-hard-to-reuse-stateful-logic-between-components\">It&rsquo;s hard to reuse stateful logic between components</h3>\n" +
+                    "<p>React doesn&rsquo;t offer a way to &ldquo;attach&rdquo; reusable behavior to a component (for example, connecting it to a store). If you&rsquo;ve worked with React for a while, you may be familiar with patterns like&nbsp;<a href=\"https://reactjs.org/docs/render-props.html\">render props</a>&nbsp;and&nbsp;<a href=\"https://reactjs.org/docs/higher-order-components.html\">higher-order components</a>&nbsp;that try to solve this. But these patterns require you to restructure your components when you use them, which can be cumbersome and make code harder to follow. If you look at a typical React application in React DevTools, you will likely find a &ldquo;wrapper hell&rdquo; of components surrounded by layers of providers, consumers, higher-order components, render props, and other abstractions. While we could&nbsp;<a href=\"https://github.com/facebook/react-devtools/pull/503\">filter them out in DevTools</a>, this points to a deeper underlying problem: React needs a better primitive for sharing stateful logic.</p>\n" +
+                    "<p>With Hooks, you can extract stateful logic from a component so it can be tested independently and reused.&nbsp;<strong>Hooks allow you to reuse stateful logic without changing your component hierarchy.</strong>&nbsp;This makes it easy to share Hooks among many components or with the community.</p>\n" +
+                    "<p>We&rsquo;ll discuss this more in&nbsp;<a href=\"https://reactjs.org/docs/hooks-custom.html\">Building Your Own Hooks</a>.</p>\n" +
+                    "<h3 id=\"complex-components-become-hard-to-understand\">Complex components become hard to understand</h3>\n" +
+                    "<p>We&rsquo;ve often had to maintain components that started out simple but grew into an unmanageable mess of stateful logic and side effects. Each lifecycle method often contains a mix of unrelated logic. For example, components might perform some data fetching in&nbsp;<code class=\"gatsby-code-text\">componentDidMount</code>&nbsp;and&nbsp;<code class=\"gatsby-code-text\">componentDidUpdate</code>. However, the same&nbsp;<code class=\"gatsby-code-text\">componentDidMount</code>method might also contain some unrelated logic that sets up event listeners, with cleanup performed in&nbsp;<code class=\"gatsby-code-text\">componentWillUnmount</code>. Mutually related code that changes together gets split apart, but completely unrelated code ends up combined in a single method. This makes it too easy to introduce bugs and inconsistencies.</p>\n" +
+                    "<p>In many cases it&rsquo;s not possible to break these components into smaller ones because the stateful logic is all over the place. It&rsquo;s also difficult to test them. This is one of the reasons many people prefer to combine React with a separate state management library. However, that often introduces too much abstraction, requires you to jump between different files, and makes reusing components more difficult.</p>\n" +
+                    "<p>To solve this,&nbsp;<strong>Hooks let you split one component into smaller functions based on what pieces are related (such as setting up a subscription or fetching data)</strong>, rather than forcing a split based on lifecycle methods. You may also opt into managing the component&rsquo;s local state with a reducer to make it more predictable.</p>\n" +
+                    "<p>We&rsquo;ll discuss this more in&nbsp;<a href=\"https://reactjs.org/docs/hooks-effect.html#tip-use-multiple-effects-to-separate-concerns\">Using the Effect Hook</a>.</p>\n" +
+                    "<h3 id=\"classes-confuse-both-people-and-machines\">Classes confuse both people and machines</h3>\n" +
+                    "<p>In our observation, classes are the biggest barrier to learning React. You have to understand how&nbsp;<code class=\"gatsby-code-text\">this</code>&nbsp;works in JavaScript, which is very different from how it works in most languages. You have to remember to bind the event handlers. Without unstable&nbsp;<a href=\"https://babeljs.io/docs/en/babel-plugin-transform-class-properties/\">syntax proposals</a>, the code is very verbose. People can understand props, state, and top-down data flow perfectly well but still struggle with classes. The distinction between function and class components in React and when to use each one leads to disagreements even between experienced React developers.</p>\n" +
+                    "<p>Additionally, React has been out for about five years, and we want to make sure it stays relevant in the next five years. As&nbsp;<a href=\"https://svelte.technology/\">Svelte</a>,&nbsp;<a href=\"https://angular.io/\">Angular</a>,&nbsp;<a href=\"https://glimmerjs.com/\">Glimmer</a>, and others show,&nbsp;<a href=\"https://en.wikipedia.org/wiki/Ahead-of-time_compilation\">ahead-of-time compilation</a>&nbsp;of components has a lot of future potential. Especially if it&rsquo;s not limited to templates. Recently, we&rsquo;ve been experimenting with&nbsp;<a href=\"https://github.com/facebook/react/issues/7323\">component folding</a>&nbsp;using&nbsp;<a href=\"https://prepack.io/\">Prepack</a>, and we&rsquo;ve seen promising early results. However, we found that class components can encourage unintentional patterns that make these optimizations fall back to a slower path. Classes present issues for today&rsquo;s tools, too. For example, classes don&rsquo;t minify very well, and they make hot reloading flaky and unreliable. We want to present an API that makes it more likely for code to stay on the optimizable path.</p>\n" +
+                    "<p>To solve these problems,&nbsp;<strong>Hooks let you use more of React&rsquo;s features without classes.</strong>Conceptually, React components have always been closer to functions. Hooks embrace functions, but without sacrificing the practical spirit of React. Hooks provide access to imperative escape hatches and don&rsquo;t require you to learn complex functional or reactive programming techniques.</p>\n" +
+                    "<blockquote>\n" +
+                    "<p>Examples</p>\n" +
+                    "<p><a href=\"https://reactjs.org/docs/hooks-overview.html\">Hooks at a Glance</a>&nbsp;is a good place to start learning Hooks.</p>\n" +
+                    "</blockquote>\n" +
+                    "<h2 id=\"gradual-adoption-strategy\">Gradual Adoption Strategy</h2>\n" +
+                    "<blockquote>\n" +
+                    "<p><strong>TLDR: There are no plans to remove classes from React.</strong></p>\n" +
+                    "</blockquote>\n" +
+                    "<p>We know that React developers are focused on shipping products and don&rsquo;t have time to look into every new API that&rsquo;s being released. Hooks are very new, and it might be better to wait for more examples and tutorials before considering learning or adopting them.</p>\n" +
+                    "<p>We also understand that the bar for adding a new primitive to React is extremely high. For curious readers, we have prepared a&nbsp;<a href=\"https://github.com/reactjs/rfcs/pull/68\">detailed RFC</a>&nbsp;that dives into motivation with more details, and provides extra perspective on the specific design decisions and related prior art.</p>\n" +
+                    "<p><strong>Crucially, Hooks work side-by-side with existing code so you can adopt them gradually.</strong>We are sharing this experimental API to get early feedback from those in the community who are interested in shaping the future of React &mdash; and we will iterate on Hooks in the open.</p>\n" +
+                    "<p>Finally, there is no rush to migrate to Hooks. We recommend avoiding any &ldquo;big rewrites&rdquo;, especially for existing, complex class components. It takes a bit of a mindshift to start &ldquo;thinking in Hooks&rdquo;. In our experience, it&rsquo;s best to practice using Hooks in new and non-critical components first, and ensure that everybody on your team feels comfortable with them. After you give Hooks a try, please feel free to&nbsp;<a href=\"https://github.com/facebook/react/issues/new\">send us feedback</a>, positive or negative.</p>\n" +
+                    "<p>We intend for Hooks to cover all existing use cases for classes, but&nbsp;<strong>we will keep supporting class components for the foreseeable future.</strong>&nbsp;At Facebook, we have tens of thousands of components written as classes, and we have absolutely no plans to rewrite them. Instead, we are starting to use Hooks in the new code side by side with classes.</p>\n" +
+                    "<h2 id=\"next-steps\">&nbsp;</h2>");
+            sec1React4.setLesson(reactJsLesson4);
+            reactJsLesson4.getSections().add(sec1React4);
+
+            Section sec2React4 = new Section();
+            sec2React4.setOrdinalNumber(2);
+            sec2React4.setDescription("Hooks at a Glance");
+            sec2React4.setContent("<p><em>Hooks</em>&nbsp;are a new feature proposal that lets you use state and other React features without writing a class. They&rsquo;re currently in React v16.7.0-alpha and being discussed in&nbsp;<a href=\"https://github.com/reactjs/rfcs/pull/68\">an open RFC</a>.</p>\n" +
+                    "<div class=\"gatsby-highlight\" data-language=\"jsx\">\n" +
+                    "<pre class=\"gatsby-code-jsx\"><code class=\"gatsby-code-jsx\"><span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> useState <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'react'</span><span class=\"token punctuation\">;</span>\n" +
+                    "\n" +
+                    "<span class=\"token keyword\">function</span> <span class=\"token function\">Example</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n" +
+                    "<span class=\"gatsby-highlight-code-line\">  <span class=\"token comment\">// Declare a new state variable, which we'll call \"count\"</span>\n" +
+                    "</span><span class=\"gatsby-highlight-code-line\">  <span class=\"token keyword\">const</span> <span class=\"token punctuation\">[</span>count<span class=\"token punctuation\">,</span> setCount<span class=\"token punctuation\">]</span> <span class=\"token operator\">=</span> <span class=\"token function\">useState</span><span class=\"token punctuation\">(</span><span class=\"token number\">0</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "</span>\n" +
+                    "  <span class=\"token keyword\">return</span> <span class=\"token punctuation\">(</span>\n" +
+                    "    <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "      <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>p<span class=\"token punctuation\">&gt;</span></span><span class=\"token plain-text\">You clicked </span><span class=\"token punctuation\">{</span>count<span class=\"token punctuation\">}</span><span class=\"token plain-text\"> times</span><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>p<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "      <span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>button <span class=\"token attr-name\">onClick</span><span class=\"token script language-javascript\"><span class=\"token script-punctuation punctuation\">=</span><span class=\"token punctuation\">{</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=&gt;</span> <span class=\"token function\">setCount</span><span class=\"token punctuation\">(</span>count <span class=\"token operator\">+</span> <span class=\"token number\">1</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">}</span></span><span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "<span class=\"token plain-text\">        Click me</span>\n" +
+                    "      <span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>button<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "    <span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div<span class=\"token punctuation\">&gt;</span></span>\n" +
+                    "  <span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n" +
+                    "<span class=\"token punctuation\">}</span></code></pre>\n" +
+                    "</div>\n" +
+                    "<p>This new function&nbsp;<code class=\"gatsby-code-text\">useState</code>&nbsp;is the first &ldquo;Hook&rdquo; we&rsquo;ll learn about, but this example is just a teaser. Don&rsquo;t worry if it doesn&rsquo;t make sense yet!</p>\n" +
+                    "<p><strong>You can start learning Hooks&nbsp;<a href=\"https://reactjs.org/docs/hooks-overview.html\">on the next page</a>.</strong>&nbsp;On this page, we&rsquo;ll continue by explaining why we&rsquo;re adding Hooks to React and how they can help you write great applications.</p>");
+            sec2React4.setLesson(reactJsLesson4);
+            reactJsLesson4.getSections().add(sec2React4);
+
+            Section sec3React4 = new Section();
+            sec3React4.setOrdinalNumber(3);
+            sec3React4.setDescription("Using the State Hook");
+            sec3React4.setContent("USing the state hook");
+            sec3React4.setLesson(reactJsLesson4);
+            reactJsLesson4.getSections().add(sec3React4);
+
+            Section sec4React4 = new Section();
+            sec4React4.setOrdinalNumber(4);
+            sec4React4.setDescription("Using the Effect Hook");
+            sec4React4.setContent("The Effect Hook lets you perform side effects in function components:\n" +
+                    "\n" +
+                    "import { useState, useEffect } from 'react';\n" +
+                    "\n" +
+                    "function Example() {\n" +
+                    "  const [count, setCount] = useState(0);\n" +
+                    "\n" +
+                    "  // Similar to componentDidMount and componentDidUpdate:\n" +
+                    "  useEffect(() => {\n" +
+                    "    // Update the document title using the browser API\n" +
+                    "    document.title = `You clicked ${count} times`;\n" +
+                    "  });\n" +
+                    "\n" +
+                    "  return (\n" +
+                    "    <div>\n" +
+                    "      <p>You clicked {count} times</p>\n" +
+                    "      <button onClick={() => setCount(count + 1)}>\n" +
+                    "        Click me\n" +
+                    "      </button>\n" +
+                    "    </div>\n" +
+                    "  );\n" +
+                    "}\n" +
+                    "This snippet is based on the counter example from the previous page, but we added a new feature to it: we set the document title to a custom message including the number of clicks.\n" +
+                    "\n" +
+                    "Data fetching, setting up a subscription, and manually changing the DOM in React components are all examples of side effects. Whether or not you’re used to calling these operations “side effects” (or just “effects”), you’ve likely performed them in your components before.\n" +
+                    "\n" +
+                    "Tip\n" +
+                    "\n" +
+                    "If you’re familiar with React class lifecycle methods, you can think of useEffect Hook as componentDidMount, componentDidUpdate, and componentWillUnmount combined.\n" +
+                    "\n" +
+                    "There are two common kinds of side effects in React components: those that don’t require cleanup, and those that do. Let’s look at this distinction in more detail.\n" +
+                    "\n" +
+                    "Effects Without Cleanup\n" +
+                    "Sometimes, we want to run some additional code after React has updated the DOM. Network requests, manual DOM mutations, and logging are common examples of effects that don’t require a cleanup. We say that because we can run them and immediately forget about them. Let’s compare how classes and Hooks let us express such side effects.\n" +
+                    "\n" +
+                    "Example Using Classes\n" +
+                    "In React class components, the render method itself shouldn’t cause side effects. It would be too early — we typically want to perform our effects after React has updated the DOM.\n" +
+                    "\n" +
+                    "This is why in React classes, we put side effects into componentDidMount and componentDidUpdate. Coming back to our example, here is a React counter class component that updates the document title right after React makes changes to the DOM:\n" +
+                    "\n" +
+                    "class Example extends React.Component {\n" +
+                    "  constructor(props) {\n" +
+                    "    super(props);\n" +
+                    "    this.state = {\n" +
+                    "      count: 0\n" +
+                    "    };\n" +
+                    "  }\n" +
+                    "\n" +
+                    "  componentDidMount() {\n" +
+                    "    document.title = `You clicked ${this.state.count} times`;\n" +
+                    "  }\n" +
+                    "\n" +
+                    "  componentDidUpdate() {\n" +
+                    "    document.title = `You clicked ${this.state.count} times`;\n" +
+                    "  }\n" +
+                    "\n" +
+                    "  render() {\n" +
+                    "    return (\n" +
+                    "      <div>\n" +
+                    "        <p>You clicked {this.state.count} times</p>\n" +
+                    "        <button onClick={() => this.setState({ count: this.state.count + 1 })}>\n" +
+                    "          Click me\n" +
+                    "        </button>\n" +
+                    "      </div>\n" +
+                    "    );\n" +
+                    "  }\n" +
+                    "}\n" +
+                    "Note how we have to duplicate the code between these two lifecycle methods in class.\n" +
+                    "\n" +
+                    "This is because in many cases we want to perform the same side effect regardless of whether the component just mounted, or if it has been updated. Conceptually, we want it to happen after every render — but React class components don’t have a method like this. We could extract a separate method but we would still have to call it in two places.\n" +
+                    "\n" +
+                    "Now let’s see how we can do the same with the useEffect Hook.\n" +
+                    "\n" +
+                    "Example Using Hooks\n" +
+                    "We’ve already seen this example at the top of this page, but let’s take a closer look at it:\n" +
+                    "\n" +
+                    "import { useState, useEffect } from 'react';\n" +
+                    "\n" +
+                    "function Example() {\n" +
+                    "  const [count, setCount] = useState(0);\n" +
+                    "\n" +
+                    "  useEffect(() => {\n" +
+                    "    document.title = `You clicked ${count} times`;\n" +
+                    "  });\n" +
+                    "\n" +
+                    "  return (\n" +
+                    "    <div>\n" +
+                    "      <p>You clicked {count} times</p>\n" +
+                    "      <button onClick={() => setCount(count + 1)}>\n" +
+                    "        Click me\n" +
+                    "      </button>\n" +
+                    "    </div>\n" +
+                    "  );\n" +
+                    "}\n" +
+                    "What does useEffect do? By using this Hook, you tell React that your component needs to do something after render. React will remember the function you passed (we’ll refer to it as our “effect”), and call it later after performing the DOM updates. In this effect, we set the document title, but we could also perform data fetching or call some other imperative API.\n" +
+                    "\n" +
+                    "Why is useEffect called inside a component? Placing useEffect inside the component lets us access the count state variable (or any props) right from the effect. We don’t need a special API to read it — it’s already in the function scope. Hooks embrace JavaScript closures and avoid introducing React-specific APIs where JavaScript already provides a solution.\n" +
+                    "\n" +
+                    "Does useEffect run after every render? Yes! By default, it runs both after the first render and after every update. (We will later talk about how to customize this.) Instead of thinking in terms of “mounting” and “updating”, you might find it easier to think that effects happen “after render”. React guarantees the DOM has been updated by the time it runs the effects.\n" +
+                    "\n" +
+                    "Detailed Explanation\n" +
+                    "Now that we know more about effects, these lines should make sense:\n" +
+                    "\n" +
+                    "function Example() {\n" +
+                    "  const [count, setCount] = useState(0);\n" +
+                    "\n" +
+                    "  useEffect(() => {\n" +
+                    "    document.title = `You clicked ${count} times`;\n" +
+                    "  });\n" +
+                    "We declare the count state variable, and then we tell React we need to use an effect. We pass a function to the useEffect Hook. This function we pass is our effect. Inside our effect, we set the document title using the document.title browser API. We can read the latest count inside the effect because it’s in the scope of our function. When React renders our component, it will remember the effect we used, and then run our effect after updating the DOM. This happens for every render, including the first one.\n" +
+                    "\n" +
+                    "Experienced JavaScript developers might notice that the function passed to useEffect is going to be different on every render. This is intentional. In fact, this is what lets us read the count value from inside the effect without worrying about it getting stale. Every time we re-render, we schedule a different effect, replacing the previous one. In a way, this makes the effects behave more like a part of the render result — each effect “belongs” to a particular render. We will see more clearly why this is useful later on this page.\n" +
+                    "\n" +
+                    "Tip\n" +
+                    "\n" +
+                    "Unlike componentDidMount or componentDidUpdate, effects scheduled with useEffect don’t block the browser from updating the screen. This makes your app feel more responsive. The majority of effects don’t need to happen synchronously. In the uncommon cases where they do (such as measuring the layout), there is a separate useLayoutEffect Hook with an API identical to useEffect.\n" +
+                    "\n" +
+                    "Effects with Cleanup\n" +
+                    "Earlier, we looked at how to express side effects that don’t require any cleanup. However, some effects do. For example, we might want to set up a subscription to some external data source. In that case, it is important to clean up so that we don’t introduce a memory leak! Let’s compare how we can do it with classes and with Hooks.\n" +
+                    "\n" +
+                    "Example Using Classes\n" +
+                    "In a React class, you would typically set up a subscription in componentDidMount, and clean it up in componentWillUnmount. For example, let’s say we have a ChatAPI module that lets us subscribe to a friend’s online status. Here’s how we might subscribe and display that status using a class:\n" +
+                    "\n" +
+                    "class FriendStatus extends React.Component {\n" +
+                    "  constructor(props) {\n" +
+                    "    super(props);\n" +
+                    "    this.state = { isOnline: null };\n" +
+                    "    this.handleStatusChange = this.handleStatusChange.bind(this);\n" +
+                    "  }\n" +
+                    "\n" +
+                    "  componentDidMount() {\n" +
+                    "    ChatAPI.subscribeToFriendStatus(\n" +
+                    "      this.props.friend.id,\n" +
+                    "      this.handleStatusChange\n" +
+                    "    );\n" +
+                    "  }\n" +
+                    "\n" +
+                    "  componentWillUnmount() {\n" +
+                    "    ChatAPI.unsubscribeFromFriendStatus(\n" +
+                    "      this.props.friend.id,\n" +
+                    "      this.handleStatusChange\n" +
+                    "    );\n" +
+                    "  }\n" +
+                    "\n" +
+                    "  handleStatusChange(status) {\n" +
+                    "    this.setState({\n" +
+                    "      isOnline: status.isOnline\n" +
+                    "    });\n" +
+                    "  }\n" +
+                    "\n" +
+                    "  render() {\n" +
+                    "    if (this.state.isOnline === null) {\n" +
+                    "      return 'Loading...';\n" +
+                    "    }\n" +
+                    "    return this.state.isOnline ? 'Online' : 'Offline';\n" +
+                    "  }\n" +
+                    "}\n" +
+                    "Notice how componentDidMount and componentWillUnmount need to mirror each other. Lifecycle methods force us to split this logic even though conceptually code in both of them is related to the same effect.\n" +
+                    "\n" +
+                    "Note\n" +
+                    "\n" +
+                    "Eagle-eyed readers may notice that this example also needs a componentDidUpdate method to be fully correct. We’ll ignore this for now but will come back to it in a later section of this page.\n" +
+                    "\n" +
+                    "Example Using Hooks\n" +
+                    "Let’s see how we could write this component with Hooks.\n" +
+                    "\n" +
+                    "You might be thinking that we’d need a separate effect to perform the cleanup. But code for adding and removing a subscription is so tightly related that useEffect is designed to keep it together. If your effect returns a function, React will run it when it is time to clean up:\n" +
+                    "\n" +
+                    "import { useState, useEffect } from 'react';\n" +
+                    "\n" +
+                    "function FriendStatus(props) {\n" +
+                    "  const [isOnline, setIsOnline] = useState(null);\n" +
+                    "\n" +
+                    "  function handleStatusChange(status) {\n" +
+                    "    setIsOnline(status.isOnline);\n" +
+                    "  }\n" +
+                    "\n" +
+                    "  useEffect(() => {\n" +
+                    "    ChatAPI.subscribeToFriendStatus(props.friend.id, handleStatusChange);\n" +
+                    "    // Specify how to clean up after this effect:\n" +
+                    "    return function cleanup() {\n" +
+                    "      ChatAPI.unsubscribeFromFriendStatus(props.friend.id, handleStatusChange);\n" +
+                    "    };\n" +
+                    "  });\n" +
+                    "\n" +
+                    "  if (isOnline === null) {\n" +
+                    "    return 'Loading...';\n" +
+                    "  }\n" +
+                    "  return isOnline ? 'Online' : 'Offline';\n" +
+                    "}\n" +
+                    "Why did we return a function from our effect? This is the optional cleanup mechanism for effects. Every effect may return a function that cleans up after it. This lets us keep the logic for adding and removing subscriptions close to each other. They’re part of the same effect!\n" +
+                    "\n" +
+                    "When exactly does React clean up an effect? React performs the cleanup when the component unmounts. However, as we learned earlier, effects run for every render and not just once. This is why React also cleans up effects from the previous render before running the effects next time. We’ll discuss why this helps avoid bugs and how to opt out of this behavior in case it creates performance issues later below.\n" +
+                    "\n" +
+                    "Note\n" +
+                    "\n" +
+                    "We don’t have to return a named function from the effect. We called it cleanup here to clarify its purpose, but you could return an arrow function or call it something different.\n" +
+                    "\n" +
+                    "Recap\n" +
+                    "We’ve learned that useEffect lets us express different kinds of side effects after a component renders. Some effects might require cleanup so they return a function:\n" +
+                    "\n" +
+                    "  useEffect(() => {\n" +
+                    "    ChatAPI.subscribeToFriendStatus(props.friend.id, handleStatusChange);\n" +
+                    "    return () => {\n" +
+                    "      ChatAPI.unsubscribeFromFriendStatus(props.friend.id, handleStatusChange);\n" +
+                    "    };\n" +
+                    "  });\n" +
+                    "Other effects might not have a cleanup phase, and don’t return anything.\n" +
+                    "\n" +
+                    "  useEffect(() => {\n" +
+                    "    document.title = `You clicked ${count} times`;\n" +
+                    "  });\n" +
+                    "The Effect Hook unifies both use cases with a single API.\n" +
+                    "\n" +
+                    "If you feel like you have a decent grasp on how the Effect Hook works, or if you feel overwhelmed, you can jump to the next page about Rules of Hooks now.\n" +
+                    "\n" +
+                    "Tips for Using Effects\n" +
+                    "We’ll continue this page with an in-depth look at some aspects of useEffect that experienced React users will likely be curious about. Don’t feel obligated to dig into them now. You can always come back to this page to learn more details about the Effect Hook.\n" +
+                    "\n" +
+                    "Tip: Use Multiple Effects to Separate Concerns\n" +
+                    "One of the problems we outlined in the Motivation for Hooks is that class lifecycle methods often contain unrelated logic, but related logic gets broken up into several methods. Here is a component that combines the counter and the friend status indicator logic from the previous examples:\n" +
+                    "\n" +
+                    "class FriendStatusWithCounter extends React.Component {\n" +
+                    "  constructor(props) {\n" +
+                    "    super(props);\n" +
+                    "    this.state = { count: 0, isOnline: null };\n" +
+                    "    this.handleStatusChange = this.handleStatusChange.bind(this);\n" +
+                    "  }\n" +
+                    "\n" +
+                    "  componentDidMount() {\n" +
+                    "    document.title = `You clicked ${this.state.count} times`;\n" +
+                    "    ChatAPI.subscribeToFriendStatus(\n" +
+                    "      this.props.friend.id,\n" +
+                    "      this.handleStatusChange\n" +
+                    "    );\n" +
+                    "  }\n" +
+                    "\n" +
+                    "  componentDidUpdate() {\n" +
+                    "    document.title = `You clicked ${this.state.count} times`;\n" +
+                    "  }\n" +
+                    "\n" +
+                    "  componentWillUnmount() {\n" +
+                    "    ChatAPI.unsubscribeFromFriendStatus(\n" +
+                    "      this.props.friend.id,\n" +
+                    "      this.handleStatusChange\n" +
+                    "    );\n" +
+                    "  }\n" +
+                    "\n" +
+                    "  handleStatusChange(status) {\n" +
+                    "    this.setState({\n" +
+                    "      isOnline: status.isOnline\n" +
+                    "    });\n" +
+                    "  }\n" +
+                    "  // ...\n" +
+                    "Note how the logic that sets document.title is split between componentDidMount and componentDidUpdate. The subscription logic is also spread between componentDidMount and componentWillUnmount. And componentDidMount contains code for both tasks.\n" +
+                    "\n" +
+                    "So, how can Hooks solve this problem? Just like you can use the State Hook more than once, you can also use several effects. This lets us separate unrelated logic into different effects:\n" +
+                    "\n" +
+                    "function FriendStatusWithCounter(props) {\n" +
+                    "  const [count, setCount] = useState(0);\n" +
+                    "  useEffect(() => {\n" +
+                    "    document.title = `You clicked ${count} times`;\n" +
+                    "  });\n" +
+                    "\n" +
+                    "  const [isOnline, setIsOnline] = useState(null);\n" +
+                    "  useEffect(() => {\n" +
+                    "    ChatAPI.subscribeToFriendStatus(props.friend.id, handleStatusChange);\n" +
+                    "    return () => {\n" +
+                    "      ChatAPI.unsubscribeFromFriendStatus(props.friend.id, handleStatusChange);\n" +
+                    "    };\n" +
+                    "  });\n" +
+                    "\n" +
+                    "  function handleStatusChange(status) {\n" +
+                    "    setIsOnline(status.isOnline);\n" +
+                    "  }\n" +
+                    "  // ...\n" +
+                    "}\n" +
+                    "Hooks lets us split the code based on what it is doing rather than a lifecycle method name. React will apply every effect used by the component, in the order they were specified.\n" +
+                    "\n" +
+                    "Explanation: Why Effects Run on Each Update\n" +
+                    "If you’re used to classes, you might be wondering why the effect cleanup phase happens after every re-render, and not just once during unmounting. Let’s look at a practical example to see why this design helps us create components with fewer bugs.\n" +
+                    "\n" +
+                    "Earlier on this page, we introduced an example FriendStatus component that displays whether a friend is online or not. Our class reads friend.id from this.props, subscribes to the friend status after the component mounts, and unsubscribes during unmounting:\n" +
+                    "\n" +
+                    "  componentDidMount() {\n" +
+                    "    ChatAPI.subscribeToFriendStatus(\n" +
+                    "      this.props.friend.id,\n" +
+                    "      this.handleStatusChange\n" +
+                    "    );\n" +
+                    "  }\n" +
+                    "\n" +
+                    "  componentWillUnmount() {\n" +
+                    "    ChatAPI.unsubscribeFromFriendStatus(\n" +
+                    "      this.props.friend.id,\n" +
+                    "      this.handleStatusChange\n" +
+                    "    );\n" +
+                    "  }\n" +
+                    "But what happens if the friend prop changes while the component is on the screen? Our component would continue displaying the online status of a different friend. This is a bug. We would also cause a memory leak or crash when unmounting since the unsubscribe call would use the wrong friend ID.\n" +
+                    "\n" +
+                    "In a class component, we would need to add componentDidUpdate to handle this case:\n" +
+                    "\n" +
+                    "  componentDidMount() {\n" +
+                    "    ChatAPI.subscribeToFriendStatus(\n" +
+                    "      this.props.friend.id,\n" +
+                    "      this.handleStatusChange\n" +
+                    "    );\n" +
+                    "  }\n" +
+                    "\n" +
+                    "  componentDidUpdate(prevProps) {\n" +
+                    "    // Unsubscribe from the previous friend.id\n" +
+                    "    ChatAPI.unsubscribeFromFriendStatus(\n" +
+                    "      prevProps.friend.id,\n" +
+                    "      this.handleStatusChange\n" +
+                    "    );\n" +
+                    "    // Subscribe to the next friend.id\n" +
+                    "    ChatAPI.subscribeToFriendStatus(\n" +
+                    "      this.props.friend.id,\n" +
+                    "      this.handleStatusChange\n" +
+                    "    );\n" +
+                    "  }\n" +
+                    "\n" +
+                    "  componentWillUnmount() {\n" +
+                    "    ChatAPI.unsubscribeFromFriendStatus(\n" +
+                    "      this.props.friend.id,\n" +
+                    "      this.handleStatusChange\n" +
+                    "    );\n" +
+                    "  }\n" +
+                    "Forgetting to handle componentDidUpdate properly is a common source of bugs in React applications.\n" +
+                    "\n" +
+                    "Now consider the version of this component that uses Hooks:\n" +
+                    "\n" +
+                    "function FriendStatus(props) {\n" +
+                    "  // ...\n" +
+                    "  useEffect(() => {\n" +
+                    "    ChatAPI.subscribeToFriendStatus(props.friend.id, handleStatusChange);\n" +
+                    "    return () => {\n" +
+                    "      ChatAPI.unsubscribeFromFriendStatus(props.friend.id, handleStatusChange);\n" +
+                    "    };\n" +
+                    "  });\n" +
+                    "It doesn’t suffer from this bug. (But we also didn’t make any changes to it.)\n" +
+                    "\n" +
+                    "There is no special code for handling updates because useEffect handles them by default. It cleans up the previous effects before applying the next effects. To illustrate this, here is a sequence of subscribe and unsubscribe calls that this component could produce over time:\n" +
+                    "\n" +
+                    "// Mount with { friend: { id: 100 } } props\n" +
+                    "ChatAPI.subscribeToFriendStatus(100, handleStatusChange);     // Run first effect\n" +
+                    "\n" +
+                    "// Update with { friend: { id: 200 } } props\n" +
+                    "ChatAPI.unsubscribeFromFriendStatus(100, handleStatusChange); // Clean up previous effect\n" +
+                    "ChatAPI.subscribeToFriendStatus(200, handleStatusChange);     // Run next effect\n" +
+                    "\n" +
+                    "// Update with { friend: { id: 300 } } props\n" +
+                    "ChatAPI.unsubscribeFromFriendStatus(200, handleStatusChange); // Clean up previous effect\n" +
+                    "ChatAPI.subscribeToFriendStatus(300, handleStatusChange);     // Run next effect\n" +
+                    "\n" +
+                    "// Unmount\n" +
+                    "ChatAPI.unsubscribeFromFriendStatus(300, handleStatusChange); // Clean up last effect\n" +
+                    "This behavior ensures consistency by default and prevents bugs that are common in class components due to missing update logic.\n" +
+                    "\n" +
+                    "Tip: Optimizing Performance by Skipping Effects\n" +
+                    "In some cases, cleaning up or applying the effect after every render might create a performance problem. In class components, we can solve this by writing an extra comparison with prevProps or prevState inside componentDidUpdate:\n" +
+                    "\n" +
+                    "componentDidUpdate(prevProps, prevState) {\n" +
+                    "  if (prevState.count !== this.state.count) {\n" +
+                    "    document.title = `You clicked ${this.state.count} times`;\n" +
+                    "  }\n" +
+                    "}\n" +
+                    "This requirement is common enough that it is built into the useEffect Hook API. You can tell React to skip applying an effect if certain values haven’t changed between re-renders. To do so, pass an array as an optional second argument to useEffect:\n" +
+                    "\n" +
+                    "useEffect(() => {\n" +
+                    "  document.title = `You clicked ${count} times`;\n" +
+                    "}, [count]); // Only re-run the effect if count changes\n" +
+                    "In the example above, we pass [count] as the second argument. What does this mean? If the count is 5, and then our component re-renders with count still equal to 5, React will compare [5] from the previous render and [5] from the next render. Because all items in the array are the same (5 === 5), React would skip the effect. That’s our optimization.\n" +
+                    "\n" +
+                    "When we render with count updated to 6, React will compare the items in the [5] array from the previous render to items in the [6] array from the next render. This time, React will re-apply the effect because 5 !== 6. If there are multiple items in the array, React will re-run the effect even if just one of them is different.\n" +
+                    "\n" +
+                    "This also works for effects that have a cleanup phase:\n" +
+                    "\n" +
+                    "useEffect(() => {\n" +
+                    "  ChatAPI.subscribeToFriendStatus(props.friend.id, handleStatusChange);\n" +
+                    "  return () => {\n" +
+                    "    ChatAPI.unsubscribeFromFriendStatus(props.friend.id, handleStatusChange);\n" +
+                    "  };\n" +
+                    "}, [props.friend.id]); // Only re-subscribe if props.friend.id changes\n" +
+                    "In the future, the second argument might get added automatically by a build-time transformation.\n" +
+                    "\n" +
+                    "Note\n" +
+                    "\n" +
+                    "If you use this optimization, make sure the array includes any values from the outer scope that change over time and that are used by the effect. Otherwise, your code will reference stale values from previous renders. We’ll also discuss other optimization options in the Hooks API reference.\n" +
+                    "\n" +
+                    "If you want to run an effect and clean it up only once (on mount and unmount), you can pass an empty array ([]) as a second argument. This tells React that your effect doesn’t depend on any values from props or state, so it never needs to re-run. This isn’t handled as a special case — it follows directly from how the inputs array always works. While passing [] is closer to the familiar componentDidMount and componentWillUnmount mental model, we suggest not making it a habit because it often leads to bugs, as discussed above. Don’t forget that React defers running useEffect until after the browser has painted, so doing extra work is less of a problem.\n" +
+                    "\n");
+            sec4React4.setLesson(reactJsLesson4);
+            reactJsLesson4.getSections().add(sec4React4);
+
+            Section sec5React4 = new Section();
+            sec5React4.setOrdinalNumber(5);
+            sec5React4.setDescription("Rules of Hooks");
+            sec5React4.setContent("Hook");
+            sec5React4.setLesson(reactJsLesson4);
+            reactJsLesson4.getSections().add(sec5React4);
+
+
+                        Section sec1Vue1 = new Section();
+            sec1Vue1.setOrdinalNumber(1);
+            sec1Vue1.setDescription("Template Syntax");
+            sec1Vue1.setContent("<p>Vue.js uses an HTML-based template syntax that allows you to declaratively bind the rendered DOM to the underlying Vue instance&rsquo;s data. All Vue.js templates are valid HTML that can be parsed by spec-compliant browsers and HTML parsers.</p>\n" +
+                    "<p>Under the hood, Vue compiles the templates into Virtual DOM render functions. Combined with the reactivity system, Vue is able to intelligently figure out the minimal number of components to re-render and apply the minimal amount of DOM manipulations when the app state changes.</p>\n" +
+                    "<p>If you are familiar with Virtual DOM concepts and prefer the raw power of JavaScript, you can also&nbsp;<a href=\"https://vuejs.org/v2/guide/render-function.html\">directly write render functions</a>&nbsp;instead of templates, with optional JSX support.</p>\n" +
+                    "<h2 id=\"Interpolations\"><a class=\"headerlink\" title=\"Interpolations\" href=\"https://vuejs.org/v2/guide/syntax.html#Interpolations\" data-scroll=\"\">Interpolations</a></h2>\n" +
+                    "<h3 id=\"Text\"><a class=\"headerlink\" title=\"Text\" href=\"https://vuejs.org/v2/guide/syntax.html#Text\" data-scroll=\"\">Text</a></h3>\n" +
+                    "<p>The most basic form of data binding is text interpolation using the &ldquo;Mustache&rdquo; syntax (double curly braces):</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">span</span>&gt;</span>Message: {{ msg }}<span class=\"tag\">&lt;/<span class=\"name\">span</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>The mustache tag will be replaced with the value of the&nbsp;<code>msg</code>&nbsp;property on the corresponding data object. It will also be updated whenever the data object&rsquo;s&nbsp;<code>msg</code>property changes.</p>\n" +
+                    "<p>You can also perform one-time interpolations that do not update on data change by using the&nbsp;<a href=\"https://vuejs.org/v2/api/#v-once\">v-once directive</a>, but keep in mind this will also affect any other bindings on the same node:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">span</span> <span class=\"attr\">v-once</span>&gt;</span>This will never change: {{ msg }}<span class=\"tag\">&lt;/<span class=\"name\">span</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<h3 id=\"Raw-HTML\"><a class=\"headerlink\" title=\"Raw HTML\" href=\"https://vuejs.org/v2/guide/syntax.html#Raw-HTML\" data-scroll=\"\">Raw HTML</a></h3>\n" +
+                    "<p>The double mustaches interprets the data as plain text, not HTML. In order to output real HTML, you will need to use the&nbsp;<code>v-html</code>&nbsp;directive:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">p</span>&gt;</span>Using mustaches: {{ rawHtml }}<span class=\"tag\">&lt;/<span class=\"name\">p</span>&gt;</span></span><br /><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">p</span>&gt;</span>Using v-html directive: <span class=\"tag\">&lt;<span class=\"name\">span</span> <span class=\"attr\">v-html</span>=<span class=\"string\">\"rawHtml\"</span>&gt;</span><span class=\"tag\">&lt;/<span class=\"name\">span</span>&gt;</span><span class=\"tag\">&lt;/<span class=\"name\">p</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<div id=\"example1\" class=\"demo\">\n" +
+                    "<p>Using mustaches: &lt;span style=\"color: red\"&gt;This should be red.&lt;/span&gt;</p>\n" +
+                    "<p>Using v-html directive:&nbsp;This should be red.</p>\n" +
+                    "</div>\n" +
+                    "<p>The contents of the&nbsp;<code>span</code>&nbsp;will be replaced with the value of the&nbsp;<code>rawHtml</code>&nbsp;property, interpreted as plain HTML - data bindings are ignored. Note that you cannot use&nbsp;<code>v-html</code>&nbsp;to compose template partials, because Vue is not a string-based templating engine. Instead, components are preferred as the fundamental unit for UI reuse and composition.</p>\n" +
+                    "<p class=\"tip\">Dynamically rendering arbitrary HTML on your website can be very dangerous because it can easily lead to&nbsp;<a href=\"https://en.wikipedia.org/wiki/Cross-site_scripting\" target=\"_blank\" rel=\"noopener\">XSS vulnerabilities</a>. Only use HTML interpolation on trusted content and&nbsp;<strong>never</strong>&nbsp;on user-provided content.</p>\n" +
+                    "<h3 id=\"Attributes\"><a class=\"headerlink\" title=\"Attributes\" href=\"https://vuejs.org/v2/guide/syntax.html#Attributes\" data-scroll=\"\">Attributes</a></h3>\n" +
+                    "<p>Mustaches cannot be used inside HTML attributes. Instead, use a&nbsp;<a href=\"https://vuejs.org/v2/api/#v-bind\">v-bind directive</a>:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">div</span> <span class=\"attr\">v-bind:id</span>=<span class=\"string\">\"dynamicId\"</span>&gt;</span><span class=\"tag\">&lt;/<span class=\"name\">div</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>In the case of boolean attributes, where their mere existence implies&nbsp;<code>true</code>,&nbsp;<code>v-bind</code>works a little differently. In this example:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">button</span> <span class=\"attr\">v-bind:disabled</span>=<span class=\"string\">\"isButtonDisabled\"</span>&gt;</span>Button<span class=\"tag\">&lt;/<span class=\"name\">button</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>If&nbsp;<code>isButtonDisabled</code>&nbsp;has the value of&nbsp;<code>null</code>,&nbsp;<code>undefined</code>, or&nbsp;<code>false</code>, the&nbsp;<code>disabled</code>attribute will not even be included in the rendered&nbsp;<code>&lt;button&gt;</code>&nbsp;element.</p>\n" +
+                    "<h3 id=\"Using-JavaScript-Expressions\"><a class=\"headerlink\" title=\"Using JavaScript Expressions\" href=\"https://vuejs.org/v2/guide/syntax.html#Using-JavaScript-Expressions\" data-scroll=\"\">Using JavaScript Expressions</a></h3>\n" +
+                    "<p>So far we&rsquo;ve only been binding to simple property keys in our templates. But Vue.js actually supports the full power of JavaScript expressions inside all data bindings:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\">{{ number + 1 }}</span><br /><br /><span class=\"line\">{{ ok ? 'YES' : 'NO' }}</span><br /><br /><span class=\"line\">{{ message.split('').reverse().join('') }}</span><br /><br /><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">div</span> <span class=\"attr\">v-bind:id</span>=<span class=\"string\">\"'list-' + id\"</span>&gt;</span><span class=\"tag\">&lt;/<span class=\"name\">div</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>These expressions will be evaluated as JavaScript in the data scope of the owner Vue instance. One restriction is that each binding can only contain&nbsp;<strong>one single expression</strong>, so the following will&nbsp;<strong>NOT</strong>&nbsp;work:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"comment\">&lt;!-- this is a statement, not an expression: --&gt;</span></span><br /><span class=\"line\">{{ var a = 1 }}</span><br /><br /><span class=\"line\"><span class=\"comment\">&lt;!-- flow control won't work either, use ternary expressions --&gt;</span></span><br /><span class=\"line\">{{ if (ok) { return message } }}</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p class=\"tip\">Template expressions are sandboxed and only have access to a whitelist of globals such as&nbsp;<code>Math</code>&nbsp;and&nbsp;<code>Date</code>. You should not attempt to access user defined globals in template expressions.</p>\n" +
+                    "<h2 id=\"Directives\"><a class=\"headerlink\" title=\"Directives\" href=\"https://vuejs.org/v2/guide/syntax.html#Directives\" data-scroll=\"\">Directives</a></h2>\n" +
+                    "<p>Directives are special attributes with the&nbsp;<code>v-</code>&nbsp;prefix. Directive attribute values are expected to be&nbsp;<strong>a single JavaScript expression</strong>&nbsp;(with the exception of&nbsp;<code>v-for</code>, which will be discussed later). A directive&rsquo;s job is to reactively apply side effects to the DOM when the value of its expression changes. Let&rsquo;s review the example we saw in the introduction:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">p</span> <span class=\"attr\">v-if</span>=<span class=\"string\">\"seen\"</span>&gt;</span>Now you see me<span class=\"tag\">&lt;/<span class=\"name\">p</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>Here, the&nbsp;<code>v-if</code>&nbsp;directive would remove/insert the&nbsp;<code>&lt;p&gt;</code>&nbsp;element based on the truthiness of the value of the expression&nbsp;<code>seen</code>.</p>\n" +
+                    "<h3 id=\"Arguments\"><a class=\"headerlink\" title=\"Arguments\" href=\"https://vuejs.org/v2/guide/syntax.html#Arguments\" data-scroll=\"\">Arguments</a></h3>\n" +
+                    "<p>Some directives can take an &ldquo;argument&rdquo;, denoted by a colon after the directive name. For example, the&nbsp;<code>v-bind</code>&nbsp;directive is used to reactively update an HTML attribute:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">a</span> <span class=\"attr\">v-bind:href</span>=<span class=\"string\">\"url\"</span>&gt;</span> ... <span class=\"tag\">&lt;/<span class=\"name\">a</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>Here&nbsp;<code>href</code>&nbsp;is the argument, which tells the&nbsp;<code>v-bind</code>&nbsp;directive to bind the element&rsquo;s&nbsp;<code>href</code>&nbsp;attribute to the value of the expression&nbsp;<code>url</code>.</p>\n" +
+                    "<p>Another example is the&nbsp;<code>v-on</code>&nbsp;directive, which listens to DOM events:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">a</span> <span class=\"attr\">v-on:click</span>=<span class=\"string\">\"doSomething\"</span>&gt;</span> ... <span class=\"tag\">&lt;/<span class=\"name\">a</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>Here the argument is the event name to listen to. We will talk about event handling in more detail too.</p>\n" +
+                    "<h3 id=\"Modifiers\"><a class=\"headerlink\" title=\"Modifiers\" href=\"https://vuejs.org/v2/guide/syntax.html#Modifiers\" data-scroll=\"\">Modifiers</a></h3>\n" +
+                    "<p>Modifiers are special postfixes denoted by a dot, which indicate that a directive should be bound in some special way. For example, the&nbsp;<code>.prevent</code>&nbsp;modifier tells the&nbsp;<code>v-on</code>directive to call&nbsp;<code>event.preventDefault()</code>&nbsp;on the triggered event:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">form</span> <span class=\"attr\">v-on:submit.prevent</span>=<span class=\"string\">\"onSubmit\"</span>&gt;</span> ... <span class=\"tag\">&lt;/<span class=\"name\">form</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>You&rsquo;ll see other examples of modifiers later,&nbsp;<a href=\"https://vuejs.org/v2/guide/events.html#Event-Modifiers\">for&nbsp;<code>v-on</code></a>&nbsp;and&nbsp;<a href=\"https://vuejs.org/v2/guide/forms.html#Modifiers\">for&nbsp;<code>v-model</code></a>, when we explore those features.</p>\n" +
+                    "<h2 id=\"Shorthands\"><a class=\"headerlink\" title=\"Shorthands\" href=\"https://vuejs.org/v2/guide/syntax.html#Shorthands\" data-scroll=\"\">Shorthands</a></h2>\n" +
+                    "<p>The&nbsp;<code>v-</code>&nbsp;prefix serves as a visual cue for identifying Vue-specific attributes in your templates. This is useful when you are using Vue.js to apply dynamic behavior to some existing markup, but can feel verbose for some frequently used directives. At the same time, the need for the&nbsp;<code>v-</code>&nbsp;prefix becomes less important when you are building a&nbsp;<a href=\"https://en.wikipedia.org/wiki/Single-page_application\" target=\"_blank\" rel=\"noopener\">SPA</a>where Vue.js manages every template. Therefore, Vue.js provides special shorthands for two of the most often used directives,&nbsp;<code>v-bind</code>&nbsp;and&nbsp;<code>v-on</code>:</p>\n" +
+                    "<h3 id=\"v-bind-Shorthand\"><a class=\"headerlink\" title=\"v-bind Shorthand\" href=\"https://vuejs.org/v2/guide/syntax.html#v-bind-Shorthand\" data-scroll=\"\"><code>v-bind</code>&nbsp;Shorthand</a></h3>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"comment\">&lt;!-- full syntax --&gt;</span></span><br /><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">a</span> <span class=\"attr\">v-bind:href</span>=<span class=\"string\">\"url\"</span>&gt;</span> ... <span class=\"tag\">&lt;/<span class=\"name\">a</span>&gt;</span></span><br /><br /><span class=\"line\"><span class=\"comment\">&lt;!-- shorthand --&gt;</span></span><br /><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">a</span> <span class=\"attr\">:href</span>=<span class=\"string\">\"url\"</span>&gt;</span> ... <span class=\"tag\">&lt;/<span class=\"name\">a</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<h3 id=\"v-on-Shorthand\"><a class=\"headerlink\" title=\"v-on Shorthand\" href=\"https://vuejs.org/v2/guide/syntax.html#v-on-Shorthand\" data-scroll=\"\"><code>v-on</code>&nbsp;Shorthand</a></h3>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"comment\">&lt;!-- full syntax --&gt;</span></span><br /><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">a</span> <span class=\"attr\">v-on:click</span>=<span class=\"string\">\"doSomething\"</span>&gt;</span> ... <span class=\"tag\">&lt;/<span class=\"name\">a</span>&gt;</span></span><br /><br /><span class=\"line\"><span class=\"comment\">&lt;!-- shorthand --&gt;</span></span><br /><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">a</span> @<span class=\"attr\">click</span>=<span class=\"string\">\"doSomething\"</span>&gt;</span> ... <span class=\"tag\">&lt;/<span class=\"name\">a</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>They may look a bit different from normal HTML, but&nbsp;<code>:</code>&nbsp;and&nbsp;<code>@</code>&nbsp;are valid chars for attribute names and all Vue.js supported browsers can parse it correctly. In addition, they do not appear in the final rendered markup. The shorthand syntax is totally optional, but you will likely appreciate it when you learn more about its usage later.</p>");
+            sec1Vue1.setLesson(vueJsLesson1);
+            vueJsLesson1.getSections().add(sec1Vue1);
+
+            Section sec2Vue1 = new Section();
+            sec2Vue1.setOrdinalNumber(2);
+            sec2Vue1.setDescription("Computed Properties and Watchers");
+            sec2Vue1.setContent("<p>In-template expressions are very convenient, but they are meant for simple operations. Putting too much logic in your templates can make them bloated and hard to maintain. For example:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">div</span> <span class=\"attr\">id</span>=<span class=\"string\">\"example\"</span>&gt;</span></span><br /><span class=\"line\">  {{ message.split('').reverse().join('') }}</span><br /><span class=\"line\"><span class=\"tag\">&lt;/<span class=\"name\">div</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>At this point, the template is no longer simple and declarative. You have to look at it for a second before realizing that it displays&nbsp;<code>message</code>&nbsp;in reverse. The problem is made worse when you want to include the reversed message in your template more than once.</p>\n" +
+                    "<p>That&rsquo;s why for any complex logic, you should use a&nbsp;<strong>computed property</strong>.</p>\n" +
+                    "<h3 id=\"Basic-Example\"><a class=\"headerlink\" title=\"Basic Example\" href=\"https://vuejs.org/v2/guide/computed.html#Basic-Example\" data-scroll=\"\">Basic Example</a></h3>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">div</span> <span class=\"attr\">id</span>=<span class=\"string\">\"example\"</span>&gt;</span></span><br /><span class=\"line\">  <span class=\"tag\">&lt;<span class=\"name\">p</span>&gt;</span>Original message: \"{{ message }}\"<span class=\"tag\">&lt;/<span class=\"name\">p</span>&gt;</span></span><br /><span class=\"line\">  <span class=\"tag\">&lt;<span class=\"name\">p</span>&gt;</span>Computed reversed message: \"{{ reversedMessage }}\"<span class=\"tag\">&lt;/<span class=\"name\">p</span>&gt;</span></span><br /><span class=\"line\"><span class=\"tag\">&lt;/<span class=\"name\">div</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<figure class=\"highlight js\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"keyword\">var</span> vm = <span class=\"keyword\">new</span> Vue({</span><br /><span class=\"line\">  el: <span class=\"string\">'#example'</span>,</span><br /><span class=\"line\">  data: {</span><br /><span class=\"line\">    message: <span class=\"string\">'Hello'</span></span><br /><span class=\"line\">  },</span><br /><span class=\"line\">  computed: {</span><br /><span class=\"line\">    <span class=\"comment\">// a computed getter</span></span><br /><span class=\"line\">    reversedMessage: <span class=\"function\"><span class=\"keyword\">function</span> () </span>{</span><br /><span class=\"line\">      <span class=\"comment\">// `this` points to the vm instance</span></span><br /><span class=\"line\">      <span class=\"keyword\">return</span> <span class=\"keyword\">this</span>.message.split(<span class=\"string\">''</span>).reverse().join(<span class=\"string\">''</span>)</span><br /><span class=\"line\">    }</span><br /><span class=\"line\">  }</span><br /><span class=\"line\">})</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>Result:</p>\n" +
+                    "<div id=\"example\" class=\"demo\">\n" +
+                    "<p>Original message: \"Hello\"</p>\n" +
+                    "<p>Computed reversed message: \"olleH\"</p>\n" +
+                    "</div>\n" +
+                    "<p>Here we have declared a computed property&nbsp;<code>reversedMessage</code>. The function we provided will be used as the getter function for the property&nbsp;<code>vm.reversedMessage</code>:</p>\n" +
+                    "<figure class=\"highlight js\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"built_in\">console</span>.log(vm.reversedMessage) <span class=\"comment\">// =&gt; 'olleH'</span></span><br /><span class=\"line\">vm.message = <span class=\"string\">'Goodbye'</span></span><br /><span class=\"line\"><span class=\"built_in\">console</span>.log(vm.reversedMessage) <span class=\"comment\">// =&gt; 'eybdooG'</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>You can open the console and play with the example vm yourself. The value of&nbsp;<code>vm.reversedMessage</code>&nbsp;is always dependent on the value of&nbsp;<code>vm.message</code>.</p>\n" +
+                    "<p>You can data-bind to computed properties in templates just like a normal property. Vue is aware that&nbsp;<code>vm.reversedMessage</code>&nbsp;depends on&nbsp;<code>vm.message</code>, so it will update any bindings that depend on&nbsp;<code>vm.reversedMessage</code>&nbsp;when&nbsp;<code>vm.message</code>&nbsp;changes. And the best part is that we&rsquo;ve created this dependency relationship declaratively: the computed getter function has no side effects, which makes it easier to test and understand.</p>\n" +
+                    "<h3 id=\"Computed-Caching-vs-Methods\"><a class=\"headerlink\" title=\"Computed Caching vs Methods\" href=\"https://vuejs.org/v2/guide/computed.html#Computed-Caching-vs-Methods\" data-scroll=\"\">Computed Caching vs Methods</a></h3>\n" +
+                    "<p>You may have noticed we can achieve the same result by invoking a method in the expression:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">p</span>&gt;</span>Reversed message: \"{{ reverseMessage() }}\"<span class=\"tag\">&lt;/<span class=\"name\">p</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<figure class=\"highlight js\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"comment\">// in component</span></span><br /><span class=\"line\">methods: {</span><br /><span class=\"line\">  reverseMessage: <span class=\"function\"><span class=\"keyword\">function</span> () </span>{</span><br /><span class=\"line\">    <span class=\"keyword\">return</span> <span class=\"keyword\">this</span>.message.split(<span class=\"string\">''</span>).reverse().join(<span class=\"string\">''</span>)</span><br /><span class=\"line\">  }</span><br /><span class=\"line\">}</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>Instead of a computed property, we can define the same function as a method instead. For the end result, the two approaches are indeed exactly the same. However, the difference is that&nbsp;<strong>computed properties are cached based on their dependencies.</strong>&nbsp;A computed property will only re-evaluate when some of its dependencies have changed. This means as long as&nbsp;<code>message</code>&nbsp;has not changed, multiple access to the&nbsp;<code>reversedMessage</code>&nbsp;computed property will immediately return the previously computed result without having to run the function again.</p>\n" +
+                    "<p>This also means the following computed property will never update, because&nbsp;<code>Date.now()</code>&nbsp;is not a reactive dependency:</p>\n" +
+                    "<figure class=\"highlight js\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\">computed: {</span><br /><span class=\"line\">  now: <span class=\"function\"><span class=\"keyword\">function</span> () </span>{</span><br /><span class=\"line\">    <span class=\"keyword\">return</span> <span class=\"built_in\">Date</span>.now()</span><br /><span class=\"line\">  }</span><br /><span class=\"line\">}</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>In comparison, a method invocation will&nbsp;<strong>always</strong>&nbsp;run the function whenever a re-render happens.</p>\n" +
+                    "<p>Why do we need caching? Imagine we have an expensive computed property&nbsp;<strong>A</strong>, which requires looping through a huge Array and doing a lot of computations. Then we may have other computed properties that in turn depend on&nbsp;<strong>A</strong>. Without caching, we would be executing&nbsp;<strong>A</strong>&rsquo;s getter many more times than necessary! In cases where you do not want caching, use a method instead.</p>\n" +
+                    "<h3 id=\"Computed-vs-Watched-Property\"><a class=\"headerlink\" title=\"Computed vs Watched Property\" href=\"https://vuejs.org/v2/guide/computed.html#Computed-vs-Watched-Property\" data-scroll=\"\">Computed vs Watched Property</a></h3>\n" +
+                    "<p>Vue does provide a more generic way to observe and react to data changes on a Vue instance:&nbsp;<strong>watch properties</strong>. When you have some data that needs to change based on some other data, it is tempting to overuse&nbsp;<code>watch</code>&nbsp;- especially if you are coming from an AngularJS background. However, it is often a better idea to use a computed property rather than an imperative&nbsp;<code>watch</code>&nbsp;callback. Consider this example:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">div</span> <span class=\"attr\">id</span>=<span class=\"string\">\"demo\"</span>&gt;</span>{{ fullName }}<span class=\"tag\">&lt;/<span class=\"name\">div</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<figure class=\"highlight js\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"keyword\">var</span> vm = <span class=\"keyword\">new</span> Vue({</span><br /><span class=\"line\">  el: <span class=\"string\">'#demo'</span>,</span><br /><span class=\"line\">  data: {</span><br /><span class=\"line\">    firstName: <span class=\"string\">'Foo'</span>,</span><br /><span class=\"line\">    lastName: <span class=\"string\">'Bar'</span>,</span><br /><span class=\"line\">    fullName: <span class=\"string\">'Foo Bar'</span></span><br /><span class=\"line\">  },</span><br /><span class=\"line\">  watch: {</span><br /><span class=\"line\">    firstName: <span class=\"function\"><span class=\"keyword\">function</span> (<span class=\"params\">val</span>) </span>{</span><br /><span class=\"line\">      <span class=\"keyword\">this</span>.fullName = val + <span class=\"string\">' '</span> + <span class=\"keyword\">this</span>.lastName</span><br /><span class=\"line\">    },</span><br /><span class=\"line\">    lastName: <span class=\"function\"><span class=\"keyword\">function</span> (<span class=\"params\">val</span>) </span>{</span><br /><span class=\"line\">      <span class=\"keyword\">this</span>.fullName = <span class=\"keyword\">this</span>.firstName + <span class=\"string\">' '</span> + val</span><br /><span class=\"line\">    }</span><br /><span class=\"line\">  }</span><br /><span class=\"line\">})</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>The above code is imperative and repetitive. Compare it with a computed property version:</p>\n" +
+                    "<figure class=\"highlight js\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"keyword\">var</span> vm = <span class=\"keyword\">new</span> Vue({</span><br /><span class=\"line\">  el: <span class=\"string\">'#demo'</span>,</span><br /><span class=\"line\">  data: {</span><br /><span class=\"line\">    firstName: <span class=\"string\">'Foo'</span>,</span><br /><span class=\"line\">    lastName: <span class=\"string\">'Bar'</span></span><br /><span class=\"line\">  },</span><br /><span class=\"line\">  computed: {</span><br /><span class=\"line\">    fullName: <span class=\"function\"><span class=\"keyword\">function</span> () </span>{</span><br /><span class=\"line\">      <span class=\"keyword\">return</span> <span class=\"keyword\">this</span>.firstName + <span class=\"string\">' '</span> + <span class=\"keyword\">this</span>.lastName</span><br /><span class=\"line\">    }</span><br /><span class=\"line\">  }</span><br /><span class=\"line\">})</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>Much better, isn&rsquo;t it?</p>\n" +
+                    "<h3 id=\"Computed-Setter\"><a class=\"headerlink\" title=\"Computed Setter\" href=\"https://vuejs.org/v2/guide/computed.html#Computed-Setter\" data-scroll=\"\">Computed Setter</a></h3>\n" +
+                    "<p>Computed properties are by default getter-only, but you can also provide a setter when you need it:</p>\n" +
+                    "<figure class=\"highlight js\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"comment\">// ...</span></span><br /><span class=\"line\">computed: {</span><br /><span class=\"line\">  fullName: {</span><br /><span class=\"line\">    <span class=\"comment\">// getter</span></span><br /><span class=\"line\">    get: <span class=\"function\"><span class=\"keyword\">function</span> () </span>{</span><br /><span class=\"line\">      <span class=\"keyword\">return</span> <span class=\"keyword\">this</span>.firstName + <span class=\"string\">' '</span> + <span class=\"keyword\">this</span>.lastName</span><br /><span class=\"line\">    },</span><br /><span class=\"line\">    <span class=\"comment\">// setter</span></span><br /><span class=\"line\">    set: <span class=\"function\"><span class=\"keyword\">function</span> (<span class=\"params\">newValue</span>) </span>{</span><br /><span class=\"line\">      <span class=\"keyword\">var</span> names = newValue.split(<span class=\"string\">' '</span>)</span><br /><span class=\"line\">      <span class=\"keyword\">this</span>.firstName = names[<span class=\"number\">0</span>]</span><br /><span class=\"line\">      <span class=\"keyword\">this</span>.lastName = names[names.length - <span class=\"number\">1</span>]</span><br /><span class=\"line\">    }</span><br /><span class=\"line\">  }</span><br /><span class=\"line\">}</span><br /><span class=\"line\"><span class=\"comment\">// ...</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>Now when you run&nbsp;<code>vm.fullName = 'John Doe'</code>, the setter will be invoked and&nbsp;<code>vm.firstName</code>&nbsp;and&nbsp;<code>vm.lastName</code>&nbsp;will be updated accordingly.</p>");
+            sec2Vue1.setLesson(vueJsLesson1);
+            vueJsLesson1.getSections().add(sec2Vue1);
+
+            Section sec3Vue1 = new Section();
+            sec3Vue1.setOrdinalNumber(3);
+            sec3Vue1.setDescription("Class and Style Bindings");
+            sec3Vue1.setContent("<h2 id=\"Binding-HTML-Classes\"><a class=\"headerlink\" title=\"Binding HTML Classes\" href=\"https://vuejs.org/v2/guide/class-and-style.html#Binding-HTML-Classes\" data-scroll=\"\">Binding HTML Classes</a></h2>\n" +
+                    "<h3 id=\"Object-Syntax\"><a class=\"headerlink\" title=\"Object Syntax\" href=\"https://vuejs.org/v2/guide/class-and-style.html#Object-Syntax\" data-scroll=\"\">Object Syntax</a></h3>\n" +
+                    "<p>We can pass an object to&nbsp;<code>v-bind:class</code>&nbsp;to dynamically toggle classes:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">div</span> <span class=\"attr\">v-bind:class</span>=<span class=\"string\">\"{ active: isActive }\"</span>&gt;</span><span class=\"tag\">&lt;/<span class=\"name\">div</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>The above syntax means the presence of the&nbsp;<code>active</code>&nbsp;class will be determined by the&nbsp;<a href=\"https://developer.mozilla.org/en-US/docs/Glossary/Truthy\" target=\"_blank\" rel=\"noopener\">truthiness</a>&nbsp;of the data property&nbsp;<code>isActive</code>.</p>\n" +
+                    "<p>You can have multiple classes toggled by having more fields in the object. In addition, the&nbsp;<code>v-bind:class</code>&nbsp;directive can also co-exist with the plain&nbsp;<code>class</code>&nbsp;attribute. So given the following template:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">div</span> <span class=\"attr\">class</span>=<span class=\"string\">\"static\"</span></span></span><br /><span class=\"line\"><span class=\"tag\">     <span class=\"attr\">v-bind:class</span>=<span class=\"string\">\"{ active: isActive, 'text-danger': hasError }\"</span>&gt;</span></span><br /><span class=\"line\"><span class=\"tag\">&lt;/<span class=\"name\">div</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>And the following data:</p>\n" +
+                    "<figure class=\"highlight js\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\">data: {</span><br /><span class=\"line\">  isActive: <span class=\"literal\">true</span>,</span><br /><span class=\"line\">  hasError: <span class=\"literal\">false</span></span><br /><span class=\"line\">}</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>It will render:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">div</span> <span class=\"attr\">class</span>=<span class=\"string\">\"static active\"</span>&gt;</span><span class=\"tag\">&lt;/<span class=\"name\">div</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>When&nbsp;<code>isActive</code>&nbsp;or&nbsp;<code>hasError</code>&nbsp;changes, the class list will be updated accordingly. For example, if&nbsp;<code>hasError</code>&nbsp;becomes&nbsp;<code>true</code>, the class list will become&nbsp;<code>\"static active text-danger\"</code>.</p>\n" +
+                    "<p>The bound object doesn&rsquo;t have to be inline:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">div</span> <span class=\"attr\">v-bind:class</span>=<span class=\"string\">\"classObject\"</span>&gt;</span><span class=\"tag\">&lt;/<span class=\"name\">div</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<figure class=\"highlight js\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\">data: {</span><br /><span class=\"line\">  classObject: {</span><br /><span class=\"line\">    active: <span class=\"literal\">true</span>,</span><br /><span class=\"line\">    <span class=\"string\">'text-danger'</span>: <span class=\"literal\">false</span></span><br /><span class=\"line\">  }</span><br /><span class=\"line\">}</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>This will render the same result. We can also bind to a&nbsp;<a href=\"https://vuejs.org/v2/guide/computed.html\">computed property</a>&nbsp;that returns an object. This is a common and powerful pattern:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">div</span> <span class=\"attr\">v-bind:class</span>=<span class=\"string\">\"classObject\"</span>&gt;</span><span class=\"tag\">&lt;/<span class=\"name\">div</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<figure class=\"highlight js\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\">data: {</span><br /><span class=\"line\">  isActive: <span class=\"literal\">true</span>,</span><br /><span class=\"line\">  error: <span class=\"literal\">null</span></span><br /><span class=\"line\">},</span><br /><span class=\"line\">computed: {</span><br /><span class=\"line\">  classObject: <span class=\"function\"><span class=\"keyword\">function</span> () </span>{</span><br /><span class=\"line\">    <span class=\"keyword\">return</span> {</span><br /><span class=\"line\">      active: <span class=\"keyword\">this</span>.isActive &amp;&amp; !<span class=\"keyword\">this</span>.error,</span><br /><span class=\"line\">      <span class=\"string\">'text-danger'</span>: <span class=\"keyword\">this</span>.error &amp;&amp; <span class=\"keyword\">this</span>.error.type === <span class=\"string\">'fatal'</span></span><br /><span class=\"line\">    }</span><br /><span class=\"line\">  }</span><br /><span class=\"line\">}</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<h3 id=\"Array-Syntax\"><a class=\"headerlink\" title=\"Array Syntax\" href=\"https://vuejs.org/v2/guide/class-and-style.html#Array-Syntax\" data-scroll=\"\">Array Syntax</a></h3>\n" +
+                    "<p>We can pass an array to&nbsp;<code>v-bind:class</code>&nbsp;to apply a list of classes:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">div</span> <span class=\"attr\">v-bind:class</span>=<span class=\"string\">\"[activeClass, errorClass]\"</span>&gt;</span><span class=\"tag\">&lt;/<span class=\"name\">div</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<figure class=\"highlight js\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\">data: {</span><br /><span class=\"line\">  activeClass: <span class=\"string\">'active'</span>,</span><br /><span class=\"line\">  errorClass: <span class=\"string\">'text-danger'</span></span><br /><span class=\"line\">}</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>Which will render:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">div</span> <span class=\"attr\">class</span>=<span class=\"string\">\"active text-danger\"</span>&gt;</span><span class=\"tag\">&lt;/<span class=\"name\">div</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>If you would like to also toggle a class in the list conditionally, you can do it with a ternary expression:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">div</span> <span class=\"attr\">v-bind:class</span>=<span class=\"string\">\"[isActive ? activeClass : '', errorClass]\"</span>&gt;</span><span class=\"tag\">&lt;/<span class=\"name\">div</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>This will always apply&nbsp;<code>errorClass</code>, but will only apply&nbsp;<code>activeClass</code>&nbsp;when&nbsp;<code>isActive</code>is truthy.</p>\n" +
+                    "<p>However, this can be a bit verbose if you have multiple conditional classes. That&rsquo;s why it&rsquo;s also possible to use the object syntax inside array syntax:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">div</span> <span class=\"attr\">v-bind:class</span>=<span class=\"string\">\"[{ active: isActive }, errorClass]\"</span>&gt;</span><span class=\"tag\">&lt;/<span class=\"name\">div</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<h3 id=\"With-Components\"><a class=\"headerlink\" title=\"With Components\" href=\"https://vuejs.org/v2/guide/class-and-style.html#With-Components\" data-scroll=\"\">With Components</a></h3>\n" +
+                    "<blockquote>\n" +
+                    "<p>This section assumes knowledge of&nbsp;<a href=\"https://vuejs.org/v2/guide/components.html\">Vue Components</a>. Feel free to skip it and come back later.</p>\n" +
+                    "</blockquote>\n" +
+                    "<p>When you use the&nbsp;<code>class</code>&nbsp;attribute on a custom component, those classes will be added to the component&rsquo;s root element. Existing classes on this element will not be overwritten.</p>\n" +
+                    "<p>For example, if you declare this component:</p>\n" +
+                    "<figure class=\"highlight js\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\">Vue.component(<span class=\"string\">'my-component'</span>, {</span><br /><span class=\"line\">  template: <span class=\"string\">'&lt;p class=\"foo bar\"&gt;Hi&lt;/p&gt;'</span></span><br /><span class=\"line\">})</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>Then add some classes when using it:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">my-component</span> <span class=\"attr\">class</span>=<span class=\"string\">\"baz boo\"</span>&gt;</span><span class=\"tag\">&lt;/<span class=\"name\">my-component</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>The rendered HTML will be:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">p</span> <span class=\"attr\">class</span>=<span class=\"string\">\"foo bar baz boo\"</span>&gt;</span>Hi<span class=\"tag\">&lt;/<span class=\"name\">p</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>The same is true for class bindings:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">my-component</span> <span class=\"attr\">v-bind:class</span>=<span class=\"string\">\"{ active: isActive }\"</span>&gt;</span><span class=\"tag\">&lt;/<span class=\"name\">my-component</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>When&nbsp;<code>isActive</code>&nbsp;is truthy, the rendered HTML will be:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">p</span> <span class=\"attr\">class</span>=<span class=\"string\">\"foo bar active\"</span>&gt;</span>Hi<span class=\"tag\">&lt;/<span class=\"name\">p</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>");
+            sec3Vue1.setLesson(vueJsLesson1);
+            vueJsLesson1.getSections().add(sec3Vue1);
+
+            Section sec4Vue1 = new Section();
+            sec4Vue1.setOrdinalNumber(4);
+            sec4Vue1.setDescription("Conditional Rendering");
+            sec4Vue1.setContent("<h2 id=\"v-if\"><a class=\"headerlink\" title=\"v-if\" href=\"https://vuejs.org/v2/guide/conditional.html#v-if\" data-scroll=\"\"><code>v-if</code></a></h2>\n" +
+                    "<p>In string templates, for example&nbsp;<a href=\"https://handlebarsjs.com/\" target=\"_blank\" rel=\"noopener\">Handlebars</a>, we would write a conditional block like this:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"comment\">&lt;!-- Handlebars template --&gt;</span></span><br /><span class=\"line\">{{#if ok}}</span><br /><span class=\"line\">  <span class=\"tag\">&lt;<span class=\"name\">h1</span>&gt;</span>Yes<span class=\"tag\">&lt;/<span class=\"name\">h1</span>&gt;</span></span><br /><span class=\"line\">{{/if}}</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>In Vue, we use the&nbsp;<code>v-if</code>&nbsp;directive to achieve the same:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">h1</span> <span class=\"attr\">v-if</span>=<span class=\"string\">\"ok\"</span>&gt;</span>Yes<span class=\"tag\">&lt;/<span class=\"name\">h1</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>It is also possible to add an &ldquo;else block&rdquo; with&nbsp;<code>v-else</code>:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">h1</span> <span class=\"attr\">v-if</span>=<span class=\"string\">\"ok\"</span>&gt;</span>Yes<span class=\"tag\">&lt;/<span class=\"name\">h1</span>&gt;</span></span><br /><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">h1</span> <span class=\"attr\">v-else</span>&gt;</span>No<span class=\"tag\">&lt;/<span class=\"name\">h1</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<h3 id=\"Conditional-Groups-with-v-if-on-lt-template-gt\"><a class=\"headerlink\" style=\"text-decoration: none; color: #2c3e50; font-weight: 600; pointer-events: auto;\" title=\"Conditional Groups with v-if on &lt;template&gt;\" href=\"https://vuejs.org/v2/guide/conditional.html#Conditional-Groups-with-v-if-on-lt-template-gt\" data-scroll=\"\">Conditional Groups with&nbsp;<code>v-if</code>&nbsp;on&nbsp;<code>&lt;template&gt;</code></a></h3>\n" +
+                    "<p>Because&nbsp;<code>v-if</code>&nbsp;is a directive, it has to be attached to a single element. But what if we want to toggle more than one element? In this case we can use&nbsp;<code>v-if</code>&nbsp;on a&nbsp;<code>&lt;template&gt;</code>&nbsp;element, which serves as an invisible wrapper. The final rendered result will not include the&nbsp;<code>&lt;template&gt;</code>&nbsp;element.</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">template</span> <span class=\"attr\">v-if</span>=<span class=\"string\">\"ok\"</span>&gt;</span></span><br /><span class=\"line\">  <span class=\"tag\">&lt;<span class=\"name\">h1</span>&gt;</span>Title<span class=\"tag\">&lt;/<span class=\"name\">h1</span>&gt;</span></span><br /><span class=\"line\">  <span class=\"tag\">&lt;<span class=\"name\">p</span>&gt;</span>Paragraph 1<span class=\"tag\">&lt;/<span class=\"name\">p</span>&gt;</span></span><br /><span class=\"line\">  <span class=\"tag\">&lt;<span class=\"name\">p</span>&gt;</span>Paragraph 2<span class=\"tag\">&lt;/<span class=\"name\">p</span>&gt;</span></span><br /><span class=\"line\"><span class=\"tag\">&lt;/<span class=\"name\">template</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<h3 id=\"v-else\"><a class=\"headerlink\" title=\"v-else\" href=\"https://vuejs.org/v2/guide/conditional.html#v-else\" data-scroll=\"\"><code>v-else</code></a></h3>\n" +
+                    "<p>You can use the&nbsp;<code>v-else</code>&nbsp;directive to indicate an &ldquo;else block&rdquo; for&nbsp;<code>v-if</code>:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">div</span> <span class=\"attr\">v-if</span>=<span class=\"string\">\"Math.random() &gt; 0.5\"</span>&gt;</span></span><br /><span class=\"line\">  Now you see me</span><br /><span class=\"line\"><span class=\"tag\">&lt;/<span class=\"name\">div</span>&gt;</span></span><br /><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">div</span> <span class=\"attr\">v-else</span>&gt;</span></span><br /><span class=\"line\">  Now you don't</span><br /><span class=\"line\"><span class=\"tag\">&lt;/<span class=\"name\">div</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>A&nbsp;<code>v-else</code>&nbsp;element must immediately follow a&nbsp;<code>v-if</code>&nbsp;or a&nbsp;<code>v-else-if</code>&nbsp;element - otherwise it will not be recognized.</p>\n" +
+                    "<h3 id=\"v-else-if\"><a class=\"headerlink\" title=\"v-else-if\" href=\"https://vuejs.org/v2/guide/conditional.html#v-else-if\" data-scroll=\"\"><code>v-else-if</code></a></h3>\n" +
+                    "<blockquote>\n" +
+                    "<p>New in 2.1.0+</p>\n" +
+                    "</blockquote>\n" +
+                    "<p>The&nbsp;<code>v-else-if</code>, as the name suggests, serves as an &ldquo;else if block&rdquo; for&nbsp;<code>v-if</code>. It can also be chained multiple times:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">div</span> <span class=\"attr\">v-if</span>=<span class=\"string\">\"type === 'A'\"</span>&gt;</span></span><br /><span class=\"line\">  A</span><br /><span class=\"line\"><span class=\"tag\">&lt;/<span class=\"name\">div</span>&gt;</span></span><br /><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">div</span> <span class=\"attr\">v-else-if</span>=<span class=\"string\">\"type === 'B'\"</span>&gt;</span></span><br /><span class=\"line\">  B</span><br /><span class=\"line\"><span class=\"tag\">&lt;/<span class=\"name\">div</span>&gt;</span></span><br /><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">div</span> <span class=\"attr\">v-else-if</span>=<span class=\"string\">\"type === 'C'\"</span>&gt;</span></span><br /><span class=\"line\">  C</span><br /><span class=\"line\"><span class=\"tag\">&lt;/<span class=\"name\">div</span>&gt;</span></span><br /><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">div</span> <span class=\"attr\">v-else</span>&gt;</span></span><br /><span class=\"line\">  Not A/B/C</span><br /><span class=\"line\"><span class=\"tag\">&lt;/<span class=\"name\">div</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>Similar to&nbsp;<code>v-else</code>, a&nbsp;<code>v-else-if</code>&nbsp;element must immediately follow a&nbsp;<code>v-if</code>&nbsp;or a&nbsp;<code>v-else-if</code>&nbsp;element.</p>\n" +
+                    "<h3 id=\"Controlling-Reusable-Elements-with-key\"><a class=\"headerlink\" title=\"Controlling Reusable Elements with key\" href=\"https://vuejs.org/v2/guide/conditional.html#Controlling-Reusable-Elements-with-key\" data-scroll=\"\">Controlling Reusable Elements with&nbsp;<code>key</code></a></h3>\n" +
+                    "<p>Vue tries to render elements as efficiently as possible, often re-using them instead of rendering from scratch. Beyond helping make Vue very fast, this can have some useful advantages. For example, if you allow users to toggle between multiple login types:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">template</span> <span class=\"attr\">v-if</span>=<span class=\"string\">\"loginType === 'username'\"</span>&gt;</span></span><br /><span class=\"line\">  <span class=\"tag\">&lt;<span class=\"name\">label</span>&gt;</span>Username<span class=\"tag\">&lt;/<span class=\"name\">label</span>&gt;</span></span><br /><span class=\"line\">  <span class=\"tag\">&lt;<span class=\"name\">input</span> <span class=\"attr\">placeholder</span>=<span class=\"string\">\"Enter your username\"</span>&gt;</span></span><br /><span class=\"line\"><span class=\"tag\">&lt;/<span class=\"name\">template</span>&gt;</span></span><br /><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">template</span> <span class=\"attr\">v-else</span>&gt;</span></span><br /><span class=\"line\">  <span class=\"tag\">&lt;<span class=\"name\">label</span>&gt;</span>Email<span class=\"tag\">&lt;/<span class=\"name\">label</span>&gt;</span></span><br /><span class=\"line\">  <span class=\"tag\">&lt;<span class=\"name\">input</span> <span class=\"attr\">placeholder</span>=<span class=\"string\">\"Enter your email address\"</span>&gt;</span></span><br /><span class=\"line\"><span class=\"tag\">&lt;/<span class=\"name\">template</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>Then switching the&nbsp;<code>loginType</code>&nbsp;in the code above will not erase what the user has already entered. Since both templates use the same elements, the&nbsp;<code>&lt;input&gt;</code>&nbsp;is not replaced - just its&nbsp;<code>placeholder</code>.</p>\n" +
+                    "<p>Check it out for yourself by entering some text in the input, then pressing the toggle button:</p>\n" +
+                    "<div id=\"no-key-example\" class=\"demo\">\n" +
+                    "<div><label>Username</label>&nbsp;<input type=\"text\" placeholder=\"Enter your username\" /></div>\n" +
+                    "<button>Toggle login type</button></div>\n" +
+                    "<p>This isn&rsquo;t always desirable though, so Vue offers a way for you to say, &ldquo;These two elements are completely separate - don&rsquo;t re-use them.&rdquo; Add a&nbsp;<code>key</code>&nbsp;attribute with unique values:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">template</span> <span class=\"attr\">v-if</span>=<span class=\"string\">\"loginType === 'username'\"</span>&gt;</span></span><br /><span class=\"line\">  <span class=\"tag\">&lt;<span class=\"name\">label</span>&gt;</span>Username<span class=\"tag\">&lt;/<span class=\"name\">label</span>&gt;</span></span><br /><span class=\"line\">  <span class=\"tag\">&lt;<span class=\"name\">input</span> <span class=\"attr\">placeholder</span>=<span class=\"string\">\"Enter your username\"</span> <span class=\"attr\">key</span>=<span class=\"string\">\"username-input\"</span>&gt;</span></span><br /><span class=\"line\"><span class=\"tag\">&lt;/<span class=\"name\">template</span>&gt;</span></span><br /><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">template</span> <span class=\"attr\">v-else</span>&gt;</span></span><br /><span class=\"line\">  <span class=\"tag\">&lt;<span class=\"name\">label</span>&gt;</span>Email<span class=\"tag\">&lt;/<span class=\"name\">label</span>&gt;</span></span><br /><span class=\"line\">  <span class=\"tag\">&lt;<span class=\"name\">input</span> <span class=\"attr\">placeholder</span>=<span class=\"string\">\"Enter your email address\"</span> <span class=\"attr\">key</span>=<span class=\"string\">\"email-input\"</span>&gt;</span></span><br /><span class=\"line\"><span class=\"tag\">&lt;/<span class=\"name\">template</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>Now those inputs will be rendered from scratch each time you toggle. See for yourself:</p>\n" +
+                    "<div id=\"key-example\" class=\"demo\">\n" +
+                    "<div><label>Username</label>&nbsp;<input type=\"text\" placeholder=\"Enter your username\" /></div>\n" +
+                    "<button>Toggle login type</button></div>\n" +
+                    "<p>Note that the&nbsp;<code>&lt;label&gt;</code>&nbsp;elements are still efficiently re-used, because they don&rsquo;t have&nbsp;<code>key</code>&nbsp;attributes.</p>\n" +
+                    "<h2 id=\"v-show\"><a class=\"headerlink\" title=\"v-show\" href=\"https://vuejs.org/v2/guide/conditional.html#v-show\" data-scroll=\"\"><code>v-show</code></a></h2>\n" +
+                    "<p>Another option for conditionally displaying an element is the&nbsp;<code>v-show</code>&nbsp;directive. The usage is largely the same:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">h1</span> <span class=\"attr\">v-show</span>=<span class=\"string\">\"ok\"</span>&gt;</span>Hello!<span class=\"tag\">&lt;/<span class=\"name\">h1</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>The difference is that an element with&nbsp;<code>v-show</code>&nbsp;will always be rendered and remain in the DOM;&nbsp;<code>v-show</code>&nbsp;only toggles the&nbsp;<code>display</code>&nbsp;CSS property of the element.</p>\n" +
+                    "<p class=\"tip\">Note that&nbsp;<code>v-show</code>&nbsp;doesn&rsquo;t support the&nbsp;<code>&lt;template&gt;</code>&nbsp;element, nor does it work with&nbsp;<code>v-else</code>.</p>\n" +
+                    "<h2 id=\"v-if-vs-v-show\"><a class=\"headerlink\" title=\"v-if vs v-show\" href=\"https://vuejs.org/v2/guide/conditional.html#v-if-vs-v-show\" data-scroll=\"\"><code>v-if</code>&nbsp;vs&nbsp;<code>v-show</code></a></h2>\n" +
+                    "<p><code>v-if</code>&nbsp;is &ldquo;real&rdquo; conditional rendering because it ensures that event listeners and child components inside the conditional block are properly destroyed and re-created during toggles.</p>\n" +
+                    "<p><code>v-if</code>&nbsp;is also&nbsp;<strong>lazy</strong>: if the condition is false on initial render, it will not do anything - the conditional block won&rsquo;t be rendered until the condition becomes true for the first time.</p>\n" +
+                    "<p>In comparison,&nbsp;<code>v-show</code>&nbsp;is much simpler - the element is always rendered regardless of initial condition, with CSS-based toggling.</p>\n" +
+                    "<p>Generally speaking,&nbsp;<code>v-if</code>&nbsp;has higher toggle costs while&nbsp;<code>v-show</code>&nbsp;has higher initial render costs. So prefer&nbsp;<code>v-show</code>&nbsp;if you need to toggle something very often, and prefer&nbsp;<code>v-if</code>&nbsp;if the condition is unlikely to change at runtime.</p>\n" +
+                    "<h2 id=\"v-if-with-v-for\"><a class=\"headerlink\" title=\"v-if with v-for\" href=\"https://vuejs.org/v2/guide/conditional.html#v-if-with-v-for\" data-scroll=\"\"><code>v-if</code>&nbsp;with&nbsp;<code>v-for</code></a></h2>\n" +
+                    "<p class=\"tip\">Using&nbsp;<code>v-if</code>&nbsp;and&nbsp;<code>v-for</code>&nbsp;together is&nbsp;<strong>not recommended</strong>. See the&nbsp;<a href=\"https://vuejs.org/v2/style-guide/#Avoid-v-if-with-v-for-essential\">style guide</a>&nbsp;for further information.</p>\n" +
+                    "<p>When used together with&nbsp;<code>v-if</code>,&nbsp;<code>v-for</code>&nbsp;has a higher priority than&nbsp;<code>v-if</code>. See the&nbsp;<a href=\"https://vuejs.org/v2/guide/list.html#V-for-and-v-if\">list rendering guide</a>&nbsp;for details.</p>");
+            sec4Vue1.setLesson(vueJsLesson1);
+            vueJsLesson1.getSections().add(sec4Vue1);
+
+            Section sec5Vue1 = new Section();
+            sec5Vue1.setOrdinalNumber(5);
+            sec5Vue1.setDescription("Component Registration");
+            sec5Vue1.setContent("<h2 id=\"Component-Names\"><a class=\"headerlink\" title=\"Component Names\" href=\"https://vuejs.org/v2/guide/components-registration.html#Component-Names\" data-scroll=\"\">Component Names</a></h2>\n" +
+                    "<p>When registering a component, it will always be given a name. For example, in the global registration we&rsquo;ve seen so far:</p>\n" +
+                    "<figure class=\"highlight js\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\">Vue.component(<span class=\"string\">'my-component-name'</span>, { <span class=\"comment\">/* ... */</span> })</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>The component&rsquo;s name is the first argument of&nbsp;<code>Vue.component</code>.</p>\n" +
+                    "<p>The name you give a component may depend on where you intend to use it. When using a component directly in the DOM (as opposed to in a string template or&nbsp;<a href=\"https://vuejs.org/v2/guide/single-file-components.html\">single-file component</a>), we strongly recommend following the&nbsp;<a href=\"https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name\" target=\"_blank\" rel=\"noopener\">W3C rules</a>&nbsp;for custom tag names (all-lowercase, must contain a hyphen). This helps you avoid conflicts with current and future HTML elements.</p>\n" +
+                    "<p>You can see other recommendations for component names in the&nbsp;<a href=\"https://vuejs.org/v2/style-guide/#Base-component-names-strongly-recommended\">Style Guide</a>.</p>\n" +
+                    "<h3 id=\"Name-Casing\"><a class=\"headerlink\" title=\"Name Casing\" href=\"https://vuejs.org/v2/guide/components-registration.html#Name-Casing\" data-scroll=\"\">Name Casing</a></h3>\n" +
+                    "<p>You have two options when defining component names:</p>\n" +
+                    "<h4 id=\"With-kebab-case\">With kebab-case</h4>\n" +
+                    "<figure class=\"highlight js\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\">Vue.component(<span class=\"string\">'my-component-name'</span>, { <span class=\"comment\">/* ... */</span> })</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>When defining a component with kebab-case, you must also use kebab-case when referencing its custom element, such as in&nbsp;<code>&lt;my-component-name&gt;</code>.</p>\n" +
+                    "<h4 id=\"With-PascalCase\">With PascalCase</h4>\n" +
+                    "<figure class=\"highlight js\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\">Vue.component(<span class=\"string\">'MyComponentName'</span>, { <span class=\"comment\">/* ... */</span> })</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>When defining a component with PascalCase, you can use either case when referencing its custom element. That means both&nbsp;<code>&lt;my-component-name&gt;</code>&nbsp;and&nbsp;<code>&lt;MyComponentName&gt;</code>are acceptable. Note, however, that only kebab-case names are valid directly in the DOM (i.e. non-string templates).</p>\n" +
+                    "<h2 id=\"Global-Registration\"><a class=\"headerlink\" title=\"Global Registration\" href=\"https://vuejs.org/v2/guide/components-registration.html#Global-Registration\" data-scroll=\"\">Global Registration</a></h2>\n" +
+                    "<p>So far, we&rsquo;ve only created components using&nbsp;<code>Vue.component</code>:</p>\n" +
+                    "<figure class=\"highlight js\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\">Vue.component(<span class=\"string\">'my-component-name'</span>, {</span><br /><span class=\"line\">  <span class=\"comment\">// ... options ...</span></span><br /><span class=\"line\">})</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>These components are&nbsp;<strong>globally registered</strong>. That means they can be used in the template of any root Vue instance (<code>new Vue</code>) created after registration. For example:</p>\n" +
+                    "<figure class=\"highlight js\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\">Vue.component(<span class=\"string\">'component-a'</span>, { <span class=\"comment\">/* ... */</span> })</span><br /><span class=\"line\">Vue.component(<span class=\"string\">'component-b'</span>, { <span class=\"comment\">/* ... */</span> })</span><br /><span class=\"line\">Vue.component(<span class=\"string\">'component-c'</span>, { <span class=\"comment\">/* ... */</span> })</span><br /><br /><span class=\"line\"><span class=\"keyword\">new</span> Vue({ <span class=\"attr\">el</span>: <span class=\"string\">'#app'</span> })</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">div</span> <span class=\"attr\">id</span>=<span class=\"string\">\"app\"</span>&gt;</span></span><br /><span class=\"line\">  <span class=\"tag\">&lt;<span class=\"name\">component-a</span>&gt;</span><span class=\"tag\">&lt;/<span class=\"name\">component-a</span>&gt;</span></span><br /><span class=\"line\">  <span class=\"tag\">&lt;<span class=\"name\">component-b</span>&gt;</span><span class=\"tag\">&lt;/<span class=\"name\">component-b</span>&gt;</span></span><br /><span class=\"line\">  <span class=\"tag\">&lt;<span class=\"name\">component-c</span>&gt;</span><span class=\"tag\">&lt;/<span class=\"name\">component-c</span>&gt;</span></span><br /><span class=\"line\"><span class=\"tag\">&lt;/<span class=\"name\">div</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>This even applies to all subcomponents, meaning all three of these components will also be available&nbsp;<em>inside each other</em>.</p>\n" +
+                    "<h2 id=\"Local-Registration\"><a class=\"headerlink\" title=\"Local Registration\" href=\"https://vuejs.org/v2/guide/components-registration.html#Local-Registration\" data-scroll=\"\">Local Registration</a></h2>\n" +
+                    "<p>Global registration often isn&rsquo;t ideal. For example, if you&rsquo;re using a build system like Webpack, globally registering all components means that even if you stop using a component, it could still be included in your final build. This unnecessarily increases the amount of JavaScript your users have to download.</p>\n" +
+                    "<p>In these cases, you can define your components as plain JavaScript objects:</p>\n" +
+                    "<figure class=\"highlight js\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"keyword\">var</span> ComponentA = { <span class=\"comment\">/* ... */</span> }</span><br /><span class=\"line\"><span class=\"keyword\">var</span> ComponentB = { <span class=\"comment\">/* ... */</span> }</span><br /><span class=\"line\"><span class=\"keyword\">var</span> ComponentC = { <span class=\"comment\">/* ... */</span> }</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>Then define the components you&rsquo;d like to use in a&nbsp;<code>components</code>&nbsp;option:</p>\n" +
+                    "<figure class=\"highlight js\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"keyword\">new</span> Vue({</span><br /><span class=\"line\">  el: <span class=\"string\">'#app'</span>,</span><br /><span class=\"line\">  components: {</span><br /><span class=\"line\">    <span class=\"string\">'component-a'</span>: ComponentA,</span><br /><span class=\"line\">    <span class=\"string\">'component-b'</span>: ComponentB</span><br /><span class=\"line\">  }</span><br /><span class=\"line\">})</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>For each property in the&nbsp;<code>components</code>&nbsp;object, the key will be the name of the custom element, while the value will contain the options object for the component.</p>\n" +
+                    "<p>Note that&nbsp;<strong>locally registered components are&nbsp;<em>not</em>&nbsp;also available in subcomponents</strong>. For example, if you wanted&nbsp;<code>ComponentA</code>&nbsp;to be available in&nbsp;<code>ComponentB</code>, you&rsquo;d have to use:</p>\n" +
+                    "<figure class=\"highlight js\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"keyword\">var</span> ComponentA = { <span class=\"comment\">/* ... */</span> }</span><br /><br /><span class=\"line\"><span class=\"keyword\">var</span> ComponentB = {</span><br /><span class=\"line\">  components: {</span><br /><span class=\"line\">    <span class=\"string\">'component-a'</span>: ComponentA</span><br /><span class=\"line\">  },</span><br /><span class=\"line\">  <span class=\"comment\">// ...</span></span><br /><span class=\"line\">}</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>Or if you&rsquo;re using ES2015 modules, such as through Babel and Webpack, that might look more like:</p>\n" +
+                    "<figure class=\"highlight js\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"keyword\">import</span> ComponentA <span class=\"keyword\">from</span> <span class=\"string\">'./ComponentA.vue'</span></span><br /><br /><span class=\"line\"><span class=\"keyword\">export</span> <span class=\"keyword\">default</span> {</span><br /><span class=\"line\">  components: {</span><br /><span class=\"line\">    ComponentA</span><br /><span class=\"line\">  },</span><br /><span class=\"line\">  <span class=\"comment\">// ...</span></span><br /><span class=\"line\">}</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>Note that in ES2015+, placing a variable name like&nbsp;<code>ComponentA</code>&nbsp;inside an object is shorthand for&nbsp;<code>ComponentA: ComponentA</code>, meaning the name of the variable is both:</p>\n" +
+                    "<ul>\n" +
+                    "<li>the custom element name to use in the template, and</li>\n" +
+                    "<li>the name of the variable containing the component options</li>\n" +
+                    "</ul>");
+            sec5Vue1.setLesson(vueJsLesson1);
+            vueJsLesson1.getSections().add(sec5Vue1);
+
+            Section sec6Vue1 = new Section();
+            sec6Vue1.setOrdinalNumber(6);
+            sec6Vue1.setDescription("Props");
+            sec6Vue1.setContent("Prop Casing (camelCase vs kebab-case)\n" +
+                    "HTML attribute names are case-insensitive, so browsers will interpret any uppercase characters as lowercase. That means when you’re using in-DOM templates, camelCased prop names need to use their kebab-cased (hyphen-delimited) equivalents:\n" +
+                    "\n" +
+                    "Vue.component('blog-post', {\n" +
+                    "  // camelCase in JavaScript\n" +
+                    "  props: ['postTitle'],\n" +
+                    "  template: '<h3>{{ postTitle }}</h3>'\n" +
+                    "})\n" +
+                    "<!-- kebab-case in HTML -->\n" +
+                    "<blog-post post-title=\"hello!\"></blog-post>\n" +
+                    "Again, if you’re using string templates, this limitation does not apply.\n" +
+                    "\n" +
+                    "Prop Types\n" +
+                    "So far, we’ve only seen props listed as an array of strings:\n" +
+                    "\n" +
+                    "props: ['title', 'likes', 'isPublished', 'commentIds', 'author']\n" +
+                    "Usually though, you’ll want every prop to be a specific type of value. In these cases, you can list props as an object, where the properties’ names and values contain the prop names and types, respectively:\n" +
+                    "\n" +
+                    "props: {\n" +
+                    "  title: String,\n" +
+                    "  likes: Number,\n" +
+                    "  isPublished: Boolean,\n" +
+                    "  commentIds: Array,\n" +
+                    "  author: Object\n" +
+                    "}\n" +
+                    "This not only documents your component, but will also warn users in the browser’s JavaScript console if they pass the wrong type. You’ll learn much more about type checks and other prop validations further down this page.\n" +
+                    "\n" +
+                    "Passing Static or Dynamic Props\n" +
+                    "So far, you’ve seen props passed a static value, like in:\n" +
+                    "\n" +
+                    "<blog-post title=\"My journey with Vue\"></blog-post>\n" +
+                    "You’ve also seen props assigned dynamically with v-bind, such as in:\n" +
+                    "\n" +
+                    "<!-- Dynamically assign the value of a variable -->\n" +
+                    "<blog-post v-bind:title=\"post.title\"></blog-post>\n" +
+                    "\n" +
+                    "<!-- Dynamically assign the value of a complex expression -->\n" +
+                    "<blog-post v-bind:title=\"post.title + ' by ' + post.author.name\"></blog-post>\n" +
+                    "In the two examples above, we happen to pass string values, but any type of value can actually be passed to a prop.\n" +
+                    "\n" +
+                    "Passing a Number\n" +
+                    "<!-- Even though `42` is static, we need v-bind to tell Vue that -->\n" +
+                    "<!-- this is a JavaScript expression rather than a string.       -->\n" +
+                    "<blog-post v-bind:likes=\"42\"></blog-post>\n" +
+                    "\n" +
+                    "<!-- Dynamically assign to the value of a variable. -->\n" +
+                    "<blog-post v-bind:likes=\"post.likes\"></blog-post>\n" +
+                    "Passing a Boolean\n" +
+                    "<!-- Including the prop with no value will imply `true`. -->\n" +
+                    "<blog-post is-published></blog-post>\n" +
+                    "\n" +
+                    "<!-- Even though `false` is static, we need v-bind to tell Vue that -->\n" +
+                    "<!-- this is a JavaScript expression rather than a string.          -->\n" +
+                    "<blog-post v-bind:is-published=\"false\"></blog-post>\n" +
+                    "\n" +
+                    "<!-- Dynamically assign to the value of a variable. -->\n" +
+                    "<blog-post v-bind:is-published=\"post.isPublished\"></blog-post>\n" +
+                    "Passing an Array\n" +
+                    "<!-- Even though the array is static, we need v-bind to tell Vue that -->\n" +
+                    "<!-- this is a JavaScript expression rather than a string.            -->\n" +
+                    "<blog-post v-bind:comment-ids=\"[234, 266, 273]\"></blog-post>\n" +
+                    "\n" +
+                    "<!-- Dynamically assign to the value of a variable. -->\n" +
+                    "<blog-post v-bind:comment-ids=\"post.commentIds\"></blog-post>\n" +
+                    "Passing an Object\n" +
+                    "<!-- Even though the object is static, we need v-bind to tell Vue that -->\n" +
+                    "<!-- this is a JavaScript expression rather than a string.             -->\n" +
+                    "<blog-post v-bind:author=\"{ name: 'Veronica', company: 'Veridian Dynamics' }\"></blog-post>\n" +
+                    "\n" +
+                    "<!-- Dynamically assign to the value of a variable. -->\n" +
+                    "<blog-post v-bind:author=\"post.author\"></blog-post>\n" +
+                    "Passing the Properties of an Object\n" +
+                    "If you want to pass all the properties of an object as props, you can use v-bind without an argument (v-bind instead of v-bind:prop-name). For example, given a post object:\n" +
+                    "\n" +
+                    "post: {\n" +
+                    "  id: 1,\n" +
+                    "  title: 'My Journey with Vue'\n" +
+                    "}\n" +
+                    "The following template:\n" +
+                    "\n" +
+                    "<blog-post v-bind=\"post\"></blog-post>\n" +
+                    "Will be equivalent to:\n" +
+                    "\n" +
+                    "<blog-post\n" +
+                    "  v-bind:id=\"post.id\"\n" +
+                    "  v-bind:title=\"post.title\"\n" +
+                    "></blog-post>");
+            sec6Vue1.setLesson(vueJsLesson1);
+            vueJsLesson1.getSections().add(sec6Vue1);
+
+            Section sec7Vue1 = new Section();
+            sec7Vue1.setOrdinalNumber(7);
+            sec7Vue1.setDescription("Custom Events");
+            sec7Vue1.setContent("<h2 id=\"Event-Names\"><a class=\"headerlink\" title=\"Event Names\" href=\"https://vuejs.org/v2/guide/components-custom-events.html#Event-Names\" data-scroll=\"\">Event Names</a></h2>\n" +
+                    "<p>Unlike components and props, event names don&rsquo;t provide any automatic case transformation. Instead, the name of an emitted event must exactly match the name used to listen to that event. For example, if emitting a camelCased event name:</p>\n" +
+                    "<figure class=\"highlight js\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"keyword\">this</span>.$emit(<span class=\"string\">'myEvent'</span>)</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>Listening to the kebab-cased version will have no effect:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">my-component</span> <span class=\"attr\">v-on:my-event</span>=<span class=\"string\">\"doSomething\"</span>&gt;</span><span class=\"tag\">&lt;/<span class=\"name\">my-component</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>Unlike components and props, event names will never be used as variable or property names in JavaScript, so there&rsquo;s no reason to use camelCase or PascalCase. Additionally,&nbsp;<code>v-on</code>&nbsp;event listeners inside DOM templates will be automatically transformed to lowercase (due to HTML&rsquo;s case-insensitivity), so&nbsp;<code>v-on:myEvent</code>&nbsp;would become&nbsp;<code>v-on:myevent</code>&nbsp;&ndash; making&nbsp;<code>myEvent</code>&nbsp;impossible to listen to.</p>\n" +
+                    "<p>For these reasons, we recommend you&nbsp;<strong>always use kebab-case for event names</strong>.</p>\n" +
+                    "<h2 id=\"Customizing-Component-v-model\"><a class=\"headerlink\" title=\"Customizing Component v-model\" href=\"https://vuejs.org/v2/guide/components-custom-events.html#Customizing-Component-v-model\" data-scroll=\"\">Customizing Component&nbsp;<code>v-model</code></a></h2>\n" +
+                    "<blockquote>\n" +
+                    "<p>New in 2.2.0+</p>\n" +
+                    "</blockquote>\n" +
+                    "<p>By default,&nbsp;<code>v-model</code>&nbsp;on a component uses&nbsp;<code>value</code>&nbsp;as the prop and&nbsp;<code>input</code>&nbsp;as the event, but some input types such as checkboxes and radio buttons may want to use the&nbsp;<code>value</code>&nbsp;attribute for a&nbsp;<a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox#Value\" target=\"_blank\" rel=\"noopener\">different purpose</a>. Using the&nbsp;<code>model</code>&nbsp;option can avoid a conflict in such cases:</p>\n" +
+                    "<figure class=\"highlight js\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\">Vue.component(<span class=\"string\">'base-checkbox'</span>, {</span><br /><span class=\"line\">  model: {</span><br /><span class=\"line\">    prop: <span class=\"string\">'checked'</span>,</span><br /><span class=\"line\">    event: <span class=\"string\">'change'</span></span><br /><span class=\"line\">  },</span><br /><span class=\"line\">  props: {</span><br /><span class=\"line\">    checked: <span class=\"built_in\">Boolean</span></span><br /><span class=\"line\">  },</span><br /><span class=\"line\">  template: <span class=\"string\">`</span></span><br /><span class=\"line\"><span class=\"string\">    &lt;input</span></span><br /><span class=\"line\"><span class=\"string\">      type=\"checkbox\"</span></span><br /><span class=\"line\"><span class=\"string\">      v-bind:checked=\"checked\"</span></span><br /><span class=\"line\"><span class=\"string\">      v-on:change=\"$emit('change', $event.target.checked)\"</span></span><br /><span class=\"line\"><span class=\"string\">    &gt;</span></span><br /><span class=\"line\"><span class=\"string\">  `</span></span><br /><span class=\"line\">})</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>Now when using&nbsp;<code>v-model</code>&nbsp;on this component:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">base-checkbox</span> <span class=\"attr\">v-model</span>=<span class=\"string\">\"lovingVue\"</span>&gt;</span><span class=\"tag\">&lt;/<span class=\"name\">base-checkbox</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>the value of&nbsp;<code>lovingVue</code>&nbsp;will be passed to the&nbsp;<code>checked</code>&nbsp;prop. The&nbsp;<code>lovingVue</code>&nbsp;property will then be updated when&nbsp;<code>&lt;base-checkbox&gt;</code>&nbsp;emits a&nbsp;<code>change</code>&nbsp;event with a new value.</p>\n" +
+                    "<p class=\"tip\">Note that you still have to declare the&nbsp;<code>checked</code>&nbsp;prop in component&rsquo;s&nbsp;<code>props</code>option.</p>\n" +
+                    "<h2 id=\"Binding-Native-Events-to-Components\"><a class=\"headerlink\" title=\"Binding Native Events to Components\" href=\"https://vuejs.org/v2/guide/components-custom-events.html#Binding-Native-Events-to-Components\" data-scroll=\"\">Binding Native Events to Components</a></h2>\n" +
+                    "<p>There may be times when you want to listen directly to a native event on the root element of a component. In these cases, you can use the&nbsp;<code>.native</code>&nbsp;modifier for&nbsp;<code>v-on</code>:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">base-input</span> <span class=\"attr\">v-on:focus.native</span>=<span class=\"string\">\"onFocus\"</span>&gt;</span><span class=\"tag\">&lt;/<span class=\"name\">base-input</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>This can be useful sometimes, but it&rsquo;s not a good idea when you&rsquo;re trying to listen on a very specific element, like an&nbsp;<code>&lt;input&gt;</code>. For example, the&nbsp;<code>&lt;base-input&gt;</code>&nbsp;component above might refactor so that the root element is actually a&nbsp;<code>&lt;label&gt;</code>&nbsp;element:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">label</span>&gt;</span></span><br /><span class=\"line\">  {{ label }}</span><br /><span class=\"line\">  <span class=\"tag\">&lt;<span class=\"name\">input</span></span></span><br /><span class=\"line\"><span class=\"tag\">    <span class=\"attr\">v-bind</span>=<span class=\"string\">\"$attrs\"</span></span></span><br /><span class=\"line\"><span class=\"tag\">    <span class=\"attr\">v-bind:value</span>=<span class=\"string\">\"value\"</span></span></span><br /><span class=\"line\"><span class=\"tag\">    <span class=\"attr\">v-on:input</span>=<span class=\"string\">\"$emit('input', $event.target.value)\"</span></span></span><br /><span class=\"line\"><span class=\"tag\">  &gt;</span></span><br /><span class=\"line\"><span class=\"tag\">&lt;/<span class=\"name\">label</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>In that case, the&nbsp;<code>.native</code>&nbsp;listener in the parent would silently break. There would be no errors, but the&nbsp;<code>onFocus</code>&nbsp;handler wouldn&rsquo;t be called when we expected it to.</p>\n" +
+                    "<p>To solve this problem, Vue provides a&nbsp;<code>$listeners</code>&nbsp;property containing an object of listeners being used on the component. For example:</p>\n" +
+                    "<figure class=\"highlight js\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\">{</span><br /><span class=\"line\">  focus: <span class=\"function\"><span class=\"keyword\">function</span> (<span class=\"params\">event</span>) </span>{ <span class=\"comment\">/* ... */</span> }</span><br /><span class=\"line\">  input: <span class=\"function\"><span class=\"keyword\">function</span> (<span class=\"params\">value</span>) </span>{ <span class=\"comment\">/* ... */</span> },</span><br /><span class=\"line\">}</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>Using the&nbsp;<code>$listeners</code>&nbsp;property, you can forward all event listeners on the component to a specific child element with&nbsp;<code>v-on=\"$listeners\"</code>. For elements like&nbsp;<code>&lt;input&gt;</code>, that you also want to work with&nbsp;<code>v-model</code>, it&rsquo;s often useful to create a new computed property for listeners, like&nbsp;<code>inputListeners</code>&nbsp;below:</p>\n" +
+                    "<figure class=\"highlight js\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\">Vue.component(<span class=\"string\">'base-input'</span>, {</span><br /><span class=\"line\">  inheritAttrs: <span class=\"literal\">false</span>,</span><br /><span class=\"line\">  props: [<span class=\"string\">'label'</span>, <span class=\"string\">'value'</span>],</span><br /><span class=\"line\">  computed: {</span><br /><span class=\"line\">    inputListeners: <span class=\"function\"><span class=\"keyword\">function</span> () </span>{</span><br /><span class=\"line\">      <span class=\"keyword\">var</span> vm = <span class=\"keyword\">this</span></span><br /><span class=\"line\">      <span class=\"comment\">// `Object.assign` merges objects together to form a new object</span></span><br /><span class=\"line\">      <span class=\"keyword\">return</span> <span class=\"built_in\">Object</span>.assign({},</span><br /><span class=\"line\">        <span class=\"comment\">// We add all the listeners from the parent</span></span><br /><span class=\"line\">        <span class=\"keyword\">this</span>.$listeners,</span><br /><span class=\"line\">        <span class=\"comment\">// Then we can add custom listeners or override the</span></span><br /><span class=\"line\">        <span class=\"comment\">// behavior of some listeners.</span></span><br /><span class=\"line\">        {</span><br /><span class=\"line\">          <span class=\"comment\">// This ensures that the component works with v-model</span></span><br /><span class=\"line\">          input: <span class=\"function\"><span class=\"keyword\">function</span> (<span class=\"params\">event</span>) </span>{</span><br /><span class=\"line\">            vm.$emit(<span class=\"string\">'input'</span>, event.target.value)</span><br /><span class=\"line\">          }</span><br /><span class=\"line\">        }</span><br /><span class=\"line\">      )</span><br /><span class=\"line\">    }</span><br /><span class=\"line\">  },</span><br /><span class=\"line\">  template: <span class=\"string\">`</span></span><br /><span class=\"line\"><span class=\"string\">    &lt;label&gt;</span></span><br /><span class=\"line\"><span class=\"string\">      {{ label }}</span></span><br /><span class=\"line\"><span class=\"string\">      &lt;input</span></span><br /><span class=\"line\"><span class=\"string\">        v-bind=\"$attrs\"</span></span><br /><span class=\"line\"><span class=\"string\">        v-bind:value=\"value\"</span></span><br /><span class=\"line\"><span class=\"string\">        v-on=\"inputListeners\"</span></span><br /><span class=\"line\"><span class=\"string\">      &gt;</span></span><br /><span class=\"line\"><span class=\"string\">    &lt;/label&gt;</span></span><br /><span class=\"line\"><span class=\"string\">  `</span></span><br /><span class=\"line\">})</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>Now the&nbsp;<code>&lt;base-input&gt;</code>&nbsp;component is a&nbsp;<strong>fully transparent wrapper</strong>, meaning it can be used exactly like a normal&nbsp;<code>&lt;input&gt;</code>&nbsp;element: all the same attributes and listeners will work, without the&nbsp;<code>.native</code>&nbsp;modifier.</p>\n" +
+                    "<h2 id=\"sync-Modifier\"><a class=\"headerlink\" title=\".sync Modifier\" href=\"https://vuejs.org/v2/guide/components-custom-events.html#sync-Modifier\" data-scroll=\"\"><code>.sync</code>&nbsp;Modifier</a></h2>\n" +
+                    "<blockquote>\n" +
+                    "<p>New in 2.3.0+</p>\n" +
+                    "</blockquote>\n" +
+                    "<p>In some cases, we may need &ldquo;two-way binding&rdquo; for a prop. Unfortunately, true two-way binding can create maintenance issues, because child components can mutate the parent without the source of that mutation being obvious in both the parent and the child.</p>\n" +
+                    "<p>That&rsquo;s why instead, we recommend emitting events in the pattern of&nbsp;<code>update:myPropName</code>. For example, in a hypothetical component with a&nbsp;<code>title</code>&nbsp;prop, we could communicate the intent of assigning a new value with:</p>\n" +
+                    "<figure class=\"highlight js\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"keyword\">this</span>.$emit(<span class=\"string\">'update:title'</span>, newTitle)</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>Then the parent can listen to that event and update a local data property, if it wants to. For example:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">text-document</span></span></span><br /><span class=\"line\"><span class=\"tag\">  <span class=\"attr\">v-bind:title</span>=<span class=\"string\">\"doc.title\"</span></span></span><br /><span class=\"line\"><span class=\"tag\">  <span class=\"attr\">v-on:update:title</span>=<span class=\"string\">\"doc.title = $event\"</span></span></span><br /><span class=\"line\"><span class=\"tag\">&gt;</span><span class=\"tag\">&lt;/<span class=\"name\">text-document</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>For convenience, we offer a shorthand for this pattern with the&nbsp;<code>.sync</code>&nbsp;modifier:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">text-document</span> <span class=\"attr\">v-bind:title.sync</span>=<span class=\"string\">\"doc.title\"</span>&gt;</span><span class=\"tag\">&lt;/<span class=\"name\">text-document</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p class=\"tip\">Note that&nbsp;<code>v-bind</code>&nbsp;with the&nbsp;<code>.sync</code>&nbsp;modifier does&nbsp;<strong>not</strong>&nbsp;work with expressions (e.g.&nbsp;<code>v-bind:title.sync=&rdquo;doc.title + &lsquo;!&rsquo;&rdquo;</code>&nbsp;is invalid). Instead, you must only provide the name of the property you want to bind, similar to&nbsp;<code>v-model</code>.</p>\n" +
+                    "<p>The&nbsp;<code>.sync</code>&nbsp;modifier can also be used with&nbsp;<code>v-bind</code>&nbsp;when using an object to set multiple props at once:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">text-document</span> <span class=\"attr\">v-bind.sync</span>=<span class=\"string\">\"doc\"</span>&gt;</span><span class=\"tag\">&lt;/<span class=\"name\">text-document</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>This passes each property in the&nbsp;<code>doc</code>&nbsp;object (e.g.&nbsp;<code>title</code>) as an individual prop, then adds&nbsp;<code>v-on</code>&nbsp;update listeners for each one.</p>\n" +
+                    "<p class=\"tip\">Using&nbsp;<code>v-bind.sync</code>&nbsp;with a literal object, such as in&nbsp;<code>v-bind.sync=&rdquo;{ title: doc.title }&rdquo;</code>, will not work, because there are too many edge cases to consider in parsing a complex expression like this.</p>");
+            sec7Vue1.setLesson(vueJsLesson1);
+            vueJsLesson1.getSections().add(sec7Vue1);
+
+            Section sec1Vue2 = new Section();
+            sec1Vue2.setOrdinalNumber(1);
+            sec1Vue2.setDescription("Production Deployment");
+            sec1Vue2.setContent("<h2 id=\"Turn-on-Production-Mode\"><a class=\"headerlink\" title=\"Turn on Production Mode\" href=\"https://vuejs.org/v2/guide/deployment.html#Turn-on-Production-Mode\" data-scroll=\"\">Turn on Production Mode</a></h2>\n" +
+                    "<p>During development, Vue provides a lot of warnings to help you with common errors and pitfalls. However, these warning strings become useless in production and bloat your app&rsquo;s payload size. In addition, some of these warning checks have small runtime costs that can be avoided in production mode.</p>\n" +
+                    "<h3 id=\"Without-Build-Tools\"><a class=\"headerlink\" title=\"Without Build Tools\" href=\"https://vuejs.org/v2/guide/deployment.html#Without-Build-Tools\" data-scroll=\"\">Without Build Tools</a></h3>\n" +
+                    "<p>If you are using the full build, i.e. directly including Vue via a script tag without a build tool, make sure to use the minified version (<code>vue.min.js</code>) for production. Both versions can be found in the&nbsp;<a href=\"https://vuejs.org/v2/guide/installation.html#Direct-lt-script-gt-Include\">Installation guide</a>.</p>\n" +
+                    "<h3 id=\"With-Build-Tools\"><a class=\"headerlink\" title=\"With Build Tools\" href=\"https://vuejs.org/v2/guide/deployment.html#With-Build-Tools\" data-scroll=\"\">With Build Tools</a></h3>\n" +
+                    "<p>When using a build tool like Webpack or Browserify, the production mode will be determined by&nbsp;<code>process.env.NODE_ENV</code>&nbsp;inside Vue&rsquo;s source code, and it will be in development mode by default. Both build tools provide ways to overwrite this variable to enable Vue&rsquo;s production mode, and warnings will be stripped by minifiers during the build. All&nbsp;<code>vue-cli</code>&nbsp;templates have these pre-configured for you, but it would be beneficial to know how it is done:</p>\n" +
+                    "<h4 id=\"Webpack\">Webpack</h4>\n" +
+                    "<p>In Webpack 4+, you can use the&nbsp;<code>mode</code>&nbsp;option:</p>\n" +
+                    "<figure class=\"highlight js\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"built_in\">module</span>.exports = {</span><br /><span class=\"line\">  mode: <span class=\"string\">'production'</span></span><br /><span class=\"line\">}</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>But in Webpack 3 and earlier, you&rsquo;ll need to use&nbsp;<a href=\"https://webpack.js.org/plugins/define-plugin/\" target=\"_blank\" rel=\"noopener\">DefinePlugin</a>:</p>\n" +
+                    "<figure class=\"highlight js\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"keyword\">var</span> webpack = <span class=\"built_in\">require</span>(<span class=\"string\">'webpack'</span>)</span><br /><br /><span class=\"line\"><span class=\"built_in\">module</span>.exports = {</span><br /><span class=\"line\">  <span class=\"comment\">// ...</span></span><br /><span class=\"line\">  plugins: [</span><br /><span class=\"line\">    <span class=\"comment\">// ...</span></span><br /><span class=\"line\">    <span class=\"keyword\">new</span> webpack.DefinePlugin({</span><br /><span class=\"line\">      <span class=\"string\">'process.env.NODE_ENV'</span>: <span class=\"built_in\">JSON</span>.stringify(<span class=\"string\">'production'</span>)</span><br /><span class=\"line\">    })</span><br /><span class=\"line\">  ]</span><br /><span class=\"line\">}</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<h4 id=\"Browserify\">Browserify</h4>\n" +
+                    "<ul>\n" +
+                    "<li>\n" +
+                    "<p>Run your bundling command with the actual&nbsp;<code>NODE_ENV</code>&nbsp;environment variable set to&nbsp;<code>\"production\"</code>. This tells&nbsp;<code>vueify</code>&nbsp;to avoid including hot-reload and development related code.</p>\n" +
+                    "</li>\n" +
+                    "<li>\n" +
+                    "<p>Apply a global&nbsp;<a href=\"https://github.com/hughsk/envify\" target=\"_blank\" rel=\"noopener\">envify</a>&nbsp;transform to your bundle. This allows the minifier to strip out all the warnings in Vue&rsquo;s source code wrapped in env variable conditional blocks. For example:</p>\n" +
+                    "<figure class=\"highlight bash\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\">NODE_ENV=production browserify -g envify -e main.js | uglifyjs -c -m &gt; build.js</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "</li>\n" +
+                    "<li>\n" +
+                    "<p>Or, using&nbsp;<a href=\"https://github.com/hughsk/envify\" target=\"_blank\" rel=\"noopener\">envify</a>&nbsp;with Gulp:</p>\n" +
+                    "<figure class=\"highlight js\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"comment\">// Use the envify custom module to specify environment variables</span></span><br /><span class=\"line\"><span class=\"keyword\">var</span> envify = <span class=\"built_in\">require</span>(<span class=\"string\">'envify/custom'</span>)</span><br /><br /><span class=\"line\">browserify(browserifyOptions)</span><br /><span class=\"line\">  .transform(vueify)</span><br /><span class=\"line\">  .transform(</span><br /><span class=\"line\">    <span class=\"comment\">// Required in order to process node_modules files</span></span><br /><span class=\"line\">    { <span class=\"attr\">global</span>: <span class=\"literal\">true</span> },</span><br /><span class=\"line\">    envify({ <span class=\"attr\">NODE_ENV</span>: <span class=\"string\">'production'</span> })</span><br /><span class=\"line\">  )</span><br /><span class=\"line\">  .bundle()</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "</li>\n" +
+                    "<li>\n" +
+                    "<p>Or, using&nbsp;<a href=\"https://github.com/hughsk/envify\" target=\"_blank\" rel=\"noopener\">envify</a>&nbsp;with Grunt and&nbsp;<a href=\"https://github.com/jmreidy/grunt-browserify\" target=\"_blank\" rel=\"noopener\">grunt-browserify</a>:</p>\n" +
+                    "<figure class=\"highlight js\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"comment\">// Use the envify custom module to specify environment variables</span></span><br /><span class=\"line\"><span class=\"keyword\">var</span> envify = <span class=\"built_in\">require</span>(<span class=\"string\">'envify/custom'</span>)</span><br /><br /><span class=\"line\">browserify: {</span><br /><span class=\"line\">  dist: {</span><br /><span class=\"line\">    options: {</span><br /><span class=\"line\">      <span class=\"comment\">// Function to deviate from grunt-browserify's default order</span></span><br /><span class=\"line\">      configure: <span class=\"function\"><span class=\"params\">b</span> =&gt;</span> b</span><br /><span class=\"line\">        .transform(<span class=\"string\">'vueify'</span>)</span><br /><span class=\"line\">        .transform(</span><br /><span class=\"line\">          <span class=\"comment\">// Required in order to process node_modules files</span></span><br /><span class=\"line\">          { <span class=\"attr\">global</span>: <span class=\"literal\">true</span> },</span><br /><span class=\"line\">          envify({ <span class=\"attr\">NODE_ENV</span>: <span class=\"string\">'production'</span> })</span><br /><span class=\"line\">        )</span><br /><span class=\"line\">        .bundle()</span><br /><span class=\"line\">    }</span><br /><span class=\"line\">  }</span><br /><span class=\"line\">}</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "</li>\n" +
+                    "</ul>\n" +
+                    "<h4 id=\"Rollup\">Rollup</h4>\n" +
+                    "<p>Use&nbsp;<a href=\"https://github.com/rollup/rollup-plugin-replace\" target=\"_blank\" rel=\"noopener\">rollup-plugin-replace</a>:</p>\n" +
+                    "<figure class=\"highlight js\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"keyword\">const</span> replace = <span class=\"built_in\">require</span>(<span class=\"string\">'rollup-plugin-replace'</span>)</span><br /><br /><span class=\"line\">rollup({</span><br /><span class=\"line\">  <span class=\"comment\">// ...</span></span><br /><span class=\"line\">  plugins: [</span><br /><span class=\"line\">    replace({</span><br /><span class=\"line\">      <span class=\"string\">'process.env.NODE_ENV'</span>: <span class=\"built_in\">JSON</span>.stringify( <span class=\"string\">'production'</span> )</span><br /><span class=\"line\">    })</span><br /><span class=\"line\">  ]</span><br /><span class=\"line\">}).then(...)</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<h2 id=\"Pre-Compiling-Templates\"><a class=\"headerlink\" title=\"Pre-Compiling Templates\" href=\"https://vuejs.org/v2/guide/deployment.html#Pre-Compiling-Templates\" data-scroll=\"\">Pre-Compiling Templates</a></h2>\n" +
+                    "<p>When using in-DOM templates or in-JavaScript template strings, the template-to-render-function compilation is performed on the fly. This is usually fast enough in most cases, but is best avoided if your application is performance-sensitive.</p>\n" +
+                    "<p>The easiest way to pre-compile templates is using&nbsp;<a href=\"https://vuejs.org/v2/guide/single-file-components.html\">Single-File Components</a>&nbsp;- the associated build setups automatically performs pre-compilation for you, so the built code contains the already compiled render functions instead of raw template strings.</p>\n" +
+                    "<p>If you are using Webpack, and prefer separating JavaScript and template files, you can use&nbsp;<a href=\"https://github.com/ktsn/vue-template-loader\" target=\"_blank\" rel=\"noopener\">vue-template-loader</a>, which also transforms the template files into JavaScript render functions during the build step.</p>");
+            sec1Vue2.setLesson(vueJsLesson2);
+            vueJsLesson2.getSections().add(sec1Vue2);
+
+            Section sec2Vue2 = new Section();
+            sec2Vue2.setOrdinalNumber(2);
+            sec2Vue2.setDescription("Single File Components");
+            sec2Vue2.setContent("<p>In many Vue projects, global components will be defined using&nbsp;<code>Vue.component</code>, followed by&nbsp;<code>new Vue({ el: '#container' })</code>&nbsp;to target a container element in the body of every page.</p>\n" +
+                    "<p>This can work very well for small to medium-sized projects, where JavaScript is only used to enhance certain views. In more complex projects however, or when your frontend is entirely driven by JavaScript, these disadvantages become apparent:</p>\n" +
+                    "<ul>\n" +
+                    "<li><strong>Global definitions</strong>&nbsp;force unique names for every component</li>\n" +
+                    "<li><strong>String templates</strong>&nbsp;lack syntax highlighting and require ugly slashes for multiline HTML</li>\n" +
+                    "<li><strong>No CSS support</strong>&nbsp;means that while HTML and JavaScript are modularized into components, CSS is conspicuously left out</li>\n" +
+                    "<li><strong>No build step</strong>&nbsp;restricts us to HTML and ES5 JavaScript, rather than preprocessors like Pug (formerly Jade) and Babel</li>\n" +
+                    "</ul>\n" +
+                    "<p>All of these are solved by&nbsp;<strong>single-file components</strong>&nbsp;with a&nbsp;<code>.vue</code>&nbsp;extension, made possible with build tools such as Webpack or Browserify.</p>\n" +
+                    "<p>Here&rsquo;s an example of a file we&rsquo;ll call&nbsp;<code>Hello.vue</code>:</p>\n" +
+                    "<p><a href=\"https://gist.github.com/chrisvfritz/e2b6a6110e0829d78fa4aedf7cf6b235\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://vuejs.org/images/vue-component.png\" alt=\"Single-file component example (click for code as text)\" /></a></p>\n" +
+                    "<p>Now we get:</p>\n" +
+                    "<ul>\n" +
+                    "<li><a href=\"https://github.com/vuejs/awesome-vue#source-code-editing\" target=\"_blank\" rel=\"noopener\">Complete syntax highlighting</a></li>\n" +
+                    "<li><a href=\"https://webpack.js.org/concepts/modules/#what-is-a-webpack-module\" target=\"_blank\" rel=\"noopener\">CommonJS modules</a></li>\n" +
+                    "<li><a href=\"https://vue-loader.vuejs.org/en/features/scoped-css.html\" target=\"_blank\" rel=\"noopener\">Component-scoped CSS</a></li>\n" +
+                    "</ul>\n" +
+                    "<p>As promised, we can also use preprocessors such as Pug, Babel (with ES2015 modules), and Stylus for cleaner and more feature-rich components.</p>\n" +
+                    "<p><a href=\"https://gist.github.com/chrisvfritz/1c9f2daea9bc078dcb47e9a82e5f7587\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://vuejs.org/images/vue-component-with-preprocessors.png\" alt=\"Single-file component example with preprocessors (click for code as text)\" /></a></p>\n" +
+                    "<p>These specific languages are only examples. You could as easily use Bubl&eacute;, TypeScript, SCSS, PostCSS - or whatever other preprocessors that help you be productive. If using Webpack with&nbsp;<code>vue-loader</code>, it also has first-class support for CSS Modules.</p>\n" +
+                    "<h3 id=\"What-About-Separation-of-Concerns\"><a class=\"headerlink\" title=\"What About Separation of Concerns?\" href=\"https://vuejs.org/v2/guide/single-file-components.html#What-About-Separation-of-Concerns\" data-scroll=\"\">What About Separation of Concerns?</a></h3>\n" +
+                    "<p>One important thing to note is that&nbsp;<strong>separation of concerns is not equal to separation of file types.</strong>&nbsp;In modern UI development, we have found that instead of dividing the codebase into three huge layers that interweave with one another, it makes much more sense to divide them into loosely-coupled components and compose them. Inside a component, its template, logic and styles are inherently coupled, and collocating them actually makes the component more cohesive and maintainable.</p>\n" +
+                    "<p>Even if you don&rsquo;t like the idea of Single-File Components, you can still leverage its hot-reloading and pre-compilation features by separating your JavaScript and CSS into separate files:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"comment\">&lt;!-- my-component.vue --&gt;</span></span><br /><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">template</span>&gt;</span></span><br /><span class=\"line\">  <span class=\"tag\">&lt;<span class=\"name\">div</span>&gt;</span>This will be pre-compiled<span class=\"tag\">&lt;/<span class=\"name\">div</span>&gt;</span></span><br /><span class=\"line\"><span class=\"tag\">&lt;/<span class=\"name\">template</span>&gt;</span></span><br /><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">script</span> <span class=\"attr\">src</span>=<span class=\"string\">\"./my-component.js\"</span>&gt;</span><span class=\"tag\">&lt;/<span class=\"name\">script</span>&gt;</span></span><br /><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">style</span> <span class=\"attr\">src</span>=<span class=\"string\">\"./my-component.css\"</span>&gt;</span><span class=\"tag\">&lt;/<span class=\"name\">style</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<h2 id=\"Getting-Started\"><a class=\"headerlink\" title=\"Getting Started\" href=\"https://vuejs.org/v2/guide/single-file-components.html#Getting-Started\" data-scroll=\"\">Getting Started</a></h2>\n" +
+                    "<h3 id=\"Example-Sandbox\"><a class=\"headerlink\" title=\"Example Sandbox\" href=\"https://vuejs.org/v2/guide/single-file-components.html#Example-Sandbox\" data-scroll=\"\">Example Sandbox</a></h3>\n" +
+                    "<p>If you want to dive right in and start playing with single-file components, check out&nbsp;<a href=\"https://codesandbox.io/s/o29j95wx9\" target=\"_blank\" rel=\"noopener\">this simple todo app</a>&nbsp;on CodeSandbox.</p>\n" +
+                    "<h3 id=\"For-Users-New-to-Module-Build-Systems-in-JavaScript\"><a class=\"headerlink\" title=\"For Users New to Module Build Systems in JavaScript\" href=\"https://vuejs.org/v2/guide/single-file-components.html#For-Users-New-to-Module-Build-Systems-in-JavaScript\" data-scroll=\"\">For Users New to Module Build Systems in JavaScript</a></h3>\n" +
+                    "<p>With&nbsp;<code>.vue</code>&nbsp;components, we&rsquo;re entering the realm of advanced JavaScript applications. That means learning to use a few additional tools if you haven&rsquo;t already:</p>\n" +
+                    "<ul>\n" +
+                    "<li>\n" +
+                    "<p><strong>Node Package Manager (NPM)</strong>: Read the&nbsp;<a href=\"https://docs.npmjs.com/getting-started/what-is-npm\" target=\"_blank\" rel=\"noopener\">Getting Started guide</a>&nbsp;through section&nbsp;<em>10: Uninstalling global packages</em>.</p>\n" +
+                    "</li>\n" +
+                    "<li>\n" +
+                    "<p><strong>Modern JavaScript with ES2015/16</strong>: Read through Babel&rsquo;s&nbsp;<a href=\"https://babeljs.io/docs/learn-es2015/\" target=\"_blank\" rel=\"noopener\">Learn ES2015 guide</a>. You don&rsquo;t have to memorize every feature right now, but keep this page as a reference you can come back to.</p>\n" +
+                    "</li>\n" +
+                    "</ul>\n" +
+                    "<p>After you&rsquo;ve taken a day to dive into these resources, we recommend checking out the&nbsp;<a href=\"https://vuejs-templates.github.io/webpack\" target=\"_blank\" rel=\"noopener\">webpack</a>&nbsp;template. Follow the instructions and you should have a Vue project with&nbsp;<code>.vue</code>&nbsp;components, ES2015, and hot-reloading in no time!</p>\n" +
+                    "<p>To learn more about Webpack itself, check out&nbsp;<a href=\"https://webpack.js.org/configuration/\" target=\"_blank\" rel=\"noopener\">their official docs</a>&nbsp;and&nbsp;<a href=\"https://webpack.academy/p/the-core-concepts\" target=\"_blank\" rel=\"noopener\">Webpack Academy</a>. In Webpack, each file can be transformed by a &ldquo;loader&rdquo; before being included in the bundle, and Vue offers the&nbsp;<a href=\"https://vue-loader.vuejs.org/\" target=\"_blank\" rel=\"noopener\">vue-loader</a>&nbsp;plugin to translate single-file (<code>.vue</code>) components.</p>");
+            sec2Vue2.setLesson(vueJsLesson2);
+            vueJsLesson2.getSections().add(sec2Vue2);
+
+            Section sec3Vue2 = new Section();
+            sec3Vue2.setOrdinalNumber(3);
+            sec3Vue2.setDescription("Unit Testing");
+            sec3Vue2.setContent("<p>Anything compatible with a module-based build system will work, but if you&rsquo;re looking for a specific recommendation try the&nbsp;<a href=\"http://karma-runner.github.io/\" target=\"_blank\" rel=\"noopener\">Karma</a>&nbsp;test runner. It has a lot of community plugins, including support for&nbsp;<a href=\"https://github.com/webpack/karma-webpack\" target=\"_blank\" rel=\"noopener\">Webpack</a>&nbsp;and&nbsp;<a href=\"https://github.com/Nikku/karma-browserify\" target=\"_blank\" rel=\"noopener\">Browserify</a>. For detailed setup please refer to each project&rsquo;s respective documentation. These example Karma configurations for&nbsp;<a href=\"https://github.com/vuejs-templates/webpack/blob/master/template/test/unit/karma.conf.js\" target=\"_blank\" rel=\"noopener\">Webpack</a>&nbsp;and&nbsp;<a href=\"https://github.com/vuejs-templates/browserify/blob/master/template/karma.conf.js\" target=\"_blank\" rel=\"noopener\">Browserify</a>&nbsp;can help you get started.</p>\n" +
+                    "<h2 id=\"Simple-Assertions\"><a class=\"headerlink\" title=\"Simple Assertions\" href=\"https://vuejs.org/v2/guide/unit-testing.html#Simple-Assertions\" data-scroll=\"\">Simple Assertions</a></h2>\n" +
+                    "<p>You don&rsquo;t have to do anything special in your components to make them testable. Export the raw options:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">template</span>&gt;</span></span><br /><span class=\"line\">  <span class=\"tag\">&lt;<span class=\"name\">span</span>&gt;</span>{{ message }}<span class=\"tag\">&lt;/<span class=\"name\">span</span>&gt;</span></span><br /><span class=\"line\"><span class=\"tag\">&lt;/<span class=\"name\">template</span>&gt;</span></span><br /><br /><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">script</span>&gt;</span></span><br /><span class=\"line\"><span class=\"javascript\">  <span class=\"keyword\">export</span> <span class=\"keyword\">default</span> {</span></span><br /><span class=\"line\"><span class=\"undefined\">    data () {</span></span><br /><span class=\"line\"><span class=\"javascript\">      <span class=\"keyword\">return</span> {</span></span><br /><span class=\"line\"><span class=\"javascript\">        message: <span class=\"string\">'hello!'</span></span></span><br /><span class=\"line\"><span class=\"undefined\">      }</span></span><br /><span class=\"line\"><span class=\"undefined\">    },</span></span><br /><span class=\"line\"><span class=\"undefined\">    created () {</span></span><br /><span class=\"line\"><span class=\"javascript\">      <span class=\"keyword\">this</span>.message = <span class=\"string\">'bye!'</span></span></span><br /><span class=\"line\"><span class=\"undefined\">    }</span></span><br /><span class=\"line\"><span class=\"undefined\">  }</span></span><br /><span class=\"line\"><span class=\"tag\">&lt;/<span class=\"name\">script</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>Then import the component options along with Vue, and you can make many common assertions:</p>\n" +
+                    "<figure class=\"highlight js\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"comment\">// Import Vue and the component being tested</span></span><br /><span class=\"line\"><span class=\"keyword\">import</span> Vue <span class=\"keyword\">from</span> <span class=\"string\">'vue'</span></span><br /><span class=\"line\"><span class=\"keyword\">import</span> MyComponent <span class=\"keyword\">from</span> <span class=\"string\">'path/to/MyComponent.vue'</span></span><br /><br /><span class=\"line\"><span class=\"comment\">// Here are some Jasmine 2.0 tests, though you can</span></span><br /><span class=\"line\"><span class=\"comment\">// use any test runner / assertion library combo you prefer</span></span><br /><span class=\"line\">describe(<span class=\"string\">'MyComponent'</span>, () =&gt; {</span><br /><span class=\"line\">  <span class=\"comment\">// Inspect the raw component options</span></span><br /><span class=\"line\">  it(<span class=\"string\">'has a created hook'</span>, () =&gt; {</span><br /><span class=\"line\">    expect(<span class=\"keyword\">typeof</span> MyComponent.created).toBe(<span class=\"string\">'function'</span>)</span><br /><span class=\"line\">  })</span><br /><br /><span class=\"line\">  <span class=\"comment\">// Evaluate the results of functions in</span></span><br /><span class=\"line\">  <span class=\"comment\">// the raw component options</span></span><br /><span class=\"line\">  it(<span class=\"string\">'sets the correct default data'</span>, () =&gt; {</span><br /><span class=\"line\">    expect(<span class=\"keyword\">typeof</span> MyComponent.data).toBe(<span class=\"string\">'function'</span>)</span><br /><span class=\"line\">    <span class=\"keyword\">const</span> defaultData = MyComponent.data()</span><br /><span class=\"line\">    expect(defaultData.message).toBe(<span class=\"string\">'hello!'</span>)</span><br /><span class=\"line\">  })</span><br /><br /><span class=\"line\">  <span class=\"comment\">// Inspect the component instance on mount</span></span><br /><span class=\"line\">  it(<span class=\"string\">'correctly sets the message when created'</span>, () =&gt; {</span><br /><span class=\"line\">    <span class=\"keyword\">const</span> vm = <span class=\"keyword\">new</span> Vue(MyComponent).$mount()</span><br /><span class=\"line\">    expect(vm.message).toBe(<span class=\"string\">'bye!'</span>)</span><br /><span class=\"line\">  })</span><br /><br /><span class=\"line\">  <span class=\"comment\">// Mount an instance and inspect the render output</span></span><br /><span class=\"line\">  it(<span class=\"string\">'renders the correct message'</span>, () =&gt; {</span><br /><span class=\"line\">    <span class=\"keyword\">const</span> Constructor = Vue.extend(MyComponent)</span><br /><span class=\"line\">    <span class=\"keyword\">const</span> vm = <span class=\"keyword\">new</span> Constructor().$mount()</span><br /><span class=\"line\">    expect(vm.$el.textContent).toBe(<span class=\"string\">'bye!'</span>)</span><br /><span class=\"line\">  })</span><br /><span class=\"line\">})</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<h2 id=\"Writing-Testable-Components\"><a class=\"headerlink\" title=\"Writing Testable Components\" href=\"https://vuejs.org/v2/guide/unit-testing.html#Writing-Testable-Components\" data-scroll=\"\">Writing Testable Components</a></h2>\n" +
+                    "<p>A component&rsquo;s render output is primarily determined by the props it receives. If a component&rsquo;s render output solely depends on its props it becomes straightforward to test, similar to asserting the return value of a pure function with different arguments. Take a simplified example:</p>\n" +
+                    "<figure class=\"highlight html\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">template</span>&gt;</span></span><br /><span class=\"line\">  <span class=\"tag\">&lt;<span class=\"name\">p</span>&gt;</span>{{ msg }}<span class=\"tag\">&lt;/<span class=\"name\">p</span>&gt;</span></span><br /><span class=\"line\"><span class=\"tag\">&lt;/<span class=\"name\">template</span>&gt;</span></span><br /><br /><span class=\"line\"><span class=\"tag\">&lt;<span class=\"name\">script</span>&gt;</span></span><br /><span class=\"line\"><span class=\"javascript\">  <span class=\"keyword\">export</span> <span class=\"keyword\">default</span> {</span></span><br /><span class=\"line\"><span class=\"javascript\">    props: [<span class=\"string\">'msg'</span>]</span></span><br /><span class=\"line\"><span class=\"undefined\">  }</span></span><br /><span class=\"line\"><span class=\"tag\">&lt;/<span class=\"name\">script</span>&gt;</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>You can assert its render output with different props using the&nbsp;<code>propsData</code>&nbsp;option:</p>\n" +
+                    "<figure class=\"highlight js\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"keyword\">import</span> Vue <span class=\"keyword\">from</span> <span class=\"string\">'vue'</span></span><br /><span class=\"line\"><span class=\"keyword\">import</span> MyComponent <span class=\"keyword\">from</span> <span class=\"string\">'./MyComponent.vue'</span></span><br /><br /><span class=\"line\"><span class=\"comment\">// helper function that mounts and returns the rendered text</span></span><br /><span class=\"line\"><span class=\"function\"><span class=\"keyword\">function</span> <span class=\"title\">getRenderedText</span> (<span class=\"params\">Component, propsData</span>) </span>{</span><br /><span class=\"line\">  <span class=\"keyword\">const</span> Constructor = Vue.extend(Component)</span><br /><span class=\"line\">  <span class=\"keyword\">const</span> vm = <span class=\"keyword\">new</span> Constructor({ <span class=\"attr\">propsData</span>: propsData }).$mount()</span><br /><span class=\"line\">  <span class=\"keyword\">return</span> vm.$el.textContent</span><br /><span class=\"line\">}</span><br /><br /><span class=\"line\">describe(<span class=\"string\">'MyComponent'</span>, () =&gt; {</span><br /><span class=\"line\">  it(<span class=\"string\">'renders correctly with different props'</span>, () =&gt; {</span><br /><span class=\"line\">    expect(getRenderedText(MyComponent, {</span><br /><span class=\"line\">      msg: <span class=\"string\">'Hello'</span></span><br /><span class=\"line\">    })).toBe(<span class=\"string\">'Hello'</span>)</span><br /><br /><span class=\"line\">    expect(getRenderedText(MyComponent, {</span><br /><span class=\"line\">      msg: <span class=\"string\">'Bye'</span></span><br /><span class=\"line\">    })).toBe(<span class=\"string\">'Bye'</span>)</span><br /><span class=\"line\">  })</span><br /><span class=\"line\">})</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<h2 id=\"Asserting-Asynchronous-Updates\"><a class=\"headerlink\" title=\"Asserting Asynchronous Updates\" href=\"https://vuejs.org/v2/guide/unit-testing.html#Asserting-Asynchronous-Updates\" data-scroll=\"\">Asserting Asynchronous Updates</a></h2>\n" +
+                    "<p>Since Vue&nbsp;<a href=\"https://vuejs.org/v2/guide/reactivity.html#Async-Update-Queue\">performs DOM updates asynchronously</a>, assertions on DOM updates resulting from state change will have to be made in a&nbsp;<code>Vue.nextTick</code>&nbsp;callback:</p>\n" +
+                    "<figure class=\"highlight js\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"comment\">// Inspect the generated HTML after a state update</span></span><br /><span class=\"line\">it(<span class=\"string\">'updates the rendered message when vm.message updates'</span>, done =&gt; {</span><br /><span class=\"line\">  <span class=\"keyword\">const</span> vm = <span class=\"keyword\">new</span> Vue(MyComponent).$mount()</span><br /><span class=\"line\">  vm.message = <span class=\"string\">'foo'</span></span><br /><br /><span class=\"line\">  <span class=\"comment\">// wait a \"tick\" after state change before asserting DOM updates</span></span><br /><span class=\"line\">  Vue.nextTick(<span class=\"function\"><span class=\"params\">()</span> =&gt;</span> {</span><br /><span class=\"line\">    expect(vm.$el.textContent).toBe(<span class=\"string\">'foo'</span>)</span><br /><span class=\"line\">    done()</span><br /><span class=\"line\">  })</span><br /><span class=\"line\">})</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>We are planning to work on a collection of common test helpers to make it easier to render components with different constraints (e.g. shallow rendering that ignores child components) and assert their output.</p>");
+            sec3Vue2.setLesson(vueJsLesson2);
+            vueJsLesson2.getSections().add(sec3Vue2);
+
+            Section sec4Vue2 = new Section();
+            sec4Vue2.setOrdinalNumber(4);
+            sec4Vue2.setDescription("TypeScript Support");
+            sec4Vue2.setContent("<p>A static type system can help prevent many potential runtime errors, especially as applications grow. That&rsquo;s why Vue ships with&nbsp;<a href=\"https://github.com/vuejs/vue/tree/dev/types\" target=\"_blank\" rel=\"noopener\">official type declarations</a>&nbsp;for&nbsp;<a href=\"https://www.typescriptlang.org/\" target=\"_blank\" rel=\"noopener\">TypeScript</a>&nbsp;- not only in Vue core, but also for&nbsp;<a href=\"https://github.com/vuejs/vue-router/tree/dev/types\" target=\"_blank\" rel=\"noopener\">vue-router</a>&nbsp;and&nbsp;<a href=\"https://github.com/vuejs/vuex/tree/dev/types\" target=\"_blank\" rel=\"noopener\">vuex</a>&nbsp;as well.</p>\n" +
+                    "<p>Since these are&nbsp;<a href=\"https://cdn.jsdelivr.net/npm/vue/types/\" target=\"_blank\" rel=\"noopener\">published on NPM</a>, and the latest TypeScript knows how to resolve type declarations in NPM packages, this means when installed via NPM, you don&rsquo;t need any additional tooling to use TypeScript with Vue.</p>\n" +
+                    "<h2 id=\"Recommended-Configuration\"><a class=\"headerlink\" title=\"Recommended Configuration\" href=\"https://vuejs.org/v2/guide/typescript.html#Recommended-Configuration\" data-scroll=\"\">Recommended Configuration</a></h2>\n" +
+                    "<figure class=\"highlight js\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"comment\">// tsconfig.json</span></span><br /><span class=\"line\">{</span><br /><span class=\"line\">  <span class=\"string\">\"compilerOptions\"</span>: {</span><br /><span class=\"line\">    <span class=\"comment\">// this aligns with Vue's browser support</span></span><br /><span class=\"line\">    <span class=\"string\">\"target\"</span>: <span class=\"string\">\"es5\"</span>,</span><br /><span class=\"line\">    <span class=\"comment\">// this enables stricter inference for data properties on `this`</span></span><br /><span class=\"line\">    <span class=\"string\">\"strict\"</span>: <span class=\"literal\">true</span>,</span><br /><span class=\"line\">    <span class=\"comment\">// if using webpack 2+ or rollup, to leverage tree shaking:</span></span><br /><span class=\"line\">    <span class=\"string\">\"module\"</span>: <span class=\"string\">\"es2015\"</span>,</span><br /><span class=\"line\">    <span class=\"string\">\"moduleResolution\"</span>: <span class=\"string\">\"node\"</span></span><br /><span class=\"line\">  }</span><br /><span class=\"line\">}</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>Note that you have to include&nbsp;<code>strict: true</code>&nbsp;(or at least&nbsp;<code>noImplicitThis: true</code>which is a part of&nbsp;<code>strict</code>&nbsp;flag) to leverage type checking of&nbsp;<code>this</code>&nbsp;in component methods otherwise it is always treated as&nbsp;<code>any</code>&nbsp;type.</p>\n" +
+                    "<p>See&nbsp;<a href=\"https://www.typescriptlang.org/docs/handbook/compiler-options.html\" target=\"_blank\" rel=\"noopener\">TypeScript compiler options docs</a>&nbsp;for more details.</p>\n" +
+                    "<h2 id=\"Development-Tooling\"><a class=\"headerlink\" title=\"Development Tooling\" href=\"https://vuejs.org/v2/guide/typescript.html#Development-Tooling\" data-scroll=\"\">Development Tooling</a></h2>\n" +
+                    "<h3 id=\"Project-Creation\"><a class=\"headerlink\" title=\"Project Creation\" href=\"https://vuejs.org/v2/guide/typescript.html#Project-Creation\" data-scroll=\"\">Project Creation</a></h3>\n" +
+                    "<p><a href=\"https://github.com/vuejs/vue-cli\" target=\"_blank\" rel=\"noopener\">Vue CLI 3</a>&nbsp;can generate new projects that use TypeScript. To get started:</p>\n" +
+                    "<figure class=\"highlight bash\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"comment\"># 1. Install Vue CLI, if it's not already installed</span></span><br /><span class=\"line\">npm install --global @vue/cli</span><br /><br /><span class=\"line\"><span class=\"comment\"># 2. Create a new project, then choose the \"Manually select features\" option</span></span><br /><span class=\"line\">vue create my-project-name</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<h3 id=\"Editor-Support\"><a class=\"headerlink\" title=\"Editor Support\" href=\"https://vuejs.org/v2/guide/typescript.html#Editor-Support\" data-scroll=\"\">Editor Support</a></h3>\n" +
+                    "<p>For developing Vue applications with TypeScript, we strongly recommend using&nbsp;<a href=\"https://code.visualstudio.com/\" target=\"_blank\" rel=\"noopener\">Visual Studio Code</a>, which provides great out-of-the-box support for TypeScript. If you are using&nbsp;<a href=\"https://vuejs.org/v2/guide/single-file-components.html\">single-file components</a>&nbsp;(SFCs), get the awesome&nbsp;<a href=\"https://github.com/vuejs/vetur\" target=\"_blank\" rel=\"noopener\">Vetur extension</a>, which provides TypeScript inference inside SFCs and many other great features.</p>\n" +
+                    "<p><a href=\"https://www.jetbrains.com/webstorm/\" target=\"_blank\" rel=\"noopener\">WebStorm</a>&nbsp;also provides out-of-the-box support for both TypeScript and Vue.</p>\n" +
+                    "<h2 id=\"Basic-Usage\"><a class=\"headerlink\" title=\"Basic Usage\" href=\"https://vuejs.org/v2/guide/typescript.html#Basic-Usage\" data-scroll=\"\">Basic Usage</a></h2>\n" +
+                    "<p>To let TypeScript properly infer types inside Vue component options, you need to define components with&nbsp;<code>Vue.component</code>&nbsp;or&nbsp;<code>Vue.extend</code>:</p>\n" +
+                    "<figure class=\"highlight ts\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"keyword\">import</span> Vue <span class=\"keyword\">from</span> <span class=\"string\">'vue'</span></span><br /><br /><span class=\"line\"><span class=\"keyword\">const</span> Component = Vue.extend({</span><br /><span class=\"line\">  <span class=\"comment\">// type inference enabled</span></span><br /><span class=\"line\">})</span><br /><br /><span class=\"line\"><span class=\"keyword\">const</span> Component = {</span><br /><span class=\"line\">  <span class=\"comment\">// this will NOT have type inference,</span></span><br /><span class=\"line\">  <span class=\"comment\">// because TypeScript can't tell this is options for a Vue component.</span></span><br /><span class=\"line\">}</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<h2 id=\"Class-Style-Vue-Components\"><a class=\"headerlink\" title=\"Class-Style Vue Components\" href=\"https://vuejs.org/v2/guide/typescript.html#Class-Style-Vue-Components\" data-scroll=\"\">Class-Style Vue Components</a></h2>\n" +
+                    "<p>If you prefer a class-based API when declaring components, you can use the officially maintained&nbsp;<a href=\"https://github.com/vuejs/vue-class-component\" target=\"_blank\" rel=\"noopener\">vue-class-component</a>&nbsp;decorator:</p>\n" +
+                    "<figure class=\"highlight ts\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"keyword\">import</span> Vue <span class=\"keyword\">from</span> <span class=\"string\">'vue'</span></span><br /><span class=\"line\"><span class=\"keyword\">import</span> Component <span class=\"keyword\">from</span> <span class=\"string\">'vue-class-component'</span></span><br /><br /><span class=\"line\"><span class=\"comment\">// The @Component decorator indicates the class is a Vue component</span></span><br /><span class=\"line\"><span class=\"meta\">@Component</span>({</span><br /><span class=\"line\">  <span class=\"comment\">// All component options are allowed in here</span></span><br /><span class=\"line\">  template: <span class=\"string\">'&lt;button @click=\"onClick\"&gt;Click!&lt;/button&gt;'</span></span><br /><span class=\"line\">})</span><br /><span class=\"line\"><span class=\"keyword\">export</span> <span class=\"keyword\">default</span> <span class=\"keyword\">class</span> MyComponent <span class=\"keyword\">extends</span> Vue {</span><br /><span class=\"line\">  <span class=\"comment\">// Initial data can be declared as instance properties</span></span><br /><span class=\"line\">  message: <span class=\"built_in\">string</span> = <span class=\"string\">'Hello!'</span></span><br /><br /><span class=\"line\">  <span class=\"comment\">// Component methods can be declared as instance methods</span></span><br /><span class=\"line\">  onClick (): <span class=\"built_in\">void</span> {</span><br /><span class=\"line\">    <span class=\"built_in\">window</span>.alert(<span class=\"keyword\">this</span>.message)</span><br /><span class=\"line\">  }</span><br /><span class=\"line\">}</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<h2 id=\"Augmenting-Types-for-Use-with-Plugins\"><a class=\"headerlink\" title=\"Augmenting Types for Use with Plugins\" href=\"https://vuejs.org/v2/guide/typescript.html#Augmenting-Types-for-Use-with-Plugins\" data-scroll=\"\">Augmenting Types for Use with Plugins</a></h2>\n" +
+                    "<p>Plugins may add to Vue&rsquo;s global/instance properties and component options. In these cases, type declarations are needed to make plugins compile in TypeScript. Fortunately, there&rsquo;s a TypeScript feature to augment existing types called&nbsp;<a href=\"https://www.typescriptlang.org/docs/handbook/declaration-merging.html#module-augmentation\" target=\"_blank\" rel=\"noopener\">module augmentation</a>.</p>\n" +
+                    "<p>For example, to declare an instance property&nbsp;<code>$myProperty</code>&nbsp;with type&nbsp;<code>string</code>:</p>\n" +
+                    "<figure class=\"highlight ts\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"comment\">// 1. Make sure to import 'vue' before declaring augmented types</span></span><br /><span class=\"line\"><span class=\"keyword\">import</span> Vue <span class=\"keyword\">from</span> <span class=\"string\">'vue'</span></span><br /><br /><span class=\"line\"><span class=\"comment\">// 2. Specify a file with the types you want to augment</span></span><br /><span class=\"line\"><span class=\"comment\">//    Vue has the constructor type in types/vue.d.ts</span></span><br /><span class=\"line\"><span class=\"keyword\">declare</span> <span class=\"keyword\">module</span> 'vue/types/vue' {</span><br /><span class=\"line\">  <span class=\"comment\">// 3. Declare augmentation for Vue</span></span><br /><span class=\"line\">  <span class=\"keyword\">interface</span> Vue {</span><br /><span class=\"line\">    $myProperty: <span class=\"built_in\">string</span></span><br /><span class=\"line\">  }</span><br /><span class=\"line\">}</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>After including the above code as a declaration file (like&nbsp;<code>my-property.d.ts</code>) in your project, you can use&nbsp;<code>$myProperty</code>&nbsp;on a Vue instance.</p>\n" +
+                    "<figure class=\"highlight ts\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"keyword\">var</span> vm = <span class=\"keyword\">new</span> Vue()</span><br /><span class=\"line\"><span class=\"built_in\">console</span>.log(vm.$myProperty) <span class=\"comment\">// This should compile successfully</span></span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>You can also declare additional global properties and component options:</p>\n" +
+                    "<figure class=\"highlight ts\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"keyword\">import</span> Vue <span class=\"keyword\">from</span> <span class=\"string\">'vue'</span></span><br /><br /><span class=\"line\"><span class=\"keyword\">declare</span> <span class=\"keyword\">module</span> 'vue/types/vue' {</span><br /><span class=\"line\">  <span class=\"comment\">// Global properties can be declared</span></span><br /><span class=\"line\">  <span class=\"comment\">// on the `VueConstructor` interface</span></span><br /><span class=\"line\">  <span class=\"keyword\">interface</span> VueConstructor {</span><br /><span class=\"line\">    $myGlobal: <span class=\"built_in\">string</span></span><br /><span class=\"line\">  }</span><br /><span class=\"line\">}</span><br /><br /><span class=\"line\"><span class=\"comment\">// ComponentOptions is declared in types/options.d.ts</span></span><br /><span class=\"line\"><span class=\"keyword\">declare</span> <span class=\"keyword\">module</span> 'vue/types/options' {</span><br /><span class=\"line\">  <span class=\"keyword\">interface</span> ComponentOptions&lt;V <span class=\"keyword\">extends</span> Vue&gt; {</span><br /><span class=\"line\">    myOption?: <span class=\"built_in\">string</span></span><br /><span class=\"line\">  }</span><br /><span class=\"line\">}</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>\n" +
+                    "<p>The above declarations allow the following code to be compiled:</p>\n" +
+                    "<figure class=\"highlight ts\">\n" +
+                    "<table>\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td class=\"code\">\n" +
+                    "<pre><span class=\"line\"><span class=\"comment\">// Global property</span></span><br /><span class=\"line\"><span class=\"built_in\">console</span>.log(Vue.$myGlobal)</span><br /><br /><span class=\"line\"><span class=\"comment\">// Additional component option</span></span><br /><span class=\"line\"><span class=\"keyword\">var</span> vm = <span class=\"keyword\">new</span> Vue({</span><br /><span class=\"line\">  myOption: <span class=\"string\">'Hello'</span></span><br /><span class=\"line\">})</span></pre>\n" +
+                    "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</figure>");
+            sec4Vue2.setLesson(vueJsLesson2);
+            vueJsLesson2.getSections().add(sec4Vue2);
+
 
 
             //Init Role ----------------------------------------------------------------------------------------------------------
@@ -2391,24 +5940,24 @@ public class DataLoader implements CommandLineRunner {
             Lesson savedNodeJsLesson1 = lessonRepository.save(nodeJsLesson1);
             Lesson savedNodeJsLesson2 = lessonRepository.save(nodeJsLesson2);
             Lesson savedNodeJsLesson3 = lessonRepository.save(nodeJsLesson3);
-            Lesson savedNodeJsLesson4 = lessonRepository.save(nodeJsLesson4);
-            Lesson savedNodeJsLesson5 = lessonRepository.save(nodeJsLesson5);
-            Lesson savedNodeJsLesson6 = lessonRepository.save(nodeJsLesson6);
-            Lesson savedNodeJsLesson7 = lessonRepository.save(nodeJsLesson7);
+//            Lesson savedNodeJsLesson4 = lessonRepository.save(nodeJsLesson4);
+//            Lesson savedNodeJsLesson5 = lessonRepository.save(nodeJsLesson5);
+//            Lesson savedNodeJsLesson6 = lessonRepository.save(nodeJsLesson6);
+//            Lesson savedNodeJsLesson7 = lessonRepository.save(nodeJsLesson7);
             Lesson saveReactJsLesson1 = lessonRepository.save(reactJsLesson1);
             Lesson saveReactJsLesson2 = lessonRepository.save(reactJsLesson2);
             Lesson saveReactJsLesson3 = lessonRepository.save(reactJsLesson3);
-            Lesson saveReactJsLesson4 = lessonRepository.save(reactJsLesson4);
-            Lesson saveReactJsLesson5 = lessonRepository.save(reactJsLesson5);
-            Lesson saveReactJsLesson6 = lessonRepository.save(reactJsLesson6);
-            Lesson saveReactJsLesson7 = lessonRepository.save(reactJsLesson7);
+//            Lesson saveReactJsLesson4 = lessonRepository.save(reactJsLesson4);
+//            Lesson saveReactJsLesson5 = lessonRepository.save(reactJsLesson5);
+//            Lesson saveReactJsLesson6 = lessonRepository.save(reactJsLesson6);
+//            Lesson saveReactJsLesson7 = lessonRepository.save(reactJsLesson7);
             Lesson savedVueJsLesson1 = lessonRepository.save(vueJsLesson1);
             Lesson savedVueJsLesson2 = lessonRepository.save(vueJsLesson2);
-            Lesson savedVueJsLesson3 = lessonRepository.save(vueJsLesson3);
-            Lesson savedVueJsLesson4 = lessonRepository.save(vueJsLesson4);
-            Lesson savedVueJsLesson5 = lessonRepository.save(vueJsLesson5);
-            Lesson savedVueJsLesson6 = lessonRepository.save(vueJsLesson6);
-            Lesson savedVueJsLesson7 = lessonRepository.save(vueJsLesson7);
+//            Lesson savedVueJsLesson3 = lessonRepository.save(vueJsLesson3);
+//            Lesson savedVueJsLesson4 = lessonRepository.save(vueJsLesson4);
+//            Lesson savedVueJsLesson5 = lessonRepository.save(vueJsLesson5);
+//            Lesson savedVueJsLesson6 = lessonRepository.save(vueJsLesson6);
+//            Lesson savedVueJsLesson7 = lessonRepository.save(vueJsLesson7);
 
             Lesson savedReactLesson1 = lessonRepository.save(reactJsLesson1);
 
@@ -2537,24 +6086,34 @@ public class DataLoader implements CommandLineRunner {
             Section savedSec1Node1 = sectionRepository.save(sec1Node1);
             Section savedSec3Node1 = sectionRepository.save(sec3Node1);
             Section savedSec1React1 = sectionRepository.save(sec1React1);
+            Section savedSec1Vue1 = sectionRepository.save(sec1Vue1);
+
+            SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+
 
             Student dinhquang = new Student();
             dinhquang.getRoles().add(saved_role_learner);
+            dinhquang.getRoles().add(saved_role_admin);
             dinhquang.setUsername("dinhquang");
             dinhquang.setEncrytedPassword(EncrytedPasswordUtils.encrytePassword("123"));
             dinhquang.setEmail("ledinhquang@gmail.com");
             dinhquang.setName("Lê Đình Quang");
-//          dinhquang.setDob(new Date("03-04-2018"));
+            dinhquang.setDob(format.parse("2009-12-31"));
             dinhquang.setImage(new Image("https://res.cloudinary.com/quanglibrary/image/upload/s--913coQRo--/v1540526988/geek/lisa_ghvqcw.jpg","e07c565e38a2e15b5d04950a41f3ba0004bba8f168cc5e0ab65257b429e166093cdc93e7c5d13a97d4d7c80013e7d75355f21f361dbd7d0256b517af70b350346a997fbdeff9e4efa4bb720b60e619809ae31ce74f6da519304dc16d4bf484652e030f0f79be044eec447c2895efb46afabbf9230d8449e42e56c963836e699ab1707aef5a148348f26d00c3d25b9e17"));
             dinhquang.setSchool("UTE");
 
-            dinhquang.addCourse(saveddockerCourse);
             Student savedDinhQuang = studentRepository.save(dinhquang);
 
             StudentCourse studentCourseDinhquang =new StudentCourse(savedDinhQuang,savedNodeJs);
             studentCourseDinhquang.setCurrentLesson(savedNodeJsLesson1);
             studentCourseDinhquang.setCurrentSection(savedSec3Node1);
             savedDinhQuang.getCourses().add(studentCourseDinhquang);
+
+            StudentCourse studentCourseDinhquangVue =new StudentCourse(savedDinhQuang,savedVueJs);
+            studentCourseDinhquangVue.setCurrentLesson(savedVueJsLesson1);
+            studentCourseDinhquangVue.setCurrentSection(savedSec1Vue1);
+            savedDinhQuang.getCourses().add(studentCourseDinhquangVue);
+
 
             StudentCourse studentCourseDinhquangReact =new StudentCourse(savedDinhQuang,savedReactJS);
             studentCourseDinhquangReact.setCurrentLesson(savedReactLesson1);
@@ -2567,6 +6126,7 @@ public class DataLoader implements CommandLineRunner {
             hongvan.setUsername("hongvan");
             hongvan.setEncrytedPassword(EncrytedPasswordUtils.encrytePassword("123"));
             hongvan.setName("Hồng Vân");
+            hongvan.setDob(format.parse("2009-12-31"));
             hongvan.setEmail("hongvan@gmail.com");
             hongvan.setImage(new Image("https://res.cloudinary.com/quanglibrary/image/upload/s--913coQRo--/v1540526988/geek/lisa_ghvqcw.jpg","e07c565e38a2e15b5d04950a41f3ba0004bba8f168cc5e0ab65257b429e166093cdc93e7c5d13a97d4d7c80013e7d75355f21f361dbd7d0256b517af70b350346a997fbdeff9e4efa4bb720b60e619809ae31ce74f6da519304dc16d4bf484652e030f0f79be044eec447c2895efb46afabbf9230d8449e42e56c963836e699ab1707aef5a148348f26d00c3d25b9e17"));
             hongvan.setSchool("PVS");
@@ -2581,6 +6141,7 @@ public class DataLoader implements CommandLineRunner {
             khanhhoang.setEmail("khanhhoang@gmail.com");
             khanhhoang.setImage(new Image("https://res.cloudinary.com/quanglibrary/image/upload/s--913coQRo--/v1540526988/geek/lisa_ghvqcw.jpg","e07c565e38a2e15b5d04950a41f3ba0004bba8f168cc5e0ab65257b429e166093cdc93e7c5d13a97d4d7c80013e7d75355f21f361dbd7d0256b517af70b350346a997fbdeff9e4efa4bb720b60e619809ae31ce74f6da519304dc16d4bf484652e030f0f79be044eec447c2895efb46afabbf9230d8449e42e56c963836e699ab1707aef5a148348f26d00c3d25b9e17"));
             khanhhoang.setSchool("PVS");
+            khanhhoang.setDob(format.parse("2009-12-31"));
 
 
             Student savedKhanhHoang = studentRepository.save(khanhhoang);

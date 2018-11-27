@@ -1,5 +1,6 @@
 package com.codingmanstudio.courses.api.v1.mapper.implementation;
 
+import com.codingmanstudio.courses.api.v1.dto.Lesson.LessonDTO;
 import com.codingmanstudio.courses.api.v1.dto.Lesson.LessonWithDetailedSectionsDTO;
 import com.codingmanstudio.courses.api.v1.dto.Lesson.StudentLessonWithSectionsDTO;
 import com.codingmanstudio.courses.api.v1.dto.Section.SectionDTO;
@@ -47,6 +48,20 @@ public class LessonMapperImpl implements LessonMapper {
         }
     }
 
+    @Override
+    public LessonDTO lessonToLessonDTO(Lesson lesson) {
+        if (lesson == null) return null;
+        else {
+            LessonDTO lessonDTO = new LessonDTO();
+            lessonDTO.setId(lesson.getId());
+            lessonDTO.setName(lesson.getName());
+            lessonDTO.setDescription(lesson.getDescription());
+            lessonDTO.setOrdinalNumber(lesson.getOrdinalNumber());
+            lessonDTO.setDateCreate(lesson.getDateCreate());
+            lessonDTO.setLastUpdate(lesson.getLastUpdate());
+            return lessonDTO;
+        }
+    }
     private SectionDTO sectionToSectionDTO(Section section) {
         if (section == null) return null;
         else {

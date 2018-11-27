@@ -1,7 +1,9 @@
 package com.codingmanstudio.courses.services.implementation;
 
 import com.codingmanstudio.courses.api.v1.dto.Course.*;
+import com.codingmanstudio.courses.api.v1.dto.Course.Create.CourseCreateDTO;
 import com.codingmanstudio.courses.api.v1.dto.Course.Update.ProgressDTO;
+import com.codingmanstudio.courses.api.v1.dto.Lesson.LessonDTO;
 import com.codingmanstudio.courses.api.v1.dto.Lesson.LessonWithDetailedSectionsDTO;
 import com.codingmanstudio.courses.api.v1.dto.Lesson.StudentLessonWithSectionsDTO;
 import com.codingmanstudio.courses.api.v1.dto.Section.SectionDTO;
@@ -9,17 +11,22 @@ import com.codingmanstudio.courses.api.v1.mapper.CourseMapper;
 import com.codingmanstudio.courses.api.v1.mapper.LessonMapper;
 import com.codingmanstudio.courses.api.v1.mapper.SectionMapper;
 import com.codingmanstudio.courses.domain.*;
+import com.codingmanstudio.courses.exceptions.NoAuthenticationException;
 import com.codingmanstudio.courses.exceptions.ResourceNotFoundException;
 import com.codingmanstudio.courses.repository.*;
 import com.codingmanstudio.courses.services.CourseService;
+import jdk.nashorn.internal.runtime.options.Option;
 import org.springframework.data.domain.*;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
+import java.util.TreeSet;
 import java.util.stream.Collectors;
 
 @Service
@@ -33,8 +40,9 @@ public class CourseServiceImpl implements CourseService {
     private final LessonRepository lessonRepository;
     private final SectionRepository sectionRepository;
     private final SectionMapper sectionMapper;
+    private final InstructorRepository instructorRepository;
 
-    public CourseServiceImpl(CourseRepository courseRepository, CourseMapper courseMapper, CategoryRepository categoryRepository, StudentRepository studentRepository, StudentCourseRepository studentCourseRepository, LessonMapper lessonMapper, LessonRepository lessonRepository, SectionRepository sectionRepository, SectionMapper sectionMapper) {
+    public CourseServiceImpl(CourseRepository courseRepository, CourseMapper courseMapper, CategoryRepository categoryRepository, StudentRepository studentRepository, StudentCourseRepository studentCourseRepository, LessonMapper lessonMapper, LessonRepository lessonRepository, SectionRepository sectionRepository, SectionMapper sectionMapper, InstructorRepository instructorRepository) {
         this.courseRepository = courseRepository;
         this.courseMapper = courseMapper;
         this.categoryRepository = categoryRepository;
@@ -44,6 +52,7 @@ public class CourseServiceImpl implements CourseService {
         this.lessonRepository = lessonRepository;
         this.sectionRepository = sectionRepository;
         this.sectionMapper = sectionMapper;
+        this.instructorRepository = instructorRepository;
     }
 
     private static final String POPUPLAR = "POPULAR";
@@ -151,7 +160,6 @@ public class CourseServiceImpl implements CourseService {
 
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-
         Optional<StudentCourse> studentCourseOptional = studentCourseRepository.findByStudentUsernameAndCourseId(userDetails.getUsername(), course.getId());
         if (!studentCourseOptional.isPresent()) {
             throw new ResourceNotFoundException("User " + userDetails.getUsername() + " or course " + course.getId() + " not found");
@@ -187,34 +195,7 @@ public class CourseServiceImpl implements CourseService {
 
     }
 
-    @Override
-    public SectionDTO getSectionDetail(String sectionId) {
-        Optional<Section> sectionOptional = sectionRepository.findById(sectionId);
-        if (!sectionOptional.isPresent()) {
-            throw new ResourceNotFoundException("Section not found");
-        }
 
-        Section section = sectionOptional.get();
-
-        Optional<Lesson> lessonOptional = lessonRepository.findById(section.getLesson().getId());
-        if (!lessonOptional.isPresent()) {
-            throw new ResourceNotFoundException("Lesson not found");
-        }
-        Lesson lesson = lessonOptional.get();
-
-        Course course = lesson.getCourse();
-
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-
-        Optional<StudentCourse> studentCourseOptional = studentCourseRepository.findByStudentUsernameAndCourseId(userDetails.getUsername(), course.getId());
-        if (!studentCourseOptional.isPresent()) {
-            throw new ResourceNotFoundException("User " + userDetails.getUsername() + " or course " + course.getId() + " not found");
-        }
-
-        return sectionMapper.sectionToSectionDto(section);
-
-    }
 
     @Override
     public StudentCourseDTO changeProgress(ProgressDTO progressDTO) {
@@ -242,10 +223,10 @@ public class CourseServiceImpl implements CourseService {
 
                     StudentCourse studentCourse = studentCourseOptional.get();
                     studentCourse.setCurrentLesson(lesson);
-                    studentCourse.setCurrentSection(lesson.getSections().stream().filter(section -> section.getOrdinalNumber()==1).findAny().orElse(null));
+                    studentCourse.setCurrentSection(lesson.getSections().stream().filter(section -> section.getOrdinalNumber() == 1).findAny().orElse(null));
                     StudentCourse savedStudentCourse = studentCourseRepository.save(studentCourse);
 
-                    System.out.println(savedStudentCourse.getCurrentSection().getId()+"   "+savedStudentCourse.getCurrentLesson().getId());
+                    System.out.println(savedStudentCourse.getCurrentSection().getId() + "   " + savedStudentCourse.getCurrentLesson().getId());
 
                     return courseMapper.courseToStudentCourseDto(savedStudentCourse);
                 } else {
@@ -280,9 +261,52 @@ public class CourseServiceImpl implements CourseService {
             studentCourse.setCurrentLesson(lesson);
             studentCourse.setCurrentSection(section);
             StudentCourse savedStudentCourse = studentCourseRepository.save(studentCourse);
-            System.out.println(savedStudentCourse.getCurrentSection().getId()+"   "+savedStudentCourse.getCurrentLesson().getId());
+            System.out.println(savedStudentCourse.getCurrentSection().getId() + "   " + savedStudentCourse.getCurrentLesson().getId());
             return courseMapper.courseToStudentCourseDto(savedStudentCourse);
         }
     }
+
+    @Override
+    public List<CourseWithoutInstructorDTO> getListCourseManagement() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+        if (userDetails.getAuthorities().contains(new SimpleGrantedAuthority("ROLE_ADMIN"))) {
+            return courseRepository.findAll().stream().map(courseMapper::courseToCourseWithoutInstructorDto).collect(Collectors.toList());
+        } else {
+            Optional<Instructor> instructorOptional = instructorRepository.findByUsername(userDetails.getUsername());
+            if (!instructorOptional.isPresent()) {
+                throw new ResourceNotFoundException("Instructor " + userDetails.getUsername() + " not found");
+            }
+            return instructorOptional.get().getCourses().stream().map(courseMapper::courseToCourseWithoutInstructorDto).collect(Collectors.toList());
+        }
+    }
+
+    @Override
+    public CourseDetailDTO createCourse(CourseCreateDTO courseCreateDTO) {
+
+        Course course = courseMapper.courseCreateDTOToCourse(courseCreateDTO);
+        Optional<Category> categoryOptional = categoryRepository.findById(courseCreateDTO.getCategoryId());
+        if (categoryOptional.isPresent()) {
+            course.setCategory(categoryOptional.get());
+        }
+
+        Course savedCourse = courseRepository.save(course);
+
+
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+        if (userDetails.getAuthorities().contains(new SimpleGrantedAuthority("ROLE_INSTRUCTOR"))) {
+            Optional<Instructor> optionalInstructor = instructorRepository.findByUsername(userDetails.getUsername());
+            if (optionalInstructor.isPresent()) {
+                Instructor instructor = optionalInstructor.get();
+                instructor.getCourses().add(savedCourse);
+                instructorRepository.save(instructor);
+            }
+        }
+
+        return courseMapper.courseToCourseDetailDto(savedCourse);
+    }
+
+
 
 }

@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Date;
+
 @Getter
 @Setter
 @AllArgsConstructor
@@ -15,7 +17,8 @@ public class SectionWithoutContentDTO implements Comparable<SectionWithoutConten
     private String id;
     private int ordinalNumber;
     private String description;
-
+    private Date dateCreate;
+    private Date lastUpdate;
     @Override
     public int compareTo(SectionWithoutContentDTO o) {
         return Integer.compare(this.getOrdinalNumber(),o.getOrdinalNumber());

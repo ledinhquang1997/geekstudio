@@ -7,6 +7,7 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
+import java.util.Date;
 
 @Setter
 @Getter
@@ -20,6 +21,10 @@ public class Section {
     private int ordinalNumber;
     
     private String description;
+
+    private Date dateCreated = new Date();
+
+    private Date lastUpdate = new Date();
 
     @Lob
     private String content;

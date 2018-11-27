@@ -1,6 +1,7 @@
 package com.codingmanstudio.courses.api.v1.mapper;
 
 import com.codingmanstudio.courses.api.v1.dto.Course.*;
+import com.codingmanstudio.courses.api.v1.dto.Course.Create.CourseCreateDTO;
 import com.codingmanstudio.courses.domain.Course;
 import com.codingmanstudio.courses.domain.StudentCourse;
 
@@ -12,4 +13,5 @@ public interface CourseMapper {
     StudentCourseDTO courseToStudentCourseDto(StudentCourse studentCourse);
     StudentCourseWithLessonsDTO courseToStudentCourseWithLessonsDto(StudentCourse studentCourse);
     CourseWithLessonsDTO courseToCourseWithLessonsDto(Course course);
+    Course courseCreateDTOToCourse(CourseCreateDTO courseCreateDTO);
 }

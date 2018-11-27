@@ -7,6 +7,7 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -26,6 +27,10 @@ public class Lesson {
 
     @Lob
     private String description;
+
+    private Date dateCreate = new Date();
+
+    private Date lastUpdate = new Date();
 
     @ManyToOne(cascade = CascadeType.PERSIST)
     private Course course;

@@ -44,8 +44,8 @@ public class Course {
 
 
     @Max(5)
-    @Min(1)
-    private double rating;
+    @Min(0)
+    private double rating = 0;
 
     @Embedded
     private Image image;

@@ -22,4 +22,6 @@ public class LessonController {
     public LessonWithDetailedSectionsDTO getLessonWithSections(@PathVariable String id){
         return courseService.getLessonWithDetailedSections(id);
     }
+
+
 }

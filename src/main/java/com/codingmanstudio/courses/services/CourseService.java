@@ -1,12 +1,15 @@
 package com.codingmanstudio.courses.services;
 
 import com.codingmanstudio.courses.api.v1.dto.Course.*;
+import com.codingmanstudio.courses.api.v1.dto.Course.Create.CourseCreateDTO;
 import com.codingmanstudio.courses.api.v1.dto.Course.Update.ProgressDTO;
+import com.codingmanstudio.courses.api.v1.dto.Lesson.LessonDTO;
 import com.codingmanstudio.courses.api.v1.dto.Lesson.LessonWithDetailedSectionsDTO;
 import com.codingmanstudio.courses.api.v1.dto.Lesson.StudentLessonWithSectionsDTO;
 import com.codingmanstudio.courses.api.v1.dto.Section.SectionDTO;
 
 import java.util.List;
+import java.util.TreeSet;
 
 public interface CourseService {
     ListCourseDTO getAllCourses();
@@ -20,6 +23,7 @@ public interface CourseService {
     StudentLessonWithSectionsDTO getLessonWithSections(String lessonId);
     CourseWithLessonsDTO getCourseWithLessons(String courseId);
     LessonWithDetailedSectionsDTO getLessonWithDetailedSections(String lessonId);
-    SectionDTO getSectionDetail(String sectionId);
     StudentCourseDTO changeProgress(ProgressDTO progressDTO);
+    List<CourseWithoutInstructorDTO> getListCourseManagement();
+    CourseDetailDTO createCourse(CourseCreateDTO courseCreateDTO);
 }

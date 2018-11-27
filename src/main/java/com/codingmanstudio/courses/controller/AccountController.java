@@ -6,9 +6,9 @@ import com.codingmanstudio.courses.api.v1.dto.Course.Update.ProgressDTO;
 import com.codingmanstudio.courses.api.v1.dto.Lesson.StudentLessonWithSectionsDTO;
 import com.codingmanstudio.courses.api.v1.dto.Section.SectionDTO;
 import com.codingmanstudio.courses.api.v1.dto.Student.StudentDTO;
-import com.codingmanstudio.courses.domain.Student;
 import com.codingmanstudio.courses.services.AccountService;
 import com.codingmanstudio.courses.services.CourseService;
+import com.codingmanstudio.courses.services.SectionService;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -23,10 +23,12 @@ import java.util.List;
 public class AccountController {
     private final AccountService accountService;
     private final CourseService courseService;
+    private final SectionService sectionService;
 
-    public AccountController(AccountService accountService, CourseService courseService) {
+    public AccountController(AccountService accountService, CourseService courseService, SectionService sectionService) {
         this.accountService = accountService;
         this.courseService = courseService;
+        this.sectionService = sectionService;
     }
 
     @GetMapping({"/{username}"})
@@ -85,7 +87,7 @@ public class AccountController {
     @GetMapping("/section/{sectionId}")
     @ResponseStatus(HttpStatus.OK)
     public SectionDTO getSectionDetail(@PathVariable String sectionId){
-        return courseService.getSectionDetail(sectionId);
+        return sectionService.getSectionDetail(sectionId);
     }
 
 
@@ -94,4 +96,5 @@ public class AccountController {
     public StudentCourseDTO changeProgress(@RequestBody ProgressDTO progressDTO){
         return courseService.changeProgress(progressDTO);
     }
+
 }

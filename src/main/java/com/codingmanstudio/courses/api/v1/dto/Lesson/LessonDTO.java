@@ -7,6 +7,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Date;
+
 
 @Getter
 @Setter
@@ -19,6 +21,8 @@ public class LessonDTO implements Comparable<LessonDTO>{
     private int ordinalNumber;
     private String name;
     private String description;
+    private Date dateCreate;
+    private Date lastUpdate;
 
     @Override
     public int compareTo(LessonDTO o) {

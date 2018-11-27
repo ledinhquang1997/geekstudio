@@ -2,15 +2,16 @@ package com.codingmanstudio.courses.api.v1.mapper.implementation;
 
 import com.codingmanstudio.courses.api.v1.dto.Category.CategoryDTO;
 import com.codingmanstudio.courses.api.v1.dto.Course.*;
+import com.codingmanstudio.courses.api.v1.dto.Course.Create.CourseCreateDTO;
 import com.codingmanstudio.courses.api.v1.dto.Instructor.InstructorDTO;
 import com.codingmanstudio.courses.api.v1.dto.Lesson.LessonDTO;
 import com.codingmanstudio.courses.api.v1.mapper.CourseMapper;
+import com.codingmanstudio.courses.api.v1.mapper.ImageMapper;
 import com.codingmanstudio.courses.api.v1.mapper.InstructorMapper;
 import com.codingmanstudio.courses.domain.*;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.stream.Collectors;
@@ -18,9 +19,10 @@ import java.util.stream.Collectors;
 @Component
 public class CourseMapperImpl implements CourseMapper {
     private final InstructorMapper instructorMapper;
-
-    public CourseMapperImpl(InstructorMapper instructorMapper) {
+    private final ImageMapper imageMapper;
+    public CourseMapperImpl(InstructorMapper instructorMapper, ImageMapper imageMapper) {
         this.instructorMapper = instructorMapper;
+        this.imageMapper = imageMapper;
     }
 
     @Override
@@ -69,6 +71,7 @@ public class CourseMapperImpl implements CourseMapper {
             courseDetailDTO.setName(course.getName());
             courseDetailDTO.setDescription(course.getDescription());
             courseDetailDTO.setCost(course.getCost());
+            courseDetailDTO.setCategory(this.categoryToCategoryDto(course.getCategory()));
             courseDetailDTO.setAmountStudent(course.getAmountStudent());
             courseDetailDTO.setRating(course.getRating());
             courseDetailDTO.setImage(course.getImage().getUrl());
@@ -162,6 +165,23 @@ public class CourseMapperImpl implements CourseMapper {
             courseWithLessonsDTO.setInstructors(this.instructorSetToInstructorDTOSet(course.getInstructors()));
             courseWithLessonsDTO.setLessons(this.lessonSetToLessonDTOSet(course.getLessons()));
             return courseWithLessonsDTO;
+        }
+    }
+
+    @Override
+    public Course courseCreateDTOToCourse(CourseCreateDTO courseCreateDTO) {
+        if(courseCreateDTO==null) return null;
+        else {
+            Course course = new Course();
+            course.setName(courseCreateDTO.getName());
+            course.setDescription(courseCreateDTO.getDescription());
+            course.setDescriptionDetail(courseCreateDTO.getDescriptionDetail());
+            course.setCost(courseCreateDTO.getCost());
+            course.setContentSummary(courseCreateDTO.getContentSummary());
+            course.setRequirements(courseCreateDTO.getRequirements());
+            course.setImage(imageMapper.imageDTOToImage(courseCreateDTO.getImage()));
+            course.setDateCreate(courseCreateDTO.getDateCreate());
+            return course;
         }
     }
 
