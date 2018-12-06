@@ -1,6 +1,7 @@
 package com.codingmanstudio.courses.controller;
 
 import com.codingmanstudio.courses.api.v1.dto.Lesson.LessonDTO;
+import com.codingmanstudio.courses.api.v1.dto.Lesson.LessonUpdateDTO;
 import com.codingmanstudio.courses.services.CourseService;
 import com.codingmanstudio.courses.services.LessonService;
 import org.springframework.http.HttpStatus;
@@ -35,6 +36,12 @@ public class LessonManagementController {
         return lessonService.getLesson(lessonId);
     }
 
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_INSTRUCTOR')")
+    @ResponseStatus(HttpStatus.OK)
+    @PutMapping("/")
+    public LessonDTO updateLesson(@RequestBody LessonUpdateDTO lessonUpdateDTO) {
+        return lessonService.updateLesson(lessonUpdateDTO);
+    }
 
 }
 

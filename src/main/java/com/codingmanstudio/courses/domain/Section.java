@@ -29,6 +29,7 @@ public class Section {
     @Lob
     private String content;
 
+
     @ManyToOne(cascade = CascadeType.PERSIST)
     private Lesson lesson;
 }

@@ -10,6 +10,7 @@ import com.codingmanstudio.courses.services.AccountService;
 import com.codingmanstudio.courses.services.CourseService;
 import com.codingmanstudio.courses.services.SectionService;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -84,6 +85,7 @@ public class AccountController {
         return courseService.getLessonWithSections(lessonId);
     }
 
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_INSTRUCTOR','ROLE_STUDENT')")
     @GetMapping("/section/{sectionId}")
     @ResponseStatus(HttpStatus.OK)
     public SectionDTO getSectionDetail(@PathVariable String sectionId){

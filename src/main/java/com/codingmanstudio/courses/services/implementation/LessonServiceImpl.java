@@ -1,10 +1,12 @@
 package com.codingmanstudio.courses.services.implementation;
 
 import com.codingmanstudio.courses.api.v1.dto.Lesson.LessonDTO;
+import com.codingmanstudio.courses.api.v1.dto.Lesson.LessonUpdateDTO;
 import com.codingmanstudio.courses.api.v1.mapper.LessonMapper;
 import com.codingmanstudio.courses.domain.Course;
 import com.codingmanstudio.courses.domain.Instructor;
 import com.codingmanstudio.courses.domain.Lesson;
+import com.codingmanstudio.courses.domain.StudentCourse;
 import com.codingmanstudio.courses.exceptions.NoAuthenticationException;
 import com.codingmanstudio.courses.exceptions.ResourceNotFoundException;
 import com.codingmanstudio.courses.repository.CourseRepository;
@@ -84,5 +86,44 @@ public class LessonServiceImpl implements LessonService {
                 }
             }
         return lessonMapper.lessonToLessonDTO(lessonOptional.get());
+    }
+
+    @Override
+    public LessonDTO updateLesson(LessonUpdateDTO lessonUpdateDTO) {
+        if(lessonUpdateDTO==null) return  null;
+        Optional<Lesson> lessonOptional = lessonRepository.findById(lessonUpdateDTO.getId());
+        if(!lessonOptional.isPresent()){
+            throw new ResourceNotFoundException("Lesson "+lessonUpdateDTO.getId()+" not found");
+        }
+        Lesson lesson = lessonOptional.get();
+        Course course = lesson.getCourse();
+
+        checkAuthenticate(course);
+
+        lesson.setName(lessonUpdateDTO.getName());
+        lesson.setDescription(lessonUpdateDTO.getDescription());
+
+        Lesson savedLesson = lessonRepository.save(lesson);
+
+        return lessonMapper.lessonToLessonDTO(savedLesson);
+    }
+
+    void checkAuthenticate(Course course) {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+        if(userDetails.getAuthorities().contains(new SimpleGrantedAuthority("ROLE_ADMIN"))) return ;
+
+        if (userDetails.getAuthorities().contains(new SimpleGrantedAuthority("ROLE_INSTRUCTOR"))) {
+            Optional<Instructor> optionalInstructor = instructorRepository.findByUsername(userDetails.getUsername());
+            if (!optionalInstructor.isPresent()) {
+                throw new ResourceNotFoundException("Instructor " + userDetails.getUsername() + " not found");
+            }
+            Instructor instructor = optionalInstructor.get();
+            if (!instructor.getCourses().contains(course)) {
+                throw new ResourceNotFoundException("Instructor " + userDetails.getUsername() + " is not the owner of course " + course.getId());
+            }
+        }
+        else throw new NoAuthenticationException("No role found");
+
     }
 }

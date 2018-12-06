@@ -36,6 +36,30 @@ public class SectionServiceImpl implements SectionService {
         this.instructorRepository = instructorRepository;
     }
 
+    void checkAuthenticate(Course course) {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+        if(userDetails.getAuthorities().contains(new SimpleGrantedAuthority("ROLE_ADMIN"))) return ;
+
+        if (userDetails.getAuthorities().contains(new SimpleGrantedAuthority("ROLE_INSTRUCTOR"))) {
+            Optional<Instructor> optionalInstructor = instructorRepository.findByUsername(userDetails.getUsername());
+            if (!optionalInstructor.isPresent()) {
+                throw new ResourceNotFoundException("Instructor " + userDetails.getUsername() + " not found");
+            }
+            Instructor instructor = optionalInstructor.get();
+            if (!instructor.getCourses().contains(course)) {
+                throw new ResourceNotFoundException("Instructor " + userDetails.getUsername() + " is not the owner of course " + course.getId());
+            }
+        } else if (userDetails.getAuthorities().contains(new SimpleGrantedAuthority("ROLE_STUDENT"))) {
+            Optional<StudentCourse> studentCourseOptional = studentCourseRepository.findByStudentUsernameAndCourseId(userDetails.getUsername(), course.getId());
+            if (!studentCourseOptional.isPresent()) {
+                throw new ResourceNotFoundException("Student " + userDetails.getUsername() + " is not the owner of course " + course.getId());
+            }
+        }
+        else throw new NoAuthenticationException("No role found");
+
+    }
+
     @Override
     public SectionDTO getSectionDetail(String sectionId) {
         Optional<Section> sectionOptional = sectionRepository.findById(sectionId);
@@ -53,13 +77,26 @@ public class SectionServiceImpl implements SectionService {
 
         Course course = lesson.getCourse();
 
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-
-        Optional<StudentCourse> studentCourseOptional = studentCourseRepository.findByStudentUsernameAndCourseId(userDetails.getUsername(), course.getId());
-        if (!studentCourseOptional.isPresent()) {
-            throw new ResourceNotFoundException("User " + userDetails.getUsername() + " or course " + course.getId() + " not found");
-        }
+        checkAuthenticate(course);
+//            Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+//            UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+//
+//            if (userDetails.getAuthorities().contains(new SimpleGrantedAuthority("ROLE_INSTRUCTOR"))) {
+//                Optional<Instructor> optionalInstructor = instructorRepository.findByUsername(userDetails.getUsername());
+//                if (!optionalInstructor.isPresent()) {
+//                    throw new ResourceNotFoundException("Instructor " + userDetails.getUsername() + " not found");
+//                }
+//                Instructor instructor = optionalInstructor.get();
+//                if (!instructor.getCourses().contains(course)) {
+//                    throw new NoAuthenticationException("Instructor doesn ")
+//                }
+//
+//            }
+//
+//            Optional<StudentCourse> studentCourseOptional = studentCourseRepository.findByStudentUsernameAndCourseId(userDetails.getUsername(), course.getId());
+//            if (!studentCourseOptional.isPresent()) {
+//                throw new ResourceNotFoundException("User " + userDetails.getUsername() + " or course " + course.getId() + " not found");
+//            }
 
         return sectionMapper.sectionToSectionDto(section);
 
