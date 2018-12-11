@@ -29,6 +29,8 @@ public class Section {
     @Lob
     private String content;
 
+    @Embedded
+    private Video video = new Video();
 
     @ManyToOne(cascade = CascadeType.PERSIST)
     private Lesson lesson;

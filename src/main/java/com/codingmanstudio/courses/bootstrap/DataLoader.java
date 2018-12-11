@@ -473,6 +473,7 @@ public class DataLoader implements CommandLineRunner {
             //Init Section ----------------------------------------------------------------------------------------------------------
 
             Section sec1Node1 = new Section();
+            sec1Node1.setVideo(new Video("http://res.cloudinary.com/quanglibrary/video/upload/s--3y5i8gCU--/v1544362858/test/269_Assignment_-_Configure_MySQL_sdy0ht.mp4","871ca78249f624d73c5bf6a7dc555e7be461e341d874bdb75fdeaefe94cb03d2a8b95b7b1edf8e8c217d51a180cce476bcdcb1ec0240c502a404ce1c86112981ec795d2cbc6381d6c9ec3b5fb0782e54943a2ab192d5ec97896a082764200909fcb9017822e684ca710d0e93938eadca4212f8b98cc0690497834224fa3d3fd360b54432889efa67925139e70c4537a9d03fc831b670c817a0374b543033f7dced362ec84ede3854c014e8759ae1db19"));
             sec1Node1.setOrdinalNumber(1);
             sec1Node1.setDescription("Overview");
             sec1Node1.setContent("<p>Google App Engine applications are easy to create, easy to maintain, and easy to scale as your traffic and data storage needs change. With App Engine, there are no servers to maintain. You simply upload your application and it's ready to go.</p>\n" +
@@ -495,6 +496,7 @@ public class DataLoader implements CommandLineRunner {
             nodeJsLesson1.getSections().add(sec1Node1);
 
             Section sec2Node1 = new Section();
+            sec2Node1.setVideo(new Video("https://res.cloudinary.com/quanglibrary/video/upload/s--VwI6pm3y--/v1544358522/test/093_Section_Overview_ie76en.mp4","8f9c54a89679bd1e2125b8d7a4890b29e2d4c40ba86cbbbd5c281b5b39b5f28ca544b5ed2ee0926af9a0433b9377b8b7f02f55362a4396b2be92043d7a2e99d50b28b6574a347aaf1576bc7f4f01240b57f13e511c09c6dd254ca033cd4653caa2c607bef5707a6c2781843d0515d19b94a5410efb007b78620082d498246d5263e765c81fe0979d20155e249c4e34907e0c9906d6aa390876d6c4617be552cf"));
             sec2Node1.setOrdinalNumber(2);
             sec2Node1.setDescription("Setup and Requirements");
             sec2Node1.setContent("<h2><strong>Self-paced environment setup</strong></h2>\n" +
@@ -533,6 +535,7 @@ public class DataLoader implements CommandLineRunner {
             nodeJsLesson1.getSections().add(sec2Node1);
 
             Section sec3Node1 = new Section();
+            sec3Node1.setVideo(new Video("https://res.cloudinary.com/quanglibrary/video/upload/s--G1-Ft7gW--/v1544358751/test/277_Introduction_to_Spring_Data_MongoDB_fiszjl.mp4","5aefb7feed32b3bffaf7b64214db2e5ae0a658369273632a2d1ebc8be291cb75f42df6911765b7550a3d3825c61ec378b64a1f9077ff9448f86176e213f8c3c32f8b84953b89d24a2bda357e9380c36466603e00219e8e466a909183bda5b9b4c3d08d7bca01da19674763d2aece325de85efc5740357846941c079d2f2319f224e7c7f2390beede303695a3fe958e49a2725b3bdd151396690d6b34b6f3bf7cb9a97fee4bb693c6ab4ada1e600e0714d908c36aa64722ef029ecf39880ddb38"));
             sec3Node1.setOrdinalNumber(3);
             sec3Node1.setDescription("Get the Getting Started Example source code");
             sec3Node1.setContent("<p>After Cloud Shell launches, you can use the command line to clone the example source code in the home directory:</p>\n" +
@@ -545,6 +548,7 @@ public class DataLoader implements CommandLineRunner {
 
             Section sec4Node1 = new Section();
             sec4Node1.setOrdinalNumber(4);
+            sec4Node1.setVideo(new Video("http://res.cloudinary.com/quanglibrary/video/upload/s--QOKd62ds--/v1544459584/test/Bai_2_Cai_dat_NodeJS_tren_Linux___Ubuntu_evuwa3.mp4","0c961bb02fad50240b13e699a90c727790b261509c0261a2468739cfa1908cae9881958ece77f1162f72bbf153f51de655654348faebbf538e7dbdcc4af6c7d801f9ef5b145e7f7a364824b052db39e85c6cca0a101956ab49660bba7c91bbdd7901f2dfb62e72ab11b7b53cb0c0c280b73847cd0fff90f921542808803310500391988c2bc02a9d36a4752a4954a4eaf14f637c6754fbd06249e1cb6190cefb73de49a8c0675df4e2b6f7dbf743cc057034b02673a188c8f1d1c76040d1c532"));
             sec4Node1.setDescription("Get the sample code");
             sec4Node1.setContent("<p>In Cloud Shell on the command-line, run the following command to clone the Github repository:</p>\n" +
                     "<pre>git clone https://github.com/googlecodelabs/cloud-nodejs.git</pre>\n" +
