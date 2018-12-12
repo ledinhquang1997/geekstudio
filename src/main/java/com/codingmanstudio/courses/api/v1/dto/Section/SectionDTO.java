@@ -21,7 +21,8 @@ public class SectionDTO implements Comparable<SectionDTO>{
     private String description;
     private String content;
     private String video;
-
+    private String lessonId;
+    private String lessonName;
     @Override
     public int compareTo(SectionDTO o) {
         return Integer.compare(this.getOrdinalNumber(),o.getOrdinalNumber());

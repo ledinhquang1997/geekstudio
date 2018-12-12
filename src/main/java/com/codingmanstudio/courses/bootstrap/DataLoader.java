@@ -88,7 +88,12 @@ public class DataLoader implements CommandLineRunner {
             Course nodeJs = new Course();
             nodeJs.setName("Conquer Node JS");
             nodeJs.setCost(300L);
+            nodeJs.getRequirements().add("Basic JS");
+            nodeJs.getRequirements().add("Basic HTML");
+            nodeJs.getContentSummary().add("Build webservice with NodeJs");
+            nodeJs.getContentSummary().add("Use ExpressJS");
             nodeJs.setRating(1);
+            nodeJs.setDescriptionDetail("<p>Hello world</p>");
             nodeJs.setAmountStudent(303);
             nodeJs.setImage(new Image("https://res.cloudinary.com/quanglibrary/image/upload/s--QReFaFjw--/v1540525483/geek/nodejs1_miaox0.jpg","7009627637e80f12b9def3fe00f955ee4ecad8cc9728367f354517584d1b98ee752abce356a7e326edf26f4c1414318210ced93489ef0d8b7ac167855ee7b62a21dcc5db26f2efc38a64ac759b8558fdc39c081f92b7e55a38341ed67c769ff3585cd2016ab6734e98a2634c7a21e485aa47092bd4c32802167dcc290dd93a0a674efe5782904776338d9dd2850b195f"));
             nodeJs.getTopics().add(savedTopicWebsite);
@@ -110,6 +115,9 @@ public class DataLoader implements CommandLineRunner {
             Course vueJs = new Course();
             vueJs.getTopics().add(savedTopicWebsite);
             vueJs.getTopics().add(savedTopicFrontend);
+            vueJs.getContentSummary().add("Use VueJs proficently");
+            vueJs.getRequirements().add("Basic CSS");
+            vueJs.setDescriptionDetail("Hello vueJS");
             vueJs.setName("Vue JS in real word");
             vueJs.setCost(350L);
             vueJs.setRating(3.4);

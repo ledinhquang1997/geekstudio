@@ -1,5 +1,6 @@
 package com.codingmanstudio.courses.services.implementation;
 
+import com.codingmanstudio.courses.api.v1.dto.Lesson.LessonCreateDTO;
 import com.codingmanstudio.courses.api.v1.dto.Lesson.LessonDTO;
 import com.codingmanstudio.courses.api.v1.dto.Lesson.LessonUpdateDTO;
 import com.codingmanstudio.courses.api.v1.mapper.LessonMapper;
@@ -104,6 +105,28 @@ public class LessonServiceImpl implements LessonService {
         lesson.setDescription(lessonUpdateDTO.getDescription());
 
         Lesson savedLesson = lessonRepository.save(lesson);
+
+        return lessonMapper.lessonToLessonDTO(savedLesson);
+    }
+
+    @Override
+    public LessonDTO createLesson(LessonCreateDTO lessonCreateDTO) {
+        Optional<Course> courseOptional = courseRepository.findById(lessonCreateDTO.getCourseId());
+        if(!courseOptional.isPresent()){
+            throw new ResourceNotFoundException("Course "+ lessonCreateDTO.getCourseId()+ " not found");
+        }
+        Course foundCourse = courseOptional.get();
+        checkAuthenticate(foundCourse);
+
+        Lesson lesson = new Lesson();
+        lesson.setName(lessonCreateDTO.getName());
+        lesson.setDescription(lessonCreateDTO.getDescription());
+        lesson.setOrdinalNumber(foundCourse.getLessons().size()+1);
+        lesson.setCourse(foundCourse);
+        foundCourse.getLessons().add(lesson);
+        Lesson savedLesson = lessonRepository.save(lesson);
+
+        courseRepository.save(foundCourse);
 
         return lessonMapper.lessonToLessonDTO(savedLesson);
     }

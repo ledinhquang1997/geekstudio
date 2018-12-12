@@ -1,4 +1,4 @@
-package com.codingmanstudio.courses.api.v1.dto.Lesson;
+package com.codingmanstudio.courses.api.v1.dto.Section;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
@@ -11,9 +11,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class LessonUpdateDTO {
-    private String id;
-    private String name;
+public class SectionCreateDTO {
     private String description;
-    private String courseId;
+    private String lessonId;
 }

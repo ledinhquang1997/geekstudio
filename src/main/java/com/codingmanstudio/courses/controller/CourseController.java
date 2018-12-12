@@ -63,4 +63,9 @@ public class CourseController {
         return courseService.getCourseWithLessons(id);
     }
 
+    @GetMapping("/search/{name}")
+    @ResponseStatus(HttpStatus.OK)
+    public List<CourseDTO> search (@PathVariable String name){
+        return courseService.search(name);
+    }
 }

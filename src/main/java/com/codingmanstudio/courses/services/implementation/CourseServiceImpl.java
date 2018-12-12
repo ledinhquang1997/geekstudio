@@ -2,12 +2,12 @@ package com.codingmanstudio.courses.services.implementation;
 
 import com.codingmanstudio.courses.api.v1.dto.Course.*;
 import com.codingmanstudio.courses.api.v1.dto.Course.Create.CourseCreateDTO;
+import com.codingmanstudio.courses.api.v1.dto.Course.Update.CourseUpdateDTO;
 import com.codingmanstudio.courses.api.v1.dto.Course.Update.ProgressDTO;
-import com.codingmanstudio.courses.api.v1.dto.Lesson.LessonDTO;
 import com.codingmanstudio.courses.api.v1.dto.Lesson.LessonWithDetailedSectionsDTO;
 import com.codingmanstudio.courses.api.v1.dto.Lesson.StudentLessonWithSectionsDTO;
-import com.codingmanstudio.courses.api.v1.dto.Section.SectionDTO;
 import com.codingmanstudio.courses.api.v1.mapper.CourseMapper;
+import com.codingmanstudio.courses.api.v1.mapper.ImageMapper;
 import com.codingmanstudio.courses.api.v1.mapper.LessonMapper;
 import com.codingmanstudio.courses.api.v1.mapper.SectionMapper;
 import com.codingmanstudio.courses.domain.*;
@@ -15,7 +15,6 @@ import com.codingmanstudio.courses.exceptions.NoAuthenticationException;
 import com.codingmanstudio.courses.exceptions.ResourceNotFoundException;
 import com.codingmanstudio.courses.repository.*;
 import com.codingmanstudio.courses.services.CourseService;
-import jdk.nashorn.internal.runtime.options.Option;
 import org.springframework.data.domain.*;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -25,8 +24,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.Set;
-import java.util.TreeSet;
 import java.util.stream.Collectors;
 
 @Service
@@ -41,8 +38,9 @@ public class CourseServiceImpl implements CourseService {
     private final SectionRepository sectionRepository;
     private final SectionMapper sectionMapper;
     private final InstructorRepository instructorRepository;
+    private final ImageMapper imageMapper;
 
-    public CourseServiceImpl(CourseRepository courseRepository, CourseMapper courseMapper, CategoryRepository categoryRepository, StudentRepository studentRepository, StudentCourseRepository studentCourseRepository, LessonMapper lessonMapper, LessonRepository lessonRepository, SectionRepository sectionRepository, SectionMapper sectionMapper, InstructorRepository instructorRepository) {
+    public CourseServiceImpl(CourseRepository courseRepository, CourseMapper courseMapper, CategoryRepository categoryRepository, StudentRepository studentRepository, StudentCourseRepository studentCourseRepository, LessonMapper lessonMapper, LessonRepository lessonRepository, SectionRepository sectionRepository, SectionMapper sectionMapper, InstructorRepository instructorRepository, ImageMapper imageMapper) {
         this.courseRepository = courseRepository;
         this.courseMapper = courseMapper;
         this.categoryRepository = categoryRepository;
@@ -53,6 +51,7 @@ public class CourseServiceImpl implements CourseService {
         this.sectionRepository = sectionRepository;
         this.sectionMapper = sectionMapper;
         this.instructorRepository = instructorRepository;
+        this.imageMapper = imageMapper;
     }
 
     private static final String POPUPLAR = "POPULAR";
@@ -196,7 +195,6 @@ public class CourseServiceImpl implements CourseService {
     }
 
 
-
     @Override
     public StudentCourseDTO changeProgress(ProgressDTO progressDTO) {
         if (progressDTO == null) {
@@ -307,6 +305,59 @@ public class CourseServiceImpl implements CourseService {
         return courseMapper.courseToCourseDetailDto(savedCourse);
     }
 
+    @Override
+    public CourseDetailDTO updateCourse(CourseUpdateDTO courseUpdateDTO) {
+        if (courseUpdateDTO == null) return null;
+        Optional<Course> courseOptional = courseRepository.findById(courseUpdateDTO.getId());
+        if (!courseOptional.isPresent()) {
+            throw new ResourceNotFoundException("Course " + courseUpdateDTO.getId() + " not found");
+        }
+        Course foundCourse = courseOptional.get();
+        checkAuthenticate(foundCourse);
 
+        foundCourse.setName(courseUpdateDTO.getName());
+        foundCourse.setDescription(courseUpdateDTO.getDescription());
+        foundCourse.setDescriptionDetail(courseUpdateDTO.getDescriptionDetail());
+        foundCourse.setCost(courseUpdateDTO.getCost());
+        foundCourse.setContentSummary(courseUpdateDTO.getContentSummary());
+        foundCourse.setRequirements(courseUpdateDTO.getRequirements());
+        foundCourse.setImage(imageMapper.imageDTOToImage(courseUpdateDTO.getImage()));
+
+        Optional<Category> categoryOptional = categoryRepository.findById(courseUpdateDTO.getCategoryId());
+        if (categoryOptional.isPresent()) {
+            foundCourse.setCategory(categoryOptional.get());
+        }
+
+        Course savedCourse = courseRepository.save(foundCourse);
+        return courseMapper.courseToCourseDetailDto(savedCourse);
+    }
+
+    @Override
+    public List<CourseDTO> search(String name) {
+        return courseRepository.findByNameIsContaining(name).stream().map(courseMapper::courseToCourseDto).collect(Collectors.toList());
+    }
+
+    void checkAuthenticate(Course course) {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+        if (userDetails.getAuthorities().contains(new SimpleGrantedAuthority("ROLE_ADMIN"))) return;
+
+        if (userDetails.getAuthorities().contains(new SimpleGrantedAuthority("ROLE_INSTRUCTOR"))) {
+            Optional<Instructor> optionalInstructor = instructorRepository.findByUsername(userDetails.getUsername());
+            if (!optionalInstructor.isPresent()) {
+                throw new ResourceNotFoundException("Instructor " + userDetails.getUsername() + " not found");
+            }
+            Instructor instructor = optionalInstructor.get();
+            if (!instructor.getCourses().contains(course)) {
+                throw new ResourceNotFoundException("Instructor " + userDetails.getUsername() + " is not the owner of course " + course.getId());
+            }
+        } else if (userDetails.getAuthorities().contains(new SimpleGrantedAuthority("ROLE_STUDENT"))) {
+            Optional<StudentCourse> studentCourseOptional = studentCourseRepository.findByStudentUsernameAndCourseId(userDetails.getUsername(), course.getId());
+            if (!studentCourseOptional.isPresent()) {
+                throw new ResourceNotFoundException("Student " + userDetails.getUsername() + " is not the owner of course " + course.getId());
+            }
+        } else throw new NoAuthenticationException("No role found");
+
+    }
 
 }

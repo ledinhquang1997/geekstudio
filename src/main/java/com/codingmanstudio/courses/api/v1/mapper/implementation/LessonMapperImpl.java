@@ -59,6 +59,8 @@ public class LessonMapperImpl implements LessonMapper {
             lessonDTO.setOrdinalNumber(lesson.getOrdinalNumber());
             lessonDTO.setDateCreate(lesson.getDateCreate());
             lessonDTO.setLastUpdate(lesson.getLastUpdate());
+            lessonDTO.setCourseId(lesson.getCourse().getId());
+            lessonDTO.setCourseName(lesson.getCourse().getName());
             return lessonDTO;
         }
     }

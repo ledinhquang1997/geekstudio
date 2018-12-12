@@ -1,5 +1,6 @@
 package com.codingmanstudio.courses.services;
 
+import com.codingmanstudio.courses.api.v1.dto.Section.SectionCreateDTO;
 import com.codingmanstudio.courses.api.v1.dto.Section.SectionDTO;
 import com.codingmanstudio.courses.api.v1.dto.Section.SectionUpdateDTO;
 import com.codingmanstudio.courses.api.v1.dto.Section.SectionWithoutContentDTO;
@@ -12,4 +13,5 @@ public interface SectionService {
     TreeSet<SectionWithoutContentDTO> getListSections(String lessonId);
     SectionUpdateDTO getSectionUpdate(String sectionId);
     SectionUpdateDTO updateSection(SectionUpdateDTO sectionUpdateDTO);
+    SectionDTO createSection(SectionCreateDTO sectionCreateDTO);
 }

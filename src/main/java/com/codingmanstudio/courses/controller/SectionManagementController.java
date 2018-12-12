@@ -1,6 +1,8 @@
 package com.codingmanstudio.courses.controller;
 
 import com.codingmanstudio.courses.api.v1.dto.Lesson.LessonDTO;
+import com.codingmanstudio.courses.api.v1.dto.Section.SectionCreateDTO;
+import com.codingmanstudio.courses.api.v1.dto.Section.SectionDTO;
 import com.codingmanstudio.courses.api.v1.dto.Section.SectionUpdateDTO;
 import com.codingmanstudio.courses.api.v1.dto.Section.SectionWithoutContentDTO;
 import com.codingmanstudio.courses.domain.Section;
@@ -40,6 +42,13 @@ public class SectionManagementController {
     @PutMapping("/")
     public SectionUpdateDTO updateSection(@RequestBody SectionUpdateDTO sectionUpdateDTO) {
         return sectionService.updateSection(sectionUpdateDTO);
+    }
+
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_INSTRUCTOR')")
+    @ResponseStatus(HttpStatus.OK)
+    @PostMapping("/")
+    public SectionDTO createSection(@RequestBody SectionCreateDTO sectionCreateDTO) {
+        return sectionService.createSection(sectionCreateDTO);
     }
 
 }

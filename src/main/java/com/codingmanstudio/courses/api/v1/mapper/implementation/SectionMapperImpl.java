@@ -27,6 +27,8 @@ public class SectionMapperImpl implements SectionMapper {
             sectionDTO.setDescription(section.getDescription());
             sectionDTO.setContent(section.getContent());
             sectionDTO.setOrdinalNumber(section.getOrdinalNumber());
+            sectionDTO.setLessonId(section.getLesson().getId());
+            sectionDTO.setLessonName(section.getLesson().getName());
             if (section.getVideo() != null)
                 sectionDTO.setVideo(section.getVideo().getUrl());
             return sectionDTO;

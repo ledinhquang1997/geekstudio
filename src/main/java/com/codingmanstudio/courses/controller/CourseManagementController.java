@@ -3,6 +3,7 @@ package com.codingmanstudio.courses.controller;
 import com.codingmanstudio.courses.api.v1.dto.Course.CourseDetailDTO;
 import com.codingmanstudio.courses.api.v1.dto.Course.CourseWithoutInstructorDTO;
 import com.codingmanstudio.courses.api.v1.dto.Course.Create.CourseCreateDTO;
+import com.codingmanstudio.courses.api.v1.dto.Course.Update.CourseUpdateDTO;
 import com.codingmanstudio.courses.api.v1.dto.Student.StudentWithoutCourseDTO;
 import com.codingmanstudio.courses.services.CourseService;
 import org.springframework.http.HttpStatus;
@@ -35,5 +36,14 @@ public class CourseManagementController {
     public CourseDetailDTO createCourse(@RequestBody CourseCreateDTO courseCreateDTO) {
         return courseService.createCourse(courseCreateDTO);
     }
+
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_INSTRUCTOR')")
+    @ResponseStatus(HttpStatus.CREATED)
+    @PutMapping ({"/update", "/update/"})
+    public CourseDetailDTO updateCourse(@RequestBody CourseUpdateDTO courseUpdateDTO) {
+        return courseService.updateCourse(courseUpdateDTO);
+    }
+
+
 
 }

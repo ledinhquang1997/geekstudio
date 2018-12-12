@@ -1,5 +1,6 @@
 package com.codingmanstudio.courses.controller;
 
+import com.codingmanstudio.courses.api.v1.dto.Lesson.LessonCreateDTO;
 import com.codingmanstudio.courses.api.v1.dto.Lesson.LessonDTO;
 import com.codingmanstudio.courses.api.v1.dto.Lesson.LessonUpdateDTO;
 import com.codingmanstudio.courses.services.CourseService;
@@ -42,6 +43,16 @@ public class LessonManagementController {
     public LessonDTO updateLesson(@RequestBody LessonUpdateDTO lessonUpdateDTO) {
         return lessonService.updateLesson(lessonUpdateDTO);
     }
+
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_INSTRUCTOR')")
+    @ResponseStatus(HttpStatus.OK)
+    @PostMapping("/")
+    public LessonDTO createLesson(@RequestBody LessonCreateDTO lessonCreateDTO) {
+        return lessonService.createLesson(lessonCreateDTO);
+    }
+
+
+
 
 }
 

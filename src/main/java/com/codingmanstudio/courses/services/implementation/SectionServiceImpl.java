@@ -1,5 +1,6 @@
 package com.codingmanstudio.courses.services.implementation;
 
+import com.codingmanstudio.courses.api.v1.dto.Section.SectionCreateDTO;
 import com.codingmanstudio.courses.api.v1.dto.Section.SectionDTO;
 import com.codingmanstudio.courses.api.v1.dto.Section.SectionUpdateDTO;
 import com.codingmanstudio.courses.api.v1.dto.Section.SectionWithoutContentDTO;
@@ -156,9 +157,9 @@ public class SectionServiceImpl implements SectionService {
     @Override
     public SectionUpdateDTO updateSection(SectionUpdateDTO sectionUpdateDTO) {
         if (sectionUpdateDTO == null) return null;
-        Optional<Section> optionalSection= sectionRepository.findById(sectionUpdateDTO.getId());
-        if(!optionalSection.isPresent()){
-            throw new ResourceNotFoundException("Section "+sectionUpdateDTO.getId() +" not found");
+        Optional<Section> optionalSection = sectionRepository.findById(sectionUpdateDTO.getId());
+        if (!optionalSection.isPresent()) {
+            throw new ResourceNotFoundException("Section " + sectionUpdateDTO.getId() + " not found");
         }
 
         Section foundSection = optionalSection.get();
@@ -171,10 +172,35 @@ public class SectionServiceImpl implements SectionService {
         foundSection.setContent(sectionUpdateDTO.getContent());
         foundSection.setDescription(sectionUpdateDTO.getDescription());
 
-        if(sectionUpdateDTO.getVideo()!=null){
+        if (sectionUpdateDTO.getVideo() != null) {
             foundSection.setVideo(videoMapper.videoDtoToVideo(sectionUpdateDTO.getVideo()));
         }
         foundSection.setLastUpdate(new Date());
         return sectionMapper.sectionToSectionUpdateDto(sectionRepository.save(foundSection));
+    }
+
+    @Override
+    public SectionDTO createSection(SectionCreateDTO sectionCreateDTO) {
+        if (sectionCreateDTO == null) return null;
+        Optional<Lesson> lessonOptional = lessonRepository.findById(sectionCreateDTO.getLessonId());
+        if (!lessonOptional.isPresent()) {
+            throw new ResourceNotFoundException("Lesson " + sectionCreateDTO.getLessonId() + " not found");
+        }
+
+        Lesson lesson = lessonOptional.get();
+        Course course = lesson.getCourse();
+
+        checkAuthenticate(course);
+        Section section = new Section();
+        section.setDescription(sectionCreateDTO.getDescription());
+        section.setOrdinalNumber(lesson.getSections().size()+1);
+        section.setLesson(lesson);
+        lesson.getSections().add(section);
+
+        Section savedSection = sectionRepository.save(section);
+
+        lessonRepository.save(lesson);
+
+        return sectionMapper.sectionToSectionDto(savedSection);
     }
 }
