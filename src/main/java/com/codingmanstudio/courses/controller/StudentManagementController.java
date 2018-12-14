@@ -34,4 +34,11 @@ public class StudentManagementController {
         return studentService.createStudent(studentCreateDTO);
     }
 
+
+    @PreAuthorize("hasRole('ROLE_LEARNER')")
+    @ResponseStatus(HttpStatus.OK)
+    @GetMapping("/addCourse/{courseId}")
+    public StudentDTO addCourse(@PathVariable String courseId){
+        return studentService.addCourse(courseId);
+    }
 }

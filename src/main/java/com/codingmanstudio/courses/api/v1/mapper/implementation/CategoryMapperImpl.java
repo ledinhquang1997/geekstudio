@@ -87,7 +87,7 @@ public class CategoryMapperImpl implements CategoryMapper {
     }
 
     private TreeSet<CourseWithoutInstructorDTO> courseSetToCourseWithCoursesDTOSet(Set<Course> courses){
-        return courses.stream().map(courseMapper::courseToCourseWithoutInstructorDto).collect(Collectors.toCollection(TreeSet::new));
+        return courses.stream().filter(course -> !course.getDeleted()).map(courseMapper::courseToCourseWithoutInstructorDto).collect(Collectors.toCollection(TreeSet::new));
     }
 }
 

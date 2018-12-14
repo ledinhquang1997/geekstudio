@@ -198,7 +198,7 @@ public class CourseMapperImpl implements CourseMapper {
     }
 
     private TreeSet<LessonDTO> lessonSetToLessonDTOSet(Set<Lesson> lessons) {
-        return lessons.stream().map(this::lessonToLessonDTO).collect(Collectors.toCollection(TreeSet::new));
+        return lessons.stream().filter(lesson -> !lesson.getDeleted()).map(this::lessonToLessonDTO).collect(Collectors.toCollection(TreeSet::new));
     }
 
     private CategoryDTO categoryToCategoryDto(Category category) {

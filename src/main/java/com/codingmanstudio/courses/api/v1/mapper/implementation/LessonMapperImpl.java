@@ -79,7 +79,7 @@ public class LessonMapperImpl implements LessonMapper {
     private TreeSet<SectionDTO> sectionSetToSectionDTOTreeSet(Set<Section> sectionSet) {
         if (sectionSet == null) return null;
         else {
-            return sectionSet.stream().map(this::sectionToSectionDTO).collect(Collectors.toCollection(TreeSet::new));
+            return sectionSet.stream().filter(section -> !section.getDeleted()).map(this::sectionToSectionDTO).collect(Collectors.toCollection(TreeSet::new));
         }
     }
 

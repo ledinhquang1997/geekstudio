@@ -52,6 +52,12 @@ public class LessonManagementController {
     }
 
 
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_INSTRUCTOR')")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @DeleteMapping("/delete/{lessonId}")
+    public void deleteLesson(@PathVariable String lessonId) {
+        lessonService.deleteLesson(lessonId);
+    }
 
 
 }

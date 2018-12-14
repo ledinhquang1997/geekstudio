@@ -67,7 +67,7 @@ public class InstructorServiceImpl implements InstructorService {
         }
         Instructor foundInstructor = optionalInstructor.get();
         Pageable pageable = PageRequest.of(page, 4, Sort.Direction.DESC,"amountStudent");
-        return courseRepository.findByInstructors(foundInstructor,pageable).stream()
+        return courseRepository.findByInstructors(foundInstructor,pageable).stream().filter(course -> !course.getDeleted())
                 .map(courseMapper::courseToCourseDto)
                 .collect(Collectors.toList());
 

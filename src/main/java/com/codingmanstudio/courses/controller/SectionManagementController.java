@@ -39,7 +39,7 @@ public class SectionManagementController {
 
     @PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_INSTRUCTOR')")
     @ResponseStatus(HttpStatus.OK)
-    @PutMapping("/")
+    @PutMapping("/update")
     public SectionUpdateDTO updateSection(@RequestBody SectionUpdateDTO sectionUpdateDTO) {
         return sectionService.updateSection(sectionUpdateDTO);
     }
@@ -49,6 +49,13 @@ public class SectionManagementController {
     @PostMapping("/")
     public SectionDTO createSection(@RequestBody SectionCreateDTO sectionCreateDTO) {
         return sectionService.createSection(sectionCreateDTO);
+    }
+
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_INSTRUCTOR')")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @DeleteMapping("/delete/{sectionId}")
+    public void deleteSection(@PathVariable String sectionId) {
+        sectionService.deleteSection(sectionId);
     }
 
 }

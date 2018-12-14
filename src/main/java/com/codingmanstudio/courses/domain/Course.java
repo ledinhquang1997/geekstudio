@@ -42,6 +42,7 @@ public class Course {
     @ElementCollection
     private Set<String> requirements = new HashSet<>();
 
+    private Boolean deleted = false;
 
     @Max(5)
     @Min(0)

@@ -30,4 +30,5 @@ public interface CourseService {
     CourseDetailDTO createCourse(CourseCreateDTO courseCreateDTO);
     CourseDetailDTO updateCourse(CourseUpdateDTO courseUpdateDTO);
     List<CourseDTO> search(String name);
+    void deleteCourse(String courseId);
 }

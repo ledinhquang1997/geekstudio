@@ -14,4 +14,5 @@ public interface SectionService {
     SectionUpdateDTO getSectionUpdate(String sectionId);
     SectionUpdateDTO updateSection(SectionUpdateDTO sectionUpdateDTO);
     SectionDTO createSection(SectionCreateDTO sectionCreateDTO);
+    void deleteSection(String sectionId);
 }

@@ -20,7 +20,7 @@ public class Lesson {
     @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
     private String id;
 
-    private int ordinalNumber;
+    private Integer ordinalNumber;
 
     @NotBlank
     private String name;
@@ -31,6 +31,8 @@ public class Lesson {
     private Date dateCreate = new Date();
 
     private Date lastUpdate = new Date();
+
+    private Boolean deleted = false;
 
     @ManyToOne(cascade = CascadeType.PERSIST)
     private Course course;

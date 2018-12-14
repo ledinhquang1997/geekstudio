@@ -85,7 +85,7 @@ public class AccountController {
         return courseService.getLessonWithSections(lessonId);
     }
 
-    @PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_INSTRUCTOR','ROLE_STUDENT')")
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_INSTRUCTOR','ROLE_LEARNER')")
     @GetMapping("/section/{sectionId}")
     @ResponseStatus(HttpStatus.OK)
     public SectionDTO getSectionDetail(@PathVariable String sectionId){

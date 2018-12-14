@@ -64,7 +64,7 @@ public class CourseServiceImpl implements CourseService {
 
         Page page = courseRepository.findAll(pageable);
         List<CourseDTO> courseDTOs = courseRepository.findAll(pageable)
-                .stream()
+                .stream().filter(course -> !course.getDeleted())
                 .map(courseMapper::courseToCourseDto)
                 .collect(Collectors.toList());
 
@@ -76,18 +76,18 @@ public class CourseServiceImpl implements CourseService {
 
     @Override
     public List<CourseDTO> getBestSellerCourse() {
-        return courseRepository.findTop6ByOrderByAmountStudentDesc().stream()
+        return courseRepository.findTop6ByDeletedIsFalseOrderByAmountStudentDesc().stream()
                 .map(courseMapper::courseToCourseDto).collect(Collectors.toList());
     }
 
     @Override
     public List<CourseDTO> getCourseByCategoryId(String id) {
-        return courseRepository.findTop8ByCategoryIdOrderByAmountStudentDesc(id).stream().map(courseMapper::courseToCourseDto).collect(Collectors.toList());
+        return courseRepository.findTop8ByCategoryIdOrderByAmountStudentDesc(id).stream().filter(course -> !course.getDeleted()).map(courseMapper::courseToCourseDto).collect(Collectors.toList());
     }
 
     @Override
     public List<CourseDTO> getTopRatingCourse() {
-        return courseRepository.findTop8ByOrderByRatingDesc().stream().map(courseMapper::courseToCourseDto).collect(Collectors.toList());
+        return courseRepository.findTop8ByDeletedIsFalseOrderByRatingDesc().stream().filter(course -> !course.getDeleted()).map(courseMapper::courseToCourseDto).collect(Collectors.toList());
     }
 
     @Override
@@ -105,7 +105,7 @@ public class CourseServiceImpl implements CourseService {
         Pageable pageable = PageRequest.of(page, 8, Sort.Direction.DESC, property);
 
         return courseRepository.findByCategoryId(foundCategory.getId(), pageable)
-                .stream()
+                .stream().filter(course -> !course.getDeleted())
                 .map(courseMapper::courseToCourseDto)
                 .collect(Collectors.toList());
     }
@@ -131,7 +131,7 @@ public class CourseServiceImpl implements CourseService {
         ) {
             System.out.println(ac.getCourse().getName() + " " + ac.getLearnerRating());
         }
-        return student.getCourses().stream().map(courseMapper::courseToStudentCourseDto).collect(Collectors.toList());
+        return student.getCourses().stream().filter(course -> !course.getCourse().getDeleted()).map(courseMapper::courseToStudentCourseDto).collect(Collectors.toList());
     }
 
     @Override
@@ -269,13 +269,13 @@ public class CourseServiceImpl implements CourseService {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();
         if (userDetails.getAuthorities().contains(new SimpleGrantedAuthority("ROLE_ADMIN"))) {
-            return courseRepository.findAll().stream().map(courseMapper::courseToCourseWithoutInstructorDto).collect(Collectors.toList());
+            return courseRepository.findAll().stream().filter(course -> !course.getDeleted()).map(courseMapper::courseToCourseWithoutInstructorDto).collect(Collectors.toList());
         } else {
             Optional<Instructor> instructorOptional = instructorRepository.findByUsername(userDetails.getUsername());
             if (!instructorOptional.isPresent()) {
                 throw new ResourceNotFoundException("Instructor " + userDetails.getUsername() + " not found");
             }
-            return instructorOptional.get().getCourses().stream().map(courseMapper::courseToCourseWithoutInstructorDto).collect(Collectors.toList());
+            return instructorOptional.get().getCourses().stream().filter(course -> !course.getDeleted()).map(courseMapper::courseToCourseWithoutInstructorDto).collect(Collectors.toList());
         }
     }
 
@@ -334,7 +334,21 @@ public class CourseServiceImpl implements CourseService {
 
     @Override
     public List<CourseDTO> search(String name) {
-        return courseRepository.findByNameIsContaining(name).stream().map(courseMapper::courseToCourseDto).collect(Collectors.toList());
+        return courseRepository.findByNameIsContaining(name).stream().filter(course -> !course.getDeleted()).map(courseMapper::courseToCourseDto).collect(Collectors.toList());
+    }
+
+    @Override
+    public void deleteCourse(String courseId) {
+        Optional<Course> courseOptional = courseRepository.findById(courseId);
+        if(!courseOptional.isPresent()){
+            throw new ResourceNotFoundException("Course "+courseId+" not found");
+        }
+
+        Course course = courseOptional.get();
+        checkAuthenticate(course);
+
+        course.setDeleted(true);
+        courseRepository.save(course);
     }
 
     void checkAuthenticate(Course course) {

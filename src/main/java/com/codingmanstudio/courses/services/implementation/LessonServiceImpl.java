@@ -20,7 +20,9 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 import java.util.TreeSet;
 import java.util.stream.Collectors;
 
@@ -60,7 +62,7 @@ public class LessonServiceImpl implements LessonService {
             }
 
 
-        return optionalCourse.get().getLessons().stream().map(lessonMapper::lessonToLessonDTO).collect(Collectors.toCollection(TreeSet::new));
+        return optionalCourse.get().getLessons().stream().filter(lesson -> !lesson.getDeleted()).map(lessonMapper::lessonToLessonDTO).collect(Collectors.toCollection(TreeSet::new));
     }
 
     @Override
@@ -91,10 +93,10 @@ public class LessonServiceImpl implements LessonService {
 
     @Override
     public LessonDTO updateLesson(LessonUpdateDTO lessonUpdateDTO) {
-        if(lessonUpdateDTO==null) return  null;
+        if (lessonUpdateDTO == null) return null;
         Optional<Lesson> lessonOptional = lessonRepository.findById(lessonUpdateDTO.getId());
-        if(!lessonOptional.isPresent()){
-            throw new ResourceNotFoundException("Lesson "+lessonUpdateDTO.getId()+" not found");
+        if (!lessonOptional.isPresent()) {
+            throw new ResourceNotFoundException("Lesson " + lessonUpdateDTO.getId() + " not found");
         }
         Lesson lesson = lessonOptional.get();
         Course course = lesson.getCourse();
@@ -112,8 +114,8 @@ public class LessonServiceImpl implements LessonService {
     @Override
     public LessonDTO createLesson(LessonCreateDTO lessonCreateDTO) {
         Optional<Course> courseOptional = courseRepository.findById(lessonCreateDTO.getCourseId());
-        if(!courseOptional.isPresent()){
-            throw new ResourceNotFoundException("Course "+ lessonCreateDTO.getCourseId()+ " not found");
+        if (!courseOptional.isPresent()) {
+            throw new ResourceNotFoundException("Course " + lessonCreateDTO.getCourseId() + " not found");
         }
         Course foundCourse = courseOptional.get();
         checkAuthenticate(foundCourse);
@@ -121,7 +123,7 @@ public class LessonServiceImpl implements LessonService {
         Lesson lesson = new Lesson();
         lesson.setName(lessonCreateDTO.getName());
         lesson.setDescription(lessonCreateDTO.getDescription());
-        lesson.setOrdinalNumber(foundCourse.getLessons().size()+1);
+        lesson.setOrdinalNumber((int)foundCourse.getLessons().stream().filter(l->!l.getDeleted()).count()+1);
         lesson.setCourse(foundCourse);
         foundCourse.getLessons().add(lesson);
         Lesson savedLesson = lessonRepository.save(lesson);
@@ -131,10 +133,34 @@ public class LessonServiceImpl implements LessonService {
         return lessonMapper.lessonToLessonDTO(savedLesson);
     }
 
+    @Override
+    public void deleteLesson(String lessonId) {
+        Optional<Lesson> lessonOptional = lessonRepository.findById(lessonId);
+        if (!lessonOptional.isPresent()) {
+            throw new ResourceNotFoundException("Lesson " + lessonId + " not found");
+        }
+
+        Lesson foundLesson = lessonOptional.get();
+        Course course = foundLesson.getCourse();
+        checkAuthenticate(course);
+
+//        List<Lesson> lessons = lessonRepository.findByCourseIdOrderByOrdinalNumber(course.getId());
+        course.getLessons().stream().forEach(lesson -> {
+            if (lesson.getOrdinalNumber() > foundLesson.getOrdinalNumber()){
+                lesson.setOrdinalNumber(lesson.getOrdinalNumber()-1);
+            }
+        });
+
+        foundLesson.setDeleted(true);
+        lessonRepository.save(foundLesson);
+
+        courseRepository.save(course);
+    }
+
     void checkAuthenticate(Course course) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-        if(userDetails.getAuthorities().contains(new SimpleGrantedAuthority("ROLE_ADMIN"))) return ;
+        if (userDetails.getAuthorities().contains(new SimpleGrantedAuthority("ROLE_ADMIN"))) return;
 
         if (userDetails.getAuthorities().contains(new SimpleGrantedAuthority("ROLE_INSTRUCTOR"))) {
             Optional<Instructor> optionalInstructor = instructorRepository.findByUsername(userDetails.getUsername());
@@ -145,8 +171,7 @@ public class LessonServiceImpl implements LessonService {
             if (!instructor.getCourses().contains(course)) {
                 throw new ResourceNotFoundException("Instructor " + userDetails.getUsername() + " is not the owner of course " + course.getId());
             }
-        }
-        else throw new NoAuthenticationException("No role found");
+        } else throw new NoAuthenticationException("No role found");
 
     }
 }

@@ -56,7 +56,7 @@ public class SectionServiceImpl implements SectionService {
             if (!instructor.getCourses().contains(course)) {
                 throw new ResourceNotFoundException("Instructor " + userDetails.getUsername() + " is not the owner of course " + course.getId());
             }
-        } else if (userDetails.getAuthorities().contains(new SimpleGrantedAuthority("ROLE_STUDENT"))) {
+        } else if (userDetails.getAuthorities().contains(new SimpleGrantedAuthority("ROLE_LEARNER"))) {
             Optional<StudentCourse> studentCourseOptional = studentCourseRepository.findByStudentUsernameAndCourseId(userDetails.getUsername(), course.getId());
             if (!studentCourseOptional.isPresent()) {
                 throw new ResourceNotFoundException("Student " + userDetails.getUsername() + " is not the owner of course " + course.getId());
@@ -129,7 +129,7 @@ public class SectionServiceImpl implements SectionService {
                     throw new NoAuthenticationException("Instructor " + userDetails.getUsername() + " does not own course " + course.getId());
                 }
             }
-        return lessonOptional.get().getSections().stream().map(sectionMapper::sectionToSectionWithoutContentDto).collect(Collectors.toCollection(TreeSet::new));
+        return lessonOptional.get().getSections().stream().filter(section -> !section.getDeleted()).map(sectionMapper::sectionToSectionWithoutContentDto).collect(Collectors.toCollection(TreeSet::new));
     }
 
     @Override
@@ -193,7 +193,7 @@ public class SectionServiceImpl implements SectionService {
         checkAuthenticate(course);
         Section section = new Section();
         section.setDescription(sectionCreateDTO.getDescription());
-        section.setOrdinalNumber(lesson.getSections().size()+1);
+        section.setOrdinalNumber((int)lesson.getSections().stream().filter(s->!s.getDeleted()).count() + 1);
         section.setLesson(lesson);
         lesson.getSections().add(section);
 
@@ -202,5 +202,28 @@ public class SectionServiceImpl implements SectionService {
         lessonRepository.save(lesson);
 
         return sectionMapper.sectionToSectionDto(savedSection);
+    }
+
+    @Override
+    public void deleteSection(String sectionId) {
+        Optional<Section> optionalSection = sectionRepository.findById(sectionId);
+        if (!optionalSection.isPresent()) {
+            throw new ResourceNotFoundException("Section " + sectionId + " not found");
+        }
+
+        Section foundsection = optionalSection.get();
+        Lesson lesson = foundsection.getLesson();
+        Course course = lesson.getCourse();
+        checkAuthenticate(course);
+
+        lesson.getSections().stream().forEach(section -> {
+            if (section.getOrdinalNumber() > foundsection.getOrdinalNumber()) {
+                section.setOrdinalNumber(section.getOrdinalNumber() - 1);
+            }
+        });
+
+        foundsection.setDeleted(true);
+        lessonRepository.save(lesson);
+        sectionRepository.save(foundsection);
     }
 }

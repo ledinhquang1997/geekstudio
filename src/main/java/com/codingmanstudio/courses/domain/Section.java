@@ -27,7 +27,9 @@ public class Section {
     private Date lastUpdate = new Date();
 
     @Lob
-    private String content;
+    private String content="<p>Type something here</p>";
+
+    private Boolean deleted = false;
 
     @Embedded
     private Video video = new Video();

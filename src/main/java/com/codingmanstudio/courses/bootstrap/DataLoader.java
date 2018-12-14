@@ -6043,12 +6043,12 @@ public class DataLoader implements CommandLineRunner {
             mrDao.setUsername("daonm");
             mrDao.setEncrytedPassword(EncrytedPasswordUtils.encrytePassword("123"));
             mrDao.getRoles().add(saved_role_instructor);
-            mrDao.setName("Nguyen Minh Dao");
+            mrDao.setName("Nguyen Minh Truong");
             mrDao.setCompany("HCMUTE");
             mrDao.setEmail("daomn@tma.com");
             mrDao.setQuote("너의 눈에 비친 나의 모습이 늘 처음 만난 그 날만 같길 소리 없이 타오르는 불꽃같이");
             mrDao.getCategories().add(savedcat1);
-            mrDao.setImage(new Image("https://res.cloudinary.com/quanglibrary/image/upload/s--csfdlqRD--/v1540526799/geek/mrdao_f7t5eg.jpg","6d0b3176551e76d75bba06ac74c8ab7755539e779e5e7b38198b234c9278211f2e85f1d2a4fd16729da8b720fca2c1cff366afa5371b596441112587251063abe5355e01ff46cf2644cdfb3dbbe0f407901e544334e982f77bdd90669c5dcfc96979b624614d153fa0f6b39ded9b352e328745de7a7df8a94bdbb22dec38fb3fd3f21035da883780e2cb4a9db88cc58d"));
+            mrDao.setImage(new Image("https://res.cloudinary.com/quanglibrary/image/upload/v1544807800/geek/22382458_245134859349521_6187369603917682316_o.jpg","6d0b3176551e76d75bba06ac74c8ab7755539e779e5e7b38198b234c9278211f2e85f1d2a4fd16729da8b720fca2c1cff366afa5371b596441112587251063abe5355e01ff46cf2644cdfb3dbbe0f407901e544334e982f77bdd90669c5dcfc96979b624614d153fa0f6b39ded9b352e328745de7a7df8a94bdbb22dec38fb3fd3f21035da883780e2cb4a9db88cc58d"));
             Instructor savedMrDao = instructorRepository.save(mrDao);
 
             Instructor rapMonster = new Instructor();
@@ -6102,6 +6102,16 @@ public class DataLoader implements CommandLineRunner {
 
             SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 
+            Student tailam = new Student();
+            tailam.getRoles().add(saved_role_learner);
+            tailam.setUsername("tailam");
+            tailam.setEncrytedPassword(EncrytedPasswordUtils.encrytePassword("123"));
+            tailam.setEmail("tailam@gmail.com");
+            tailam.setName("Lâm Thanh Tài");
+            tailam.setDob(format.parse("2009-12-31"));
+            tailam.setImage(new Image("https://res.cloudinary.com/quanglibrary/image/upload/s--913coQRo--/v1540526988/geek/lisa_ghvqcw.jpg","e07c565e38a2e15b5d04950a41f3ba0004bba8f168cc5e0ab65257b429e166093cdc93e7c5d13a97d4d7c80013e7d75355f21f361dbd7d0256b517af70b350346a997fbdeff9e4efa4bb720b60e619809ae31ce74f6da519304dc16d4bf484652e030f0f79be044eec447c2895efb46afabbf9230d8449e42e56c963836e699ab1707aef5a148348f26d00c3d25b9e17"));
+            tailam.setSchool("UTE");
+            Student savedTai = studentRepository.save(tailam);
 
             Student dinhquang = new Student();
             dinhquang.getRoles().add(saved_role_learner);

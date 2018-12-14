@@ -39,11 +39,16 @@ public class CourseManagementController {
 
     @PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_INSTRUCTOR')")
     @ResponseStatus(HttpStatus.CREATED)
-    @PutMapping ({"/update", "/update/"})
+    @PutMapping({"/update", "/update/"})
     public CourseDetailDTO updateCourse(@RequestBody CourseUpdateDTO courseUpdateDTO) {
         return courseService.updateCourse(courseUpdateDTO);
     }
 
-
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_INSTRUCTOR')")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @DeleteMapping("/delete/{courseId}")
+    public void deleteCourse(@PathVariable String courseId) {
+        courseService.deleteCourse(courseId);
+    }
 
 }
