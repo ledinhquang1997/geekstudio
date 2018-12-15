@@ -321,7 +321,10 @@ public class CourseServiceImpl implements CourseService {
         foundCourse.setCost(courseUpdateDTO.getCost());
         foundCourse.setContentSummary(courseUpdateDTO.getContentSummary());
         foundCourse.setRequirements(courseUpdateDTO.getRequirements());
-        foundCourse.setImage(imageMapper.imageDTOToImage(courseUpdateDTO.getImage()));
+
+        if(courseUpdateDTO.getImage()!= null) {
+            foundCourse.setImage(imageMapper.imageDTOToImage(courseUpdateDTO.getImage()));
+        }
 
         Optional<Category> categoryOptional = categoryRepository.findById(courseUpdateDTO.getCategoryId());
         if (categoryOptional.isPresent()) {
