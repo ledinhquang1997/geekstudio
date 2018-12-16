@@ -354,6 +354,11 @@ public class CourseServiceImpl implements CourseService {
         courseRepository.save(course);
     }
 
+    @Override
+    public List<CourseStatisticDTO> getCourseStatistic() {
+       return courseRepository.findAll().stream().filter(course -> !course.getDeleted()).map(courseMapper::courseToCourseStatisticDto).collect(Collectors.toList());
+    }
+
     void checkAuthenticate(Course course) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();

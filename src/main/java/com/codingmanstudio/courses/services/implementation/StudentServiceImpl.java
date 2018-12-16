@@ -17,6 +17,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -63,6 +64,7 @@ public class StudentServiceImpl implements StudentService {
         return studentMapper.studentToStudentDto(savedStudent);
     }
 
+    @Transactional
     @Override
     public StudentDTO addCourse(String courseId) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
@@ -115,6 +117,9 @@ public class StudentServiceImpl implements StudentService {
         studentCourse.setCurrentSection(section);
         student.getCourses().add(studentCourse);
         Student savedStudent = studentRepository.save(student);
+
+        foundCourse.setAmountStudent(foundCourse.getAmountStudent()+1);
+        courseRepository.save(foundCourse);
 
         return studentMapper.studentToStudentDto(savedStudent);
     }

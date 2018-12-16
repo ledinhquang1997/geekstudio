@@ -14,4 +14,5 @@ public interface CourseMapper {
     StudentCourseWithLessonsDTO courseToStudentCourseWithLessonsDto(StudentCourse studentCourse);
     CourseWithLessonsDTO courseToCourseWithLessonsDto(Course course);
     Course courseCreateDTOToCourse(CourseCreateDTO courseCreateDTO);
+    CourseStatisticDTO courseToCourseStatisticDto(Course course);
 }

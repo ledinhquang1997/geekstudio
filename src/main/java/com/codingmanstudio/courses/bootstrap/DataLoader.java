@@ -94,7 +94,7 @@ public class DataLoader implements CommandLineRunner {
             nodeJs.getContentSummary().add("Use ExpressJS");
             nodeJs.setRating(1);
             nodeJs.setDescriptionDetail("<p>Hello world</p>");
-            nodeJs.setAmountStudent(303);
+            nodeJs.setAmountStudent(0);
             nodeJs.setImage(new Image("https://res.cloudinary.com/quanglibrary/image/upload/s--QReFaFjw--/v1540525483/geek/nodejs1_miaox0.jpg","7009627637e80f12b9def3fe00f955ee4ecad8cc9728367f354517584d1b98ee752abce356a7e326edf26f4c1414318210ced93489ef0d8b7ac167855ee7b62a21dcc5db26f2efc38a64ac759b8558fdc39c081f92b7e55a38341ed67c769ff3585cd2016ab6734e98a2634c7a21e485aa47092bd4c32802167dcc290dd93a0a674efe5782904776338d9dd2850b195f"));
             nodeJs.getTopics().add(savedTopicWebsite);
             nodeJs.getTopics().add(savedTopicBackend);
@@ -106,7 +106,7 @@ public class DataLoader implements CommandLineRunner {
             reactJs.getTopics().add(savedTopicWebsite);
             reactJs.getTopics().add(savedTopicFrontend);
             reactJs.setImage(new Image("http://res.cloudinary.com/quanglibrary/image/upload/s--ZZVzPy97--/v1540525582/geek/reactjs_sm3evd.jpg","15c204e97f23f939d11b32fafa195ffb38c95d6041b95fa0b80cbcd10e4f82189b9c932b98ca79df3a40cc8a77ab18423390af66cd134632604ad9efcc833fbc384647b883d48eca48401aacc28152de114ed10caf60bfbfabad07a469a5f63ccbf56ee77853eb800d72650f8df8a39b219c256a22f63de692468df6bdeeb447595ba348ed41595fc17d30d150c76c58"));
-            reactJs.setAmountStudent(401);
+            reactJs.setAmountStudent(0);
             reactJs.setCost(350L);
             reactJs.setRating(1.4);
             reactJs.setDescription("Similarly, any interface we define by extending the ExtendedRepository interface will have the same method");
@@ -122,7 +122,7 @@ public class DataLoader implements CommandLineRunner {
             vueJs.setCost(350L);
             vueJs.setRating(3.4);
             vueJs.setImage(new Image("https://res.cloudinary.com/quanglibrary/image/upload/s--VuolUoHw--/v1540525653/geek/vuejs_ow9zoq.png","6471e831804dad2236c0360b81ec8d11480b4ce863e1fab5877ded7855bb37d1bb218bcd0e4f6a3355a3ae78060f1f188a9880384f91f4890fa5816b6a054955b3159bd4896731243bdf70f8d47cfb52c5139deba5de2f1ec59f900fb6538f965cd5647b830b0831d1a17ec0242f44175be0b4b4a6dfa43095970105b743b16fb4742bf595c0c2c796ea99055642c6fe"));
-            vueJs.setAmountStudent(233);
+            vueJs.setAmountStudent(0);
             vueJs.setDescription("Vue.js, gọi tắt là Vue, là một framework linh động dùng để xây dựng giao diện người dùng. Khác với các framework nguyên khối, Vue được thiết kế từ đầu theo hướng cho phép và khuyến khích việc phát triển ứng dụng theo các bước");
             vueJs.setDateCreate("03-04-2018");
 
@@ -132,7 +132,7 @@ public class DataLoader implements CommandLineRunner {
             business.setCost(350L);
             business.setRating(2.4);
             business.setImage(new Image("https://res.cloudinary.com/quanglibrary/image/upload/s--ziyaKDc8--/v1540525762/geek/business1_ag1vla.jpg","97d5524c8f574ef9baedac7a2e6fa61838767be52b0c72b3b013c9f9e7ccb7fae56ad253868ae008c165c7fb1eec728fb440b75a48bb68b456d18093cdc9869f2c2841df0e07f7b8f53d3702a636349be56f702dd27c24871f955ce2eac4c5778e90b7b8e9389c02f68c73e75acdb6799b119f0ee9d0397ebe24d929573a696728443b8e16420ee04dd1bd89a36ca1f8683535e906f4b4df95dddc30cf865e4b"));
-            business.setAmountStudent(123);
+            business.setAmountStudent(0);
             business.setDescription("Để giữ gìn sự trong sáng của tiếng Việt khi tham gia chat, blog, các diễn đàn, SMS… Mấy bợng đừn diếc xai trính tã nge");
             business.setDateCreate("03-04-2018");
 
@@ -142,7 +142,7 @@ public class DataLoader implements CommandLineRunner {
             marketingCourse.setCost(350L);
             marketingCourse.setRating(3.6);
             marketingCourse.setImage(new Image("https://res.cloudinary.com/quanglibrary/image/upload/s--K5m-Xf9L--/v1540525844/geek/marketing_u6csqk.jpg","5122915ec3894414fd79a993f08c89d0e52344c8863ca99310bee2b0af760c72a3a6044984b0d6692485f6c99304619c08825ff7ddbd7e79f099f8acebf628c63abc3e83be87befec708b51278da3f702875b0d787d8ae15ffb13d33997aabb53b0a200f0b10f4a25c9cb848872b83fdee120a03f6157fffd3d32c8cc88750077087099238edb6452db3c09543a32e7150880efe9f0dbf82196050dad361e32c"));
-            marketingCourse.setAmountStudent(923);
+            marketingCourse.setAmountStudent(0);
             marketingCourse.setDescription("Để giữ gìn sự trong sáng của tiếng Việt khi tham gia chat, blog, các diễn đàn, SMS… Mấy bợng đừn diếc xai trính tã nge");
             marketingCourse.setDateCreate("03-04-2018");
 
@@ -152,7 +152,7 @@ public class DataLoader implements CommandLineRunner {
             electronicCourse.setCost(350L);
             electronicCourse.setRating(4.5);
             electronicCourse.setImage(new Image("https://res.cloudinary.com/quanglibrary/image/upload/s--dgh_pQof--/v1540525886/geek/electonic_klhzef.jpg","7dc7285f302bd40c3555854d49ad564b0e9ddb67b37285a9005ce6bcc76c7a23e66fb627396a4a70350ec9636fca17d8b554291ff22f9937042c62a1979b315c3d21c774030b3a39514fbd0de6ff7cd1cc83c50ae5d7a1b75ade707966c6bedd2e5f3916c6c09cee6dd22efc463f1cc7bd6f4f94d7493fd93b37237aea3a8c0ecf0da8587c17e32d00ba9ec5dc6923c449df2c326741fab5a2aaba20bd38511b"));
-            electronicCourse.setAmountStudent(923);
+            electronicCourse.setAmountStudent(0);
             electronicCourse.setDescription("Để giữ gìn sự trong sáng của tiếng Việt khi tham gia chat, blog, các diễn đàn, SMS… Mấy bợng đừn diếc xai trính tã nge");
             electronicCourse.setDateCreate("03-04-2018");
 
@@ -170,7 +170,7 @@ public class DataLoader implements CommandLineRunner {
             dockerCourse.getRequirements().add("This is a follow up course to the course \"Foundation Stock Trading Course\"\n");
 
             dockerCourse.setImage(new Image("https://res.cloudinary.com/quanglibrary/image/upload/s--JMGQDe5Q--/v1540525955/geek/docker_wbfbls.png","ad1867137bcad0c43b41750e18ab84acccaa7534382220cfb39b109cc531e97aa9fc4e6138f4d43caaf613304e61b59ffe5147f430945fe95bd02f0d13ad9af0fbafb6a8a834b5d033b18c2f52dc4294df6f8708dad91449a7420e72a9850a5f1d083a86d3d2dbebcbc1ecb4846358477b859987e6051aa9aebd03956a35a20fa47b83fc068393e2ac7e047ea063696b"));
-            dockerCourse.setAmountStudent(943);
+            dockerCourse.setAmountStudent(0);
 
             dockerCourse.setDescriptionDetail("<p>This is the advanced&nbsp;course that our<strong>&nbsp;Full-Time Traders&nbsp;</strong>at the Proprietary Trading Firm Montreal&nbsp;Trading Group have taken in order to start their trading career.&nbsp;</p>\n" +
                     "<p>This course&nbsp;includes comprehensive advanced&nbsp;material that is required to start&nbsp;trading confidently and effectively.&nbsp;You learn the complete theory behind trading and even better,&nbsp;<strong>how to put theory&nbsp;into actio</strong><strong>n</strong>. I&nbsp;will&nbsp;teach you how our full time traders are&nbsp;making&nbsp;independent market decisions&nbsp;to produce profitable consistent&nbsp;results. You will get&nbsp;an&nbsp;<strong>excellent understanding of the Tools and Techniques used by Professional Traders</strong>.</p>\n" +
@@ -187,7 +187,7 @@ public class DataLoader implements CommandLineRunner {
             phpCourse.setCost(353L);
             phpCourse.setRating(3.1);
             phpCourse.setImage(new Image("https://res.cloudinary.com/quanglibrary/image/upload/s--6q3OK3c3--/v1540526007/geek/php_hadezi.jpg","f59d06d3aa795b8b6141a23aa5a94e9fd8b3be801cb49ee330964c6164f642cda72f86888b9a01762b6201df398c74f1b77aa0ccc673f967e7b47f2e29cdab8e48fb9c396fd346d9ab6d7981f000e9da711c88d7ae0532842894adcd4a3e941fa3025d8d6d0543ed5e9cfe31a9c07b88d3d85f771a59dc3f84e281fe1d76581c7e6bd7f9d98ca263e74c8a2ee91e5d5d"));
-            phpCourse.setAmountStudent(716);
+            phpCourse.setAmountStudent(0);
             phpCourse.setDescription("Để giữ gìn sự trong sáng của tiếng Việt khi tham gia chat, blog, các diễn đàn, SMS… Mấy bợng đừn diếc xai trính tã nge");
             phpCourse.setDateCreate("03-04-2018");
 
@@ -197,7 +197,7 @@ public class DataLoader implements CommandLineRunner {
             cScharp.setCost(350L);
             cScharp.setRating(4.2);
             cScharp.setImage(new Image("https://res.cloudinary.com/quanglibrary/image/upload/s--epyNMN8M--/v1540526040/geek/csharp1_vyqahz.png","13b2b3712566dee180a174df0a9c34dd1470e60fda4c4c82d35d1aecb94918c2eda2fd938f86b46d23a5a48b9aaf9509e8f6f5ac646aed5afcf910c3baf3ae3260572a415b69b877e1f44d373b2fa7d8b6c3d90302dbeb139721fc542910d6b9158dc08e9799e4178016f1be628e3079021919f9cc75f16d88565256a9872f386fe50eb08618a44b10e16aae71758e56"));
-            cScharp.setAmountStudent(12);
+            cScharp.setAmountStudent(0);
             cScharp.setDescription("Để giữ gìn sự trong sáng của tiếng Việt khi tham gia chat, blog, các diễn đàn, SMS… Mấy bợng đừn diếc xai trính tã nge");
             cScharp.setDateCreate("03-04-2018");
 
@@ -207,7 +207,7 @@ public class DataLoader implements CommandLineRunner {
             java.setCost(120L);
             java.setRating(4);
             java.setImage(new Image("https://res.cloudinary.com/quanglibrary/image/upload/s--NxpFvmiF--/v1540526072/geek/java_jvzksj.jpg","d160cd5ca09fd301cd28c359bf7c753cae428fdf3dc4227b10f53ae010d68df8e760729e871517f3c942d7b1968d9d0c5d0f3b7ab4a75f0e19b16539151f7749ab453afc49043a00f554906aca5a0f0f5666d99daa64b857c651311c01bd5b676822878d157f4f2d5bf5e0374445cfc4823697c06335800d4885c911c1a03a7994a3bcae4742761bc75a3284dac15a4e"));
-            java.setAmountStudent(12);
+            java.setAmountStudent(0);
             java.setDescription("Để giữ gìn sự trong sáng của tiếng Việt khi tham gia chat, blog, các diễn đàn, SMS… Mấy bợng đừn diếc xai trính tã nge");
             java.setDateCreate("03-04-2018");
 
@@ -218,7 +218,7 @@ public class DataLoader implements CommandLineRunner {
             css.setCost(350L);
             css.setRating(4.7);
             css.setImage(new Image("https://res.cloudinary.com/quanglibrary/image/upload/s--xP-M834P--/v1540526154/geek/css_pasizv.jpg","156c5df5bcb5eb0ad2654cc4c4af518ffa8c99c100aa43d22948b76520a3b8069198482cd9104b378fa262e705b1e1c89dfff2b463d7466b0256b7321068be953bb484078abedae1874c471845851ea95aab5930b82192cef923c8d9c2d5f084e4e2015e902633b45504d330e9dfab809a08e29f713a67643f964c59654fc9e9f2eca5fab7e67262a5082a50eedc59ad"));
-            css.setAmountStudent(12);
+            css.setAmountStudent(0);
             css.setDescription("Để giữ gìn sự trong sáng của tiếng Việt khi tham gia chat, blog, các diễn đàn, SMS… Mấy bợng đừn diếc xai trính tã nge");
             css.setDateCreate("03-04-2018");
 
@@ -228,7 +228,7 @@ public class DataLoader implements CommandLineRunner {
             linux.setCost(350L);
             linux.setRating(4.7);
             linux.setImage(new Image("https://res.cloudinary.com/quanglibrary/image/upload/s--C-Absi9K--/v1540526194/geek/css-wonderful_bziyf7.png","d49c12dfd482ec6e851f5bd3ddde6ab58e7b972ce36e22f02f4973df23fa3c08423686eb88923d2fdebfd09a47db20b4d35c7b14d9d69c8dcad7c77a5d80a023c97799c181dda1c663b6062df7295812c912a75ea1f73769e4920b2c069a3b5205eefb3584ab97663af08d3ef72fd1e0bede77822c37f21c029d74137185aa2efa314bfcfa0dc486cb1b29eb39437abe5326bb5ee9231e611826198510c89df1"));
-            linux.setAmountStudent(12);
+            linux.setAmountStudent(0);
             linux.setDescription("Để giữ gìn sự trong sáng của tiếng Việt khi tham gia chat, blog, các diễn đàn, SMS… Mấy bợng đừn diếc xai trính tã nge");
             linux.setDateCreate("03-04-2018");
 
@@ -239,7 +239,7 @@ public class DataLoader implements CommandLineRunner {
             html.setCost(350L);
             html.setRating(3.4);
             html.setImage(new Image("https://res.cloudinary.com/quanglibrary/image/upload/s--ZWVpCe4J--/v1540526239/geek/html_u373he.jpg","f1d2b409315ed9043d2975c94a8bce7625b276a897db9d2d93a7f93f524386c387caf9898a33b46477305e07bfda144cd4977665fabd987b028958272f94f08833bdf5c081cb0ff7092e742a7f874e73d41808921580783bf1987ce2a96dd77f75905e8ba0d796a7fba121b4d029ff4f989e6d6d5ce4e5245435b2fca4c3368311d828d483faa7c2d223fcac230cdf4e"));
-            html.setAmountStudent(12);
+            html.setAmountStudent(0);
             html.setDescription("Để giữ gìn sự trong sáng của tiếng Việt khi tham gia chat, blog, các diễn đàn, SMS… Mấy bợng đừn diếc xai trính tã nge");
             html.setDateCreate("03-04-2018");
 
@@ -250,7 +250,7 @@ public class DataLoader implements CommandLineRunner {
             typeScript.setCost(350L);
             typeScript.setRating(3.9);
             typeScript.setImage(new Image("https://res.cloudinary.com/quanglibrary/image/upload/s--cS_nnnRh--/v1540526285/geek/typescript_s0drdi.png","ff3d7227aa3743f6ba8489b1a23f29bccb707d3ca2d1e022f9301da06b022691e8a388c65f62a8528891063598ced5a349289c58fd0cd1a03dbc0adfb85c337fd63e7dd2a7b4cd0301eb76e8a596b5a886fe999ac02012cab27c8a02c2db5221d5927feee6b893da79da1da50488739a90b5cdadd4c1a0d2b57865d37439f58554f36ca9f0bb5a001f37abf32180298a22aeda95a6ecd2bcfecea3435147debd"));
-            typeScript.setAmountStudent(12);
+            typeScript.setAmountStudent(0);
             typeScript.setDescription("Để giữ gìn sự trong sáng của tiếng Việt khi tham gia chat, blog, các diễn đàn, SMS… Mấy bợng đừn diếc xai trính tã nge");
             typeScript.setDateCreate("03-04-2018");
 
@@ -6126,56 +6126,50 @@ public class DataLoader implements CommandLineRunner {
 
             Student savedDinhQuang = studentRepository.save(dinhquang);
 
-            StudentCourse studentCourseDinhquang =new StudentCourse(savedDinhQuang,savedNodeJs);
-            studentCourseDinhquang.setCurrentLesson(savedNodeJsLesson1);
-            studentCourseDinhquang.setCurrentSection(savedSec3Node1);
-            savedDinhQuang.getCourses().add(studentCourseDinhquang);
-
-            StudentCourse studentCourseDinhquangVue =new StudentCourse(savedDinhQuang,savedVueJs);
-            studentCourseDinhquangVue.setCurrentLesson(savedVueJsLesson1);
-            studentCourseDinhquangVue.setCurrentSection(savedSec1Vue1);
-            savedDinhQuang.getCourses().add(studentCourseDinhquangVue);
-
-
-            StudentCourse studentCourseDinhquangReact =new StudentCourse(savedDinhQuang,savedReactJS);
-            studentCourseDinhquangReact.setCurrentLesson(savedReactLesson1);
-            studentCourseDinhquangReact.setCurrentSection(savedSec1React1);
-            savedDinhQuang.getCourses().add(studentCourseDinhquangReact);
-            studentRepository.save(savedDinhQuang);
-
-            Student hongvan = new Student();
-            hongvan.getRoles().add(saved_role_learner);
-            hongvan.setUsername("hongvan");
-            hongvan.setEncrytedPassword(EncrytedPasswordUtils.encrytePassword("123"));
-            hongvan.setName("Hồng Vân");
-            hongvan.setDob(format.parse("2009-12-31"));
-            hongvan.setEmail("hongvan@gmail.com");
-            hongvan.setImage(new Image("https://res.cloudinary.com/quanglibrary/image/upload/s--913coQRo--/v1540526988/geek/lisa_ghvqcw.jpg","e07c565e38a2e15b5d04950a41f3ba0004bba8f168cc5e0ab65257b429e166093cdc93e7c5d13a97d4d7c80013e7d75355f21f361dbd7d0256b517af70b350346a997fbdeff9e4efa4bb720b60e619809ae31ce74f6da519304dc16d4bf484652e030f0f79be044eec447c2895efb46afabbf9230d8449e42e56c963836e699ab1707aef5a148348f26d00c3d25b9e17"));
-            hongvan.setSchool("PVS");
-            hongvan.addCourse(saveddockerCourse);
-            Student savedHongVan = studentRepository.save(hongvan);
-
-            Student khanhhoang = new Student();
-            khanhhoang.getRoles().add(saved_role_learner);
-            khanhhoang.setUsername("khanhhoang");
-            khanhhoang.setEncrytedPassword(EncrytedPasswordUtils.encrytePassword("123"));
-            khanhhoang.setName("Khánh Hoàng");
-            khanhhoang.setEmail("khanhhoang@gmail.com");
-            khanhhoang.setImage(new Image("https://res.cloudinary.com/quanglibrary/image/upload/s--913coQRo--/v1540526988/geek/lisa_ghvqcw.jpg","e07c565e38a2e15b5d04950a41f3ba0004bba8f168cc5e0ab65257b429e166093cdc93e7c5d13a97d4d7c80013e7d75355f21f361dbd7d0256b517af70b350346a997fbdeff9e4efa4bb720b60e619809ae31ce74f6da519304dc16d4bf484652e030f0f79be044eec447c2895efb46afabbf9230d8449e42e56c963836e699ab1707aef5a148348f26d00c3d25b9e17"));
-            khanhhoang.setSchool("PVS");
-            khanhhoang.setDob(format.parse("2009-12-31"));
-
-
-            Student savedKhanhHoang = studentRepository.save(khanhhoang);
-
-
-            StudentCourse studentCourse=new StudentCourse(savedKhanhHoang,saveddockerCourse);
-//            studentCourse.setCourse(saveddockerCourse);
-//            studentCourse.setStudent(savedKhanhHoang);
-
-            savedKhanhHoang.getCourses().add(studentCourse);
-
-            studentRepository.save(savedKhanhHoang);
+//            StudentCourse studentCourseDinhquang =new StudentCourse(savedDinhQuang,savedNodeJs);
+//            studentCourseDinhquang.setCurrentLesson(savedNodeJsLesson1);
+//            studentCourseDinhquang.setCurrentSection(savedSec3Node1);
+//            savedDinhQuang.getCourses().add(studentCourseDinhquang);
+//
+//            StudentCourse studentCourseDinhquangVue =new StudentCourse(savedDinhQuang,savedVueJs);
+//            studentCourseDinhquangVue.setCurrentLesson(savedVueJsLesson1);
+//            studentCourseDinhquangVue.setCurrentSection(savedSec1Vue1);
+//            savedDinhQuang.getCourses().add(studentCourseDinhquangVue);
+//
+//
+//            StudentCourse studentCourseDinhquangReact =new StudentCourse(savedDinhQuang,savedReactJS);
+//            studentCourseDinhquangReact.setCurrentLesson(savedReactLesson1);
+//            studentCourseDinhquangReact.setCurrentSection(savedSec1React1);
+//            savedDinhQuang.getCourses().add(studentCourseDinhquangReact);
+//            studentRepository.save(savedDinhQuang);
+//
+//            Student hongvan = new Student();
+//            hongvan.getRoles().add(saved_role_learner);
+//            hongvan.setUsername("hongvan");
+//            hongvan.setEncrytedPassword(EncrytedPasswordUtils.encrytePassword("123"));
+//            hongvan.setName("Hồng Vân");
+//            hongvan.setDob(format.parse("2009-12-31"));
+//            hongvan.setEmail("hongvan@gmail.com");
+//            hongvan.setImage(new Image("https://res.cloudinary.com/quanglibrary/image/upload/s--913coQRo--/v1540526988/geek/lisa_ghvqcw.jpg","e07c565e38a2e15b5d04950a41f3ba0004bba8f168cc5e0ab65257b429e166093cdc93e7c5d13a97d4d7c80013e7d75355f21f361dbd7d0256b517af70b350346a997fbdeff9e4efa4bb720b60e619809ae31ce74f6da519304dc16d4bf484652e030f0f79be044eec447c2895efb46afabbf9230d8449e42e56c963836e699ab1707aef5a148348f26d00c3d25b9e17"));
+//            hongvan.setSchool("PVS");
+//            hongvan.addCourse(saveddockerCourse);
+//            Student savedHongVan = studentRepository.save(hongvan);
+//
+//            Student khanhhoang = new Student();
+//            khanhhoang.getRoles().add(saved_role_learner);
+//            khanhhoang.setUsername("khanhhoang");
+//            khanhhoang.setEncrytedPassword(EncrytedPasswordUtils.encrytePassword("123"));
+//            khanhhoang.setName("Khánh Hoàng");
+//            khanhhoang.setEmail("khanhhoang@gmail.com");
+//            khanhhoang.setImage(new Image("https://res.cloudinary.com/quanglibrary/image/upload/s--913coQRo--/v1540526988/geek/lisa_ghvqcw.jpg","e07c565e38a2e15b5d04950a41f3ba0004bba8f168cc5e0ab65257b429e166093cdc93e7c5d13a97d4d7c80013e7d75355f21f361dbd7d0256b517af70b350346a997fbdeff9e4efa4bb720b60e619809ae31ce74f6da519304dc16d4bf484652e030f0f79be044eec447c2895efb46afabbf9230d8449e42e56c963836e699ab1707aef5a148348f26d00c3d25b9e17"));
+//            khanhhoang.setSchool("PVS");
+//            khanhhoang.setDob(format.parse("2009-12-31"));
+//
+//
+//            Student savedKhanhHoang = studentRepository.save(khanhhoang);
+//            StudentCourse studentCourse=new StudentCourse(savedKhanhHoang,saveddockerCourse);
+//            savedKhanhHoang.getCourses().add(studentCourse);
+//            studentRepository.save(savedKhanhHoang);
 
             //Init Account ----------------------------------------------------------------------------------------------------------
             Account user1 = new Account();

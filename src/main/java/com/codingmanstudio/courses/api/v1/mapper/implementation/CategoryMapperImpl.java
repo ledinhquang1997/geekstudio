@@ -1,6 +1,7 @@
 package com.codingmanstudio.courses.api.v1.mapper.implementation;
 
 import com.codingmanstudio.courses.api.v1.dto.Category.CategoryDTO;
+import com.codingmanstudio.courses.api.v1.dto.Category.CategoryStatisticDTO;
 import com.codingmanstudio.courses.api.v1.dto.Category.CategoryWithCoursesDTO;
 import com.codingmanstudio.courses.api.v1.dto.Category.CategoryWithTopicsDTO;
 import com.codingmanstudio.courses.api.v1.dto.Course.CourseWithoutInstructorDTO;
@@ -26,6 +27,7 @@ public class CategoryMapperImpl implements CategoryMapper {
     private final CourseMapper courseMapper;
     private final TopicMapper topicMapper;
     private final InstructorMapper instructorMapper;
+
     public CategoryMapperImpl(CourseMapper courseMapper, TopicMapper topicMapper, InstructorMapper instructorMapper) {
         this.courseMapper = courseMapper;
         this.topicMapper = topicMapper;
@@ -78,15 +80,31 @@ public class CategoryMapperImpl implements CategoryMapper {
         }
     }
 
-    private Set<TopicDTO> topicSetTopicDTOSet(Set<Topic> topics){
+    @Override
+    public CategoryStatisticDTO categoryToCategoryStatisticDto(Category category) {
+        if (category == null) return null;
+        else {
+            int quantityStudent = 0;
+            for (Course course : category.getCourses()
+            ) {
+                quantityStudent+=course.getAmountStudent();
+            }
+            CategoryStatisticDTO categoryStatisticDTO = new CategoryStatisticDTO();
+            categoryStatisticDTO.setCategory(category.getName());
+            categoryStatisticDTO.setY(quantityStudent);
+            return categoryStatisticDTO;
+        }
+    }
+
+    private Set<TopicDTO> topicSetTopicDTOSet(Set<Topic> topics) {
         return topics.stream().map(topicMapper::topicTopicDto).collect(Collectors.toSet());
     }
 
-    private Set<InstructorDTO> instructorSetToInstructorDTOSet(Set<Instructor> instructors){
+    private Set<InstructorDTO> instructorSetToInstructorDTOSet(Set<Instructor> instructors) {
         return instructors.stream().map(instructorMapper::instructorToInstructorDto).collect(Collectors.toSet());
     }
 
-    private TreeSet<CourseWithoutInstructorDTO> courseSetToCourseWithCoursesDTOSet(Set<Course> courses){
+    private TreeSet<CourseWithoutInstructorDTO> courseSetToCourseWithCoursesDTOSet(Set<Course> courses) {
         return courses.stream().filter(course -> !course.getDeleted()).map(courseMapper::courseToCourseWithoutInstructorDto).collect(Collectors.toCollection(TreeSet::new));
     }
 }

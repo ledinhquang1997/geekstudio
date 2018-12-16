@@ -1,6 +1,7 @@
 package com.codingmanstudio.courses.services.implementation;
 
 import com.codingmanstudio.courses.api.v1.dto.Category.CategoryDTO;
+import com.codingmanstudio.courses.api.v1.dto.Category.CategoryStatisticDTO;
 import com.codingmanstudio.courses.api.v1.dto.Category.CategoryWithCoursesDTO;
 import com.codingmanstudio.courses.api.v1.dto.Category.CategoryWithTopicsDTO;
 import com.codingmanstudio.courses.api.v1.dto.Course.CourseDTO;
@@ -79,5 +80,10 @@ public class CategoryServiceImpl implements CategoryService {
         //Set totalPage
         returnCategory.setTotalPage(coursesPage.getTotalPages());
         return returnCategory;
+    }
+
+    @Override
+    public List<CategoryStatisticDTO> getCategoryStatistics() {
+        return categoryRepository.findAll().stream().map(categoryMapper::categoryToCategoryStatisticDto).collect(Collectors.toList());
     }
 }

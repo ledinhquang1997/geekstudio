@@ -1,6 +1,7 @@
 package com.codingmanstudio.courses.controller;
 
 import com.codingmanstudio.courses.api.v1.dto.Course.CourseDetailDTO;
+import com.codingmanstudio.courses.api.v1.dto.Course.CourseStatisticDTO;
 import com.codingmanstudio.courses.api.v1.dto.Course.CourseWithoutInstructorDTO;
 import com.codingmanstudio.courses.api.v1.dto.Course.Create.CourseCreateDTO;
 import com.codingmanstudio.courses.api.v1.dto.Course.Update.CourseUpdateDTO;
@@ -51,4 +52,10 @@ public class CourseManagementController {
         courseService.deleteCourse(courseId);
     }
 
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
+    @ResponseStatus(HttpStatus.OK)
+    @GetMapping("/statistic")
+    public List<CourseStatisticDTO> getCourseStatistic() {
+        return courseService.getCourseStatistic();
+    }
 }

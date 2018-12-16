@@ -20,6 +20,7 @@ import java.util.stream.Collectors;
 public class CourseMapperImpl implements CourseMapper {
     private final InstructorMapper instructorMapper;
     private final ImageMapper imageMapper;
+
     public CourseMapperImpl(InstructorMapper instructorMapper, ImageMapper imageMapper) {
         this.instructorMapper = instructorMapper;
         this.imageMapper = imageMapper;
@@ -170,7 +171,7 @@ public class CourseMapperImpl implements CourseMapper {
 
     @Override
     public Course courseCreateDTOToCourse(CourseCreateDTO courseCreateDTO) {
-        if(courseCreateDTO==null) return null;
+        if (courseCreateDTO == null) return null;
         else {
             Course course = new Course();
             course.setName(courseCreateDTO.getName());
@@ -182,6 +183,18 @@ public class CourseMapperImpl implements CourseMapper {
             course.setImage(imageMapper.imageDTOToImage(courseCreateDTO.getImage()));
             course.setDateCreate(courseCreateDTO.getDateCreate());
             return course;
+        }
+    }
+
+    @Override
+    public CourseStatisticDTO courseToCourseStatisticDto(Course course) {
+        if (course == null)
+            return null;
+        else {
+            CourseStatisticDTO courseStatisticDTO= new CourseStatisticDTO();
+            courseStatisticDTO.setLabel(course.getName());
+            courseStatisticDTO.setY(course.getAmountStudent());
+            return courseStatisticDTO;
         }
     }
 
