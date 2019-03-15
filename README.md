@@ -7,12 +7,20 @@
 
 ### Java Data Type
 
-Primitive type: ` byte, short, int, long, float, double, boolean and char`
-Non-Primitive type: `String, Integer, Double, Class, ...`
+    Primitive type: ` byte, short, int, long, float, double, boolean and char`
+    Non-Primitive type: `String, Integer, Double, Class, ...`
 
 ### Java Collection
+    The Collection in Java is a framework that provides an architecture to store and manipulate the group of objects.
 
+    Collection is an interface extending from Iterable and extended by List, Queue and Set.
+
+    List: implemented by ArrayList, LinkedList, Vector, Stack
+    Queue: implemented by PriorityQueue,
+    Set: implemented by HashSet and LinkedHashSet
 ### Java IO
+    Java I/O (Input and Output) is used to process the input and produce the output.
+
 
 ### Read and Parse files
 
@@ -23,8 +31,24 @@ Non-Primitive type: `String, Integer, Double, Class, ...`
 ### Lombok
 
 * What is lombok?
+
+  Lombok is the tool help us to avoid repetitve code. It automatically generate code if we annotate the class its annotations.
+
+
 * Implement a POJO class with lombok.
+  Put lombok annotations above class declaration
+
+  @Getter: Generate getter
+  @Setter: Generate setter
+  @NoArgsConstructor: generate constructor with no param
+  @AllArgsConstructor: generate constructor with all params
+  @Slf4j: generate logger field
+  ...
+
 * Logging with lombok
+
+  Use @Slf4j and use log.info()
+
 * Using `@Cleanup`
 
 ### JDBC
